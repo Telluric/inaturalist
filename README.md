@@ -1,7 +1,7 @@
 ## iNaturalist  
 [![inaturalist CI](https://github.com/inaturalist/inaturalist/actions/workflows/CI.yml/badge.svg)](https://github.com/inaturalist/inaturalist/actions/workflows/CI.yml)
-[![Maintainability](https://api.codeclimate.com/v1/badges/d292250cf933f2d1a6f7/maintainability)](https://codeclimate.com/github/Telluric/inaturalist/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/d292250cf933f2d1a6f7/test_coverage)](https://codeclimate.com/github/Telluric/inaturalist/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/a183070c4f1af48a0263/maintainability)](https://codeclimate.com/github/Telluric/inaturalist/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/a183070c4f1af48a0263/test_coverage)](https://codeclimate.com/github/Telluric/inaturalist/test_coverage)
 
 Open source Rails app behind [iNaturalist.org](https://www.inaturalist.org/)
 
