@@ -14,7 +14,6 @@ jobs:
         with:
           github_token: ${{ github.token }}
           cancel_others: true
-
   build:
     needs: pre_build
     runs-on: ubuntu-20.04
@@ -44,12 +43,20 @@ jobs:
           - spec/helpers spec/initializers spec/lib spec/views spec/features
 
     steps:
+    - name: Install dependencies
+      run: |
+        sudo apt-get -qq update
+        sudo apt-get -yqq install libpq-dev build-essential libcurl4-openssl-dev gdal-bin proj-bin proj-data libgeos-dev libgeos++-dev libproj-dev ffmpeg
     - uses: actions/checkout@v2
-
-    - name: Use Ruby
-      uses: actions/setup-ruby@v1
+    - uses: actions/setup-node@v3
       with:
-        ruby-version: 2.7
+        node-version: 16
+        cache: 'npm'
+    - name: Use Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        # ruby-version: 2.7 Uses .ruby-version
+        bundler-cache: true
 
     - name: Configure sysctl limits
       run: |
@@ -70,12 +77,8 @@ jobs:
 
     - run: npm install
 
-    - name: Install dependencies
+    - name: Add .rspec
       run: |
-        sudo apt-get -qq update
-        sudo apt-get -yqq install libpq-dev build-essential libcurl4-openssl-dev gdal-bin proj-bin proj-data libgeos-dev libgeos++-dev libproj-dev ffmpeg
-        gem install bundler
-        bundle install --jobs 4 --retry 3
         echo -e "--format documentation\n--color\n--require spec_helper\n--profile\n--tty" > .rspec
 
     - name: Before script
