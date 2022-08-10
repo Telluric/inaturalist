@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>GuideTaxaController</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["GuideTaxaController"]'>
+
+
+    <meta property="og:title" value="GuideTaxaController">
+
+  
+
+    <meta name="keywords" content="GuideTaxaController class, index, show, edit, create, update, destroy, update_photos, sync">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            GuideTaxaController
+            
+                <span class="parent">&lt;
+                    
+                    <a href="ApplicationController.html">ApplicationController</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/app/controllers/guide_taxa_controller_rb.html">app/controllers/guide_taxa_controller.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-create">create</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-destroy">destroy</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-edit">edit</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-index">index</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-show">show</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-sync">sync</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_photos">update_photos</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-create">
+            
+              <b>create</b>()
+            
+            <a href="../classes/GuideTaxaController.html#method-i-create" name="method-i-create" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>POST /guide_taxa POST /guide_taxa.json</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-create_source')" id="l_method-i-create_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-create_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/guide_taxa_controller.rb</span>
+<span class="line-num">62</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">create</span>
+<span class="line-num">63</span>   <span class="ruby-ivar">@guide_taxon</span> = <span class="ruby-constant">GuideTaxon</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:guide_taxon</span>])
+<span class="line-num">64</span>   <span class="ruby-ivar">@guide</span> <span class="ruby-operator">||=</span> <span class="ruby-ivar">@guide_taxon</span>.<span class="ruby-identifier">guide</span>
+<span class="line-num">65</span>   <span class="ruby-identifier">source_guide_taxon</span> = <span class="ruby-constant">GuideTaxon</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:guide_taxon_id</span>]) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:guide_taxon_id</span>].<span class="ruby-identifier">blank?</span>
+<span class="line-num">66</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">source_guide_taxon</span>
+<span class="line-num">67</span>     <span class="ruby-ivar">@guide_taxon</span> = <span class="ruby-identifier">source_guide_taxon</span>.<span class="ruby-identifier">reuse</span>
+<span class="line-num">68</span>     <span class="ruby-ivar">@guide_taxon</span>.<span class="ruby-identifier">guide</span> = <span class="ruby-ivar">@guide</span>
+<span class="line-num">69</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">70</span> 
+<span class="line-num">71</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">72</span>     <span class="ruby-keyword">if</span> <span class="ruby-ivar">@guide_taxon</span>.<span class="ruby-identifier">save</span>
+<span class="line-num">73</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">edit_guide_path</span>(<span class="ruby-ivar">@guide_taxon</span>.<span class="ruby-identifier">guide_id</span>), <span class="ruby-value">notice:</span> <span class="ruby-string">&#39;Guide taxon was successfully created.&#39;</span> }
+<span class="line-num">74</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> <span class="ruby-keyword">do</span>
+<span class="line-num">75</span>         <span class="ruby-keyword">if</span> <span class="ruby-identifier">partial</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:partial</span>]
+<span class="line-num">76</span>           <span class="ruby-ivar">@guide_taxon</span>.<span class="ruby-identifier">html</span> = <span class="ruby-identifier">view_context</span>.<span class="ruby-identifier">render_in_format</span>(<span class="ruby-value">:html</span>, <span class="ruby-identifier">partial</span>, <span class="ruby-value">:guide_taxon</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-ivar">@guide_taxon</span>)
+<span class="line-num">77</span>         <span class="ruby-keyword">end</span>
+<span class="line-num">78</span>         <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> <span class="ruby-ivar">@guide_taxon</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-value">:root</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">:methods</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:html</span>]), <span class="ruby-value">status:</span> <span class="ruby-value">:created</span>, <span class="ruby-value">location:</span> <span class="ruby-ivar">@guide_taxon</span>
+<span class="line-num">79</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">80</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">81</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">action:</span> <span class="ruby-string">&quot;new&quot;</span> }
+<span class="line-num">82</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> <span class="ruby-ivar">@guide_taxon</span>.<span class="ruby-identifier">errors</span>.<span class="ruby-identifier">full_messages</span>, <span class="ruby-value">status:</span> <span class="ruby-value">:unprocessable_entity</span> }
+<span class="line-num">83</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">84</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">85</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-destroy">
+            
+              <b>destroy</b>()
+            
+            <a href="../classes/GuideTaxaController.html#method-i-destroy" name="method-i-destroy" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>DELETE /guide_taxa/1 DELETE /guide_taxa/1.json</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-destroy_source')" id="l_method-i-destroy_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-destroy_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/guide_taxa_controller.rb</span>
+<span class="line-num">106</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">destroy</span>
+<span class="line-num">107</span>   <span class="ruby-ivar">@guide_taxon</span>.<span class="ruby-identifier">destroy</span>
+<span class="line-num">108</span> 
+<span class="line-num">109</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">110</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">edit_guide_url</span>(<span class="ruby-ivar">@guide_taxon</span>.<span class="ruby-identifier">guide_id</span>), <span class="ruby-value">notice:</span> <span class="ruby-string">&quot;Taxon removed&quot;</span> }
+<span class="line-num">111</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">head</span> <span class="ruby-value">:no_content</span> }
+<span class="line-num">112</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">113</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-edit">
+            
+              <b>edit</b>()
+            
+            <a href="../classes/GuideTaxaController.html#method-i-edit" name="method-i-edit" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>GET /guide_taxa/1/edit</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-edit_source')" id="l_method-i-edit_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-edit_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/guide_taxa_controller.rb</span>
+<span class="line-num">53</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">edit</span>
+<span class="line-num">54</span>   <span class="ruby-identifier">load_data_for_edit</span>
+<span class="line-num">55</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">56</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span>
+<span class="line-num">57</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">58</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-index">
+            
+              <b>index</b>()
+            
+            <a href="../classes/GuideTaxaController.html#method-i-index" name="method-i-index" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>GET /guide_taxa GET /guide_taxa.json</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-index_source')" id="l_method-i-index_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-index_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/guide_taxa_controller.rb</span>
+<span class="line-num">13</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">index</span>
+<span class="line-num">14</span>   <span class="ruby-ivar">@guide_taxa</span> = <span class="ruby-constant">GuideTaxon</span>.<span class="ruby-identifier">includes</span>(<span class="ruby-value">:guide_photos</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:photo</span>]).<span class="ruby-identifier">page</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>]).<span class="ruby-identifier">per_page</span>(<span class="ruby-value">200</span>)
+<span class="line-num">15</span>   <span class="ruby-ivar">@guide_taxa</span> = <span class="ruby-ivar">@guide_taxa</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:guide_id</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:guide_id</span>]) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:guide_id</span>].<span class="ruby-identifier">blank?</span>
+<span class="line-num">16</span> 
+<span class="line-num">17</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">18</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> <span class="ruby-comment"># index.html.erb</span>
+<span class="line-num">19</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> <span class="ruby-keyword">do</span>
+<span class="line-num">20</span>       <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> <span class="ruby-operator">=&gt;</span> {<span class="ruby-value">:guide_taxa</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-ivar">@guide_taxa</span>.<span class="ruby-identifier">as_json</span>(
+<span class="line-num">21</span>         <span class="ruby-value">:root</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">false</span>, 
+<span class="line-num">22</span>         <span class="ruby-value">:methods</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:guide_photo_ids</span>, <span class="ruby-value">:guide_section_ids</span>, <span class="ruby-value">:guide_range_ids</span>],
+<span class="line-num">23</span>         <span class="ruby-value">:include</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:guide_photos</span> <span class="ruby-operator">=&gt;</span> {<span class="ruby-value">:include</span> <span class="ruby-operator">=&gt;</span> [{<span class="ruby-value">:photo</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-constant">Photo</span>.<span class="ruby-identifier">default_json_options</span>}]}]
+<span class="line-num">24</span>       )}
+<span class="line-num">25</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">26</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">27</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-show">
+            
+              <b>show</b>()
+            
+            <a href="../classes/GuideTaxaController.html#method-i-show" name="method-i-show" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>GET /guide_taxa/1 GET /guide_taxa/1.json</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-show_source')" id="l_method-i-show_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-show_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/guide_taxa_controller.rb</span>
+<span class="line-num">31</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">show</span>
+<span class="line-num">32</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">33</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> <span class="ruby-keyword">do</span>
+<span class="line-num">34</span>       <span class="ruby-ivar">@taxon_links</span> = <span class="ruby-constant">TaxonLink</span>.<span class="ruby-identifier">by_taxon</span>(<span class="ruby-ivar">@guide_taxon</span>.<span class="ruby-identifier">taxon</span>)
+<span class="line-num">35</span>       <span class="ruby-ivar">@machine_tags</span> = <span class="ruby-ivar">@guide_taxon</span>.<span class="ruby-identifier">tag_list</span>.<span class="ruby-identifier">select</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">t</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/=/</span>}
+<span class="line-num">36</span>       <span class="ruby-ivar">@grouped_machine_tags</span> = <span class="ruby-ivar">@machine_tags</span>.<span class="ruby-identifier">inject</span>({}) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">memo</span>, <span class="ruby-identifier">tag</span><span class="ruby-operator">|</span>
+<span class="line-num">37</span>         <span class="ruby-identifier">predicate</span>, <span class="ruby-identifier">value</span> = <span class="ruby-identifier">tag</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;=&#39;</span>)
+<span class="line-num">38</span>         <span class="ruby-identifier">memo</span>[<span class="ruby-identifier">predicate</span>] <span class="ruby-operator">||=</span> []
+<span class="line-num">39</span>         <span class="ruby-identifier">memo</span>[<span class="ruby-identifier">predicate</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">value</span>
+<span class="line-num">40</span>         <span class="ruby-identifier">memo</span>[<span class="ruby-identifier">predicate</span>] = <span class="ruby-identifier">memo</span>[<span class="ruby-identifier">predicate</span>].<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">uniq</span>
+<span class="line-num">41</span>         <span class="ruby-identifier">memo</span>
+<span class="line-num">42</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">43</span>       <span class="ruby-ivar">@next</span> = <span class="ruby-ivar">@guide</span>.<span class="ruby-identifier">guide_taxa</span>.<span class="ruby-identifier">order</span>(<span class="ruby-string">&quot;position ASC, id ASC&quot;</span>).<span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;(position &gt; 0 AND position &gt; ?) OR id &gt; ?&quot;</span>, <span class="ruby-ivar">@guide_taxon</span>.<span class="ruby-identifier">position</span>, <span class="ruby-ivar">@guide_taxon</span>.<span class="ruby-identifier">id</span>).<span class="ruby-identifier">first</span>
+<span class="line-num">44</span>       <span class="ruby-ivar">@prev</span> = <span class="ruby-ivar">@guide</span>.<span class="ruby-identifier">guide_taxa</span>.<span class="ruby-identifier">order</span>(<span class="ruby-string">&quot;position ASC, id ASC&quot;</span>).<span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;(position &gt; 0 AND position &lt; ?) OR id &lt; ?&quot;</span>, <span class="ruby-ivar">@guide_taxon</span>.<span class="ruby-identifier">position</span>, <span class="ruby-ivar">@guide_taxon</span>.<span class="ruby-identifier">id</span>).<span class="ruby-identifier">last</span>
+<span class="line-num">45</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">46</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> <span class="ruby-ivar">@guide_taxon</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-value">:root</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">true</span>,
+<span class="line-num">47</span>       <span class="ruby-value">:methods</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:guide_photo_ids</span>, <span class="ruby-value">:guide_section_ids</span>, <span class="ruby-value">:guide_range_ids</span>]) }
+<span class="line-num">48</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>
+<span class="line-num">49</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">50</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-sync">
+            
+              <b>sync</b>()
+            
+            <a href="../classes/GuideTaxaController.html#method-i-sync" name="method-i-sync" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-sync_source')" id="l_method-i-sync_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-sync_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/guide_taxa_controller.rb</span>
+<span class="line-num">137</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">sync</span>
+<span class="line-num">138</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:provider</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&quot;eol&quot;</span>
+<span class="line-num">139</span>     <span class="ruby-ivar">@guide_taxon</span>.<span class="ruby-identifier">sync_eol</span>(<span class="ruby-value">:photos</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">:ranges</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">:sections</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">:overview</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">true</span>)
+<span class="line-num">140</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">141</span>     <span class="ruby-ivar">@guide_taxon</span>.<span class="ruby-identifier">sync_site_content</span>(<span class="ruby-value">:photos</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">:summary</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">:names</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">true</span>)
+<span class="line-num">142</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">143</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">144</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> <span class="ruby-keyword">do</span>
+<span class="line-num">145</span>       <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">edit_guide_taxon_path</span>(<span class="ruby-ivar">@guide_taxon</span>)
+<span class="line-num">146</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">147</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">148</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/GuideTaxaController.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>PUT /guide_taxa/1 PUT /guide_taxa/1.json</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/guide_taxa_controller.rb</span>
+<span class="line-num"> 89</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">update</span>
+<span class="line-num"> 90</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num"> 91</span>     <span class="ruby-keyword">if</span> <span class="ruby-ivar">@guide_taxon</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:guide_taxon</span>])
+<span class="line-num"> 92</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span> <span class="ruby-ivar">@guide_taxon</span>, <span class="ruby-value">notice:</span> <span class="ruby-string">&#39;Guide taxon was successfully updated.&#39;</span> }
+<span class="line-num"> 93</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-ivar">@guide_taxon</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-value">:root</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">:methods</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:html</span>]) }
+<span class="line-num"> 94</span>     <span class="ruby-keyword">else</span>
+<span class="line-num"> 95</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> <span class="ruby-keyword">do</span>
+<span class="line-num"> 96</span>         <span class="ruby-identifier">load_data_for_edit</span>
+<span class="line-num"> 97</span>         <span class="ruby-identifier">render</span> <span class="ruby-value">action:</span> <span class="ruby-string">&quot;edit&quot;</span>
+<span class="line-num"> 98</span>       <span class="ruby-keyword">end</span>
+<span class="line-num"> 99</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> <span class="ruby-ivar">@guide_taxon</span>.<span class="ruby-identifier">errors</span>.<span class="ruby-identifier">full_messages</span>, <span class="ruby-value">status:</span> <span class="ruby-value">:unprocessable_entity</span> }
+<span class="line-num">100</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">101</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">102</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-update_photos">
+            
+              <b>update_photos</b>()
+            
+            <a href="../classes/GuideTaxaController.html#method-i-update_photos" name="method-i-update_photos" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-update_photos_source')" id="l_method-i-update_photos_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-update_photos_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/guide_taxa_controller.rb</span>
+<span class="line-num">115</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">update_photos</span>
+<span class="line-num">116</span>     <span class="ruby-identifier">photos</span> = <span class="ruby-identifier">retrieve_photos</span>
+<span class="line-num">117</span>     <span class="ruby-identifier">errors</span> = <span class="ruby-identifier">photos</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span>
+<span class="line-num">118</span>       <span class="ruby-identifier">p</span>.<span class="ruby-identifier">valid?</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">errors</span>.<span class="ruby-identifier">full_messages</span>
+<span class="line-num">119</span>     <span class="ruby-keyword">end</span>.<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">compact</span>
+<span class="line-num">120</span>     <span class="ruby-ivar">@guide_taxon</span>.<span class="ruby-identifier">photos</span> = <span class="ruby-identifier">photos</span>
+<span class="line-num">121</span>     <span class="ruby-ivar">@guide_taxon</span>.<span class="ruby-identifier">save</span>
+<span class="line-num">122</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">123</span>       <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">&quot;Taxon photos updated!&quot;</span>
+<span class="line-num">124</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">125</span>       <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-node">&quot;Some of those photos couldn&#39;t be saved: #{errors.to_sentence.downcase}&quot;</span>
+<span class="line-num">126</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">127</span>     <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">edit_guide_taxon_path</span>(<span class="ruby-ivar">@guide_taxon</span>)
+<span class="line-num">128</span> <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ETIMEDOUT</span>
+<span class="line-num">129</span>   <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-string">&quot;Request timed out!&quot;</span>
+<span class="line-num">130</span>   <span class="ruby-identifier">redirect_back_or_default</span>(<span class="ruby-identifier">edit_guide_taxon_path</span>(<span class="ruby-ivar">@guide_taxon</span>))
+<span class="line-num">131</span> <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Koala</span><span class="ruby-operator">::</span><span class="ruby-constant">Facebook</span><span class="ruby-operator">::</span><span class="ruby-constant">APIError</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">e</span>
+<span class="line-num">132</span>   <span class="ruby-identifier">raise</span> <span class="ruby-identifier">e</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/OAuthException/</span>
+<span class="line-num">133</span>   <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-node">&quot;Facebook needs the owner of that photo to re-confirm their connection to #{@site.preferred_site_name_short}.&quot;</span>
+<span class="line-num">134</span>   <span class="ruby-identifier">redirect_back_or_default</span>(<span class="ruby-identifier">edit_guide_taxon_path</span>(<span class="ruby-ivar">@guide_taxon</span>))
+<span class="line-num">135</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

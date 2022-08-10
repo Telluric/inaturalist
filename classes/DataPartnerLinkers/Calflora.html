@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DataPartnerLinkers::Calflora</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../../">
+<meta name="data-tree-keys" content='["DataPartnerLinkers", "Calflora"]'>
+
+
+    <meta property="og:title" value="DataPartnerLinkers::Calflora">
+
+  
+
+    <meta name="keywords" content="DataPartnerLinkers::Calflora class, run, get_calflora_rows, partition_data, process_rows">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            DataPartnerLinkers::Calflora
+            
+                <span class="parent">&lt;
+                    
+                    <a href="DataPartnerLinker.html">DataPartnerLinkers::DataPartnerLinker</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../../files/lib/data_partner_linkers/calflora_rb.html">lib/data_partner_linkers/calflora.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-get_calflora_rows">get_calflora_rows</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-partition_data">partition_data</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-process_rows">process_rows</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-run">run</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <h2 class="sectiontitle">Constants</h2>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">MAX_DOWNLOAD_LINES</td>
+            <td>=</td>
+            <td class="attr-value">50000</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><p>This is the maximum number of lines <a href="Calflora.html"><code>Calflora</code></a> will return in a download. If we get a response this size or bigger, we need to partition the data requesting to get smaller responses so we don&#39;t miss anything</p></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-get_calflora_rows">
+            
+              <b>get_calflora_rows</b>( after = nil, before = nil )
+            
+            <a href="../../classes/DataPartnerLinkers/Calflora.html#method-i-get_calflora_rows" name="method-i-get_calflora_rows" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-get_calflora_rows_source')" id="l_method-i-get_calflora_rows_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-get_calflora_rows_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/data_partner_linkers/calflora.rb</span>
+<span class="line-num">38</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_calflora_rows</span>( <span class="ruby-identifier">after</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">before</span> = <span class="ruby-keyword">nil</span> )
+<span class="line-num">39</span>   <span class="ruby-identifier">params</span> = {
+<span class="line-num">40</span>     <span class="ruby-value">format:</span> <span class="ruby-string">&quot;Bar&quot;</span>,
+<span class="line-num">41</span>     <span class="ruby-value">cols:</span> <span class="ruby-string">&quot;ID,Source&quot;</span>,
+<span class="line-num">42</span>     <span class="ruby-value">org:</span> <span class="ruby-string">&quot;iNaturalist&quot;</span>,
+<span class="line-num">43</span>     <span class="ruby-value">dateAfter:</span> <span class="ruby-identifier">after</span>.<span class="ruby-identifier">to_s</span>,
+<span class="line-num">44</span>     <span class="ruby-value">dateBefore:</span> <span class="ruby-identifier">before</span>.<span class="ruby-identifier">to_s</span>,
+<span class="line-num">45</span>     <span class="ruby-value">wint:</span> <span class="ruby-string">&quot;r&quot;</span>
+<span class="line-num">46</span>   }
+<span class="line-num">47</span>   <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;Getting Calflora iNat obs after #{after} and before #{before}&quot;</span>
+<span class="line-num">48</span>   <span class="ruby-identifier">resp</span> = <span class="ruby-constant">RestClient</span>.<span class="ruby-identifier">get</span>( <span class="ruby-string">&quot;https://www.calflora.org/app/download&quot;</span>, <span class="ruby-value">params:</span> <span class="ruby-identifier">params</span> )
+<span class="line-num">49</span>   <span class="ruby-keyword">return</span> [] <span class="ruby-keyword">if</span> <span class="ruby-identifier">resp</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">50</span>   <span class="ruby-identifier">resp</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">split</span>( <span class="ruby-regexp">/\r?\n/</span> )[<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">-1</span>].<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span> <span class="ruby-identifier">row</span>.<span class="ruby-identifier">split</span>( <span class="ruby-string">&quot;|&quot;</span> ) }
+<span class="line-num">51</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-partition_data">
+            
+              <b>partition_data</b>(after = Date.parse(&quot;1900-01-01&quot;), before=Date.today)
+            
+            <a href="../../classes/DataPartnerLinkers/Calflora.html#method-i-partition_data" name="method-i-partition_data" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-partition_data_source')" id="l_method-i-partition_data_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-partition_data_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/data_partner_linkers/calflora.rb</span>
+<span class="line-num">53</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">partition_data</span>(<span class="ruby-identifier">after</span> = <span class="ruby-constant">Date</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-string">&quot;1900-01-01&quot;</span>), <span class="ruby-identifier">before</span>=<span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span>)
+<span class="line-num">54</span>   <span class="ruby-identifier">rows</span> = <span class="ruby-identifier">get_calflora_rows</span>( <span class="ruby-identifier">after</span>, <span class="ruby-identifier">before</span> )
+<span class="line-num">55</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">rows</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-constant">MAX_DOWNLOAD_LINES</span>
+<span class="line-num">56</span>     <span class="ruby-identifier">split</span> = <span class="ruby-identifier">before</span> <span class="ruby-operator">-</span> ( ( <span class="ruby-identifier">before</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">after</span> ) <span class="ruby-operator">/</span> <span class="ruby-value">2</span> )
+<span class="line-num">57</span>     <span class="ruby-identifier">partition_data</span>( <span class="ruby-identifier">after</span>, <span class="ruby-identifier">split</span> )
+<span class="line-num">58</span>     <span class="ruby-identifier">partition_data</span>( <span class="ruby-identifier">split</span>, <span class="ruby-identifier">before</span> )
+<span class="line-num">59</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">60</span>     <span class="ruby-identifier">process_rows</span>( <span class="ruby-identifier">rows</span> )
+<span class="line-num">61</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">62</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-process_rows">
+            
+              <b>process_rows</b>( rows )
+            
+            <a href="../../classes/DataPartnerLinkers/Calflora.html#method-i-process_rows" name="method-i-process_rows" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-process_rows_source')" id="l_method-i-process_rows_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-process_rows_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/data_partner_linkers/calflora.rb</span>
+<span class="line-num"> 64</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">process_rows</span>( <span class="ruby-identifier">rows</span> )
+<span class="line-num"> 65</span>   <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;Processing #{rows.size} rows&quot;</span>
+<span class="line-num"> 66</span>   <span class="ruby-identifier">per_page</span> = <span class="ruby-value">300</span>
+<span class="line-num"> 67</span>   <span class="ruby-identifier">rows</span>.<span class="ruby-identifier">in_groups_of</span>( <span class="ruby-identifier">per_page</span> ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">grp</span><span class="ruby-operator">|</span>
+<span class="line-num"> 68</span>     <span class="ruby-identifier">pairs</span> = <span class="ruby-identifier">grp</span>.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span>
+<span class="line-num"> 69</span>       <span class="ruby-identifier">calflora_id</span>, <span class="ruby-identifier">source</span> = <span class="ruby-identifier">row</span>
+<span class="line-num"> 70</span>       <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">calflora_id</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num"> 71</span>       <span class="ruby-identifier">observation_id</span> = <span class="ruby-identifier">calflora_id</span>[<span class="ruby-regexp">/in:(.+)/</span>, <span class="ruby-value">1</span>]
+<span class="line-num"> 72</span>       <span class="ruby-keyword">if</span> <span class="ruby-identifier">observation_id</span>.<span class="ruby-identifier">blank?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">source</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num"> 73</span>         <span class="ruby-identifier">observation_id</span> = <span class="ruby-identifier">source</span>[<span class="ruby-regexp">/inaturalist\.org\/observations\/([^\/\?]+)/</span>, <span class="ruby-value">1</span>]
+<span class="line-num"> 74</span>       <span class="ruby-keyword">end</span>
+<span class="line-num"> 75</span>       [<span class="ruby-identifier">calflora_id</span>, <span class="ruby-identifier">observation_id</span>]
+<span class="line-num"> 76</span>     <span class="ruby-keyword">end</span>
+<span class="line-num"> 77</span>     <span class="ruby-identifier">obs_ids</span> = <span class="ruby-identifier">pairs</span>.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:last</span>).<span class="ruby-identifier">compact</span>
+<span class="line-num"> 78</span>     <span class="ruby-identifier">observations</span> = <span class="ruby-constant">Observation</span>.<span class="ruby-identifier">page_of_results</span>( <span class="ruby-value">id:</span> <span class="ruby-identifier">obs_ids</span>, <span class="ruby-value">per_page:</span> <span class="ruby-identifier">per_page</span> ).<span class="ruby-identifier">index_by</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:id</span>)
+<span class="line-num"> 79</span>     <span class="ruby-identifier">observation_links</span> = <span class="ruby-constant">ObservationLink</span>.<span class="ruby-identifier">where</span>( <span class="ruby-value">observation_id:</span> <span class="ruby-identifier">obs_ids</span> ).<span class="ruby-identifier">group_by</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:observation_id</span>)
+<span class="line-num"> 80</span>     <span class="ruby-identifier">pairs</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">calflora_id</span>, <span class="ruby-identifier">observation_id</span><span class="ruby-operator">|</span>
+<span class="line-num"> 81</span>       <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">calflora_id</span>
+<span class="line-num"> 82</span>       <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span> <span class="ruby-identifier">calflora_id</span>
+<span class="line-num"> 83</span>       <span class="ruby-identifier">observation</span> = <span class="ruby-identifier">observations</span>[<span class="ruby-identifier">observation_id</span>.<span class="ruby-identifier">to_i</span>]
+<span class="line-num"> 84</span>       <span class="ruby-keyword">if</span> <span class="ruby-identifier">observation</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num"> 85</span>         <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span> <span class="ruby-node">&quot;\tobservation #{observation_id} doesn&#39;t exist, skipping...&quot;</span>
+<span class="line-num"> 86</span>         <span class="ruby-keyword">next</span>
+<span class="line-num"> 87</span>       <span class="ruby-keyword">end</span>
+<span class="line-num"> 88</span>       <span class="ruby-identifier">href</span> = <span class="ruby-node">&quot;http://www.calflora.org/cgi-bin/noccdetail.cgi?seq_num=#{calflora_id}&quot;</span>
+<span class="line-num"> 89</span>       <span class="ruby-identifier">existing</span> = ( <span class="ruby-identifier">observation_links</span>[<span class="ruby-identifier">observation_id</span>.<span class="ruby-identifier">to_i</span>] <span class="ruby-operator">||</span> [] ).<span class="ruby-identifier">detect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">ol</span><span class="ruby-operator">|</span> <span class="ruby-identifier">ol</span>.<span class="ruby-identifier">href</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">href</span>}
+<span class="line-num"> 90</span>       <span class="ruby-keyword">if</span> <span class="ruby-identifier">existing</span>
+<span class="line-num"> 91</span>         <span class="ruby-identifier">existing</span>.<span class="ruby-identifier">touch</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@opts</span>[<span class="ruby-value">:debug</span>]
+<span class="line-num"> 92</span>         <span class="ruby-ivar">@old_count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+<span class="line-num"> 93</span>         <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span> <span class="ruby-string">&quot;\tobservation link already exists, skipping&quot;</span>
+<span class="line-num"> 94</span>       <span class="ruby-keyword">else</span>
+<span class="line-num"> 95</span>         <span class="ruby-identifier">ol</span> = <span class="ruby-constant">ObservationLink</span>.<span class="ruby-identifier">new</span>(
+<span class="line-num"> 96</span>           <span class="ruby-value">observation:</span> <span class="ruby-identifier">observation</span>,
+<span class="line-num"> 97</span>           <span class="ruby-value">href:</span> <span class="ruby-identifier">href</span>,
+<span class="line-num"> 98</span>           <span class="ruby-value">href_name:</span> <span class="ruby-ivar">@data_partner</span>.<span class="ruby-identifier">name</span>,
+<span class="line-num"> 99</span>           <span class="ruby-value">rel:</span> <span class="ruby-string">&quot;alternate&quot;</span>
+<span class="line-num">100</span>         )
+<span class="line-num">101</span>         <span class="ruby-keyword">unless</span> <span class="ruby-identifier">ol</span>.<span class="ruby-identifier">valid?</span>
+<span class="line-num">102</span>           <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;#{ol} not valid: #{ol.errors.full_messages.to_sentence}&quot;</span>
+<span class="line-num">103</span>         <span class="ruby-keyword">end</span>
+<span class="line-num">104</span>         <span class="ruby-identifier">ol</span>.<span class="ruby-identifier">save</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@opts</span>[<span class="ruby-value">:debug</span>]
+<span class="line-num">105</span>         <span class="ruby-ivar">@new_count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+<span class="line-num">106</span>         <span class="ruby-ivar">@obs_ids_to_index</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">observation</span>.<span class="ruby-identifier">id</span>
+<span class="line-num">107</span>         <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span> <span class="ruby-node">&quot;\tCreated #{ol}&quot;</span>
+<span class="line-num">108</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">109</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">110</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">111</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-run">
+            
+              <b>run</b>()
+            
+            <a href="../../classes/DataPartnerLinkers/Calflora.html#method-i-run" name="method-i-run" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-run_source')" id="l_method-i-run_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-run_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/data_partner_linkers/calflora.rb</span>
+<span class="line-num"> 9</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">run</span>
+<span class="line-num">10</span>   <span class="ruby-ivar">@obs_ids_to_index</span> = []
+<span class="line-num">11</span>   <span class="ruby-ivar">@new_count</span> = <span class="ruby-value">0</span>
+<span class="line-num">12</span>   <span class="ruby-ivar">@old_count</span> = <span class="ruby-value">0</span>
+<span class="line-num">13</span>   <span class="ruby-identifier">start_time</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+<span class="line-num">14</span>   <span class="ruby-identifier">partition_data</span>  
+<span class="line-num">15</span>   <span class="ruby-identifier">links_to_delete_scope</span> = <span class="ruby-constant">ObservationLink</span>.<span class="ruby-identifier">where</span>( <span class="ruby-string">&quot;href_name = ? AND updated_at &lt; ?&quot;</span>, <span class="ruby-ivar">@data_partner</span>.<span class="ruby-identifier">name</span>, <span class="ruby-identifier">start_time</span> )
+<span class="line-num">16</span>   <span class="ruby-identifier">delete_count</span> = <span class="ruby-identifier">links_to_delete_scope</span>.<span class="ruby-identifier">count</span>
+<span class="line-num">17</span>   <span class="ruby-ivar">@obs_ids_to_index</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">links_to_delete_scope</span>.<span class="ruby-identifier">pluck</span>(<span class="ruby-value">:observation_id</span>)
+<span class="line-num">18</span>   <span class="ruby-ivar">@obs_ids_to_index</span> = <span class="ruby-ivar">@obs_ids_to_index</span>.<span class="ruby-identifier">uniq</span>.<span class="ruby-identifier">compact</span>
+<span class="line-num">19</span>   <span class="ruby-comment"># TODO extract link deletion into a parent class method, b/c all linkers need to do this</span>
+<span class="line-num">20</span>   <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;Deleting #{delete_count} links...&quot;</span>
+<span class="line-num">21</span>   <span class="ruby-identifier">links_to_delete_scope</span>.<span class="ruby-identifier">delete_all</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@opts</span>[<span class="ruby-value">:debug</span>]
+<span class="line-num">22</span>   <span class="ruby-comment"># TODO extract obs indexing so a) each linker doesn&#39;t have to do this, and</span>
+<span class="line-num">23</span>   <span class="ruby-comment"># b) we can minimize the obs we need to index when syncing links for</span>
+<span class="line-num">24</span>   <span class="ruby-comment"># multiple linkers</span>
+<span class="line-num">25</span>   <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;Re-indexing #{@obs_ids_to_index.size} observations...&quot;</span>
+<span class="line-num">26</span>   <span class="ruby-identifier">obs_ids_to_index_groups</span> = <span class="ruby-ivar">@obs_ids_to_index</span>.<span class="ruby-identifier">in_groups_of</span>( <span class="ruby-value">500</span> )
+<span class="line-num">27</span>   <span class="ruby-identifier">obs_ids_to_index_groups</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">group</span>,<span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+<span class="line-num">28</span>     <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;Indexing obs group #{i} / #{obs_ids_to_index_groups.size}&quot;</span>
+<span class="line-num">29</span>     <span class="ruby-constant">Observation</span>.<span class="ruby-identifier">elastic_index!</span>( <span class="ruby-value">ids:</span> <span class="ruby-identifier">group</span>.<span class="ruby-identifier">compact</span> )
+<span class="line-num">30</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">31</span>   <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-string">&quot;&quot;</span>
+<span class="line-num">32</span>   <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;#{self.class.name} created #{@new_count} new links, &quot;</span> <span class="ruby-operator">+</span>
+<span class="line-num">33</span>     <span class="ruby-node">&quot;#{@old_count} existing, #{delete_count} deleted, &quot;</span> <span class="ruby-operator">+</span>
+<span class="line-num">34</span>     <span class="ruby-node">&quot;#{@obs_ids_to_index.size} obs reindexed in #{Time.now - start_time}s&quot;</span>
+<span class="line-num">35</span>   <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-string">&quot;&quot;</span>
+<span class="line-num">36</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

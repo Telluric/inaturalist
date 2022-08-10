@@ -1,0 +1,1783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ApplicationController</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["ApplicationController"]'>
+
+
+    <meta property="og:title" value="ApplicationController">
+
+  
+    
+    <meta name="description" content="Filters added to this controller will be run for all controllers in the application. Likewise, all the methods added will be available for all controllers.">
+    <meta property="og:description" content="Filters added to this controller will be run for all controllers in the application. Likewise, all the methods added will be available for all controllers.">
+  
+
+    <meta name="keywords" content="ApplicationController class, set_locale, ping, load_registration_form_data, get_flickraw, photo_identities_required, curator_required, current_user, set_time_zone, logstash_catchall, enable_replica, return_here_from_url, preload_user_preferences, user_logging, user_request_logging, check_user_last_active, render_404, redirect_to_hell, cache, load_user_by_login, load_record, require_owner, require_guide_user, limit_page_param_for_search, current_preferences, log_timer, require_admin_or_trusted_project_manager_for, limited_per_page, json_request?">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            ApplicationController
+            
+                <span class="parent">&lt;
+                    
+                    <a href="ActionController/Base.html">ActionController::Base</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/app/controllers/application_controller_rb.html">app/controllers/application_controller.rb</a></li>
+            
+            <li><a href="../files/app/models/user_rb.html">app/models/user.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>Filters added to this controller will be run for all controllers in the application. Likewise, all the methods added will be available for all controllers.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-cache">cache</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-check_user_last_active">check_user_last_active</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-curator_required">curator_required</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-current_preferences">current_preferences</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-current_user">current_user</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-enable_replica">enable_replica</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-get_flickraw">get_flickraw</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>J</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-json_request-3F">json_request?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-limit_page_param_for_search">limit_page_param_for_search</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-limited_per_page">limited_per_page</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-load_record">load_record</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-load_registration_form_data">load_registration_form_data</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-load_user_by_login">load_user_by_login</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-log_timer">log_timer</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-logstash_catchall">logstash_catchall</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-photo_identities_required">photo_identities_required</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-ping">ping</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-preload_user_preferences">preload_user_preferences</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-redirect_to_hell">redirect_to_hell</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-render_404">render_404</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-require_admin_or_trusted_project_manager_for">require_admin_or_trusted_project_manager_for</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-require_guide_user">require_guide_user</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-require_owner">require_owner</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-return_here_from_url">return_here_from_url</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-set_locale">set_locale</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_time_zone">set_time_zone</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-user_logging">user_logging</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-user_request_logging">user_request_logging</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="Ambidextrous.html">
+              Ambidextrous
+            </a>
+          
+        </li>
+      
+        <li>
+          
+            <a href="Shared/FiltersModule.html">
+              Shared::FiltersModule
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <h2 class="sectiontitle">Constants</h2>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">HEADER_VERSION</td>
+            <td>=</td>
+            <td class="attr-value">21</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">PER_PAGES</td>
+            <td>=</td>
+            <td class="attr-value">[10,30,50,100,200]</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-ping">
+            
+              <b>ping</b>()
+            
+            <a href="../classes/ApplicationController.html#method-i-ping" name="method-i-ping" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-ping_source')" id="l_method-i-ping_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-ping_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/application_controller.rb</span>
+<span class="line-num">54</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">ping</span>
+<span class="line-num">55</span>   <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> { <span class="ruby-value">status:</span> <span class="ruby-string">&quot;available&quot;</span> }
+<span class="line-num">56</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-set_locale">
+            
+              <b>set_locale</b>()
+            
+            <a href="../classes/ApplicationController.html#method-i-set_locale" name="method-i-set_locale" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>set the locale for the current session. If the user is logged in, also update their preferred locale in the DB</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-set_locale_source')" id="l_method-i-set_locale_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-set_locale_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/application_controller.rb</span>
+<span class="line-num">44</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">set_locale</span>
+<span class="line-num">45</span>   <span class="ruby-keyword">if</span> <span class="ruby-constant">I18N_SUPPORTED_LOCALES</span>.<span class="ruby-identifier">include?</span>( <span class="ruby-identifier">params</span>[<span class="ruby-value">:locale</span>] )
+<span class="line-num">46</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">logged_in?</span>
+<span class="line-num">47</span>       <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">update_attribute</span>(<span class="ruby-value">:locale</span>, <span class="ruby-identifier">params</span>[<span class="ruby-value">:locale</span>])
+<span class="line-num">48</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">49</span>     <span class="ruby-identifier">session</span>[<span class="ruby-value">:locale</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:locale</span>]
+<span class="line-num">50</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">51</span>   <span class="ruby-identifier">redirect_back_or_default</span>( <span class="ruby-identifier">root_url</span> )
+<span class="line-num">52</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+      <h2 class="sectiontitle">Instance Protected methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-cache">
+            
+              <b>cache</b>(time = 1.hour)
+            
+            <a href="../classes/ApplicationController.html#method-i-cache" name="method-i-cache" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Caching common place to put caching related code for simplier tuning</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-cache_source')" id="l_method-i-cache_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-cache_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/application_controller.rb</span>
+<span class="line-num">370</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">cache</span>(<span class="ruby-identifier">time</span> = <span class="ruby-value">1</span>.<span class="ruby-identifier">hour</span>)
+<span class="line-num">371</span>   <span class="ruby-identifier">expires_in</span>(<span class="ruby-identifier">time</span>)
+<span class="line-num">372</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-check_user_last_active">
+            
+              <b>check_user_last_active</b>()
+            
+            <a href="../classes/ApplicationController.html#method-i-check_user_last_active" name="method-i-check_user_last_active" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-check_user_last_active_source')" id="l_method-i-check_user_last_active_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-check_user_last_active_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/application_controller.rb</span>
+<span class="line-num">332</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">check_user_last_active</span>
+<span class="line-num">333</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">current_user</span>
+<span class="line-num">334</span>     <span class="ruby-comment"># there is a current_user, so that user is active</span>
+<span class="line-num">335</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">last_active</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">last_active</span> <span class="ruby-operator">!=</span> <span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span>
+<span class="line-num">336</span>       <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">last_active</span> = <span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span>
+<span class="line-num">337</span>       <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">last_ip</span> = <span class="ruby-constant">Logstasher</span>.<span class="ruby-identifier">ip_from_request_env</span>( <span class="ruby-identifier">request</span>.<span class="ruby-identifier">env</span> )
+<span class="line-num">338</span>       <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">save</span>
+<span class="line-num">339</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">340</span>     <span class="ruby-comment"># since they are active, unsuspend any stopped subscriptions</span>
+<span class="line-num">341</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">subscriptions_suspended_at</span>
+<span class="line-num">342</span>       <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">update_column</span>(<span class="ruby-value">:subscriptions_suspended_at</span>, <span class="ruby-keyword">nil</span>)
+<span class="line-num">343</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">344</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">345</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-curator_required">
+            
+              <b>curator_required</b>()
+            
+            <a href="../classes/ApplicationController.html#method-i-curator_required" name="method-i-curator_required" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Filter method to require a curator for certain actions.</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-curator_required_source')" id="l_method-i-curator_required_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-curator_required_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/application_controller.rb</span>
+<span class="line-num">242</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">curator_required</span>
+<span class="line-num">243</span>   <span class="ruby-keyword">unless</span> <span class="ruby-identifier">logged_in?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">is_curator?</span>
+<span class="line-num">244</span>     <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-identifier">t</span>(<span class="ruby-value">:only_curators_can_access_that_page</span>)
+<span class="line-num">245</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">session</span>[<span class="ruby-value">:return_to</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">fullpath</span>
+<span class="line-num">246</span>       <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">root_url</span>
+<span class="line-num">247</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">248</span>       <span class="ruby-identifier">redirect_back_or_default</span>(<span class="ruby-identifier">root_url</span>)
+<span class="line-num">249</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">250</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">251</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-current_preferences">
+            
+              <b>current_preferences</b>(update_params = nil)
+            
+            <a href="../classes/ApplicationController.html#method-i-current_preferences" name="method-i-current_preferences" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Get <a href="ApplicationController.html#method-i-current_user"><code>current_user</code></a>&#39;s preferences, prefs in the session, or stash new prefs in the session</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-current_preferences_source')" id="l_method-i-current_preferences_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-current_preferences_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/application_controller.rb</span>
+<span class="line-num">444</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">current_preferences</span>(<span class="ruby-identifier">update_params</span> = <span class="ruby-keyword">nil</span>)
+<span class="line-num">445</span>   <span class="ruby-identifier">update_params</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:preferences</span>]
+<span class="line-num">446</span>   <span class="ruby-identifier">prefs</span> = <span class="ruby-keyword">if</span> <span class="ruby-identifier">logged_in?</span>
+<span class="line-num">447</span>     <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">preferences</span>
+<span class="line-num">448</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">449</span>     <span class="ruby-identifier">session</span>[<span class="ruby-value">:preferences</span>] <span class="ruby-operator">||=</span> <span class="ruby-constant">User</span>.<span class="ruby-identifier">preference_definitions</span>.<span class="ruby-identifier">inject</span>({}) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">memo</span>, <span class="ruby-identifier">pair</span><span class="ruby-operator">|</span>
+<span class="line-num">450</span>       <span class="ruby-identifier">name</span>, <span class="ruby-identifier">pref</span> = <span class="ruby-identifier">pair</span>
+<span class="line-num">451</span>       <span class="ruby-identifier">memo</span>[<span class="ruby-identifier">name</span>] = <span class="ruby-identifier">pref</span>.<span class="ruby-identifier">default_value</span>
+<span class="line-num">452</span>       <span class="ruby-identifier">memo</span>
+<span class="line-num">453</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">454</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">455</span>   
+<span class="line-num">456</span>   <span class="ruby-identifier">update_params</span> = <span class="ruby-identifier">update_params</span>.<span class="ruby-identifier">to_h</span>.<span class="ruby-identifier">reject</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">blank?</span>} <span class="ruby-keyword">if</span> <span class="ruby-identifier">update_params</span>
+<span class="line-num">457</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">update_params</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">update_params</span>.<span class="ruby-identifier">empty?</span>
+<span class="line-num">458</span>     <span class="ruby-comment"># prefs.update(update_params)</span>
+<span class="line-num">459</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">logged_in?</span>
+<span class="line-num">460</span>       <span class="ruby-identifier">update_params</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+<span class="line-num">461</span>         <span class="ruby-identifier">new_value</span> = <span class="ruby-keyword">if</span> <span class="ruby-identifier">v</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;true&quot;</span>
+<span class="line-num">462</span>           <span class="ruby-keyword">true</span>
+<span class="line-num">463</span>         <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">v</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;false&quot;</span>
+<span class="line-num">464</span>           <span class="ruby-keyword">false</span>
+<span class="line-num">465</span>         <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+<span class="line-num">466</span>           <span class="ruby-identifier">v</span>.<span class="ruby-identifier">to_i</span>
+<span class="line-num">467</span>         <span class="ruby-keyword">else</span>
+<span class="line-num">468</span>           <span class="ruby-identifier">v</span>
+<span class="line-num">469</span>         <span class="ruby-keyword">end</span>
+<span class="line-num">470</span>         <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">write_preference</span>(<span class="ruby-identifier">k</span>, <span class="ruby-identifier">new_value</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">new_value</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">471</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">472</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">473</span>       <span class="ruby-identifier">prefs</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">update_params</span>)
+<span class="line-num">474</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">475</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">476</span>   
+<span class="line-num">477</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">logged_in?</span>
+<span class="line-num">478</span>     <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">save</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">preferences_changed?</span>
+<span class="line-num">479</span>     <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">preferences</span>
+<span class="line-num">480</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">481</span>     <span class="ruby-identifier">session</span>[<span class="ruby-value">:preferences</span>] = <span class="ruby-identifier">prefs</span>
+<span class="line-num">482</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">483</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-current_user">
+            
+              <b>current_user</b>()
+            
+            <a href="../classes/ApplicationController.html#method-i-current_user" name="method-i-current_user" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Override <a href="Devise.html"><code>Devise</code></a> implementation so we can set this for oauth2 / doorkeeper requests</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-current_user_source')" id="l_method-i-current_user_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-current_user_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/application_controller.rb</span>
+<span class="line-num">254</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">current_user</span>
+<span class="line-num">255</span>   <span class="ruby-identifier">cu</span> = <span class="ruby-keyword">super</span>
+<span class="line-num">256</span>   <span class="ruby-keyword">return</span> <span class="ruby-identifier">cu</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">cu</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">257</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">doorkeeper_token</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">doorkeeper_token</span>.<span class="ruby-identifier">accessible?</span>
+<span class="line-num">258</span>   <span class="ruby-ivar">@current_user</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">doorkeeper_token</span>.<span class="ruby-identifier">resource_owner_id</span>)
+<span class="line-num">259</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-enable_replica">
+            
+              <b>enable_replica</b>()
+            
+            <a href="../classes/ApplicationController.html#method-i-enable_replica" name="method-i-enable_replica" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>if Makara is configured with replica DBs, querying of replicas is currently disabled by default. Actions must use this in a `prepend_around_action` to have any queries run against the replicas. e.g.</p>
+
+<pre><code>prepend_around_action :enable_replica
+</code></pre>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-enable_replica_source')" id="l_method-i-enable_replica_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-enable_replica_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/application_controller.rb</span>
+<span class="line-num">301</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">enable_replica</span>
+<span class="line-num">302</span>   <span class="ruby-keyword">begin</span>
+<span class="line-num">303</span>     <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">enable_replica</span>
+<span class="line-num">304</span>     <span class="ruby-keyword">yield</span>
+<span class="line-num">305</span>   <span class="ruby-keyword">ensure</span>
+<span class="line-num">306</span>     <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">disable_replica</span>
+<span class="line-num">307</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">308</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-get_flickraw">
+            
+              <b>get_flickraw</b>()
+            
+            <a href="../classes/ApplicationController.html#method-i-get_flickraw" name="method-i-get_flickraw" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-get_flickraw_source')" id="l_method-i-get_flickraw_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-get_flickraw_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/application_controller.rb</span>
+<span class="line-num">230</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_flickraw</span>
+<span class="line-num">231</span>   <span class="ruby-identifier">current_user</span> <span class="ruby-operator">?</span> <span class="ruby-constant">FlickrPhoto</span>.<span class="ruby-identifier">flickraw_for_user</span>(<span class="ruby-identifier">current_user</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">flickr</span>
+<span class="line-num">232</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-json_request-3F">
+            
+              <b>json_request?</b>()
+            
+            <a href="../classes/ApplicationController.html#method-i-json_request-3F" name="method-i-json_request-3F" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-json_request-3F_source')" id="l_method-i-json_request-3F_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-json_request-3F_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/application_controller.rb</span>
+<span class="line-num">524</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">json_request?</span>
+<span class="line-num">525</span>   <span class="ruby-identifier">request</span>.<span class="ruby-identifier">format</span>.<span class="ruby-identifier">json?</span>
+<span class="line-num">526</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-limit_page_param_for_search">
+            
+              <b>limit_page_param_for_search</b>()
+            
+            <a href="../classes/ApplicationController.html#method-i-limit_page_param_for_search" name="method-i-limit_page_param_for_search" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Formerly used to address that ThinkingSphinx returns a maximum of 50 pages. Now kept to keep the logic the same</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-limit_page_param_for_search_source')" id="l_method-i-limit_page_param_for_search_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-limit_page_param_for_search_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/application_controller.rb</span>
+<span class="line-num">436</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">limit_page_param_for_search</span>
+<span class="line-num">437</span>   <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>].<span class="ruby-identifier">blank?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">50</span>
+<span class="line-num">438</span>     <span class="ruby-identifier">render_404</span>
+<span class="line-num">439</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">440</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-limited_per_page">
+            
+              <b>limited_per_page</b>()
+            
+            <a href="../classes/ApplicationController.html#method-i-limited_per_page" name="method-i-limited_per_page" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-limited_per_page_source')" id="l_method-i-limited_per_page_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-limited_per_page_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/application_controller.rb</span>
+<span class="line-num">513</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">limited_per_page</span>
+<span class="line-num">514</span>   <span class="ruby-identifier">requested_per_page</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:per_page</span>].<span class="ruby-identifier">to_i</span>
+<span class="line-num">515</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">requested_per_page</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">200</span>
+<span class="line-num">516</span>     <span class="ruby-value">200</span>
+<span class="line-num">517</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">requested_per_page</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0</span>
+<span class="line-num">518</span>     <span class="ruby-value">30</span>
+<span class="line-num">519</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">520</span>     <span class="ruby-identifier">requested_per_page</span>
+<span class="line-num">521</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">522</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-load_record">
+            
+              <b>load_record</b>(options = {})
+            
+            <a href="../classes/ApplicationController.html#method-i-load_record" name="method-i-load_record" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-load_record_source')" id="l_method-i-load_record_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-load_record_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/application_controller.rb</span>
+<span class="line-num">381</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">load_record</span>(<span class="ruby-identifier">options</span> = {})
+<span class="line-num">382</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:klass</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Class</span>)
+<span class="line-num">383</span>     <span class="ruby-identifier">klass</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:klass</span>]
+<span class="line-num">384</span>     <span class="ruby-identifier">class_name</span> = <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;::&#39;</span>).<span class="ruby-identifier">last</span>
+<span class="line-num">385</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">386</span>     <span class="ruby-identifier">class_name</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:klass</span>) <span class="ruby-operator">||</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">underscore</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;_&#39;</span>)[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">-2</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;_&#39;</span>).<span class="ruby-identifier">singularize</span>
+<span class="line-num">387</span>     <span class="ruby-identifier">class_name</span> = <span class="ruby-identifier">class_name</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">underscore</span>.<span class="ruby-identifier">camelcase</span>
+<span class="line-num">388</span>     <span class="ruby-identifier">klass</span> = <span class="ruby-constant">Object</span>.<span class="ruby-identifier">const_get</span>(<span class="ruby-identifier">class_name</span>)
+<span class="line-num">389</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">390</span>   <span class="ruby-identifier">record_id</span> = <span class="ruby-identifier">params</span>[<span class="ruby-identifier">options</span>[<span class="ruby-value">:param</span>]] <span class="ruby-operator">||</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">params</span>[<span class="ruby-node">&quot;#{class_name}_id&quot;</span>]
+<span class="line-num">391</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:find_by_uuid</span>)
+<span class="line-num">392</span>     <span class="ruby-identifier">record</span> = <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">find_by_uuid</span>( <span class="ruby-identifier">record_id</span> )
+<span class="line-num">393</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">394</span>   <span class="ruby-identifier">record</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">find</span>( <span class="ruby-identifier">record_id</span> ) <span class="ruby-keyword">rescue</span> <span class="ruby-keyword">nil</span>
+<span class="line-num">395</span>   <span class="ruby-identifier">instance_variable_set</span> <span class="ruby-node">&quot;@#{class_name.underscore}&quot;</span>, <span class="ruby-identifier">record</span>
+<span class="line-num">396</span>   <span class="ruby-keyword">return</span> <span class="ruby-identifier">render_404</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">record</span>
+<span class="line-num">397</span> 
+<span class="line-num">398</span>   <span class="ruby-identifier">record</span>
+<span class="line-num">399</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-load_registration_form_data">
+            
+              <b>load_registration_form_data</b>()
+            
+            <a href="../classes/ApplicationController.html#method-i-load_registration_form_data" name="method-i-load_registration_form_data" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-load_registration_form_data_source')" id="l_method-i-load_registration_form_data_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-load_registration_form_data_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/application_controller.rb</span>
+<span class="line-num">223</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">load_registration_form_data</span>
+<span class="line-num">224</span>   <span class="ruby-ivar">@footless</span> = <span class="ruby-keyword">true</span>
+<span class="line-num">225</span>   <span class="ruby-ivar">@no_footer_gap</span> = <span class="ruby-keyword">true</span>
+<span class="line-num">226</span>   <span class="ruby-ivar">@responsive</span> = <span class="ruby-keyword">true</span>
+<span class="line-num">227</span>   <span class="ruby-ivar">@observations</span> = <span class="ruby-ivar">@site</span>.<span class="ruby-identifier">login_featured_observations</span>
+<span class="line-num">228</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-load_user_by_login">
+            
+              <b>load_user_by_login</b>()
+            
+            <a href="../classes/ApplicationController.html#method-i-load_user_by_login" name="method-i-load_user_by_login" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-load_user_by_login_source')" id="l_method-i-load_user_by_login_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-load_user_by_login_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/application_controller.rb</span>
+<span class="line-num">374</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">load_user_by_login</span>
+<span class="line-num">375</span>   <span class="ruby-ivar">@login</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:login</span>].<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">downcase</span>
+<span class="line-num">376</span>   <span class="ruby-ivar">@selected_user</span> =  <span class="ruby-ivar">@login</span>.<span class="ruby-identifier">blank?</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">:</span>
+<span class="line-num">377</span>     <span class="ruby-constant">User</span>.<span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;lower(login) = ?&quot;</span>, <span class="ruby-ivar">@login</span>).<span class="ruby-identifier">take</span>
+<span class="line-num">378</span>   <span class="ruby-keyword">return</span> <span class="ruby-identifier">render_404</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@selected_user</span>
+<span class="line-num">379</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-log_timer">
+            
+              <b>log_timer</b>()
+            
+            <a href="../classes/ApplicationController.html#method-i-log_timer" name="method-i-log_timer" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-log_timer_source')" id="l_method-i-log_timer_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-log_timer_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/application_controller.rb</span>
+<span class="line-num">485</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">log_timer</span>
+<span class="line-num">486</span>   <span class="ruby-identifier">starttime</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+<span class="line-num">487</span>   <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span> <span class="ruby-node">&quot;\n\n[DEBUG] LOG TIMER START #{starttime}&quot;</span>
+<span class="line-num">488</span>   <span class="ruby-keyword">yield</span>
+<span class="line-num">489</span>   <span class="ruby-identifier">endtime</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+<span class="line-num">490</span>   <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span> <span class="ruby-node">&quot;\n\n[DEBUG] LOG TIMER END #{endtime} (#{endtime - starttime} s)\n\n&quot;</span>
+<span class="line-num">491</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-logstash_catchall">
+            
+              <b>logstash_catchall</b>()
+            
+            <a href="../classes/ApplicationController.html#method-i-logstash_catchall" name="method-i-logstash_catchall" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-logstash_catchall_source')" id="l_method-i-logstash_catchall_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-logstash_catchall_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/application_controller.rb</span>
+<span class="line-num">280</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">logstash_catchall</span>
+<span class="line-num">281</span>   <span class="ruby-keyword">begin</span>
+<span class="line-num">282</span>     <span class="ruby-keyword">yield</span>
+<span class="line-num">283</span>   <span class="ruby-keyword">ensure</span>
+<span class="line-num">284</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-value">422</span>
+<span class="line-num">285</span>       <span class="ruby-comment"># Logstasher uses ActiveSupport::Notifications to write controller action</span>
+<span class="line-num">286</span>       <span class="ruby-comment"># logs, but it won&#39;t have access to the response there. This ensures</span>
+<span class="line-num">287</span>       <span class="ruby-comment"># that all requests with response status 422 get an additional log entry</span>
+<span class="line-num">288</span>       <span class="ruby-comment"># with the response body</span>
+<span class="line-num">289</span>       <span class="ruby-constant">Logstasher</span>.<span class="ruby-identifier">write_unprocessable</span>( <span class="ruby-identifier">request</span>, <span class="ruby-identifier">response</span>, <span class="ruby-identifier">session</span>, <span class="ruby-identifier">current_user</span> )
+<span class="line-num">290</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">291</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">292</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-photo_identities_required">
+            
+              <b>photo_identities_required</b>()
+            
+            <a href="../classes/ApplicationController.html#method-i-photo_identities_required" name="method-i-photo_identities_required" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-photo_identities_required_source')" id="l_method-i-photo_identities_required_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-photo_identities_required_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/application_controller.rb</span>
+<span class="line-num">234</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">photo_identities_required</span>
+<span class="line-num">235</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">logged_in?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@photo_identities</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">236</span>   <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:controller</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&#39;flickr&#39;</span>, <span class="ruby-value">:action</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&#39;options&#39;</span>)
+<span class="line-num">237</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-preload_user_preferences">
+            
+              <b>preload_user_preferences</b>()
+            
+            <a href="../classes/ApplicationController.html#method-i-preload_user_preferences" name="method-i-preload_user_preferences" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-preload_user_preferences_source')" id="l_method-i-preload_user_preferences_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-preload_user_preferences_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/application_controller.rb</span>
+<span class="line-num">315</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">preload_user_preferences</span>
+<span class="line-num">316</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">logged_in?</span>
+<span class="line-num">317</span>     <span class="ruby-constant">User</span>.<span class="ruby-identifier">preload_associations</span>(<span class="ruby-identifier">current_user</span>, <span class="ruby-value">:stored_preferences</span>)
+<span class="line-num">318</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">319</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-redirect_to_hell">
+            
+              <b>redirect_to_hell</b>()
+            
+            <a href="../classes/ApplicationController.html#method-i-redirect_to_hell" name="method-i-redirect_to_hell" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Redirect user to front page when they do something naughty.</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-redirect_to_hell_source')" id="l_method-i-redirect_to_hell_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-redirect_to_hell_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/application_controller.rb</span>
+<span class="line-num">363</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">redirect_to_hell</span>
+<span class="line-num">364</span>   <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-identifier">t</span>(<span class="ruby-value">:you_dont_have_permission_to_do_that</span>)
+<span class="line-num">365</span>   <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">root_path</span>, <span class="ruby-value">status:</span> <span class="ruby-value">:see_other</span>
+<span class="line-num">366</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-render_404">
+            
+              <b>render_404</b>()
+            
+            <a href="../classes/ApplicationController.html#method-i-render_404" name="method-i-render_404" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Return a 404 response with our default 404 page</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-render_404_source')" id="l_method-i-render_404_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-render_404_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/application_controller.rb</span>
+<span class="line-num">350</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">render_404</span>
+<span class="line-num">351</span>   <span class="ruby-keyword">unless</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">format</span>.<span class="ruby-identifier">json?</span>
+<span class="line-num">352</span>     <span class="ruby-identifier">request</span>.<span class="ruby-identifier">format</span> = <span class="ruby-string">&quot;html&quot;</span>
+<span class="line-num">353</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">354</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">355</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> { <span class="ruby-value">error:</span> <span class="ruby-identifier">t</span>(<span class="ruby-value">:not_found</span>) }, <span class="ruby-value">status:</span> <span class="ruby-value">404</span> }
+<span class="line-num">356</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">all</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">template:</span> <span class="ruby-string">&quot;errors/error_404&quot;</span>, <span class="ruby-value">status:</span> <span class="ruby-value">404</span>, <span class="ruby-value">layout:</span> <span class="ruby-string">&quot;application&quot;</span> }
+<span class="line-num">357</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">358</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-require_admin_or_trusted_project_manager_for">
+            
+              <b>require_admin_or_trusted_project_manager_for</b>(project)
+            
+            <a href="../classes/ApplicationController.html#method-i-require_admin_or_trusted_project_manager_for" name="method-i-require_admin_or_trusted_project_manager_for" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-require_admin_or_trusted_project_manager_for_source')" id="l_method-i-require_admin_or_trusted_project_manager_for_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-require_admin_or_trusted_project_manager_for_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/application_controller.rb</span>
+<span class="line-num">493</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">require_admin_or_trusted_project_manager_for</span>(<span class="ruby-identifier">project</span>)
+<span class="line-num">494</span>   <span class="ruby-identifier">allowed_project_roles</span> = <span class="ruby-node">%w(manager admin)</span>
+<span class="line-num">495</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">has_role?</span>(<span class="ruby-value">:admin</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">logged_in?</span>
+<span class="line-num">496</span>   <span class="ruby-identifier">project_user</span> = <span class="ruby-identifier">project</span>.<span class="ruby-identifier">project_users</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:user_id</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">current_user</span>).<span class="ruby-identifier">first</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">logged_in?</span>
+<span class="line-num">497</span>   <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">project_user</span> <span class="ruby-operator">||</span> 
+<span class="line-num">498</span>       <span class="ruby-operator">!</span><span class="ruby-identifier">project</span>.<span class="ruby-identifier">trusted?</span> <span class="ruby-operator">||</span> 
+<span class="line-num">499</span>       <span class="ruby-operator">!</span><span class="ruby-identifier">allowed_project_roles</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">project_user</span>.<span class="ruby-identifier">role</span>)
+<span class="line-num">500</span>     <span class="ruby-identifier">message</span> = <span class="ruby-identifier">t</span>(<span class="ruby-value">:you_must_be_a_member_of_this_project_to_do_that</span>)
+<span class="line-num">501</span>     <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">502</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> <span class="ruby-keyword">do</span>
+<span class="line-num">503</span>         <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-identifier">message</span>
+<span class="line-num">504</span>         <span class="ruby-identifier">redirect_back_or_default</span> <span class="ruby-identifier">project_url</span>(<span class="ruby-identifier">project</span>)
+<span class="line-num">505</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">506</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> <span class="ruby-keyword">do</span>
+<span class="line-num">507</span>         <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> <span class="ruby-operator">=&gt;</span> {<span class="ruby-value">:error</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">message</span>}, <span class="ruby-value">:status</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:unprocessable_entity</span>
+<span class="line-num">508</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">509</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">510</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">511</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-require_guide_user">
+            
+              <b>require_guide_user</b>()
+            
+            <a href="../classes/ApplicationController.html#method-i-require_guide_user" name="method-i-require_guide_user" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-require_guide_user_source')" id="l_method-i-require_guide_user_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-require_guide_user_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/application_controller.rb</span>
+<span class="line-num">419</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">require_guide_user</span>
+<span class="line-num">420</span>   <span class="ruby-keyword">unless</span> <span class="ruby-identifier">logged_in?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@guide</span>.<span class="ruby-identifier">editable_by?</span>(<span class="ruby-identifier">current_user</span>)
+<span class="line-num">421</span>     <span class="ruby-identifier">msg</span> = <span class="ruby-identifier">t</span>(<span class="ruby-value">:you_dont_have_permission_to_do_that</span>)
+<span class="line-num">422</span>     <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">423</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> <span class="ruby-keyword">do</span>
+<span class="line-num">424</span>         <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-identifier">msg</span>
+<span class="line-num">425</span>         <span class="ruby-keyword">return</span> <span class="ruby-identifier">redirect_to</span> <span class="ruby-ivar">@guide</span>
+<span class="line-num">426</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">427</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> <span class="ruby-keyword">do</span>
+<span class="line-num">428</span>         <span class="ruby-keyword">return</span> <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> { <span class="ruby-value">error:</span> <span class="ruby-identifier">msg</span> }, <span class="ruby-value">status:</span> <span class="ruby-value">:forbidden</span>
+<span class="line-num">429</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">430</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">431</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">432</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-require_owner">
+            
+              <b>require_owner</b>(options = {})
+            
+            <a href="../classes/ApplicationController.html#method-i-require_owner" name="method-i-require_owner" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-require_owner_source')" id="l_method-i-require_owner_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-require_owner_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/application_controller.rb</span>
+<span class="line-num">401</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">require_owner</span>(<span class="ruby-identifier">options</span> = {})
+<span class="line-num">402</span>   <span class="ruby-identifier">class_name</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:klass</span>) <span class="ruby-operator">||</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">underscore</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;_&#39;</span>)[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">-2</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;_&#39;</span>).<span class="ruby-identifier">singularize</span>
+<span class="line-num">403</span>   <span class="ruby-identifier">class_name</span> = <span class="ruby-identifier">class_name</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">underscore</span>.<span class="ruby-identifier">camelcase</span>
+<span class="line-num">404</span>   <span class="ruby-identifier">record</span> = <span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-node">&quot;@#{class_name.underscore}&quot;</span>)
+<span class="line-num">405</span>   <span class="ruby-keyword">unless</span> <span class="ruby-identifier">logged_in?</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">id</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">record</span>.<span class="ruby-identifier">user_id</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">is_admin?</span>)
+<span class="line-num">406</span>     <span class="ruby-identifier">msg</span> = <span class="ruby-identifier">t</span>(<span class="ruby-value">:you_dont_have_permission_to_do_that</span>)
+<span class="line-num">407</span>     <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">408</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> <span class="ruby-keyword">do</span>
+<span class="line-num">409</span>         <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-identifier">msg</span>
+<span class="line-num">410</span>         <span class="ruby-keyword">return</span> <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">record</span>
+<span class="line-num">411</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">412</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> <span class="ruby-keyword">do</span>
+<span class="line-num">413</span>         <span class="ruby-keyword">return</span> <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> { <span class="ruby-value">error:</span> <span class="ruby-identifier">msg</span> }, <span class="ruby-value">status:</span> <span class="ruby-value">:forbidden</span>
+<span class="line-num">414</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">415</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">416</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">417</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-return_here_from_url">
+            
+              <b>return_here_from_url</b>()
+            
+            <a href="../classes/ApplicationController.html#method-i-return_here_from_url" name="method-i-return_here_from_url" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-return_here_from_url_source')" id="l_method-i-return_here_from_url_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-return_here_from_url_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/application_controller.rb</span>
+<span class="line-num">310</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">return_here_from_url</span>
+<span class="line-num">311</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:return_to</span>].<span class="ruby-identifier">blank?</span>
+<span class="line-num">312</span>   <span class="ruby-identifier">session</span>[<span class="ruby-value">:return_to</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:return_to</span>]
+<span class="line-num">313</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-set_time_zone">
+            
+              <b>set_time_zone</b>()
+            
+            <a href="../classes/ApplicationController.html#method-i-set_time_zone" name="method-i-set_time_zone" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Grab current user&#39;s time zone and set it as the default</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-set_time_zone_source')" id="l_method-i-set_time_zone_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-set_time_zone_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/application_controller.rb</span>
+<span class="line-num">264</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">set_time_zone</span>
+<span class="line-num">265</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">logged_in?</span>
+<span class="line-num">266</span>     <span class="ruby-identifier">old_time_class</span> = <span class="ruby-constant">Chronic</span>.<span class="ruby-identifier">time_class</span>
+<span class="line-num">267</span>     <span class="ruby-keyword">begin</span>
+<span class="line-num">268</span>       <span class="ruby-constant">Time</span>.<span class="ruby-identifier">use_zone</span>( <span class="ruby-keyword">self</span>.<span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">time_zone</span> ) <span class="ruby-keyword">do</span>
+<span class="line-num">269</span>         <span class="ruby-constant">Chronic</span>.<span class="ruby-identifier">time_class</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">zone</span>
+<span class="line-num">270</span>         <span class="ruby-keyword">yield</span>
+<span class="line-num">271</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">272</span>     <span class="ruby-keyword">ensure</span>
+<span class="line-num">273</span>       <span class="ruby-constant">Chronic</span>.<span class="ruby-identifier">time_class</span> = <span class="ruby-identifier">old_time_class</span>
+<span class="line-num">274</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">275</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">276</span>     <span class="ruby-keyword">yield</span>
+<span class="line-num">277</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">278</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-user_logging">
+            
+              <b>user_logging</b>()
+            
+            <a href="../classes/ApplicationController.html#method-i-user_logging" name="method-i-user_logging" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-user_logging_source')" id="l_method-i-user_logging_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-user_logging_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/application_controller.rb</span>
+<span class="line-num">321</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">user_logging</span>
+<span class="line-num">322</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">logged_in?</span>
+<span class="line-num">323</span>   <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;  User: #{current_user.login} #{current_user.id}&quot;</span>
+<span class="line-num">324</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-user_request_logging">
+            
+              <b>user_request_logging</b>()
+            
+            <a href="../classes/ApplicationController.html#method-i-user_request_logging" name="method-i-user_request_logging" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-user_request_logging_source')" id="l_method-i-user_request_logging_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-user_request_logging_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/application_controller.rb</span>
+<span class="line-num">326</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">user_request_logging</span>
+<span class="line-num">327</span>   <span class="ruby-identifier">msg</span> = <span class="ruby-node">&quot;Finished #{request.method} #{request.path} from #{request.ip}&quot;</span>
+<span class="line-num">328</span>   <span class="ruby-identifier">msg</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot; for user: #{current_user.login} #{current_user.id}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">logged_in?</span>
+<span class="line-num">329</span>   <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-identifier">msg</span>
+<span class="line-num">330</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

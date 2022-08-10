@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ProjectObservationRule</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["ProjectObservationRule"]'>
+
+
+    <meta property="og:title" value="ProjectObservationRule">
+
+  
+
+    <meta name="keywords" content="ProjectObservationRule class, operand_present, clear_operand, terms, reset_last_aggregated_if_rules_changed, touch_projects, notify_trusting_members">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            ProjectObservationRule
+            
+                <span class="parent">&lt;
+                    
+                    <a href="Rule.html">Rule</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/app/models/project_observation_rule_rb.html">app/models/project_observation_rule.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-clear_operand">clear_operand</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-notify_trusting_members">notify_trusting_members</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-operand_present">operand_present</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-reset_last_aggregated_if_rules_changed">reset_last_aggregated_if_rules_changed</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-terms">terms</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-touch_projects">touch_projects</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <h2 class="sectiontitle">Constants</h2>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">OPERAND_OPERATORS</td>
+            <td>=</td>
+            <td class="attr-value">OPERAND_OPERATORS_CLASSES.keys</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">OPERAND_OPERATORS_CLASSES</td>
+            <td>=</td>
+            <td class="attr-value">{
+&quot;not_observed_in_place?&quot; =&gt; &quot;Place&quot;,
+&quot;observed_in_place?&quot; =&gt; &quot;Place&quot;,
+&quot;not_in_taxon?&quot; =&gt; &quot;Taxon&quot;,
+&quot;in_taxon?&quot; =&gt; &quot;Taxon&quot;,
+&quot;has_observation_field?&quot; =&gt; &quot;ObservationField&quot;,
+&quot;observed_after?&quot; =&gt; &quot;Time&quot;,
+&quot;not_observed_by_user?&quot; =&gt; &quot;User&quot;,
+&quot;observed_by_user?&quot; =&gt; &quot;User&quot;,
+&quot;observed_before?&quot; =&gt; &quot;Time&quot;,
+&quot;in_project?&quot; =&gt; &quot;Project&quot;
+}</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-clear_operand">
+            
+              <b>clear_operand</b>()
+            
+            <a href="../classes/ProjectObservationRule.html#method-i-clear_operand" name="method-i-clear_operand" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-clear_operand_source')" id="l_method-i-clear_operand_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-clear_operand_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/project_observation_rule.rb</span>
+<span class="line-num">38</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">clear_operand</span>
+<span class="line-num">39</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">OPERAND_OPERATORS</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">operator</span>)
+<span class="line-num">40</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">operand</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">41</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">42</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-notify_trusting_members">
+            
+              <b>notify_trusting_members</b>()
+            
+            <a href="../classes/ProjectObservationRule.html#method-i-notify_trusting_members" name="method-i-notify_trusting_members" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-notify_trusting_members_source')" id="l_method-i-notify_trusting_members_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-notify_trusting_members_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/project_observation_rule.rb</span>
+<span class="line-num">88</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">notify_trusting_members</span>
+<span class="line-num">89</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">ruler</span>.<span class="ruby-identifier">prefers_user_trust?</span>
+<span class="line-num">90</span>     <span class="ruby-identifier">ruler</span>.<span class="ruby-identifier">set_observation_requirements_updated_at</span>( <span class="ruby-value">force:</span> <span class="ruby-keyword">true</span> )
+<span class="line-num">91</span>     <span class="ruby-identifier">ruler</span>.<span class="ruby-identifier">save</span>
+<span class="line-num">92</span>     <span class="ruby-identifier">ruler</span>.<span class="ruby-identifier">notify_trusting_members_about_changes_later</span>
+<span class="line-num">93</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">94</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">95</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-operand_present">
+            
+              <b>operand_present</b>()
+            
+            <a href="../classes/ProjectObservationRule.html#method-i-operand_present" name="method-i-operand_present" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-operand_present_source')" id="l_method-i-operand_present_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-operand_present_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/project_observation_rule.rb</span>
+<span class="line-num">26</span>   <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">operand_present</span>
+<span class="line-num">27</span>     <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">OPERAND_OPERATORS</span>.<span class="ruby-identifier">include?</span>( <span class="ruby-identifier">operator</span> )
+<span class="line-num">28</span>     <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">operand</span>.<span class="ruby-identifier">blank?</span> <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">operand</span>.<span class="ruby-identifier">is_a?</span>( <span class="ruby-constant">Object</span>.<span class="ruby-identifier">const_get</span>( <span class="ruby-constant">OPERAND_OPERATORS_CLASSES</span>[<span class="ruby-identifier">operator</span>] ) )
+<span class="line-num">29</span> 
+<span class="line-num">30</span>     <span class="ruby-identifier">msg</span> = <span class="ruby-identifier">&lt;&lt;~MSG</span>
+<span class="line-num">31</span> <span class="ruby-value">      Must select a
+<span class="line-num">32</span>       #{OPERAND_OPERATORS_CLASSES[operator].underscore.humanize.downcase}
+<span class="line-num">33</span>       for that rule.
+<span class="line-num">34</span> </span><span class="ruby-identifier">    MSG</span>
+<span class="line-num">35</span>     <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">add</span>( <span class="ruby-value">:base</span>, <span class="ruby-identifier">msg</span> )
+<span class="line-num">36</span>   <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-reset_last_aggregated_if_rules_changed">
+            
+              <b>reset_last_aggregated_if_rules_changed</b>()
+            
+            <a href="../classes/ProjectObservationRule.html#method-i-reset_last_aggregated_if_rules_changed" name="method-i-reset_last_aggregated_if_rules_changed" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-reset_last_aggregated_if_rules_changed_source')" id="l_method-i-reset_last_aggregated_if_rules_changed_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-reset_last_aggregated_if_rules_changed_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/project_observation_rule.rb</span>
+<span class="line-num">73</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">reset_last_aggregated_if_rules_changed</span>
+<span class="line-num">74</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">ruler</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">ruler</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Project</span>)
+<span class="line-num">75</span>     <span class="ruby-identifier">ruler</span>.<span class="ruby-identifier">update_columns</span>(<span class="ruby-value">last_aggregated_at:</span> <span class="ruby-keyword">nil</span>)
+<span class="line-num">76</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">77</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-terms">
+            
+              <b>terms</b>()
+            
+            <a href="../classes/ProjectObservationRule.html#method-i-terms" name="method-i-terms" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-terms_source')" id="l_method-i-terms_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-terms_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/project_observation_rule.rb</span>
+<span class="line-num">44</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">terms</span>
+<span class="line-num">45</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">operator</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;observed_in_place?&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">operand</span>
+<span class="line-num">46</span>     <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>( <span class="ruby-value">:must_be_observed_in_place</span>, <span class="ruby-value">place:</span> <span class="ruby-identifier">send</span>( <span class="ruby-value">:operand</span> ).<span class="ruby-identifier">display_name</span> )
+<span class="line-num">47</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">operator</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;not_observed_in_place?&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">operand</span>
+<span class="line-num">48</span>     <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>( <span class="ruby-value">:must_be_not_observed_in_place</span>, <span class="ruby-value">place:</span> <span class="ruby-identifier">send</span>( <span class="ruby-value">:operand</span> ).<span class="ruby-identifier">display_name</span> )
+<span class="line-num">49</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">operator</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;has_observation_field?&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">operand</span>
+<span class="line-num">50</span>     <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-value">:must_have_observation_field</span>, <span class="ruby-value">operand:</span> <span class="ruby-identifier">operand</span>.<span class="ruby-identifier">name</span>)
+<span class="line-num">51</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">operator</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;observed_after?&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">operand</span>
+<span class="line-num">52</span>     <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-value">:must_be_observed_after</span>, <span class="ruby-value">operand:</span> <span class="ruby-identifier">operand</span>.<span class="ruby-identifier">name</span>)
+<span class="line-num">53</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">operator</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;observed_before?&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">operand</span>
+<span class="line-num">54</span>     <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-value">:must_be_observed_before</span>, <span class="ruby-value">operand:</span> <span class="ruby-identifier">operand</span>.<span class="ruby-identifier">name</span>)
+<span class="line-num">55</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">operator</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;observed_by_user?&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">operand</span>
+<span class="line-num">56</span>     <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>( <span class="ruby-value">:must_be_observed_by_user</span>, <span class="ruby-value">user:</span> <span class="ruby-identifier">operand</span>.<span class="ruby-identifier">login</span> )
+<span class="line-num">57</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">operator</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;not_observed_by_user?&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">operand</span>
+<span class="line-num">58</span>     <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>( <span class="ruby-value">:must_be_not_observed_by_user</span>, <span class="ruby-value">user:</span> <span class="ruby-identifier">operand</span>.<span class="ruby-identifier">login</span> )
+<span class="line-num">59</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">operator</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;in_taxon?&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">operand</span>
+<span class="line-num">60</span>     <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>( <span class="ruby-value">:must_be_in_taxon</span>, <span class="ruby-value">taxon:</span> <span class="ruby-identifier">operand</span>.<span class="ruby-identifier">name</span> )
+<span class="line-num">61</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">operator</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;not_in_taxon?&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">operand</span>
+<span class="line-num">62</span>     <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>( <span class="ruby-value">:must_be_not_in_taxon</span>, <span class="ruby-value">taxon:</span> <span class="ruby-identifier">operand</span>.<span class="ruby-identifier">name</span> )
+<span class="line-num">63</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">operator</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;in_project?&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">operand</span>
+<span class="line-num">64</span>     <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>( <span class="ruby-value">:must_be_in_project</span>, <span class="ruby-value">project:</span> <span class="ruby-identifier">operand</span>.<span class="ruby-identifier">title</span> )
+<span class="line-num">65</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">operator</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/has.+/</span>
+<span class="line-num">66</span>     <span class="ruby-identifier">thing_it_has</span> = <span class="ruby-identifier">operator</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;_&#39;</span>)[<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">-1</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;_&#39;</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/\?/</span>, <span class="ruby-string">&#39;&#39;</span>)
+<span class="line-num">67</span>     <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-value">:must_have_x</span>, <span class="ruby-value">:x</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-identifier">thing_it_has</span>, <span class="ruby-value">:default</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">thing_it_has</span>.<span class="ruby-identifier">humanize</span>.<span class="ruby-identifier">downcase</span>))
+<span class="line-num">68</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">69</span>     <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-node">&quot;rules_types.#{super.gsub(&#39; &#39;,&#39;_&#39;)}&quot;</span>)
+<span class="line-num">70</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">71</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-touch_projects">
+            
+              <b>touch_projects</b>()
+            
+            <a href="../classes/ProjectObservationRule.html#method-i-touch_projects" name="method-i-touch_projects" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-touch_projects_source')" id="l_method-i-touch_projects_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-touch_projects_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/project_observation_rule.rb</span>
+<span class="line-num">79</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">touch_projects</span>
+<span class="line-num">80</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">ruler</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">ruler</span>.<span class="ruby-identifier">is_a?</span>( <span class="ruby-constant">Project</span> )
+<span class="line-num">81</span>     <span class="ruby-identifier">ruler</span>.<span class="ruby-identifier">touch</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">ruler</span>.<span class="ruby-identifier">saved_change_to_id?</span>
+<span class="line-num">82</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">operand</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">operand</span>.<span class="ruby-identifier">is_a?</span>( <span class="ruby-constant">Project</span> )
+<span class="line-num">83</span>       <span class="ruby-identifier">operand</span>.<span class="ruby-identifier">touch</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">operand</span>.<span class="ruby-identifier">saved_change_to_id?</span>
+<span class="line-num">84</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">85</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">86</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

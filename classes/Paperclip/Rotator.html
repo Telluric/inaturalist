@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Paperclip::Rotator</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../../">
+<meta name="data-tree-keys" content='["Paperclip", "Rotator"]'>
+
+
+    <meta property="og:title" value="Paperclip::Rotator">
+
+  
+
+    <meta name="keywords" content="Paperclip::Rotator class, transformation_command, rotate_command">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            Paperclip::Rotator
+            
+                <span class="parent">&lt;
+                    
+                    Thumbnail
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../../files/lib/paperclip_processors/rotator_rb.html">lib/paperclip_processors/rotator.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-rotate_command">rotate_command</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-transformation_command">transformation_command</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-rotate_command">
+            
+              <b>rotate_command</b>()
+            
+            <a href="../../classes/Paperclip/Rotator.html#method-i-rotate_command" name="method-i-rotate_command" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-rotate_command_source')" id="l_method-i-rotate_command_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-rotate_command_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/paperclip_processors/rotator.rb</span>
+<span class="line-num">11</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">rotate_command</span>
+<span class="line-num">12</span>   <span class="ruby-identifier">target</span> = <span class="ruby-ivar">@attachment</span>.<span class="ruby-identifier">instance</span>
+<span class="line-num">13</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">target</span>.<span class="ruby-identifier">rotation</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">14</span>   <span class="ruby-node">&quot; -rotate #{target.rotation}&quot;</span>
+<span class="line-num">15</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-transformation_command">
+            
+              <b>transformation_command</b>()
+            
+            <a href="../../classes/Paperclip/Rotator.html#method-i-transformation_command" name="method-i-transformation_command" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-transformation_command_source')" id="l_method-i-transformation_command_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-transformation_command_source" class="dyn-source">
+                <pre>  <span class="ruby-comment"># File lib/paperclip_processors/rotator.rb</span>
+<span class="line-num">3</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">transformation_command</span>
+<span class="line-num">4</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">rotate_command</span>
+<span class="line-num">5</span>     <span class="ruby-keyword">super</span>.<span class="ruby-identifier">select</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span> <span class="ruby-operator">!~</span> <span class="ruby-regexp">/auto-orient/</span>} <span class="ruby-operator">+</span> [<span class="ruby-identifier">rotate_command</span>]
+<span class="line-num">6</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">7</span>     <span class="ruby-keyword">super</span>
+<span class="line-num">8</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">9</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PhotosController</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["PhotosController"]'>
+
+
+    <meta property="og:title" value="PhotosController">
+
+  
+    
+    <meta name="description" content="encoding: utf-8.">
+    <meta property="og:description" content="encoding: utf-8.">
+  
+
+    <meta name="keywords" content="PhotosController class, show, update, local_photo_fields, destroy, fix, repair_all, repair, rotate, create">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            PhotosController
+            
+                <span class="parent">&lt;
+                    
+                    <a href="ApplicationController.html">ApplicationController</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/app/controllers/photos_controller_rb.html">app/controllers/photos_controller.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>encoding: utf-8</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-create">create</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-destroy">destroy</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-fix">fix</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-local_photo_fields">local_photo_fields</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-repair">repair</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-repair_all">repair_all</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-rotate">rotate</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-show">show</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-create">
+            
+              <b>create</b>()
+            
+            <a href="../classes/PhotosController.html#method-i-create" name="method-i-create" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-create_source')" id="l_method-i-create_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-create_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/photos_controller.rb</span>
+<span class="line-num">162</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">create</span>
+<span class="line-num">163</span>   <span class="ruby-ivar">@photo</span> = <span class="ruby-constant">LocalPhoto</span>.<span class="ruby-identifier">new</span>( <span class="ruby-value">file:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:file</span>],
+<span class="line-num">164</span>     <span class="ruby-value">user:</span> <span class="ruby-identifier">current_user</span>, <span class="ruby-value">mobile:</span> <span class="ruby-identifier">is_mobile_app?</span> )
+<span class="line-num">165</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">166</span>     <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@photo</span>.<span class="ruby-identifier">file</span>.<span class="ruby-identifier">blank?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@photo</span>.<span class="ruby-identifier">save</span>
+<span class="line-num">167</span>       <span class="ruby-ivar">@photo</span>.<span class="ruby-identifier">reload</span>
+<span class="line-num">168</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">observations_path</span> }
+<span class="line-num">169</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> <span class="ruby-keyword">do</span>
+<span class="line-num">170</span>         <span class="ruby-identifier">json</span> = <span class="ruby-ivar">@photo</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-value">include:</span> {
+<span class="line-num">171</span>           <span class="ruby-value">to_observation:</span> {
+<span class="line-num">172</span>             <span class="ruby-value">include:</span> { <span class="ruby-value">observation_field_values:</span>
+<span class="line-num">173</span>               { <span class="ruby-value">include:</span> <span class="ruby-value">:observation_field</span>, <span class="ruby-value">methods:</span> <span class="ruby-value">:taxon</span> } },
+<span class="line-num">174</span>             <span class="ruby-value">methods:</span> [ <span class="ruby-value">:tag_list</span> ]
+<span class="line-num">175</span>           } } )
+<span class="line-num">176</span>         <span class="ruby-identifier">json</span>[<span class="ruby-value">:original_url</span>] = <span class="ruby-ivar">@photo</span>.<span class="ruby-identifier">file</span>.<span class="ruby-identifier">url</span>(<span class="ruby-value">:original</span>)
+<span class="line-num">177</span>         <span class="ruby-identifier">json</span>[<span class="ruby-value">:large_url</span>] = <span class="ruby-ivar">@photo</span>.<span class="ruby-identifier">file</span>.<span class="ruby-identifier">url</span>(<span class="ruby-value">:large</span>)
+<span class="line-num">178</span>         <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> <span class="ruby-identifier">json</span>
+<span class="line-num">179</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">180</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">181</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">observations_path</span> }
+<span class="line-num">182</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> <span class="ruby-keyword">do</span>
+<span class="line-num">183</span>         <span class="ruby-identifier">errors</span> = <span class="ruby-ivar">@photo</span>.<span class="ruby-identifier">file</span>.<span class="ruby-identifier">blank?</span> <span class="ruby-operator">?</span> { <span class="ruby-value">errors:</span> <span class="ruby-string">&quot;No photo specified&quot;</span> } <span class="ruby-operator">:</span> <span class="ruby-ivar">@photo</span>.<span class="ruby-identifier">errors</span>
+<span class="line-num">184</span>         <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> <span class="ruby-identifier">errors</span>, <span class="ruby-value">status:</span> <span class="ruby-value">:unprocessable_entity</span>
+<span class="line-num">185</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">186</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">187</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">188</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-destroy">
+            
+              <b>destroy</b>()
+            
+            <a href="../classes/PhotosController.html#method-i-destroy" name="method-i-destroy" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-destroy_source')" id="l_method-i-destroy_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-destroy_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/photos_controller.rb</span>
+<span class="line-num">75</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">destroy</span>
+<span class="line-num">76</span>   <span class="ruby-identifier">resource</span> = <span class="ruby-ivar">@photo</span>.<span class="ruby-identifier">observations</span>.<span class="ruby-identifier">first</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@photo</span>.<span class="ruby-identifier">taxa</span>.<span class="ruby-identifier">first</span>
+<span class="line-num">77</span>   <span class="ruby-ivar">@photo</span>.<span class="ruby-identifier">destroy</span>
+<span class="line-num">78</span>   <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-identifier">t</span>(<span class="ruby-value">:photo_deleted</span>)
+<span class="line-num">79</span>   <span class="ruby-identifier">redirect_back_or_default</span>(<span class="ruby-identifier">resource</span> <span class="ruby-operator">||</span> <span class="ruby-string">&#39;/&#39;</span>)
+<span class="line-num">80</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-fix">
+            
+              <b>fix</b>()
+            
+            <a href="../classes/PhotosController.html#method-i-fix" name="method-i-fix" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-fix_source')" id="l_method-i-fix_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-fix_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/photos_controller.rb</span>
+<span class="line-num">82</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">fix</span>
+<span class="line-num">83</span>   <span class="ruby-identifier">types</span> = <span class="ruby-node">%w(FacebookPhoto FlickrPhoto PicasaPhoto)</span>
+<span class="line-num">84</span>   <span class="ruby-ivar">@type</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:type</span>]
+<span class="line-num">85</span>   <span class="ruby-ivar">@type</span> = <span class="ruby-string">&#39;FacebookPhoto&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">types</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-ivar">@type</span>)
+<span class="line-num">86</span>   <span class="ruby-ivar">@provider_name</span> = <span class="ruby-ivar">@type</span>.<span class="ruby-identifier">underscore</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/_photo/</span>, <span class="ruby-string">&#39;&#39;</span>)
+<span class="line-num">87</span>   <span class="ruby-ivar">@provider_identity</span> = <span class="ruby-keyword">if</span> <span class="ruby-ivar">@provider_name</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;flickr&#39;</span>
+<span class="line-num">88</span>     <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">has_provider_auth</span>(<span class="ruby-string">&#39;flickr&#39;</span>)
+<span class="line-num">89</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">90</span>     <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{@provider_name}_identity&quot;</span>)
+<span class="line-num">91</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">92</span>   <span class="ruby-ivar">@photos</span> = <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">photos</span>.<span class="ruby-identifier">page</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>]).<span class="ruby-identifier">per_page</span>(<span class="ruby-value">120</span>).<span class="ruby-identifier">order</span>(<span class="ruby-string">&quot;photos.id ASC&quot;</span>)
+<span class="line-num">93</span>   <span class="ruby-ivar">@photos</span> = <span class="ruby-ivar">@photos</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">type:</span> <span class="ruby-ivar">@type</span>)
+<span class="line-num">94</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">95</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">layout:</span> <span class="ruby-string">&#39;bootstrap&#39;</span> }
+<span class="line-num">96</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">97</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-local_photo_fields">
+            
+              <b>local_photo_fields</b>()
+            
+            <a href="../classes/PhotosController.html#method-i-local_photo_fields" name="method-i-local_photo_fields" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-local_photo_fields_source')" id="l_method-i-local_photo_fields_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-local_photo_fields_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/photos_controller.rb</span>
+<span class="line-num">60</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">local_photo_fields</span>
+<span class="line-num">61</span>   <span class="ruby-comment"># Determine whether we should include synclinks</span>
+<span class="line-num">62</span>   <span class="ruby-ivar">@synclink_base</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:synclink_base</span>] <span class="ruby-keyword">unless</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:synclink_base</span>].<span class="ruby-identifier">blank?</span>
+<span class="line-num">63</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">64</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> <span class="ruby-keyword">do</span>
+<span class="line-num">65</span>       <span class="ruby-identifier">render</span> <span class="ruby-value">partial:</span> <span class="ruby-string">&quot;photos/photo_list_form&quot;</span>, <span class="ruby-value">locals:</span> {
+<span class="line-num">66</span>         <span class="ruby-value">photos:</span> [], 
+<span class="line-num">67</span>         <span class="ruby-value">index:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:index</span>],
+<span class="line-num">68</span>         <span class="ruby-value">synclink_base:</span> <span class="ruby-ivar">@synclink_base</span>,
+<span class="line-num">69</span>         <span class="ruby-value">local_photos:</span> <span class="ruby-keyword">true</span>
+<span class="line-num">70</span>       }
+<span class="line-num">71</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">72</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">73</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-repair">
+            
+              <b>repair</b>()
+            
+            <a href="../classes/PhotosController.html#method-i-repair" name="method-i-repair" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-repair_source')" id="l_method-i-repair_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-repair_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/photos_controller.rb</span>
+<span class="line-num">131</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">repair</span>
+<span class="line-num">132</span>   <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@photo</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:repair</span>)
+<span class="line-num">133</span>     <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-identifier">t</span>(<span class="ruby-value">:repair_doesnt_work_for_that_kind_of_photo</span>)
+<span class="line-num">134</span>     <span class="ruby-identifier">redirect_back_or_default</span>(<span class="ruby-ivar">@photo</span>.<span class="ruby-identifier">becomes</span>(<span class="ruby-constant">Photo</span>))
+<span class="line-num">135</span>     <span class="ruby-keyword">return</span>
+<span class="line-num">136</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">137</span> 
+<span class="line-num">138</span>   <span class="ruby-identifier">url</span> = <span class="ruby-ivar">@photo</span>.<span class="ruby-identifier">taxa</span>.<span class="ruby-identifier">first</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@photo</span>.<span class="ruby-identifier">observations</span>.<span class="ruby-identifier">first</span> <span class="ruby-operator">||</span> <span class="ruby-string">&#39;/&#39;</span>
+<span class="line-num">139</span>   <span class="ruby-identifier">repaired</span>, <span class="ruby-identifier">errors</span> = <span class="ruby-constant">Photo</span>.<span class="ruby-identifier">repair_single_photo</span>(<span class="ruby-ivar">@photo</span>)
+<span class="line-num">140</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">repaired</span>.<span class="ruby-identifier">destroyed?</span>
+<span class="line-num">141</span>     <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-identifier">t</span>(<span class="ruby-value">:photo_destroyed_because_it_was_deleted_from</span>, <span class="ruby-value">:site_name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-ivar">@site</span>.<span class="ruby-identifier">site_name_short</span>)
+<span class="line-num">142</span>     <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">url</span>
+<span class="line-num">143</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-operator">!</span><span class="ruby-identifier">errors</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">144</span>     <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-identifier">t</span>(<span class="ruby-value">:failed_to_repair_photo</span>, <span class="ruby-value">:errors</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">to_sentence</span>)
+<span class="line-num">145</span>     <span class="ruby-identifier">redirect_back_or_default</span>(<span class="ruby-ivar">@photo</span>.<span class="ruby-identifier">becomes</span>(<span class="ruby-constant">Photo</span>))
+<span class="line-num">146</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">147</span>     <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-identifier">t</span>(<span class="ruby-value">:photo_urls_repaired</span>)
+<span class="line-num">148</span>     <span class="ruby-identifier">redirect_back_or_default</span>(<span class="ruby-ivar">@photo</span>.<span class="ruby-identifier">becomes</span>(<span class="ruby-constant">Photo</span>))
+<span class="line-num">149</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">150</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-repair_all">
+            
+              <b>repair_all</b>()
+            
+            <a href="../classes/PhotosController.html#method-i-repair_all" name="method-i-repair_all" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-repair_all_source')" id="l_method-i-repair_all_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-repair_all_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/photos_controller.rb</span>
+<span class="line-num"> 99</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">repair_all</span>
+<span class="line-num">100</span>   <span class="ruby-ivar">@type</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:type</span>] <span class="ruby-keyword">if</span> <span class="ruby-node">%w(FlickrPhoto FacebookPhoto PicasaPhoto)</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:type</span>])
+<span class="line-num">101</span>   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@type</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">102</span>     <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">103</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> <span class="ruby-keyword">do</span>
+<span class="line-num">104</span>         <span class="ruby-identifier">msg</span> = <span class="ruby-string">&quot;You must specify a photo type&quot;</span>
+<span class="line-num">105</span>         <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-identifier">msg</span>
+<span class="line-num">106</span>         <span class="ruby-identifier">render</span> <span class="ruby-value">status:</span> <span class="ruby-value">:unprocessable_entity</span>, <span class="ruby-value">json:</span> {<span class="ruby-value">error:</span> <span class="ruby-identifier">msg</span>}
+<span class="line-num">107</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">108</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">109</span>     <span class="ruby-keyword">return</span>
+<span class="line-num">110</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">111</span>   <span class="ruby-identifier">key</span> = <span class="ruby-node">&quot;repair_photos_for_user_#{current_user.id}_#{@type}&quot;</span>
+<span class="line-num">112</span>   <span class="ruby-identifier">delayed_progress</span>(<span class="ruby-identifier">key</span>) <span class="ruby-keyword">do</span>
+<span class="line-num">113</span>     <span class="ruby-ivar">@job</span> = <span class="ruby-constant">Photo</span>.<span class="ruby-identifier">delay</span>.<span class="ruby-identifier">repair_photos_for_user</span>(<span class="ruby-identifier">current_user</span>, <span class="ruby-ivar">@type</span>)
+<span class="line-num">114</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">115</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">116</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> <span class="ruby-keyword">do</span>
+<span class="line-num">117</span>       <span class="ruby-keyword">case</span> <span class="ruby-ivar">@status</span>
+<span class="line-num">118</span>       <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;done&quot;</span>
+<span class="line-num">119</span>         <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">&quot;Repaired photos&quot;</span>
+<span class="line-num">120</span>         <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> {<span class="ruby-value">message:</span> <span class="ruby-string">&quot;Repaired photos&quot;</span>}
+<span class="line-num">121</span>       <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;error&quot;</span>
+<span class="line-num">122</span>         <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-ivar">@error_msg</span>
+<span class="line-num">123</span>         <span class="ruby-identifier">render</span> <span class="ruby-value">status:</span> <span class="ruby-value">:unprocessable_entity</span>, <span class="ruby-value">json:</span> {<span class="ruby-value">error:</span> <span class="ruby-ivar">@error_msg</span>}
+<span class="line-num">124</span>       <span class="ruby-keyword">else</span>
+<span class="line-num">125</span>         <span class="ruby-identifier">render</span> <span class="ruby-value">status:</span> <span class="ruby-value">:accepted</span>, <span class="ruby-value">json:</span> {<span class="ruby-value">message:</span> <span class="ruby-string">&#39;In progress...&#39;</span>}
+<span class="line-num">126</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">127</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">128</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">129</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-rotate">
+            
+              <b>rotate</b>()
+            
+            <a href="../classes/PhotosController.html#method-i-rotate" name="method-i-rotate" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-rotate_source')" id="l_method-i-rotate_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-rotate_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/photos_controller.rb</span>
+<span class="line-num">152</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">rotate</span>
+<span class="line-num">153</span>   <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@photo</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">LocalPhoto</span>)
+<span class="line-num">154</span>     <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-identifier">t</span>(<span class="ruby-value">:you_cant_rotate_photos_hostde_outside</span>, <span class="ruby-value">:site_name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-ivar">@site</span>.<span class="ruby-identifier">site_name_short</span>)
+<span class="line-num">155</span>     <span class="ruby-identifier">redirect_back_or_default</span>(<span class="ruby-ivar">@photo</span>.<span class="ruby-identifier">becomes</span>(<span class="ruby-constant">Photo</span>))
+<span class="line-num">156</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">157</span>   <span class="ruby-identifier">rotation</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:left</span>] <span class="ruby-operator">?</span> <span class="ruby-value">-90</span> <span class="ruby-operator">:</span> <span class="ruby-value">90</span>
+<span class="line-num">158</span>   <span class="ruby-ivar">@photo</span>.<span class="ruby-identifier">rotate!</span>(<span class="ruby-identifier">rotation</span>)
+<span class="line-num">159</span>   <span class="ruby-identifier">redirect_back_or_default</span>(<span class="ruby-ivar">@photo</span>.<span class="ruby-identifier">becomes</span>(<span class="ruby-constant">Photo</span>))
+<span class="line-num">160</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-show">
+            
+              <b>show</b>()
+            
+            <a href="../classes/PhotosController.html#method-i-show" name="method-i-show" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-show_source')" id="l_method-i-show_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-show_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/photos_controller.rb</span>
+<span class="line-num">13</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">show</span>
+<span class="line-num">14</span>   <span class="ruby-ivar">@size</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:size</span>]
+<span class="line-num">15</span>   <span class="ruby-ivar">@size</span> = <span class="ruby-string">&quot;medium&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-node">%w(small medium large original)</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-ivar">@size</span>)
+<span class="line-num">16</span>   <span class="ruby-ivar">@size</span> = <span class="ruby-string">&quot;small&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@photo</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{@size}_url&quot;</span>).<span class="ruby-identifier">blank?</span>
+<span class="line-num">17</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">18</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> <span class="ruby-keyword">do</span>
+<span class="line-num">19</span>       <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:partial</span>]
+<span class="line-num">20</span>         <span class="ruby-identifier">partial</span> = (<span class="ruby-identifier">params</span>[<span class="ruby-value">:partial</span>] <span class="ruby-operator">||</span> <span class="ruby-string">&#39;photo&#39;</span>).<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;/&#39;</span>).<span class="ruby-identifier">reject</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:blank?</span>).<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;/&#39;</span>)
+<span class="line-num">21</span>         <span class="ruby-identifier">render</span> <span class="ruby-value">:layout</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">false</span>, <span class="ruby-value">:partial</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">partial</span>, <span class="ruby-value">:object</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-ivar">@photo</span>, <span class="ruby-value">:size</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-ivar">@size</span>
+<span class="line-num">22</span>         <span class="ruby-keyword">return</span>
+<span class="line-num">23</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">24</span>       <span class="ruby-ivar">@taxa</span> = <span class="ruby-ivar">@photo</span>.<span class="ruby-identifier">taxa</span>.<span class="ruby-identifier">limit</span>(<span class="ruby-value">100</span>)
+<span class="line-num">25</span>       <span class="ruby-ivar">@observations</span> = <span class="ruby-ivar">@photo</span>.<span class="ruby-identifier">observations</span>.<span class="ruby-identifier">limit</span>(<span class="ruby-value">100</span>)
+<span class="line-num">26</span>       <span class="ruby-ivar">@flags</span> = <span class="ruby-ivar">@photo</span>.<span class="ruby-identifier">flags</span>
+<span class="line-num">27</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">28</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">js</span> <span class="ruby-keyword">do</span>
+<span class="line-num">29</span>       <span class="ruby-identifier">partial</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:partial</span>] <span class="ruby-operator">||</span> <span class="ruby-string">&#39;photo&#39;</span>
+<span class="line-num">30</span>       <span class="ruby-identifier">render</span> <span class="ruby-value">:layout</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">false</span>, <span class="ruby-value">:partial</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">partial</span>, <span class="ruby-value">:object</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-ivar">@photo</span>
+<span class="line-num">31</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">32</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">33</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/PhotosController.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/photos_controller.rb</span>
+<span class="line-num">35</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">update</span>
+<span class="line-num">36</span>   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@photo</span>.<span class="ruby-identifier">update</span>( <span class="ruby-identifier">photo_params</span>( <span class="ruby-identifier">params</span>[<span class="ruby-value">:photo</span>] ) )
+<span class="line-num">37</span>     <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">38</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> <span class="ruby-keyword">do</span>
+<span class="line-num">39</span>         <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-identifier">t</span>(<span class="ruby-value">:updated_photo</span>)
+<span class="line-num">40</span>         <span class="ruby-identifier">redirect_to</span> <span class="ruby-ivar">@photo</span>.<span class="ruby-identifier">becomes</span>(<span class="ruby-constant">Photo</span>)
+<span class="line-num">41</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">42</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> <span class="ruby-keyword">do</span>
+<span class="line-num">43</span>         <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> <span class="ruby-ivar">@photo</span>.<span class="ruby-identifier">as_json</span>
+<span class="line-num">44</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">45</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">46</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">47</span>     <span class="ruby-comment"># flash[:error] = t(:error_updating_photo, :photo_errors =&gt; @photo.errors.full_messages.to_sentence)</span>
+<span class="line-num">48</span>     <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">49</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> <span class="ruby-keyword">do</span>
+<span class="line-num">50</span>         <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-identifier">t</span>(<span class="ruby-value">:error_updating_photo</span>, <span class="ruby-value">:photo_errors</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-ivar">@photo</span>.<span class="ruby-identifier">errors</span>.<span class="ruby-identifier">full_messages</span>.<span class="ruby-identifier">to_sentence</span>)
+<span class="line-num">51</span>         <span class="ruby-identifier">redirect_to</span> <span class="ruby-ivar">@photo</span>.<span class="ruby-identifier">becomes</span>(<span class="ruby-constant">Photo</span>)
+<span class="line-num">52</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">53</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> <span class="ruby-keyword">do</span>
+<span class="line-num">54</span>         <span class="ruby-identifier">render</span> <span class="ruby-value">status:</span> <span class="ruby-value">:unprocessable_entity</span>, <span class="ruby-value">json:</span> { <span class="ruby-value">errors:</span> <span class="ruby-ivar">@photo</span>.<span class="ruby-identifier">errors</span>.<span class="ruby-identifier">as_json</span> }
+<span class="line-num">55</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">56</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">57</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">58</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

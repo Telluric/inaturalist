@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HasSubscribers::ClassMethods</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../../">
+<meta name="data-tree-keys" content='["HasSubscribers", "ClassMethods"]'>
+
+
+    <meta property="og:title" value="HasSubscribers::ClassMethods">
+
+  
+
+    <meta name="keywords" content="HasSubscribers::ClassMethods class, has_subscribers, notifies_subscribers_of, notifies_owner_of, notifies_users, auto_subscribes, notify_subscribers_with, create_callback">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Module</span>
+            HasSubscribers::ClassMethods
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../../files/lib/has_subscribers_rb.html">lib/has_subscribers.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-auto_subscribes">auto_subscribes</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-create_callback">create_callback</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-has_subscribers">has_subscribers</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-notifies_owner_of">notifies_owner_of</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-notifies_subscribers_of">notifies_subscribers_of</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-notifies_users">notifies_users</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-notify_subscribers_with">notify_subscribers_with</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="InstanceMethods.html">
+              HasSubscribers::InstanceMethods
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-auto_subscribes">
+            
+              <b>auto_subscribes</b>(subscriber, options = {})
+            
+            <a href="../../classes/HasSubscribers/ClassMethods.html#method-i-auto_subscribes" name="method-i-auto_subscribes" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Subscribe an associated user to an associated object when this record is created. For example, you might auto-subscribe a comment user to the blog post they commented on UNLESS they authored the blog post:</p>
+
+<pre><code>auto_subscribes :user, :to =&gt; :blog_post, :if =&gt; {|comment, blog_post| comment.user_id != blog_post.user_id}
+</code></pre>
+
+<p>Options:</p>
+<ul><li>
+<p><code>:to</code> - association to call to retrieve the user</p>
+</li><li>
+<p><code>:if</code> - block called to determine whether or not to create the subscription. Takes the record and the subscribable as args.</p>
+</li></ul>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-auto_subscribes_source')" id="l_method-i-auto_subscribes_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-auto_subscribes_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/has_subscribers.rb</span>
+<span class="line-num">157</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">auto_subscribes</span>(<span class="ruby-identifier">subscriber</span>, <span class="ruby-identifier">options</span> = {})
+<span class="line-num">158</span>   <span class="ruby-identifier">callback_method</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:on</span>] <span class="ruby-operator">==</span> <span class="ruby-value">:update</span> <span class="ruby-operator">?</span> <span class="ruby-value">:after_update</span> <span class="ruby-operator">:</span> <span class="ruby-value">:after_create</span>
+<span class="line-num">159</span>   
+<span class="line-num">160</span>   <span class="ruby-identifier">send</span>(<span class="ruby-identifier">callback_method</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">record</span><span class="ruby-operator">|</span>
+<span class="line-num">161</span>     <span class="ruby-identifier">resource</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:to</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">record</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">options</span>[<span class="ruby-value">:to</span>]) <span class="ruby-operator">:</span> <span class="ruby-identifier">record</span>
+<span class="line-num">162</span>     <span class="ruby-keyword">if</span> (<span class="ruby-identifier">options</span>[<span class="ruby-value">:if</span>].<span class="ruby-identifier">blank?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:if</span>].<span class="ruby-identifier">call</span>(<span class="ruby-identifier">record</span>, <span class="ruby-identifier">resource</span>)) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">record</span>.<span class="ruby-identifier">try</span>(<span class="ruby-value">:unsubscribable?</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">CONFIG</span>.<span class="ruby-identifier">has_subscribers</span> <span class="ruby-operator">!=</span> <span class="ruby-value">:disabled</span>
+<span class="line-num">163</span>       <span class="ruby-constant">Subscription</span>.<span class="ruby-identifier">create</span>(<span class="ruby-value">:user</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">record</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">subscriber</span>), <span class="ruby-value">:resource</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">resource</span>)
+<span class="line-num">164</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">165</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">166</span> 
+<span class="line-num">167</span>   <span class="ruby-identifier">attr_accessor</span> <span class="ruby-value">:auto_subscriber</span>
+<span class="line-num">168</span> 
+<span class="line-num">169</span>   <span class="ruby-identifier">before_destroy</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">record</span><span class="ruby-operator">|</span>
+<span class="line-num">170</span>     <span class="ruby-keyword">unless</span> <span class="ruby-identifier">record</span>.<span class="ruby-identifier">try</span>(<span class="ruby-value">:unsubscribable?</span>) <span class="ruby-operator">||</span> <span class="ruby-constant">CONFIG</span>.<span class="ruby-identifier">has_subscribers</span> <span class="ruby-operator">==</span> <span class="ruby-value">:disabled</span>
+<span class="line-num">171</span>       <span class="ruby-identifier">record</span>.<span class="ruby-identifier">auto_subscriber</span> = <span class="ruby-identifier">record</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">subscriber</span>)
+<span class="line-num">172</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">173</span>     <span class="ruby-keyword">true</span>
+<span class="line-num">174</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">175</span>   
+<span class="line-num">176</span>   <span class="ruby-comment"># this is potentially weird b/c there might be other reasons you&#39;re</span>
+<span class="line-num">177</span>   <span class="ruby-comment"># subscribed to something, and this will remove the subscription anyway.</span>
+<span class="line-num">178</span>   <span class="ruby-comment"># alts would be to remove uniqueness constraint so every</span>
+<span class="line-num">179</span>   <span class="ruby-comment"># auto_subscribing object generates a subscription...</span>
+<span class="line-num">180</span>   <span class="ruby-identifier">after_destroy</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">record</span><span class="ruby-operator">|</span>
+<span class="line-num">181</span>     <span class="ruby-keyword">unless</span> <span class="ruby-identifier">record</span>.<span class="ruby-identifier">try</span>(<span class="ruby-value">:unsubscribable?</span>) <span class="ruby-operator">||</span> <span class="ruby-constant">CONFIG</span>.<span class="ruby-identifier">has_subscribers</span> <span class="ruby-operator">==</span> <span class="ruby-value">:disabled</span>
+<span class="line-num">182</span>       <span class="ruby-identifier">resource</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:to</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">record</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">options</span>[<span class="ruby-value">:to</span>]) <span class="ruby-operator">:</span> <span class="ruby-identifier">record</span>
+<span class="line-num">183</span>       <span class="ruby-identifier">user</span> = <span class="ruby-identifier">record</span>.<span class="ruby-identifier">auto_subscriber</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">record</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">subscriber</span>)
+<span class="line-num">184</span>       <span class="ruby-keyword">if</span> <span class="ruby-identifier">user</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">resource</span>
+<span class="line-num">185</span>         <span class="ruby-constant">Subscription</span>.<span class="ruby-identifier">where</span>(
+<span class="line-num">186</span>           <span class="ruby-value">user_id:</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>,
+<span class="line-num">187</span>           <span class="ruby-value">resource_type:</span> <span class="ruby-identifier">resource</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">name</span>,
+<span class="line-num">188</span>           <span class="ruby-value">resource_id:</span> <span class="ruby-identifier">resource</span>.<span class="ruby-identifier">id</span>
+<span class="line-num">189</span>         ).<span class="ruby-identifier">delete_all</span>
+<span class="line-num">190</span>       <span class="ruby-keyword">else</span>
+<span class="line-num">191</span>         <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;[ERROR #{Time.now}] Couldn&#39;t delete auto subscription for #{record}&quot;</span>
+<span class="line-num">192</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">193</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">194</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">195</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-create_callback">
+            
+              <b>create_callback</b>(subscribable_association, options = {})
+            
+            <a href="../../classes/HasSubscribers/ClassMethods.html#method-i-create_callback" name="method-i-create_callback" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-create_callback_source')" id="l_method-i-create_callback_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-create_callback_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/has_subscribers.rb</span>
+<span class="line-num">277</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">create_callback</span>(<span class="ruby-identifier">subscribable_association</span>, <span class="ruby-identifier">options</span> = {})
+<span class="line-num">278</span>   <span class="ruby-identifier">callback_types</span> = []
+<span class="line-num">279</span>   <span class="ruby-identifier">options_on</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:on</span>] <span class="ruby-operator">?</span> [<span class="ruby-identifier">options</span>[<span class="ruby-value">:on</span>]].<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:to_s</span>) <span class="ruby-operator">:</span> <span class="ruby-node">%w(after_create)</span>
+<span class="line-num">280</span>   <span class="ruby-identifier">callback_types</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">:update</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">options_on</span>.<span class="ruby-identifier">detect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">o</span><span class="ruby-operator">|</span> <span class="ruby-identifier">o</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/update/</span>}
+<span class="line-num">281</span>   <span class="ruby-identifier">callback_types</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">:create</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">options_on</span>.<span class="ruby-identifier">detect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">o</span><span class="ruby-operator">|</span> <span class="ruby-identifier">o</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/create/</span>}
+<span class="line-num">282</span>   <span class="ruby-identifier">callback_types</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-value">:update</span>, <span class="ruby-value">:create</span>]   <span class="ruby-keyword">if</span> <span class="ruby-identifier">options_on</span>.<span class="ruby-identifier">detect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">o</span><span class="ruby-operator">|</span> <span class="ruby-identifier">o</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/save/</span>}
+<span class="line-num">283</span>   <span class="ruby-identifier">callback_method</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:with</span>] <span class="ruby-operator">||</span> <span class="ruby-value">:notify_subscribers_of</span>
+<span class="line-num">284</span>   <span class="ruby-identifier">attr_accessor</span> <span class="ruby-value">:skip_updates</span>
+<span class="line-num">285</span>   <span class="ruby-identifier">after_commit</span> <span class="ruby-value">on:</span> <span class="ruby-identifier">callback_types</span>.<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">uniq</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">record</span><span class="ruby-operator">|</span>
+<span class="line-num">286</span>     <span class="ruby-identifier">unless_skipped</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:unless</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:unless</span>].<span class="ruby-identifier">call</span>( <span class="ruby-keyword">self</span> ) <span class="ruby-operator">:</span> <span class="ruby-keyword">false</span>
+<span class="line-num">287</span>     <span class="ruby-keyword">unless</span> <span class="ruby-identifier">record</span>.<span class="ruby-identifier">skip_updates</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">record</span>.<span class="ruby-identifier">try</span>(<span class="ruby-value">:unsubscribable?</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">unless_skipped</span>
+<span class="line-num">288</span>       <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:queue_if</span>].<span class="ruby-identifier">blank?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:queue_if</span>].<span class="ruby-identifier">call</span>(<span class="ruby-identifier">record</span>)
+<span class="line-num">289</span>         <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:delay</span>] <span class="ruby-operator">==</span> <span class="ruby-keyword">false</span>
+<span class="line-num">290</span>           <span class="ruby-identifier">record</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">callback_method</span>, <span class="ruby-identifier">subscribable_association</span>)
+<span class="line-num">291</span>         <span class="ruby-keyword">else</span>
+<span class="line-num">292</span>           <span class="ruby-identifier">record</span>.<span class="ruby-identifier">delay</span>(<span class="ruby-value">priority:</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:priority</span>], <span class="ruby-value">run_at:</span> <span class="ruby-value">5</span>.<span class="ruby-identifier">seconds</span>.<span class="ruby-identifier">from_now</span>).
+<span class="line-num">293</span>             <span class="ruby-identifier">send</span>(<span class="ruby-identifier">callback_method</span>, <span class="ruby-identifier">subscribable_association</span>)
+<span class="line-num">294</span>         <span class="ruby-keyword">end</span>
+<span class="line-num">295</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">296</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">297</span>     <span class="ruby-keyword">true</span>
+<span class="line-num">298</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">299</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-has_subscribers">
+            
+              <b>has_subscribers</b>(options = {})
+            
+            <a href="../../classes/HasSubscribers/ClassMethods.html#method-i-has_subscribers" name="method-i-has_subscribers" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Tell a class that it has subscribers :to =&gt; {:notofying_association =&gt; options}</p>
+
+<pre><code>this is a way to explicitly decalre a notifying association.  This 
+will happen automatically from notifies_subscribers_of in most cases, 
+but NOT for polymorphic associations
+</code></pre>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-has_subscribers_source')" id="l_method-i-has_subscribers_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-has_subscribers_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/has_subscribers.rb</span>
+<span class="line-num">12</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">has_subscribers</span>(<span class="ruby-identifier">options</span> = {})
+<span class="line-num">13</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">included_modules</span>.<span class="ruby-identifier">include?</span>( <span class="ruby-operator">::</span><span class="ruby-constant">HasSubscribers</span><span class="ruby-operator">::</span><span class="ruby-constant">InstanceMethods</span> )
+<span class="line-num">14</span>   <span class="ruby-identifier">include</span> <span class="ruby-constant">HasSubscribers</span><span class="ruby-operator">::</span><span class="ruby-constant">InstanceMethods</span>
+<span class="line-num">15</span>   
+<span class="line-num">16</span>   <span class="ruby-identifier">has_many</span> <span class="ruby-value">:update_subscriptions</span>, <span class="ruby-value">class_name:</span> <span class="ruby-string">&quot;Subscription&quot;</span>, <span class="ruby-value">as:</span> <span class="ruby-value">:resource</span>, <span class="ruby-value">inverse_of:</span> <span class="ruby-value">:resource</span>
+<span class="line-num">17</span>   <span class="ruby-identifier">has_many</span> <span class="ruby-value">:update_subscriptions_with_unsuspended_users</span>, <span class="ruby-operator">-&gt;</span> {
+<span class="line-num">18</span>     <span class="ruby-identifier">joins</span>(<span class="ruby-value">:user</span>).<span class="ruby-identifier">where</span>(<span class="ruby-value">users:</span> { <span class="ruby-value">subscriptions_suspended_at:</span> <span class="ruby-keyword">nil</span> }) },
+<span class="line-num">19</span>     <span class="ruby-value">class_name:</span> <span class="ruby-string">&quot;Subscription&quot;</span>, <span class="ruby-value">as:</span> <span class="ruby-value">:resource</span>, <span class="ruby-value">inverse_of:</span> <span class="ruby-value">:resource</span>
+<span class="line-num">20</span>   <span class="ruby-identifier">has_many</span> <span class="ruby-value">:subscribers</span>, <span class="ruby-value">through:</span> <span class="ruby-value">:update_subscriptions</span>, <span class="ruby-value">source:</span> <span class="ruby-value">:user</span>
+<span class="line-num">21</span>   <span class="ruby-identifier">has_many</span> <span class="ruby-value">:update_actions</span>, <span class="ruby-value">as:</span> <span class="ruby-value">:resource</span>
+<span class="line-num">22</span>   
+<span class="line-num">23</span>   <span class="ruby-identifier">cattr_accessor</span> <span class="ruby-value">:notifying_associations</span>
+<span class="line-num">24</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">notifying_associations</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:to</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:to</span>] <span class="ruby-operator">:</span> {}
+<span class="line-num">25</span> 
+<span class="line-num">26</span>   <span class="ruby-operator">::</span><span class="ruby-constant">Subscription</span>.<span class="ruby-identifier">subscribable_classes</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">to_s</span>
+<span class="line-num">27</span>   
+<span class="line-num">28</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:destroy_callback</span>] <span class="ruby-operator">==</span> <span class="ruby-value">:commit</span>
+<span class="line-num">29</span>     <span class="ruby-identifier">after_commit</span> <span class="ruby-value">:delete_update_actions</span>, <span class="ruby-value">on:</span> <span class="ruby-value">:destroy</span>
+<span class="line-num">30</span>     <span class="ruby-identifier">after_commit</span> <span class="ruby-value">:delete_subscriptions</span>, <span class="ruby-value">on:</span> <span class="ruby-value">:destroy</span>
+<span class="line-num">31</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">32</span>     <span class="ruby-identifier">after_destroy</span> <span class="ruby-value">:delete_update_actions</span>
+<span class="line-num">33</span>     <span class="ruby-identifier">after_destroy</span> <span class="ruby-value">:delete_subscriptions</span>
+<span class="line-num">34</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">35</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-notifies_owner_of">
+            
+              <b>notifies_owner_of</b>(subscribable_association, options = {})
+            
+            <a href="../../classes/HasSubscribers/ClassMethods.html#method-i-notifies_owner_of" name="method-i-notifies_owner_of" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Generates one-time update for the user associated with a related object</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-notifies_owner_of_source')" id="l_method-i-notifies_owner_of_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-notifies_owner_of_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/has_subscribers.rb</span>
+<span class="line-num">103</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">notifies_owner_of</span>(<span class="ruby-identifier">subscribable_association</span>, <span class="ruby-identifier">options</span> = {})
+<span class="line-num">104</span>   <span class="ruby-keyword">unless</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">included_modules</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-constant">HasSubscribers</span><span class="ruby-operator">::</span><span class="ruby-constant">InstanceMethods</span>)
+<span class="line-num">105</span>     <span class="ruby-identifier">include</span> <span class="ruby-constant">HasSubscribers</span><span class="ruby-operator">::</span><span class="ruby-constant">InstanceMethods</span>
+<span class="line-num">106</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">107</span> 
+<span class="line-num">108</span>   <span class="ruby-identifier">options</span>[<span class="ruby-value">:with</span>] <span class="ruby-operator">||=</span> <span class="ruby-value">:notify_owner_of</span>
+<span class="line-num">109</span>   <span class="ruby-identifier">options</span>[<span class="ruby-value">:notification</span>] <span class="ruby-operator">||=</span> <span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">underscore</span>
+<span class="line-num">110</span>   <span class="ruby-identifier">options</span>[<span class="ruby-value">:priority</span>] <span class="ruby-operator">||=</span> <span class="ruby-value">1</span>
+<span class="line-num">111</span> 
+<span class="line-num">112</span>   <span class="ruby-identifier">cattr_accessor</span> <span class="ruby-value">:notifies_owner_of_options</span>
+<span class="line-num">113</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">notifies_owner_of_options</span> <span class="ruby-operator">||=</span> {}
+<span class="line-num">114</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">notifies_owner_of_options</span>[<span class="ruby-identifier">subscribable_association</span>.<span class="ruby-identifier">to_sym</span>] = <span class="ruby-identifier">options</span>
+<span class="line-num">115</span> 
+<span class="line-num">116</span>   <span class="ruby-identifier">create_callback</span>(<span class="ruby-identifier">subscribable_association</span>, <span class="ruby-identifier">options</span>)
+<span class="line-num">117</span>   <span class="ruby-identifier">after_destroy</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">record</span><span class="ruby-operator">|</span>
+<span class="line-num">118</span>     <span class="ruby-keyword">unless</span> <span class="ruby-identifier">record</span>.<span class="ruby-identifier">try</span>(<span class="ruby-value">:unsubscribable?</span>) <span class="ruby-operator">||</span> <span class="ruby-constant">CONFIG</span>.<span class="ruby-identifier">has_subscribers</span> <span class="ruby-operator">==</span> <span class="ruby-value">:disabled</span>
+<span class="line-num">119</span>       <span class="ruby-constant">UpdateAction</span>.<span class="ruby-identifier">delete_and_purge</span>([<span class="ruby-string">&quot;notifier_type = ? AND notifier_id = ?&quot;</span>, <span class="ruby-identifier">record</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">name</span>, <span class="ruby-identifier">record</span>.<span class="ruby-identifier">id</span>])
+<span class="line-num">120</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">121</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">122</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-notifies_subscribers_of">
+            
+              <b>notifies_subscribers_of</b>(subscribable_association, options = {})
+            
+            <a href="../../classes/HasSubscribers/ClassMethods.html#method-i-notifies_subscribers_of" name="method-i-notifies_subscribers_of" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Tell a model to generate updates for subscribers of an association. For  example, a <a href="../Comment.html"><code>Comment</code></a> <a href="ClassMethods.html#method-i-notifies_subscribers_of"><code>notifies_subscribers_of</code></a> :blog_post.</p>
+
+<p>Configuration options:</p>
+<ul><li>
+<p><code>:on</code> - event that triggers notification. Values: update or  create.</p>
+</li><li>
+<p><code>:with</code> - name of an instance method that notifies subscribers. Use this if you want to customize the way updates get generated.</p>
+</li><li>
+<p><code>:if</code> - block to decide whether to send generate an update.  Takes the following arguments: notifier, associate, subscription.  So if a comment was going to generate updates for subscribers to its parent blog post, the arguments would be comment, blog_post, subscription, and this block would get called for every subscription.</p>
+</li><li>
+<p><code>:queue_if</code> - block to decide whether to queue a record for  update generation. The :if block determines whether the record generates an update, but that still happens in a Delayed::Job. :queue_if determines whether that job gets delayed in the first place.  Takes the record as its arg.</p>
+</li><li>
+<p><code>:priority</code> - DJ priority at which to run the notification</p>
+</li><li>
+<p><code>:include_owner</code> - Create an update for the user associated with the resource, e.g. if a comment generates an update for an observation, the owner of the observation should be notified even if they&#39;re not subscribed. This can also be a Proc that takes the arguments subscribable and notifier.</p>
+</li><li>
+<p><code>:include_notifier</code> - Create an update for the person associated with the notifying record.</p>
+</li></ul>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-notifies_subscribers_of_source')" id="l_method-i-notifies_subscribers_of_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-notifies_subscribers_of_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/has_subscribers.rb</span>
+<span class="line-num"> 65</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">notifies_subscribers_of</span>(<span class="ruby-identifier">subscribable_association</span>, <span class="ruby-identifier">options</span> = {})
+<span class="line-num"> 66</span>   <span class="ruby-keyword">unless</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">included_modules</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-constant">HasSubscribers</span><span class="ruby-operator">::</span><span class="ruby-constant">InstanceMethods</span>)
+<span class="line-num"> 67</span>     <span class="ruby-identifier">include</span> <span class="ruby-constant">HasSubscribers</span><span class="ruby-operator">::</span><span class="ruby-constant">InstanceMethods</span>
+<span class="line-num"> 68</span>   <span class="ruby-keyword">end</span>
+<span class="line-num"> 69</span> 
+<span class="line-num"> 70</span>   <span class="ruby-identifier">options</span>[<span class="ruby-value">:priority</span>] <span class="ruby-operator">||=</span> <span class="ruby-value">1</span>
+<span class="line-num"> 71</span>   
+<span class="line-num"> 72</span>   <span class="ruby-identifier">cattr_accessor</span> <span class="ruby-value">:notifies_subscribers_of_options</span>
+<span class="line-num"> 73</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">notifies_subscribers_of_options</span> <span class="ruby-operator">||=</span> {}
+<span class="line-num"> 74</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">notifies_subscribers_of_options</span>[<span class="ruby-identifier">subscribable_association</span>.<span class="ruby-identifier">to_sym</span>] = <span class="ruby-identifier">options</span>
+<span class="line-num"> 75</span>   
+<span class="line-num"> 76</span>   <span class="ruby-identifier">create_callback</span>(<span class="ruby-identifier">subscribable_association</span>, <span class="ruby-identifier">options</span>)
+<span class="line-num"> 77</span>   
+<span class="line-num"> 78</span>   <span class="ruby-keyword">if</span> <span class="ruby-constant">Object</span>.<span class="ruby-identifier">const_defined?</span>(<span class="ruby-identifier">subscribable_association</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">classify</span>) <span class="ruby-operator">&amp;&amp;</span> 
+<span class="line-num"> 79</span>       (<span class="ruby-identifier">klass</span> = <span class="ruby-constant">Object</span>.<span class="ruby-identifier">const_get</span>(<span class="ruby-identifier">subscribable_association</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">classify</span>)) <span class="ruby-operator">&amp;&amp;</span> 
+<span class="line-num"> 80</span>       (<span class="ruby-identifier">klass</span>.<span class="ruby-identifier">reflections</span>.<span class="ruby-identifier">detect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">k</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">underscore</span>.<span class="ruby-identifier">pluralize</span>.<span class="ruby-identifier">to_sym</span>} <span class="ruby-operator">||</span> <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">underscore</span>.<span class="ruby-identifier">pluralize</span>.<span class="ruby-identifier">to_sym</span>))
+<span class="line-num"> 81</span>     <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">notifying_associations</span>[<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">underscore</span>.<span class="ruby-identifier">pluralize</span>.<span class="ruby-identifier">to_sym</span>] <span class="ruby-operator">||=</span> <span class="ruby-identifier">options</span>
+<span class="line-num"> 82</span>   <span class="ruby-keyword">end</span>
+<span class="line-num"> 83</span>   
+<span class="line-num"> 84</span>   <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:associations_to_notify</span>)
+<span class="line-num"> 85</span>     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">associations_to_notify</span>[<span class="ruby-identifier">subscribable_association</span>.<span class="ruby-identifier">to_sym</span>] = <span class="ruby-identifier">options</span>
+<span class="line-num"> 86</span>   <span class="ruby-keyword">else</span>
+<span class="line-num"> 87</span>     <span class="ruby-identifier">cattr_accessor</span> <span class="ruby-value">:associations_to_notify</span>
+<span class="line-num"> 88</span>     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">associations_to_notify</span> = {
+<span class="line-num"> 89</span>       <span class="ruby-identifier">subscribable_association</span>.<span class="ruby-identifier">to_sym</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">options</span>
+<span class="line-num"> 90</span>     }
+<span class="line-num"> 91</span>   <span class="ruby-keyword">end</span>
+<span class="line-num"> 92</span>   
+<span class="line-num"> 93</span>   <span class="ruby-identifier">after_destroy</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">record</span><span class="ruby-operator">|</span>
+<span class="line-num"> 94</span>     <span class="ruby-keyword">unless</span> <span class="ruby-identifier">record</span>.<span class="ruby-identifier">try</span>(<span class="ruby-value">:unsubscribable?</span>) <span class="ruby-operator">||</span> <span class="ruby-constant">CONFIG</span>.<span class="ruby-identifier">has_subscribers</span> <span class="ruby-operator">==</span> <span class="ruby-value">:disabled</span>
+<span class="line-num"> 95</span>       <span class="ruby-constant">UpdateAction</span>.<span class="ruby-identifier">transaction</span> <span class="ruby-keyword">do</span>
+<span class="line-num"> 96</span>         <span class="ruby-constant">UpdateAction</span>.<span class="ruby-identifier">delete_and_purge</span>([<span class="ruby-string">&quot;notifier_type = ? AND notifier_id = ?&quot;</span>, <span class="ruby-identifier">record</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">base_class</span>.<span class="ruby-identifier">name</span>, <span class="ruby-identifier">record</span>.<span class="ruby-identifier">id</span>])
+<span class="line-num"> 97</span>       <span class="ruby-keyword">end</span>
+<span class="line-num"> 98</span>     <span class="ruby-keyword">end</span>
+<span class="line-num"> 99</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">100</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-notifies_users">
+            
+              <b>notifies_users</b>(method, options = {})
+            
+            <a href="../../classes/HasSubscribers/ClassMethods.html#method-i-notifies_users" name="method-i-notifies_users" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Generates one-time update for the user returned by the supplied method</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-notifies_users_source')" id="l_method-i-notifies_users_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-notifies_users_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/has_subscribers.rb</span>
+<span class="line-num">125</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">notifies_users</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">options</span> = {})
+<span class="line-num">126</span>   <span class="ruby-keyword">unless</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">included_modules</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-constant">HasSubscribers</span><span class="ruby-operator">::</span><span class="ruby-constant">InstanceMethods</span>)
+<span class="line-num">127</span>     <span class="ruby-identifier">include</span> <span class="ruby-constant">HasSubscribers</span><span class="ruby-operator">::</span><span class="ruby-constant">InstanceMethods</span>
+<span class="line-num">128</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">129</span> 
+<span class="line-num">130</span>   <span class="ruby-identifier">options</span>[<span class="ruby-value">:with</span>] <span class="ruby-operator">||=</span> <span class="ruby-value">:notify_users</span>
+<span class="line-num">131</span>   <span class="ruby-identifier">options</span>[<span class="ruby-value">:notification</span>] <span class="ruby-operator">||=</span> <span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">underscore</span>
+<span class="line-num">132</span>   <span class="ruby-identifier">options</span>[<span class="ruby-value">:priority</span>] <span class="ruby-operator">||=</span> <span class="ruby-value">1</span>
+<span class="line-num">133</span> 
+<span class="line-num">134</span>   <span class="ruby-identifier">cattr_accessor</span> <span class="ruby-value">:notifies_users_options</span>
+<span class="line-num">135</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">notifies_users_options</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">options</span>
+<span class="line-num">136</span> 
+<span class="line-num">137</span>   <span class="ruby-identifier">create_callback</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">options</span>)
+<span class="line-num">138</span>   <span class="ruby-identifier">after_destroy</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">record</span><span class="ruby-operator">|</span>
+<span class="line-num">139</span>     <span class="ruby-keyword">unless</span> <span class="ruby-identifier">record</span>.<span class="ruby-identifier">try</span>(<span class="ruby-value">:unsubscribable?</span>) <span class="ruby-operator">||</span> <span class="ruby-constant">CONFIG</span>.<span class="ruby-identifier">has_subscribers</span> <span class="ruby-operator">==</span> <span class="ruby-value">:disabled</span>
+<span class="line-num">140</span>       <span class="ruby-constant">UpdateAction</span>.<span class="ruby-identifier">delete_and_purge</span>([<span class="ruby-string">&quot;notifier_type = ? AND notifier_id = ?&quot;</span>, <span class="ruby-identifier">record</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">name</span>, <span class="ruby-identifier">record</span>.<span class="ruby-identifier">id</span>])
+<span class="line-num">141</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">142</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">143</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-notify_subscribers_with">
+            
+              <b>notify_subscribers_with</b>(notifier, subscribable_association)
+            
+            <a href="../../classes/HasSubscribers/ClassMethods.html#method-i-notify_subscribers_with" name="method-i-notify_subscribers_with" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-notify_subscribers_with_source')" id="l_method-i-notify_subscribers_with_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-notify_subscribers_with_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/has_subscribers.rb</span>
+<span class="line-num">197</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">notify_subscribers_with</span>(<span class="ruby-identifier">notifier</span>, <span class="ruby-identifier">subscribable_association</span>)
+<span class="line-num">198</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">CONFIG</span>.<span class="ruby-identifier">has_subscribers</span> <span class="ruby-operator">==</span> <span class="ruby-value">:disabled</span>
+<span class="line-num">199</span>   <span class="ruby-identifier">options</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">notifies_subscribers_of_options</span>[<span class="ruby-identifier">subscribable_association</span>.<span class="ruby-identifier">to_sym</span>]
+<span class="line-num">200</span>   <span class="ruby-identifier">notifier</span> = <span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">notifier</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">notifier</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-keyword">self</span>)
+<span class="line-num">201</span>   <span class="ruby-identifier">has_many_reflections</span>    = <span class="ruby-identifier">reflections</span>.<span class="ruby-identifier">select</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">macro</span> <span class="ruby-operator">==</span> <span class="ruby-value">:has_many</span>}.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">to_s</span>}
+<span class="line-num">202</span>   <span class="ruby-identifier">belongs_to_reflections</span>  = <span class="ruby-identifier">reflections</span>.<span class="ruby-identifier">select</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">macro</span> <span class="ruby-operator">==</span> <span class="ruby-value">:belongs_to</span>}.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">to_s</span>}
+<span class="line-num">203</span>   <span class="ruby-identifier">has_one_reflections</span>     = <span class="ruby-identifier">reflections</span>.<span class="ruby-identifier">select</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">macro</span> <span class="ruby-operator">==</span> <span class="ruby-value">:has_one</span>}.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">to_s</span>}
+<span class="line-num">204</span>   
+<span class="line-num">205</span>   <span class="ruby-identifier">notification</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:notification</span>] <span class="ruby-operator">||</span> <span class="ruby-string">&quot;create&quot;</span>
+<span class="line-num">206</span>   <span class="ruby-identifier">users_to_notify</span> = { }
+<span class="line-num">207</span>   <span class="ruby-identifier">users_with_unviewed_from_notifier</span> = <span class="ruby-constant">Subscription</span>.<span class="ruby-identifier">users_with_unviewed_updates_from</span>(<span class="ruby-identifier">notifier</span>)
+<span class="line-num">208</span> 
+<span class="line-num">209</span>   <span class="ruby-comment"># give the model a chance to load needed associations in an efficient way</span>
+<span class="line-num">210</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:before_notify</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:before_notify</span>].<span class="ruby-identifier">is_a?</span>( <span class="ruby-constant">Proc</span> )
+<span class="line-num">211</span>     <span class="ruby-identifier">options</span>[<span class="ruby-value">:before_notify</span>].<span class="ruby-identifier">call</span>( <span class="ruby-identifier">notifier</span> )
+<span class="line-num">212</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">213</span> 
+<span class="line-num">214</span>   <span class="ruby-identifier">updater_proc</span> = <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">subscribable</span><span class="ruby-operator">|</span>
+<span class="line-num">215</span>     <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">subscribable</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">216</span>     <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">subscribable</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:update_subscriptions</span>)
+<span class="line-num">217</span>     <span class="ruby-identifier">notify_owner</span> = <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:include_owner</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Proc</span>)
+<span class="line-num">218</span>       <span class="ruby-identifier">options</span>[<span class="ruby-value">:include_owner</span>].<span class="ruby-identifier">call</span>(<span class="ruby-identifier">notifier</span>, <span class="ruby-identifier">subscribable</span>)
+<span class="line-num">219</span>     <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:include_owner</span>]
+<span class="line-num">220</span>       <span class="ruby-identifier">subscribable</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:user</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">subscribable</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">notifier</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">subscribable</span>.<span class="ruby-identifier">user_id</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">notifier</span>.<span class="ruby-identifier">user_id</span>)
+<span class="line-num">221</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">222</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">notify_owner</span>
+<span class="line-num">223</span>       <span class="ruby-identifier">owner_subscription</span> = <span class="ruby-identifier">subscribable</span>.<span class="ruby-identifier">update_subscriptions</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">user_id:</span> <span class="ruby-identifier">subscribable</span>.<span class="ruby-identifier">user_id</span>).<span class="ruby-identifier">first</span>
+<span class="line-num">224</span>       <span class="ruby-keyword">unless</span> <span class="ruby-identifier">owner_subscription</span>
+<span class="line-num">225</span>         <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:if</span>]
+<span class="line-num">226</span>           <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:if</span>].<span class="ruby-identifier">call</span>(<span class="ruby-identifier">notifier</span>, <span class="ruby-identifier">subscribable</span>, <span class="ruby-constant">Subscription</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">resource:</span> <span class="ruby-identifier">subscribable</span>, <span class="ruby-value">user:</span> <span class="ruby-identifier">subscribable</span>.<span class="ruby-identifier">user</span>))
+<span class="line-num">227</span>         <span class="ruby-keyword">end</span>
+<span class="line-num">228</span>         <span class="ruby-identifier">users_to_notify</span>[<span class="ruby-identifier">subscribable</span>] <span class="ruby-operator">||=</span> [ ]
+<span class="line-num">229</span>         <span class="ruby-identifier">users_to_notify</span>[<span class="ruby-identifier">subscribable</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">subscribable</span>.<span class="ruby-identifier">user_id</span>
+<span class="line-num">230</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">231</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">232</span>     <span class="ruby-comment"># if subscriptions are loaded, iterate them with &quot;each&quot;, but if they are</span>
+<span class="line-num">233</span>     <span class="ruby-comment"># not loaded, use &quot;find_each&quot; which will query and iterate in groups</span>
+<span class="line-num">234</span>     <span class="ruby-identifier">iterate_method</span> = <span class="ruby-identifier">subscribable</span>.<span class="ruby-identifier">update_subscriptions_with_unsuspended_users</span>.<span class="ruby-identifier">loaded?</span> <span class="ruby-operator">?</span> <span class="ruby-string">&quot;each&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-string">&quot;find_each&quot;</span>
+<span class="line-num">235</span>     <span class="ruby-identifier">subscribable</span>.<span class="ruby-identifier">update_subscriptions_with_unsuspended_users</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">iterate_method</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">subscription</span><span class="ruby-operator">|</span>
+<span class="line-num">236</span>       <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">notifier</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:user_id</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">subscription</span>.<span class="ruby-identifier">user_id</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">notifier</span>.<span class="ruby-identifier">user_id</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">options</span>[<span class="ruby-value">:include_notifier</span>]
+<span class="line-num">237</span>       <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">subscription</span>.<span class="ruby-identifier">created_at</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">notifier</span>.<span class="ruby-identifier">updated_at</span>
+<span class="line-num">238</span>       <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">users_with_unviewed_from_notifier</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">subscription</span>.<span class="ruby-identifier">user_id</span>)
+<span class="line-num">239</span> 
+<span class="line-num">240</span>       <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:if</span>]
+<span class="line-num">241</span>         <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:if</span>].<span class="ruby-identifier">call</span>(<span class="ruby-identifier">notifier</span>, <span class="ruby-identifier">subscribable</span>, <span class="ruby-identifier">subscription</span>)
+<span class="line-num">242</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">243</span>       <span class="ruby-identifier">users_to_notify</span>[<span class="ruby-identifier">subscribable</span>] <span class="ruby-operator">||=</span> [ ]
+<span class="line-num">244</span>       <span class="ruby-identifier">users_to_notify</span>[<span class="ruby-identifier">subscribable</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">subscription</span>.<span class="ruby-identifier">user_id</span>
+<span class="line-num">245</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">246</span>   }
+<span class="line-num">247</span>   <span class="ruby-constant">Observation</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">transaction</span> <span class="ruby-keyword">do</span>
+<span class="line-num">248</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">has_many_reflections</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">subscribable_association</span>.<span class="ruby-identifier">to_s</span>)
+<span class="line-num">249</span>       <span class="ruby-identifier">notifier</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">subscribable_association</span>).<span class="ruby-identifier">find_each</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">updater_proc</span>)
+<span class="line-num">250</span>     <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">reflections</span>.<span class="ruby-identifier">detect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">subscribable_association</span>.<span class="ruby-identifier">to_s</span>}
+<span class="line-num">251</span>       <span class="ruby-identifier">updater_proc</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">notifier</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">subscribable_association</span>))
+<span class="line-num">252</span>     <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">subscribable_association</span> <span class="ruby-operator">==</span> <span class="ruby-value">:self</span>
+<span class="line-num">253</span>       <span class="ruby-identifier">updater_proc</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">notifier</span>)
+<span class="line-num">254</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">255</span>       <span class="ruby-identifier">subscribable</span> = <span class="ruby-identifier">notifier</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">subscribable_association</span>)
+<span class="line-num">256</span>       <span class="ruby-keyword">if</span> <span class="ruby-identifier">subscribable</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Enumerable</span>)
+<span class="line-num">257</span>         <span class="ruby-identifier">subscribable</span>.<span class="ruby-identifier">each</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">updater_proc</span>)
+<span class="line-num">258</span>       <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">subscribable</span>
+<span class="line-num">259</span>         <span class="ruby-identifier">updater_proc</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">subscribable</span>)
+<span class="line-num">260</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">261</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">262</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">263</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">users_to_notify</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+<span class="line-num">264</span>     <span class="ruby-identifier">users_to_notify</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">subscribable</span>, <span class="ruby-identifier">user_ids</span><span class="ruby-operator">|</span>
+<span class="line-num">265</span>       <span class="ruby-identifier">action_attrs</span> = {
+<span class="line-num">266</span>         <span class="ruby-value">resource:</span> <span class="ruby-identifier">subscribable</span>,
+<span class="line-num">267</span>         <span class="ruby-value">notifier:</span> <span class="ruby-identifier">notifier</span>,
+<span class="line-num">268</span>         <span class="ruby-value">notification:</span> <span class="ruby-identifier">notification</span>
+<span class="line-num">269</span>       }
+<span class="line-num">270</span>       <span class="ruby-keyword">if</span> <span class="ruby-identifier">action</span> = <span class="ruby-constant">UpdateAction</span>.<span class="ruby-identifier">first_with_attributes</span>(<span class="ruby-identifier">action_attrs</span>)
+<span class="line-num">271</span>         <span class="ruby-identifier">action</span>.<span class="ruby-identifier">append_subscribers</span>( <span class="ruby-identifier">user_ids</span> )
+<span class="line-num">272</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">273</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">274</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">275</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

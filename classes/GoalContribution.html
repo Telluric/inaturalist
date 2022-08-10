@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>GoalContribution</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["GoalContribution"]'>
+
+
+    <meta property="og:title" value="GoalContribution">
+
+  
+
+    <meta name="keywords" content="GoalContribution class, inform_goal_of_new_contribution, goal_must_not_have_ended">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            GoalContribution
+            
+                <span class="parent">&lt;
+                    
+                    <a href="ApplicationRecord.html">ApplicationRecord</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/app/models/goal_contribution_rb.html">app/models/goal_contribution.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-goal_must_not_have_ended">goal_must_not_have_ended</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-inform_goal_of_new_contribution">inform_goal_of_new_contribution</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-inform_goal_of_new_contribution">
+            
+              <b>inform_goal_of_new_contribution</b>()
+            
+            <a href="../classes/GoalContribution.html#method-i-inform_goal_of_new_contribution" name="method-i-inform_goal_of_new_contribution" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>This is a magical bridge that tells the <a href="Goal.html"><code>Goal</code></a> object that a new contribution has been made which may or may not play a part in the goal being completed.</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-inform_goal_of_new_contribution_source')" id="l_method-i-inform_goal_of_new_contribution_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-inform_goal_of_new_contribution_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/goal_contribution.rb</span>
+<span class="line-num">48</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">inform_goal_of_new_contribution</span>
+<span class="line-num">49</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">goal</span>.<span class="ruby-identifier">check_for_completion!</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">goal_participant</span>)
+<span class="line-num">50</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+      <h2 class="sectiontitle">Instance Protected methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-goal_must_not_have_ended">
+            
+              <b>goal_must_not_have_ended</b>()
+            
+            <a href="../classes/GoalContribution.html#method-i-goal_must_not_have_ended" name="method-i-goal_must_not_have_ended" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <pre><code>Validations #########################################################
+</code></pre>
+
+<p>Used for a validation to ensure that goals which have already ended do not continue to receive goal contributions.</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-goal_must_not_have_ended_source')" id="l_method-i-goal_must_not_have_ended_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-goal_must_not_have_ended_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/goal_contribution.rb</span>
+<span class="line-num">57</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">goal_must_not_have_ended</span>
+<span class="line-num">58</span>   <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">goal</span>.<span class="ruby-identifier">ended?</span>
+<span class="line-num">59</span>     <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">add</span>(<span class="ruby-value">:goal</span>, <span class="ruby-string">&quot;has already ended&quot;</span>)
+<span class="line-num">60</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">61</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

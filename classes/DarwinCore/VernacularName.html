@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DarwinCore::VernacularName</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../../">
+<meta name="data-tree-keys" content='["DarwinCore", "VernacularName"]'>
+
+
+    <meta property="og:title" value="DarwinCore::VernacularName">
+
+  
+
+    <meta name="keywords" content="DarwinCore::VernacularName class, adapt, descriptor, data, base_scope, file_names">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            DarwinCore::VernacularName
+            
+                <span class="parent">&lt;
+                    
+                    <a href="../Object.html">Object</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../../files/lib/darwin_core/vernacular_name_rb.html">lib/darwin_core/vernacular_name.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+    <!-- Namespace -->
+    <div class="sectiontitle">Namespace</div>
+    <ul>
+      
+        <li>
+          <span class="type">MODULE</span>
+          <a href="VernacularName/InstanceMethods.html">DarwinCore::VernacularName::InstanceMethods</a>
+        </li>
+      
+    </ul>
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-adapt">adapt</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-base_scope">base_scope</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-data">data</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-descriptor">descriptor</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-file_names">file_names</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="Helpers.html">
+              DarwinCore::Helpers
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <h2 class="sectiontitle">Constants</h2>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TERMS</td>
+            <td>=</td>
+            <td class="attr-value">[
+[&#39;id&#39;, &#39;id&#39;, nil, &#39;core_id&#39;],
+
+# http://rs.gbif.org/terms/1.0/VernacularName
+%w(vernacularName http://rs.tdwg.org/dwc/terms/vernacularName),
+%w(language http://purl.org/dc/terms/language),
+%w(locality http://rs.tdwg.org/dwc/terms/locality),
+%w(countryCode http://rs.tdwg.org/dwc/terms/countryCode),
+[&quot;source&quot;, &quot;http://purl.org/dc/terms/source&quot;, nil, &quot;dwc_source&quot;],
+
+# Specific to iNat
+%w(lexicon https://www.inaturalist.org/terms/lexicon),
+%w(contributor http://purl.org/dc/elements/1.1/contributor),
+%w(created http://purl.org/dc/terms/created),
+]</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">TERM_NAMES</td>
+            <td>=</td>
+            <td class="attr-value">TERMS.map{|name, uri| name}</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <h2 class="sectiontitle">Class Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-c-adapt">
+            
+              <b>adapt</b>( record, options = {} )
+            
+            <a href="../../classes/DarwinCore/VernacularName.html#method-c-adapt" name="method-c-adapt" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-adapt_source')" id="l_method-c-adapt_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-adapt_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/darwin_core/vernacular_name.rb</span>
+<span class="line-num">22</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">adapt</span>( <span class="ruby-identifier">record</span>, <span class="ruby-identifier">options</span> = {} )
+<span class="line-num">23</span>   <span class="ruby-identifier">record</span>.<span class="ruby-identifier">extend</span>( <span class="ruby-constant">InstanceMethods</span> )
+<span class="line-num">24</span>   <span class="ruby-identifier">record</span>.<span class="ruby-identifier">core</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:core</span>]
+<span class="line-num">25</span>   <span class="ruby-identifier">record</span>
+<span class="line-num">26</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-base_scope">
+            
+              <b>base_scope</b>()
+            
+            <a href="../../classes/DarwinCore/VernacularName.html#method-c-base_scope" name="method-c-base_scope" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-base_scope_source')" id="l_method-c-base_scope_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-base_scope_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/darwin_core/vernacular_name.rb</span>
+<span class="line-num">116</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">base_scope</span>
+<span class="line-num">117</span>   <span class="ruby-constant">TaxonName</span>.<span class="ruby-identifier">joins</span>(<span class="ruby-value">:taxon</span>).
+<span class="line-num">118</span>     <span class="ruby-identifier">where</span>( <span class="ruby-string">&quot;taxa.is_active&quot;</span> ).
+<span class="line-num">119</span>     <span class="ruby-identifier">where</span>( <span class="ruby-string">&quot;lexicon IS NOT NULL&quot;</span> ).
+<span class="line-num">120</span>     <span class="ruby-identifier">where</span>( <span class="ruby-string">&quot;lexicon NOT IN (?)&quot;</span>, [<span class="ruby-constant">TaxonName</span><span class="ruby-operator">::</span><span class="ruby-constant">SCIENTIFIC_NAMES</span>, <span class="ruby-string">&quot;&quot;</span>] )
+<span class="line-num">121</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-data">
+            
+              <b>data</b>( options = {} )
+            
+            <a href="../../classes/DarwinCore/VernacularName.html#method-c-data" name="method-c-data" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-data_source')" id="l_method-c-data_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-data_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/darwin_core/vernacular_name.rb</span>
+<span class="line-num"> 85</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">data</span>( <span class="ruby-identifier">options</span> = {} )
+<span class="line-num"> 86</span>   <span class="ruby-keyword">unless</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:core</span>] <span class="ruby-operator">==</span> <span class="ruby-constant">DarwinCore</span><span class="ruby-operator">::</span><span class="ruby-constant">Cores</span><span class="ruby-operator">::</span><span class="ruby-constant">TAXON</span>
+<span class="line-num"> 87</span>     <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;VernacularNames extension can only be used with a taxon core&quot;</span>
+<span class="line-num"> 88</span>   <span class="ruby-keyword">end</span>
+<span class="line-num"> 89</span>   <span class="ruby-comment"># fname = &quot;vernacular_names.csv&quot;</span>
+<span class="line-num"> 90</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:work_path</span>]
+<span class="line-num"> 91</span>     <span class="ruby-identifier">work_path</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:work_path</span>]
+<span class="line-num"> 92</span>   <span class="ruby-keyword">else</span>
+<span class="line-num"> 93</span>     <span class="ruby-identifier">work_path</span> = <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">mktmpdir</span>
+<span class="line-num"> 94</span>     <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">mkdir_p</span> <span class="ruby-identifier">work_path</span>, <span class="ruby-value">mode:</span> <span class="ruby-value">0755</span>
+<span class="line-num"> 95</span>   <span class="ruby-keyword">end</span>
+<span class="line-num"> 96</span>   <span class="ruby-identifier">paths</span> = []
+<span class="line-num"> 97</span>   <span class="ruby-identifier">file_names</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">lexicon</span>, <span class="ruby-identifier">fname</span><span class="ruby-operator">|</span>
+<span class="line-num"> 98</span>     <span class="ruby-identifier">tmp_path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>( <span class="ruby-identifier">work_path</span>, <span class="ruby-identifier">fname</span> )
+<span class="line-num"> 99</span>     <span class="ruby-identifier">mode</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>( <span class="ruby-identifier">tmp_path</span> ) <span class="ruby-operator">?</span> <span class="ruby-string">&quot;a&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-string">&quot;w&quot;</span>
+<span class="line-num">100</span>     <span class="ruby-constant">CSV</span>.<span class="ruby-identifier">open</span>( <span class="ruby-identifier">tmp_path</span>, <span class="ruby-identifier">mode</span> ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">csv</span><span class="ruby-operator">|</span>
+<span class="line-num">101</span>       <span class="ruby-identifier">csv</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">TERM_NAMES</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">mode</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;w&quot;</span>
+<span class="line-num">102</span>       <span class="ruby-constant">DarwinCore</span><span class="ruby-operator">::</span><span class="ruby-constant">VernacularName</span>.<span class="ruby-identifier">base_scope</span>.
+<span class="line-num">103</span>           <span class="ruby-identifier">where</span>( <span class="ruby-value">lexicon:</span> <span class="ruby-identifier">lexicon</span> ).
+<span class="line-num">104</span>           <span class="ruby-identifier">includes</span>(<span class="ruby-value">:taxon</span>, <span class="ruby-value">:source</span>, <span class="ruby-value">:creator</span>, <span class="ruby-value">:updater</span>, <span class="ruby-value">place_taxon_names:</span> <span class="ruby-value">:place</span>).
+<span class="line-num">105</span>           <span class="ruby-identifier">order</span>(<span class="ruby-string">&quot;taxon_id&quot;</span>).
+<span class="line-num">106</span>           <span class="ruby-identifier">find_each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">tn</span><span class="ruby-operator">|</span>
+<span class="line-num">107</span>         <span class="ruby-constant">DarwinCore</span><span class="ruby-operator">::</span><span class="ruby-constant">VernacularName</span>.<span class="ruby-identifier">adapt</span>( <span class="ruby-identifier">tn</span>, <span class="ruby-value">core:</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:core</span>] )
+<span class="line-num">108</span>         <span class="ruby-identifier">csv</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">DarwinCore</span><span class="ruby-operator">::</span><span class="ruby-constant">VernacularName</span><span class="ruby-operator">::</span><span class="ruby-constant">TERMS</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">field</span>, <span class="ruby-identifier">uri</span>, <span class="ruby-identifier">default</span>, <span class="ruby-identifier">method</span><span class="ruby-operator">|</span> <span class="ruby-identifier">tn</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">method</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">field</span>)}
+<span class="line-num">109</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">110</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">111</span>     <span class="ruby-identifier">paths</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">tmp_path</span>
+<span class="line-num">112</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">113</span>   <span class="ruby-identifier">paths</span>
+<span class="line-num">114</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-descriptor">
+            
+              <b>descriptor</b>()
+            
+            <a href="../../classes/DarwinCore/VernacularName.html#method-c-descriptor" name="method-c-descriptor" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-descriptor_source')" id="l_method-c-descriptor_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-descriptor_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/darwin_core/vernacular_name.rb</span>
+<span class="line-num">77</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">descriptor</span>
+<span class="line-num">78</span>   {
+<span class="line-num">79</span>     <span class="ruby-value">row_type:</span> <span class="ruby-string">&quot;http://rs.gbif.org/terms/1.0/VernacularName&quot;</span>,
+<span class="line-num">80</span>     <span class="ruby-value">files:</span> <span class="ruby-identifier">file_names</span>.<span class="ruby-identifier">values</span>,
+<span class="line-num">81</span>     <span class="ruby-value">terms:</span> <span class="ruby-constant">TERMS</span>
+<span class="line-num">82</span>   }
+<span class="line-num">83</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-file_names">
+            
+              <b>file_names</b>()
+            
+            <a href="../../classes/DarwinCore/VernacularName.html#method-c-file_names" name="method-c-file_names" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-file_names_source')" id="l_method-c-file_names_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-file_names_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/darwin_core/vernacular_name.rb</span>
+<span class="line-num">123</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">file_names</span>
+<span class="line-num">124</span>   <span class="ruby-identifier">lexicons</span> = <span class="ruby-identifier">base_scope</span>.<span class="ruby-identifier">select</span>(<span class="ruby-string">&quot;DISTINCT lexicon&quot;</span>).<span class="ruby-identifier">pluck</span>(<span class="ruby-value">:lexicon</span>).<span class="ruby-identifier">uniq</span>.<span class="ruby-identifier">select</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">l</span><span class="ruby-operator">|</span> <span class="ruby-operator">!</span><span class="ruby-identifier">l</span>.<span class="ruby-identifier">blank?</span>}
+<span class="line-num">125</span>   <span class="ruby-identifier">lexicons</span>.<span class="ruby-identifier">inject</span>( {} ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">memo</span>, <span class="ruby-identifier">lexicon</span><span class="ruby-operator">|</span>
+<span class="line-num">126</span>     <span class="ruby-identifier">memo</span>[<span class="ruby-identifier">lexicon</span>] = <span class="ruby-node">&quot;VernacularNames-#{lexicon.parameterize}.csv&quot;</span>
+<span class="line-num">127</span>     <span class="ruby-identifier">memo</span>
+<span class="line-num">128</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">129</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

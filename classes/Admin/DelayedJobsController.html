@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin::DelayedJobsController</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../../">
+<meta name="data-tree-keys" content='["Admin", "DelayedJobsController"]'>
+
+
+    <meta property="og:title" value="Admin::DelayedJobsController">
+
+  
+
+    <meta name="keywords" content="Admin::DelayedJobsController class, index, active, failed, pending, unlock">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            Admin::DelayedJobsController
+            
+                <span class="parent">&lt;
+                    
+                    <a href="../ApplicationController.html">ApplicationController</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../../files/app/controllers/admin/delayed_jobs_controller_rb.html">app/controllers/admin/delayed_jobs_controller.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-active">active</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-failed">failed</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-index">index</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-pending">pending</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-unlock">unlock</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-active">
+            
+              <b>active</b>()
+            
+            <a href="../../classes/Admin/DelayedJobsController.html#method-i-active" name="method-i-active" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-active_source')" id="l_method-i-active_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-active_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/admin/delayed_jobs_controller.rb</span>
+<span class="line-num">12</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">active</span>
+<span class="line-num">13</span>   <span class="ruby-ivar">@jobs</span> = <span class="ruby-constant">Delayed</span><span class="ruby-operator">::</span><span class="ruby-constant">Job</span>.<span class="ruby-identifier">possibly_active</span>
+<span class="line-num">14</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-failed">
+            
+              <b>failed</b>()
+            
+            <a href="../../classes/Admin/DelayedJobsController.html#method-i-failed" name="method-i-failed" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-failed_source')" id="l_method-i-failed_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-failed_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/admin/delayed_jobs_controller.rb</span>
+<span class="line-num">16</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">failed</span>
+<span class="line-num">17</span>   <span class="ruby-ivar">@jobs</span> = <span class="ruby-constant">Delayed</span><span class="ruby-operator">::</span><span class="ruby-constant">Job</span>.<span class="ruby-identifier">failed</span>.<span class="ruby-identifier">limit</span>(<span class="ruby-value">100</span>)
+<span class="line-num">18</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-index">
+            
+              <b>index</b>()
+            
+            <a href="../../classes/Admin/DelayedJobsController.html#method-i-index" name="method-i-index" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-index_source')" id="l_method-i-index_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-index_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/admin/delayed_jobs_controller.rb</span>
+<span class="line-num"> 8</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">index</span>
+<span class="line-num"> 9</span>   <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:active_admin_delayed_jobs</span>
+<span class="line-num">10</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-pending">
+            
+              <b>pending</b>()
+            
+            <a href="../../classes/Admin/DelayedJobsController.html#method-i-pending" name="method-i-pending" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-pending_source')" id="l_method-i-pending_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-pending_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/admin/delayed_jobs_controller.rb</span>
+<span class="line-num">20</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">pending</span>
+<span class="line-num">21</span>   <span class="ruby-ivar">@jobs</span> = <span class="ruby-constant">Delayed</span><span class="ruby-operator">::</span><span class="ruby-constant">Job</span>.<span class="ruby-identifier">pending</span>.<span class="ruby-identifier">limit</span>(<span class="ruby-value">100</span>)
+<span class="line-num">22</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-unlock">
+            
+              <b>unlock</b>()
+            
+            <a href="../../classes/Admin/DelayedJobsController.html#method-i-unlock" name="method-i-unlock" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-unlock_source')" id="l_method-i-unlock_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-unlock_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/admin/delayed_jobs_controller.rb</span>
+<span class="line-num">24</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">unlock</span>
+<span class="line-num">25</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">delayed_job</span> = <span class="ruby-constant">Delayed</span><span class="ruby-operator">::</span><span class="ruby-constant">Job</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+<span class="line-num">26</span>     <span class="ruby-identifier">delayed_job</span>.<span class="ruby-identifier">update_columns</span>(<span class="ruby-value">locked_by:</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">locked_at:</span> <span class="ruby-keyword">nil</span>)
+<span class="line-num">27</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">28</span>   <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:active_admin_delayed_jobs</span>
+<span class="line-num">29</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

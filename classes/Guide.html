@@ -1,0 +1,1977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Guide</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["Guide"]'>
+
+
+    <meta property="og:title" value="Guide">
+
+  
+
+    <meta name="keywords" content="Guide class, to_s, import_taxa, editable_by?, set_taxon, set_taxon, set_published_at, expire_caches, reorder_by_taxonomy, set_defaults_from_source_url, set_defaults_from_eol_collection, add_taxa_from_source_url, create_guide_user, add_taxa_from_eol_collection, add_taxa_from_names, recent_tags, recent_photo_tags, tags, ngz_size, generate_ngz_if_necessary, generate_ngz_later, generate_ngz_cache_key, generate_ngz, ngz_work_path, to_ngz, user_login, icon_url, serializable_hash, unique_tags, published?, must_have_some_guide_taxa_to_publish">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            Guide
+            
+                <span class="parent">&lt;
+                    
+                    <a href="ApplicationRecord.html">ApplicationRecord</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/app/models/guide_rb.html">app/models/guide.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-add_taxa_from_eol_collection">add_taxa_from_eol_collection</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-add_taxa_from_names">add_taxa_from_names</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-add_taxa_from_source_url">add_taxa_from_source_url</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-create_guide_user">create_guide_user</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-editable_by-3F">editable_by?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-expire_caches">expire_caches</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-generate_ngz">generate_ngz</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-generate_ngz_cache_key">generate_ngz_cache_key</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-generate_ngz_if_necessary">generate_ngz_if_necessary</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-generate_ngz_later">generate_ngz_later</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-icon_url">icon_url</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-import_taxa">import_taxa</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-must_have_some_guide_taxa_to_publish">must_have_some_guide_taxa_to_publish</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-ngz_size">ngz_size</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-ngz_work_path">ngz_work_path</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-published-3F">published?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-recent_photo_tags">recent_photo_tags</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-recent_tags">recent_tags</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-reorder_by_taxonomy">reorder_by_taxonomy</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-serializable_hash">serializable_hash</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_defaults_from_eol_collection">set_defaults_from_eol_collection</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_defaults_from_source_url">set_defaults_from_source_url</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_published_at">set_published_at</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-set_taxon">set_taxon</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_taxon">set_taxon</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-tags">tags</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-to_ngz">to_ngz</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-to_s">to_s</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-unique_tags">unique_tags</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-user_login">user_login</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <h2 class="sectiontitle">Constants</h2>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">PDF_LAYOUTS</td>
+            <td>=</td>
+            <td class="attr-value">%w(grid book journal).freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><p>We used to generate PDFs on the server side, and most of these layouts were designed to look ok as PDFs, hence the PDF-oriented naming</p></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+      <!-- Section attributes -->
+      <h2 class="sectiontitle">Attributes</h2>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>publish</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <h2 class="sectiontitle">Class Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-c-set_taxon">
+            
+              <b>set_taxon</b>( guide_id )
+            
+            <a href="../classes/Guide.html#method-c-set_taxon" name="method-c-set_taxon" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-set_taxon_source')" id="l_method-c-set_taxon_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-set_taxon_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/guide.rb</span>
+<span class="line-num">127</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">set_taxon</span>( <span class="ruby-identifier">guide_id</span> )
+<span class="line-num">128</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">guide</span> = <span class="ruby-constant">Guide</span>.<span class="ruby-identifier">find_by_id</span>( <span class="ruby-identifier">guide_id</span> )
+<span class="line-num">129</span>   <span class="ruby-identifier">guide</span>.<span class="ruby-identifier">set_taxon</span>
+<span class="line-num">130</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-add_taxa_from_eol_collection">
+            
+              <b>add_taxa_from_eol_collection</b>( collection_url )
+            
+            <a href="../classes/Guide.html#method-i-add_taxa_from_eol_collection" name="method-i-add_taxa_from_eol_collection" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-add_taxa_from_eol_collection_source')" id="l_method-i-add_taxa_from_eol_collection_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-add_taxa_from_eol_collection_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/guide.rb</span>
+<span class="line-num">240</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">add_taxa_from_eol_collection</span>( <span class="ruby-identifier">collection_url</span> )
+<span class="line-num">241</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> ( <span class="ruby-identifier">collection_id</span> = <span class="ruby-identifier">collection_url</span>[<span class="ruby-regexp">%r{/(\d+)(\.\w+)?$}</span>, <span class="ruby-value">1</span>] )
+<span class="line-num">242</span> 
+<span class="line-num">243</span>   <span class="ruby-identifier">eol</span> = <span class="ruby-constant">EolService</span>.<span class="ruby-identifier">new</span>( <span class="ruby-value">timeout:</span> <span class="ruby-value">30</span>, <span class="ruby-value">debug:</span> <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">env</span>.<span class="ruby-identifier">development?</span> )
+<span class="line-num">244</span>   <span class="ruby-identifier">c</span> = <span class="ruby-identifier">eol</span>.<span class="ruby-identifier">collections</span>( <span class="ruby-identifier">collection_id</span>, <span class="ruby-value">per_page:</span> <span class="ruby-value">500</span>, <span class="ruby-value">filter:</span> <span class="ruby-string">&quot;taxa&quot;</span>, <span class="ruby-value">sort_by:</span> <span class="ruby-string">&quot;sort_field&quot;</span> )
+<span class="line-num">245</span>   <span class="ruby-identifier">saved</span> = <span class="ruby-value">0</span>
+<span class="line-num">246</span>   <span class="ruby-identifier">errors</span> = []
+<span class="line-num">247</span>   <span class="ruby-identifier">guide_taxa</span> = []
+<span class="line-num">248</span>   <span class="ruby-identifier">c</span>.<span class="ruby-identifier">search</span>( <span class="ruby-string">&quot;item&quot;</span> ).<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">item</span>, <span class="ruby-identifier">i</span> <span class="ruby-operator">|</span>
+<span class="line-num">249</span>     <span class="ruby-identifier">gt</span> = <span class="ruby-constant">GuideTaxon</span>.<span class="ruby-identifier">new_from_eol_collection_item</span>( <span class="ruby-identifier">item</span>, <span class="ruby-value">position:</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-value">guide:</span> <span class="ruby-keyword">self</span> )
+<span class="line-num">250</span>     <span class="ruby-identifier">existing</span> = <span class="ruby-keyword">unless</span> <span class="ruby-identifier">gt</span>.<span class="ruby-identifier">source_identifier</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">251</span>       <span class="ruby-keyword">self</span>.<span class="ruby-identifier">guide_taxa</span>.<span class="ruby-identifier">where</span>( <span class="ruby-value">source_identifier:</span> <span class="ruby-identifier">gt</span>.<span class="ruby-identifier">source_identifier</span> ).<span class="ruby-identifier">first</span>
+<span class="line-num">252</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">253</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">existing</span>
+<span class="line-num">254</span>       <span class="ruby-node">%w(name display_name source_identifier)</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">a</span> <span class="ruby-operator">|</span>
+<span class="line-num">255</span>         <span class="ruby-identifier">existing</span>.<span class="ruby-identifier">send</span>( <span class="ruby-node">&quot;#{a}=&quot;</span>, <span class="ruby-identifier">gt</span>.<span class="ruby-identifier">send</span>( <span class="ruby-identifier">a</span> ) )
+<span class="line-num">256</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">257</span>       <span class="ruby-keyword">if</span> <span class="ruby-identifier">existing</span>.<span class="ruby-identifier">save</span>
+<span class="line-num">258</span>         <span class="ruby-identifier">saved</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+<span class="line-num">259</span>       <span class="ruby-keyword">else</span>
+<span class="line-num">260</span>         <span class="ruby-identifier">errors</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">gt</span>.<span class="ruby-identifier">errors</span>.<span class="ruby-identifier">full_messages</span>.<span class="ruby-identifier">to_sentence</span>
+<span class="line-num">261</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">262</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">263</span>       <span class="ruby-keyword">if</span> <span class="ruby-identifier">gt</span>.<span class="ruby-identifier">save</span>
+<span class="line-num">264</span>         <span class="ruby-identifier">saved</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+<span class="line-num">265</span>       <span class="ruby-keyword">else</span>
+<span class="line-num">266</span>         <span class="ruby-identifier">errors</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">gt</span>.<span class="ruby-identifier">errors</span>.<span class="ruby-identifier">full_messages</span>.<span class="ruby-identifier">to_sentence</span>
+<span class="line-num">267</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">268</span>       <span class="ruby-identifier">guide_taxa</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">gt</span>
+<span class="line-num">269</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">270</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">271</span>   <span class="ruby-identifier">guide_taxa</span>
+<span class="line-num">272</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-add_taxa_from_names">
+            
+              <b>add_taxa_from_names</b>( names )
+            
+            <a href="../classes/Guide.html#method-i-add_taxa_from_names" name="method-i-add_taxa_from_names" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-add_taxa_from_names_source')" id="l_method-i-add_taxa_from_names_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-add_taxa_from_names_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/guide.rb</span>
+<span class="line-num">274</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">add_taxa_from_names</span>( <span class="ruby-identifier">names</span> )
+<span class="line-num">275</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">names</span>.<span class="ruby-identifier">is_a?</span>( <span class="ruby-constant">String</span> )
+<span class="line-num">276</span>     <span class="ruby-identifier">names</span> = <span class="ruby-identifier">names</span>.<span class="ruby-identifier">split</span>( <span class="ruby-string">&quot;\n&quot;</span> ).<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">map</span>( <span class="ruby-operator">&amp;</span><span class="ruby-value">:strip</span> )
+<span class="line-num">277</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">278</span>   <span class="ruby-identifier">guide_taxa</span> = []
+<span class="line-num">279</span>   <span class="ruby-identifier">names</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">500</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">|</span>
+<span class="line-num">280</span>     <span class="ruby-identifier">name</span>, <span class="ruby-identifier">display_name</span> = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">split</span>( <span class="ruby-string">&quot;,&quot;</span> )
+<span class="line-num">281</span>     <span class="ruby-identifier">gt</span> = <span class="ruby-keyword">if</span> ( <span class="ruby-identifier">taxon</span> = <span class="ruby-constant">Taxon</span>.<span class="ruby-identifier">single_taxon_for_name</span>( <span class="ruby-identifier">name</span> ) )
+<span class="line-num">282</span>       <span class="ruby-identifier">default_name</span> = <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">default_name</span>.<span class="ruby-identifier">name</span>
+<span class="line-num">283</span>       <span class="ruby-identifier">display_name</span> = <span class="ruby-keyword">if</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">downcase</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">default_name</span>.<span class="ruby-identifier">downcase</span>
+<span class="line-num">284</span>         <span class="ruby-identifier">display_name</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">default_name</span>
+<span class="line-num">285</span>       <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">downcase</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">downcase</span>
+<span class="line-num">286</span>         <span class="ruby-identifier">display_name</span>
+<span class="line-num">287</span>       <span class="ruby-keyword">else</span>
+<span class="line-num">288</span>         <span class="ruby-identifier">display_name</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">name</span>
+<span class="line-num">289</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">290</span>       <span class="ruby-keyword">self</span>.<span class="ruby-identifier">guide_taxa</span>.<span class="ruby-identifier">build</span>(
+<span class="line-num">291</span>         <span class="ruby-value">taxon_id:</span> <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">id</span>,
+<span class="line-num">292</span>         <span class="ruby-value">name:</span> <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">name</span>,
+<span class="line-num">293</span>         <span class="ruby-value">display_name:</span> <span class="ruby-identifier">display_name</span>
+<span class="line-num">294</span>       )
+<span class="line-num">295</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">296</span>       <span class="ruby-keyword">self</span>.<span class="ruby-identifier">guide_taxa</span>.<span class="ruby-identifier">build</span>( <span class="ruby-value">name:</span> <span class="ruby-identifier">name</span>, <span class="ruby-value">display_name:</span> <span class="ruby-identifier">display_name</span> )
+<span class="line-num">297</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">298</span>     <span class="ruby-keyword">unless</span> <span class="ruby-identifier">gt</span>.<span class="ruby-identifier">save</span>
+<span class="line-num">299</span>       <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;[ERROR #{Time.now}] Failed to save #{gt}: #{gt.errors.full_messages.to_sentence}&quot;</span>
+<span class="line-num">300</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">301</span>     <span class="ruby-identifier">guide_taxa</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">gt</span>
+<span class="line-num">302</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">303</span>   <span class="ruby-identifier">guide_taxa</span>
+<span class="line-num">304</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-add_taxa_from_source_url">
+            
+              <b>add_taxa_from_source_url</b>()
+            
+            <a href="../classes/Guide.html#method-i-add_taxa_from_source_url" name="method-i-add_taxa_from_source_url" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-add_taxa_from_source_url_source')" id="l_method-i-add_taxa_from_source_url_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-add_taxa_from_source_url_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/guide.rb</span>
+<span class="line-num">230</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">add_taxa_from_source_url</span>
+<span class="line-num">231</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">source_url</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">232</span> 
+<span class="line-num">233</span>   <span class="ruby-identifier">add_taxa_from_eol_collection</span>( <span class="ruby-identifier">source_url</span> )
+<span class="line-num">234</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-create_guide_user">
+            
+              <b>create_guide_user</b>()
+            
+            <a href="../classes/Guide.html#method-i-create_guide_user" name="method-i-create_guide_user" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-create_guide_user_source')" id="l_method-i-create_guide_user_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-create_guide_user_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/guide.rb</span>
+<span class="line-num">236</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">create_guide_user</span>
+<span class="line-num">237</span>   <span class="ruby-identifier">guide_users</span>.<span class="ruby-identifier">build</span>( <span class="ruby-value">user_id:</span> <span class="ruby-identifier">user_id</span> )
+<span class="line-num">238</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-editable_by-3F">
+            
+              <b>editable_by?</b>( user )
+            
+            <a href="../classes/Guide.html#method-i-editable_by-3F" name="method-i-editable_by-3F" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-editable_by-3F_source')" id="l_method-i-editable_by-3F_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-editable_by-3F_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/guide.rb</span>
+<span class="line-num">118</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">editable_by?</span>( <span class="ruby-identifier">user</span> )
+<span class="line-num">119</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">user</span>&amp;.<span class="ruby-identifier">is_admin?</span>
+<span class="line-num">120</span> 
+<span class="line-num">121</span>   <span class="ruby-identifier">user_id</span> = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">is_a?</span>( <span class="ruby-constant">User</span> ) <span class="ruby-operator">?</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">user</span>
+<span class="line-num">122</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">user_id</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">123</span> 
+<span class="line-num">124</span>   <span class="ruby-identifier">guide_users</span>.<span class="ruby-identifier">detect</span> {<span class="ruby-operator">|</span> <span class="ruby-identifier">gu</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">gu</span>.<span class="ruby-identifier">user_id</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">user_id</span> }
+<span class="line-num">125</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-expire_caches">
+            
+              <b>expire_caches</b>( options = {} )
+            
+            <a href="../classes/Guide.html#method-i-expire_caches" name="method-i-expire_caches" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-expire_caches_source')" id="l_method-i-expire_caches_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-expire_caches_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/guide.rb</span>
+<span class="line-num">168</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">expire_caches</span>( <span class="ruby-identifier">options</span> = {} )
+<span class="line-num">169</span>   <span class="ruby-identifier">ctrl</span> = <span class="ruby-constant">ActionController</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">new</span>
+<span class="line-num">170</span>   <span class="ruby-identifier">ctrl</span>.<span class="ruby-identifier">expire_page</span>( <span class="ruby-node">&quot;/guides/#{id}.pdf&quot;</span> )
+<span class="line-num">171</span>   <span class="ruby-identifier">ctrl</span>.<span class="ruby-identifier">expire_page</span>( <span class="ruby-node">&quot;/guides/#{id}.xml&quot;</span> )
+<span class="line-num">172</span>   <span class="ruby-constant">PDF_LAYOUTS</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">l</span> <span class="ruby-operator">|</span>
+<span class="line-num">173</span>     <span class="ruby-identifier">ctrl</span>.<span class="ruby-identifier">expire_page</span>( <span class="ruby-node">&quot;/guides/#{id}.#{l}.pdf&quot;</span> )
+<span class="line-num">174</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">175</span>   <span class="ruby-identifier">ctrl</span>.<span class="ruby-identifier">expire_page</span>( <span class="ruby-node">&quot;/guides/#{to_param}.ngz&quot;</span> )
+<span class="line-num">176</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:check_ngz</span>]
+<span class="line-num">177</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">downloadable?</span>
+<span class="line-num">178</span>       <span class="ruby-identifier">generate_ngz_later</span>
+<span class="line-num">179</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">180</span>       <span class="ruby-identifier">update</span>( <span class="ruby-value">ngz:</span> <span class="ruby-keyword">nil</span> )
+<span class="line-num">181</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">182</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">183</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">184</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-generate_ngz">
+            
+              <b>generate_ngz</b>( options = {} )
+            
+            <a href="../classes/Guide.html#method-i-generate_ngz" name="method-i-generate_ngz" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-generate_ngz_source')" id="l_method-i-generate_ngz_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-generate_ngz_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/guide.rb</span>
+<span class="line-num">378</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">generate_ngz</span>( <span class="ruby-identifier">options</span> = {} )
+<span class="line-num">379</span>   <span class="ruby-identifier">zip_path</span> = <span class="ruby-identifier">to_ngz</span>( <span class="ruby-identifier">options</span> )
+<span class="line-num">380</span>   <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>( <span class="ruby-identifier">zip_path</span> ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">f</span> <span class="ruby-operator">|</span>
+<span class="line-num">381</span>     <span class="ruby-keyword">unless</span> <span class="ruby-identifier">update</span>( <span class="ruby-value">ngz:</span> <span class="ruby-identifier">f</span> )
+<span class="line-num">382</span>       <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;[ERROR #{Time.now}] Failed to save NGZ attachment &quot;</span> \
+<span class="line-num">383</span>         <span class="ruby-node">&quot;for guide #{id}: #{errors.full_messages.to_sentence}&quot;</span>
+<span class="line-num">384</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">385</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">386</span>   <span class="ruby-comment"># the file will have been copied to the ngz final path</span>
+<span class="line-num">387</span>   <span class="ruby-comment"># so delete the copy in the tmp directory</span>
+<span class="line-num">388</span>   <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">rm_rf</span> <span class="ruby-identifier">zip_path</span>
+<span class="line-num">389</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-generate_ngz_cache_key">
+            
+              <b>generate_ngz_cache_key</b>()
+            
+            <a href="../classes/Guide.html#method-i-generate_ngz_cache_key" name="method-i-generate_ngz_cache_key" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-generate_ngz_cache_key_source')" id="l_method-i-generate_ngz_cache_key_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-generate_ngz_cache_key_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/guide.rb</span>
+<span class="line-num">374</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">generate_ngz_cache_key</span>
+<span class="line-num">375</span>   <span class="ruby-node">&quot;gen_ngz_#{id}&quot;</span>
+<span class="line-num">376</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-generate_ngz_if_necessary">
+            
+              <b>generate_ngz_if_necessary</b>()
+            
+            <a href="../classes/Guide.html#method-i-generate_ngz_if_necessary" name="method-i-generate_ngz_if_necessary" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-generate_ngz_if_necessary_source')" id="l_method-i-generate_ngz_if_necessary_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-generate_ngz_if_necessary_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/guide.rb</span>
+<span class="line-num">354</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">generate_ngz_if_necessary</span>
+<span class="line-num">355</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-node">%w(title description downloadable published_at)</span>.<span class="ruby-identifier">detect</span> {<span class="ruby-operator">|</span> <span class="ruby-identifier">a</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">send</span>( <span class="ruby-node">&quot;#{a}_changed?&quot;</span> ) }
+<span class="line-num">356</span> 
+<span class="line-num">357</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">downloadable?</span>
+<span class="line-num">358</span>     <span class="ruby-identifier">generate_ngz_later</span>
+<span class="line-num">359</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">360</span>     <span class="ruby-constant">Delayed</span><span class="ruby-operator">::</span><span class="ruby-constant">Job</span>.<span class="ruby-identifier">where</span>( <span class="ruby-node">&quot;handler LIKE &#39;%id: &#39;&#39;#{id}&#39;&#39;%generate_ngz%&#39;&quot;</span> ).<span class="ruby-identifier">destroy_all</span>
+<span class="line-num">361</span>     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">ngz</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">362</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">363</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">364</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-generate_ngz_later">
+            
+              <b>generate_ngz_later</b>( options = {} )
+            
+            <a href="../classes/Guide.html#method-i-generate_ngz_later" name="method-i-generate_ngz_later" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-generate_ngz_later_source')" id="l_method-i-generate_ngz_later_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-generate_ngz_later_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/guide.rb</span>
+<span class="line-num">366</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">generate_ngz_later</span>( <span class="ruby-identifier">options</span> = {} )
+<span class="line-num">367</span>   <span class="ruby-identifier">delay</span>(
+<span class="line-num">368</span>     <span class="ruby-value">priority:</span> <span class="ruby-constant">USER_INTEGRITY_PRIORITY</span>,
+<span class="line-num">369</span>     <span class="ruby-value">unique_hash:</span> { <span class="ruby-value">&quot;Guide::generate_ngz&quot;:</span> <span class="ruby-identifier">id</span> },
+<span class="line-num">370</span>     <span class="ruby-value">queue:</span> <span class="ruby-string">&quot;csv&quot;</span>
+<span class="line-num">371</span>   ).<span class="ruby-identifier">generate_ngz</span>( <span class="ruby-identifier">options</span> )
+<span class="line-num">372</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-icon_url">
+            
+              <b>icon_url</b>()
+            
+            <a href="../classes/Guide.html#method-i-icon_url" name="method-i-icon_url" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-icon_url_source')" id="l_method-i-icon_url_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-icon_url_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/guide.rb</span>
+<span class="line-num">462</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">icon_url</span>
+<span class="line-num">463</span>   <span class="ruby-identifier">icon</span>.<span class="ruby-identifier">file?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">icon</span>.<span class="ruby-identifier">url</span>( <span class="ruby-value">:span2</span> ) <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+<span class="line-num">464</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-import_taxa">
+            
+              <b>import_taxa</b>( options = {} )
+            
+            <a href="../classes/Guide.html#method-i-import_taxa" name="method-i-import_taxa" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-import_taxa_source')" id="l_method-i-import_taxa_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-import_taxa_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/guide.rb</span>
+<span class="line-num"> 83</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">import_taxa</span>( <span class="ruby-identifier">options</span> = {} )
+<span class="line-num"> 84</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:eol_collection_url</span>]
+<span class="line-num"> 85</span>     <span class="ruby-keyword">return</span> <span class="ruby-identifier">add_taxa_from_eol_collection</span>( <span class="ruby-identifier">options</span>[<span class="ruby-value">:eol_collection_url</span>] )
+<span class="line-num"> 86</span>   <span class="ruby-keyword">end</span>
+<span class="line-num"> 87</span>   <span class="ruby-keyword">unless</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:names</span>].<span class="ruby-identifier">blank?</span>
+<span class="line-num"> 88</span>     <span class="ruby-keyword">return</span> <span class="ruby-identifier">add_taxa_from_names</span>( <span class="ruby-identifier">options</span>[<span class="ruby-value">:names</span>] )
+<span class="line-num"> 89</span>   <span class="ruby-keyword">end</span>
+<span class="line-num"> 90</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:place_id</span>].<span class="ruby-identifier">blank?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:list_id</span>].<span class="ruby-identifier">blank?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:taxon_id</span>].<span class="ruby-identifier">blank?</span>
+<span class="line-num"> 91</span> 
+<span class="line-num"> 92</span>   <span class="ruby-identifier">scope</span> = <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">options</span>[<span class="ruby-value">:place_id</span>].<span class="ruby-identifier">blank?</span>
+<span class="line-num"> 93</span>     <span class="ruby-constant">Taxon</span>.<span class="ruby-identifier">from_place</span>( <span class="ruby-identifier">options</span>[<span class="ruby-value">:place_id</span>] )
+<span class="line-num"> 94</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-operator">!</span><span class="ruby-identifier">options</span>[<span class="ruby-value">:list_id</span>].<span class="ruby-identifier">blank?</span>
+<span class="line-num"> 95</span>     <span class="ruby-constant">Taxon</span>.<span class="ruby-identifier">on_list</span>( <span class="ruby-identifier">options</span>[<span class="ruby-value">:list_id</span>] )
+<span class="line-num"> 96</span>   <span class="ruby-keyword">else</span>
+<span class="line-num"> 97</span>     <span class="ruby-constant">Taxon</span>.<span class="ruby-identifier">all</span>
+<span class="line-num"> 98</span>   <span class="ruby-keyword">end</span>
+<span class="line-num"> 99</span>   <span class="ruby-keyword">if</span> ( <span class="ruby-identifier">t</span> = <span class="ruby-constant">Taxon</span>.<span class="ruby-identifier">find_by_id</span>( <span class="ruby-identifier">options</span>[<span class="ruby-value">:taxon_id</span>] ) )
+<span class="line-num">100</span>     <span class="ruby-identifier">scope</span> = <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">descendants_of</span>( <span class="ruby-identifier">t</span> )
+<span class="line-num">101</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">102</span>   <span class="ruby-identifier">scope</span> = <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">of_rank</span>( <span class="ruby-identifier">options</span>[<span class="ruby-value">:rank</span>] ) <span class="ruby-keyword">if</span> <span class="ruby-constant">Taxon</span><span class="ruby-operator">::</span><span class="ruby-constant">RANKS</span>.<span class="ruby-identifier">include?</span>( <span class="ruby-identifier">options</span>[<span class="ruby-value">:rank</span>] )
+<span class="line-num">103</span>   <span class="ruby-identifier">guide_taxa</span> = []
+<span class="line-num">104</span>   <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">includes</span>( <span class="ruby-value">:taxon_photos</span>, <span class="ruby-value">:taxon_descriptions</span> ).<span class="ruby-identifier">find_each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">taxon</span> <span class="ruby-operator">|</span>
+<span class="line-num">105</span>     <span class="ruby-identifier">gt</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">guide_taxa</span>.<span class="ruby-identifier">build</span>(
+<span class="line-num">106</span>       <span class="ruby-value">taxon_id:</span> <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">id</span>,
+<span class="line-num">107</span>       <span class="ruby-value">name:</span> <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">name</span>,
+<span class="line-num">108</span>       <span class="ruby-value">display_name:</span> <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">default_name</span>.<span class="ruby-identifier">name</span>
+<span class="line-num">109</span>     )
+<span class="line-num">110</span>     <span class="ruby-keyword">unless</span> <span class="ruby-identifier">gt</span>.<span class="ruby-identifier">save</span>
+<span class="line-num">111</span>       <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;[ERROR #{Time.now}] Failed to save #{gt}: #{gt.errors.full_messages.to_sentence}&quot;</span>
+<span class="line-num">112</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">113</span>     <span class="ruby-identifier">guide_taxa</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">gt</span>
+<span class="line-num">114</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">115</span>   <span class="ruby-identifier">guide_taxa</span>
+<span class="line-num">116</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-must_have_some_guide_taxa_to_publish">
+            
+              <b>must_have_some_guide_taxa_to_publish</b>()
+            
+            <a href="../classes/Guide.html#method-i-must_have_some_guide_taxa_to_publish" name="method-i-must_have_some_guide_taxa_to_publish" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-must_have_some_guide_taxa_to_publish_source')" id="l_method-i-must_have_some_guide_taxa_to_publish_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-must_have_some_guide_taxa_to_publish_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/guide.rb</span>
+<span class="line-num">490</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">must_have_some_guide_taxa_to_publish</span>
+<span class="line-num">491</span>   <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">add</span>( <span class="ruby-value">:published_at</span>, <span class="ruby-value">:published_at_needs_3_taxa</span> ) <span class="ruby-keyword">if</span> <span class="ruby-identifier">published?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">guide_taxa</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">3</span>
+<span class="line-num">492</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-ngz_size">
+            
+              <b>ngz_size</b>()
+            
+            <a href="../classes/Guide.html#method-i-ngz_size" name="method-i-ngz_size" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-ngz_size_source')" id="l_method-i-ngz_size_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-ngz_size_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/guide.rb</span>
+<span class="line-num">350</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">ngz_size</span>
+<span class="line-num">351</span>   <span class="ruby-identifier">ngz</span>.<span class="ruby-identifier">size</span>
+<span class="line-num">352</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-ngz_work_path">
+            
+              <b>ngz_work_path</b>()
+            
+            <a href="../classes/Guide.html#method-i-ngz_work_path" name="method-i-ngz_work_path" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-ngz_work_path_source')" id="l_method-i-ngz_work_path_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-ngz_work_path_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/guide.rb</span>
+<span class="line-num">391</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">ngz_work_path</span>
+<span class="line-num">392</span>   <span class="ruby-keyword">return</span> <span class="ruby-ivar">@ngz_work_path</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@ngz_work_path</span>
+<span class="line-num">393</span> 
+<span class="line-num">394</span>   <span class="ruby-identifier">basename</span> = <span class="ruby-identifier">title</span>.<span class="ruby-identifier">parameterize</span>
+<span class="line-num">395</span>   <span class="ruby-ivar">@ngz_work_path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>( <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">tmpdir</span>, <span class="ruby-node">&quot;#{basename}-#{Time.now.to_i}&quot;</span> )
+<span class="line-num">396</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-published-3F">
+            
+              <b>published?</b>()
+            
+            <a href="../classes/Guide.html#method-i-published-3F" name="method-i-published-3F" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-published-3F_source')" id="l_method-i-published-3F_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-published-3F_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/guide.rb</span>
+<span class="line-num">486</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">published?</span>
+<span class="line-num">487</span>   <span class="ruby-operator">!</span><span class="ruby-identifier">published_at</span>.<span class="ruby-identifier">blank?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">errors</span>[<span class="ruby-value">:published_at</span>].<span class="ruby-identifier">blank?</span>
+<span class="line-num">488</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-recent_photo_tags">
+            
+              <b>recent_photo_tags</b>()
+            
+            <a href="../classes/Guide.html#method-i-recent_photo_tags" name="method-i-recent_photo_tags" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-recent_photo_tags_source')" id="l_method-i-recent_photo_tags_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-recent_photo_tags_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/guide.rb</span>
+<span class="line-num">321</span>   <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">recent_photo_tags</span>
+<span class="line-num">322</span>     <span class="ruby-identifier">tag_sql</span> = <span class="ruby-identifier">&lt;&lt;-SQL</span>
+<span class="line-num">323</span> <span class="ruby-value">      SELECT DISTINCT ON (tags.name) tags.*, taggings.id AS taggings_id
+<span class="line-num">324</span>       FROM tags
+<span class="line-num">325</span>         JOIN taggings ON taggings.tag_id = tags.id
+<span class="line-num">326</span>         JOIN guide_photos ON guide_photos.id = taggings.taggable_id
+<span class="line-num">327</span>         JOIN guide_taxa ON guide_taxa.id = guide_photos.guide_taxon_id
+<span class="line-num">328</span>       WHERE
+<span class="line-num">329</span>         taggable_type = &#39;GuidePhoto&#39; AND
+<span class="line-num">330</span>         guide_taxa.guide_id = #{id}
+<span class="line-num">331</span> </span><span class="ruby-identifier">    SQL</span>
+<span class="line-num">332</span>     <span class="ruby-constant">ActsAsTaggableOn</span><span class="ruby-operator">::</span><span class="ruby-constant">Tag</span>.<span class="ruby-identifier">find_by_sql</span>(
+<span class="line-num">333</span>       <span class="ruby-node">&quot;SELECT * FROM (#{tag_sql}) AS guide_tags ORDER BY guide_tags.taggings_id DESC LIMIT 20&quot;</span>
+<span class="line-num">334</span>     ).<span class="ruby-identifier">map</span>( <span class="ruby-operator">&amp;</span><span class="ruby-value">:name</span> ).<span class="ruby-identifier">sort_by</span>( <span class="ruby-operator">&amp;</span><span class="ruby-value">:downcase</span> )
+<span class="line-num">335</span>   <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-recent_tags">
+            
+              <b>recent_tags</b>()
+            
+            <a href="../classes/Guide.html#method-i-recent_tags" name="method-i-recent_tags" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-recent_tags_source')" id="l_method-i-recent_tags_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-recent_tags_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/guide.rb</span>
+<span class="line-num">306</span>   <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">recent_tags</span>
+<span class="line-num">307</span>     <span class="ruby-identifier">tag_sql</span> = <span class="ruby-identifier">&lt;&lt;-SQL</span>
+<span class="line-num">308</span> <span class="ruby-value">      SELECT DISTINCT ON (tags.name) tags.*, taggings.id AS taggings_id
+<span class="line-num">309</span>       FROM tags
+<span class="line-num">310</span>         JOIN taggings ON taggings.tag_id = tags.id
+<span class="line-num">311</span>         JOIN guide_taxa ON guide_taxa.id = taggings.taggable_id
+<span class="line-num">312</span>       WHERE
+<span class="line-num">313</span>         taggable_type = &#39;GuideTaxon&#39; AND
+<span class="line-num">314</span>         guide_taxa.guide_id = #{id}
+<span class="line-num">315</span> </span><span class="ruby-identifier">    SQL</span>
+<span class="line-num">316</span>     <span class="ruby-constant">ActsAsTaggableOn</span><span class="ruby-operator">::</span><span class="ruby-constant">Tag</span>.<span class="ruby-identifier">find_by_sql</span>(
+<span class="line-num">317</span>       <span class="ruby-node">&quot;SELECT * FROM (#{tag_sql}) AS guide_tags ORDER BY guide_tags.taggings_id DESC LIMIT 20&quot;</span>
+<span class="line-num">318</span>     ).<span class="ruby-identifier">map</span>( <span class="ruby-operator">&amp;</span><span class="ruby-value">:name</span> ).<span class="ruby-identifier">sort_by</span>( <span class="ruby-operator">&amp;</span><span class="ruby-value">:downcase</span> )
+<span class="line-num">319</span>   <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-reorder_by_taxonomy">
+            
+              <b>reorder_by_taxonomy</b>()
+            
+            <a href="../classes/Guide.html#method-i-reorder_by_taxonomy" name="method-i-reorder_by_taxonomy" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-reorder_by_taxonomy_source')" id="l_method-i-reorder_by_taxonomy_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-reorder_by_taxonomy_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/guide.rb</span>
+<span class="line-num">186</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">reorder_by_taxonomy</span>
+<span class="line-num">187</span>   <span class="ruby-identifier">gts</span> = <span class="ruby-identifier">guide_taxa</span>.<span class="ruby-identifier">includes</span>( <span class="ruby-value">:taxon</span> ).<span class="ruby-identifier">all</span>
+<span class="line-num">188</span>   <span class="ruby-identifier">indexed_guide_taxa</span> = <span class="ruby-identifier">gts</span>.<span class="ruby-identifier">index_by</span>( <span class="ruby-operator">&amp;</span><span class="ruby-value">:taxon_id</span> )
+<span class="line-num">189</span>   <span class="ruby-identifier">taxa</span> = <span class="ruby-identifier">gts</span>.<span class="ruby-identifier">map</span>( <span class="ruby-operator">&amp;</span><span class="ruby-value">:taxon</span> ).<span class="ruby-identifier">compact</span>
+<span class="line-num">190</span>   <span class="ruby-identifier">guide_taxa_without_taxa</span> = <span class="ruby-identifier">gts</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span> <span class="ruby-identifier">gt</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">gt</span>.<span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">blank?</span> }
+<span class="line-num">191</span>   <span class="ruby-identifier">ordered_taxa</span> = <span class="ruby-identifier">guide_taxa_without_taxa</span> <span class="ruby-operator">+</span>
+<span class="line-num">192</span>     <span class="ruby-constant">Taxon</span>.<span class="ruby-identifier">sort_by_ancestry</span>( <span class="ruby-identifier">taxa</span> ) {<span class="ruby-operator">|</span> <span class="ruby-identifier">t1</span>, <span class="ruby-identifier">t2</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">t1</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">t2</span>.<span class="ruby-identifier">name</span> }
+<span class="line-num">193</span>   <span class="ruby-identifier">ordered_taxa</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">t</span>, <span class="ruby-identifier">i</span> <span class="ruby-operator">|</span>
+<span class="line-num">194</span>     <span class="ruby-identifier">gt</span> = <span class="ruby-identifier">indexed_guide_taxa</span>[<span class="ruby-identifier">t</span>.<span class="ruby-identifier">id</span>]
+<span class="line-num">195</span>     <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">gt</span>
+<span class="line-num">196</span> 
+<span class="line-num">197</span>     <span class="ruby-identifier">gt</span>.<span class="ruby-identifier">update_attribute</span>( <span class="ruby-value">:position</span>, <span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span> )
+<span class="line-num">198</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">199</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-serializable_hash">
+            
+              <b>serializable_hash</b>( opts = nil )
+            
+            <a href="../classes/Guide.html#method-i-serializable_hash" name="method-i-serializable_hash" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-serializable_hash_source')" id="l_method-i-serializable_hash_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-serializable_hash_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/guide.rb</span>
+<span class="line-num">466</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">serializable_hash</span>( <span class="ruby-identifier">opts</span> = <span class="ruby-keyword">nil</span> )
+<span class="line-num">467</span>   <span class="ruby-identifier">options</span> = <span class="ruby-identifier">opts</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">clone</span> <span class="ruby-operator">:</span> {}
+<span class="line-num">468</span>   <span class="ruby-identifier">options</span>[<span class="ruby-value">:include</span>] = <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:include</span>].<span class="ruby-identifier">is_a?</span>( <span class="ruby-constant">Hash</span> )
+<span class="line-num">469</span>     <span class="ruby-identifier">options</span>[<span class="ruby-value">:include</span>].<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span> <span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span> <span class="ruby-operator">|</span> { <span class="ruby-identifier">k</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">v</span> } }
+<span class="line-num">470</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">471</span>     [<span class="ruby-identifier">options</span>[<span class="ruby-value">:include</span>]].<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">compact</span>
+<span class="line-num">472</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">473</span>   <span class="ruby-identifier">options</span>[<span class="ruby-value">:methods</span>] <span class="ruby-operator">||=</span> []
+<span class="line-num">474</span>   <span class="ruby-identifier">options</span>[<span class="ruby-value">:methods</span>] <span class="ruby-operator">+=</span> [<span class="ruby-value">:user_login</span>, <span class="ruby-value">:icon_url</span>]
+<span class="line-num">475</span>   <span class="ruby-identifier">h</span> = <span class="ruby-keyword">super</span>( <span class="ruby-identifier">options</span> )
+<span class="line-num">476</span>   <span class="ruby-identifier">h</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span> <span class="ruby-operator">|</span>
+<span class="line-num">477</span>     <span class="ruby-identifier">h</span>[<span class="ruby-identifier">k</span>] = <span class="ruby-identifier">v</span>.<span class="ruby-identifier">gsub</span>( <span class="ruby-regexp">/&lt;script.*script&gt;/i</span>, <span class="ruby-string">&quot;&quot;</span> ) <span class="ruby-keyword">if</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">is_a?</span>( <span class="ruby-constant">String</span> )
+<span class="line-num">478</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">479</span>   <span class="ruby-identifier">h</span>
+<span class="line-num">480</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-set_defaults_from_eol_collection">
+            
+              <b>set_defaults_from_eol_collection</b>( collection_url, options = {} )
+            
+            <a href="../classes/Guide.html#method-i-set_defaults_from_eol_collection" name="method-i-set_defaults_from_eol_collection" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>rubocop:enable Naming/AccessorMethodName</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-set_defaults_from_eol_collection_source')" id="l_method-i-set_defaults_from_eol_collection_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-set_defaults_from_eol_collection_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/guide.rb</span>
+<span class="line-num">212</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">set_defaults_from_eol_collection</span>( <span class="ruby-identifier">collection_url</span>, <span class="ruby-identifier">options</span> = {} )
+<span class="line-num">213</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> ( <span class="ruby-identifier">collection_id</span> = <span class="ruby-identifier">collection_url</span>[<span class="ruby-regexp">%r{/(\d+)(\.\w+)?$}</span>, <span class="ruby-value">1</span>] )
+<span class="line-num">214</span> 
+<span class="line-num">215</span>   <span class="ruby-identifier">eol</span> = <span class="ruby-constant">EolService</span>.<span class="ruby-identifier">new</span>( <span class="ruby-value">timeout:</span> <span class="ruby-value">30</span> )
+<span class="line-num">216</span>   <span class="ruby-identifier">c</span> = <span class="ruby-identifier">eol</span>.<span class="ruby-identifier">collections</span>( <span class="ruby-identifier">collection_id</span> )
+<span class="line-num">217</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">title</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">at</span>( <span class="ruby-string">&quot;name&quot;</span> ).<span class="ruby-identifier">inner_text</span>
+<span class="line-num">218</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">description</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">at</span>( <span class="ruby-string">&quot;description&quot;</span> ).<span class="ruby-identifier">inner_text</span>
+<span class="line-num">219</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-operator">!</span><span class="ruby-identifier">icon</span>.<span class="ruby-identifier">present?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">options</span>[<span class="ruby-value">:skip_icon</span>]
+<span class="line-num">220</span> 
+<span class="line-num">221</span>   <span class="ruby-identifier">logo_url</span> = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">at</span>( <span class="ruby-string">&quot;logo_url&quot;</span> ).<span class="ruby-identifier">inner_text</span>
+<span class="line-num">222</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">logo_url</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">223</span> 
+<span class="line-num">224</span>   <span class="ruby-identifier">logo_url</span>.<span class="ruby-identifier">strip!</span>
+<span class="line-num">225</span>   <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>( <span class="ruby-identifier">logo_url</span> ).<span class="ruby-identifier">open</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">io</span> <span class="ruby-operator">|</span>
+<span class="line-num">226</span>     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">icon</span> = ( <span class="ruby-identifier">io</span>.<span class="ruby-identifier">base_uri</span>.<span class="ruby-identifier">path</span>.<span class="ruby-identifier">split</span>( <span class="ruby-string">&quot;/&quot;</span> ).<span class="ruby-identifier">last</span>.<span class="ruby-identifier">blank?</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">io</span> )
+<span class="line-num">227</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">228</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-set_defaults_from_source_url">
+            
+              <b>set_defaults_from_source_url</b>( options = {} )
+            
+            <a href="../classes/Guide.html#method-i-set_defaults_from_source_url" name="method-i-set_defaults_from_source_url" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>rubocop:disable Naming/AccessorMethodName</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-set_defaults_from_source_url_source')" id="l_method-i-set_defaults_from_source_url_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-set_defaults_from_source_url_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/guide.rb</span>
+<span class="line-num">202</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">set_defaults_from_source_url</span>( <span class="ruby-identifier">options</span> = {} )
+<span class="line-num">203</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">source_url</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">204</span> 
+<span class="line-num">205</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">source_url</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">%r{eol.org/collections/\d+}</span>
+<span class="line-num">206</span>     <span class="ruby-identifier">set_defaults_from_eol_collection</span>( <span class="ruby-identifier">source_url</span>, <span class="ruby-identifier">options</span> )
+<span class="line-num">207</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">208</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">209</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-set_published_at">
+            
+              <b>set_published_at</b>()
+            
+            <a href="../classes/Guide.html#method-i-set_published_at" name="method-i-set_published_at" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-set_published_at_source')" id="l_method-i-set_published_at_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-set_published_at_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/guide.rb</span>
+<span class="line-num">159</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">set_published_at</span>
+<span class="line-num">160</span>   <span class="ruby-keyword">case</span> <span class="ruby-identifier">publish</span>
+<span class="line-num">161</span>   <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;publish&quot;</span>
+<span class="line-num">162</span>     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">published_at</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+<span class="line-num">163</span>   <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;unpublish&quot;</span>
+<span class="line-num">164</span>     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">published_at</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">165</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">166</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-set_taxon">
+            
+              <b>set_taxon</b>()
+            
+            <a href="../classes/Guide.html#method-i-set_taxon" name="method-i-set_taxon" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-set_taxon_source')" id="l_method-i-set_taxon_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-set_taxon_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/guide.rb</span>
+<span class="line-num">132</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">set_taxon</span>
+<span class="line-num">133</span>   <span class="ruby-identifier">ancestry_counts</span> = <span class="ruby-constant">Taxon</span>.<span class="ruby-identifier">joins</span>( <span class="ruby-value">:guide_taxa</span> ).<span class="ruby-identifier">where</span>( <span class="ruby-string">&quot;guide_taxa.guide_id = ?&quot;</span>, <span class="ruby-identifier">id</span> ).<span class="ruby-identifier">group</span>( <span class="ruby-value">:ancestry</span> ).<span class="ruby-identifier">count</span>
+<span class="line-num">134</span>   <span class="ruby-identifier">ancestries</span> = <span class="ruby-identifier">ancestry_counts</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span> <span class="ruby-identifier">a</span>, <span class="ruby-identifier">_c</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">split</span>( <span class="ruby-string">&quot;/&quot;</span> ) }.<span class="ruby-identifier">sort_by</span>( <span class="ruby-operator">&amp;</span><span class="ruby-value">:size</span> ).<span class="ruby-identifier">compact</span>
+<span class="line-num">135</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">ancestries</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">136</span>     <span class="ruby-constant">Guide</span>.<span class="ruby-identifier">where</span>( <span class="ruby-value">id:</span> <span class="ruby-identifier">id</span> ).<span class="ruby-identifier">update_all</span>( <span class="ruby-value">taxon_id:</span> <span class="ruby-keyword">nil</span> )
+<span class="line-num">137</span>     <span class="ruby-keyword">return</span>
+<span class="line-num">138</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">139</span> 
+<span class="line-num">140</span>   <span class="ruby-identifier">width</span> = <span class="ruby-identifier">ancestries</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">size</span>
+<span class="line-num">141</span>   <span class="ruby-identifier">matrix</span> = <span class="ruby-identifier">ancestries</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">a</span> <span class="ruby-operator">|</span>
+<span class="line-num">142</span>     <span class="ruby-identifier">a</span> <span class="ruby-operator">+</span> ( [<span class="ruby-keyword">nil</span>] <span class="ruby-operator">*</span> ( <span class="ruby-identifier">width</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">size</span> ) )
+<span class="line-num">143</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">144</span> 
+<span class="line-num">145</span>   <span class="ruby-comment"># start at the right col (lowest rank), look for the first occurrence of</span>
+<span class="line-num">146</span>   <span class="ruby-comment"># consensus within a rank</span>
+<span class="line-num">147</span>   <span class="ruby-identifier">consensus_taxon_id</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">148</span>   <span class="ruby-identifier">width</span>.<span class="ruby-identifier">downto</span>( <span class="ruby-value">0</span> ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">c</span> <span class="ruby-operator">|</span>
+<span class="line-num">149</span>     <span class="ruby-identifier">column_taxon_ids</span> = <span class="ruby-identifier">matrix</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span> <span class="ruby-identifier">ancestry</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">ancestry</span>[<span class="ruby-identifier">c</span>] }
+<span class="line-num">150</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">column_taxon_ids</span>.<span class="ruby-identifier">uniq</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">column_taxon_ids</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">151</span>       <span class="ruby-identifier">consensus_taxon_id</span> = <span class="ruby-identifier">column_taxon_ids</span>.<span class="ruby-identifier">first</span>
+<span class="line-num">152</span>       <span class="ruby-keyword">break</span>
+<span class="line-num">153</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">154</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">155</span> 
+<span class="line-num">156</span>   <span class="ruby-constant">Guide</span>.<span class="ruby-identifier">where</span>( <span class="ruby-value">id:</span> <span class="ruby-identifier">id</span> ).<span class="ruby-identifier">update_all</span>( <span class="ruby-value">taxon_id:</span> <span class="ruby-identifier">consensus_taxon_id</span> )
+<span class="line-num">157</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-tags">
+            
+              <b>tags</b>()
+            
+            <a href="../classes/Guide.html#method-i-tags" name="method-i-tags" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-tags_source')" id="l_method-i-tags_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-tags_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/guide.rb</span>
+<span class="line-num">337</span>   <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">tags</span>
+<span class="line-num">338</span>     <span class="ruby-identifier">tag_sql</span> = <span class="ruby-identifier">&lt;&lt;-SQL</span>
+<span class="line-num">339</span> <span class="ruby-value">      SELECT DISTINCT ON (tags.name) tags.*, taggings.id AS taggings_id
+<span class="line-num">340</span>       FROM tags
+<span class="line-num">341</span>         JOIN taggings ON taggings.tag_id = tags.id
+<span class="line-num">342</span>         JOIN guide_taxa ON guide_taxa.id = taggings.taggable_id
+<span class="line-num">343</span>       WHERE
+<span class="line-num">344</span>         taggable_type = &#39;GuideTaxon&#39; AND
+<span class="line-num">345</span>         guide_taxa.guide_id = #{id}
+<span class="line-num">346</span> </span><span class="ruby-identifier">    SQL</span>
+<span class="line-num">347</span>     <span class="ruby-constant">ActsAsTaggableOn</span><span class="ruby-operator">::</span><span class="ruby-constant">Tag</span>.<span class="ruby-identifier">find_by_sql</span>( <span class="ruby-node">&quot;SELECT * FROM (#{tag_sql}) AS guide_tags&quot;</span> ).<span class="ruby-identifier">map</span>( <span class="ruby-operator">&amp;</span><span class="ruby-value">:name</span> ).<span class="ruby-identifier">sort_by</span>( <span class="ruby-operator">&amp;</span><span class="ruby-value">:downcase</span> )
+<span class="line-num">348</span>   <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-to_ngz">
+            
+              <b>to_ngz</b>( options = {} )
+            
+            <a href="../classes/Guide.html#method-i-to_ngz" name="method-i-to_ngz" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-to_ngz_source')" id="l_method-i-to_ngz_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-to_ngz_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/guide.rb</span>
+<span class="line-num">398</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">to_ngz</span>( <span class="ruby-identifier">options</span> = {} )
+<span class="line-num">399</span>   <span class="ruby-identifier">start_log_timer</span> <span class="ruby-node">&quot;#{self} to_ngz&quot;</span>
+<span class="line-num">400</span>   <span class="ruby-identifier">ordered_guide_taxa</span> = <span class="ruby-identifier">guide_taxa</span>.
+<span class="line-num">401</span>     <span class="ruby-identifier">order</span>( <span class="ruby-value">:position</span> ).
+<span class="line-num">402</span>     <span class="ruby-identifier">includes</span>( { <span class="ruby-value">guide_photos:</span> [<span class="ruby-value">:photo</span>] }, <span class="ruby-value">:guide_ranges</span>, <span class="ruby-value">:guide_sections</span>, <span class="ruby-value">:tags</span> )
+<span class="line-num">403</span>   <span class="ruby-identifier">image_sizes</span> = <span class="ruby-node">%w(thumb small medium)</span>
+<span class="line-num">404</span>   <span class="ruby-identifier">local_asset_path</span> = <span class="ruby-string">&quot;files&quot;</span>
+<span class="line-num">405</span>   <span class="ruby-identifier">work_path</span> = <span class="ruby-identifier">ngz_work_path</span>
+<span class="line-num">406</span>   <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">mkdir_p</span> <span class="ruby-identifier">work_path</span>, <span class="ruby-value">mode:</span> <span class="ruby-value">0o755</span>
+<span class="line-num">407</span>   <span class="ruby-comment"># build xml and write to file in tmpdir</span>
+<span class="line-num">408</span>   <span class="ruby-identifier">xml_fname</span> = <span class="ruby-node">&quot;#{id}.xml&quot;</span>
+<span class="line-num">409</span>   <span class="ruby-identifier">xml_path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>( <span class="ruby-identifier">work_path</span>, <span class="ruby-identifier">xml_fname</span> )
+<span class="line-num">410</span>   <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span> <span class="ruby-identifier">xml_path</span>, <span class="ruby-string">&quot;w&quot;</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">f</span> <span class="ruby-operator">|</span>
+<span class="line-num">411</span>     <span class="ruby-identifier">f</span>.<span class="ruby-identifier">write</span> <span class="ruby-constant">FakeView</span>.<span class="ruby-identifier">render</span>( <span class="ruby-value">template:</span> <span class="ruby-string">&quot;guides/show&quot;</span>, <span class="ruby-value">formats:</span> [<span class="ruby-value">:xml</span>], <span class="ruby-value">locals:</span> {
+<span class="line-num">412</span>       <span class="ruby-value">local_asset_path:</span> <span class="ruby-identifier">local_asset_path</span>,
+<span class="line-num">413</span>       <span class="ruby-value">guide:</span> <span class="ruby-keyword">self</span>,
+<span class="line-num">414</span>       <span class="ruby-value">guide_taxa:</span> <span class="ruby-identifier">ordered_guide_taxa</span>,
+<span class="line-num">415</span>       <span class="ruby-value">image_sizes:</span> <span class="ruby-identifier">image_sizes</span>
+<span class="line-num">416</span>     } )
+<span class="line-num">417</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">418</span> 
+<span class="line-num">419</span>   <span class="ruby-comment"># mkdir for assests</span>
+<span class="line-num">420</span>   <span class="ruby-identifier">full_asset_path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>( <span class="ruby-identifier">work_path</span>, <span class="ruby-identifier">local_asset_path</span> )
+<span class="line-num">421</span>   <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">mkdir_p</span> <span class="ruby-identifier">full_asset_path</span>, <span class="ruby-value">mode:</span> <span class="ruby-value">0o755</span>
+<span class="line-num">422</span>   <span class="ruby-comment"># loop over all photos and ranges, downloading assets to the asset dir</span>
+<span class="line-num">423</span>   <span class="ruby-identifier">ordered_guide_taxa</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">gt</span> <span class="ruby-operator">|</span>
+<span class="line-num">424</span>     ( <span class="ruby-identifier">gt</span>.<span class="ruby-identifier">guide_photos</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">gt</span>.<span class="ruby-identifier">guide_ranges</span> ).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">gp</span> <span class="ruby-operator">|</span>
+<span class="line-num">425</span>       <span class="ruby-identifier">image_sizes</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">s</span> <span class="ruby-operator">|</span>
+<span class="line-num">426</span>         <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> ( <span class="ruby-identifier">url</span> = <span class="ruby-identifier">gp</span>.<span class="ruby-identifier">send</span>( <span class="ruby-node">&quot;#{s}_url&quot;</span> ) )
+<span class="line-num">427</span> 
+<span class="line-num">428</span>         <span class="ruby-identifier">fname</span> = <span class="ruby-constant">FakeView</span>.<span class="ruby-identifier">guide_asset_filename</span>( <span class="ruby-identifier">gp</span>, <span class="ruby-value">size:</span> <span class="ruby-identifier">s</span> )
+<span class="line-num">429</span>         <span class="ruby-identifier">path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>( <span class="ruby-identifier">full_asset_path</span>, <span class="ruby-identifier">fname</span> )
+<span class="line-num">430</span>         <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;[INFO #{Time.now}] Fetching #{url} to #{path}&quot;</span>
+<span class="line-num">431</span>         <span class="ruby-keyword">begin</span>
+<span class="line-num">432</span>           <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>( <span class="ruby-identifier">path</span>, <span class="ruby-string">&quot;wb&quot;</span> ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">f</span> <span class="ruby-operator">|</span>
+<span class="line-num">433</span>             <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>( <span class="ruby-constant">CGI</span>.<span class="ruby-identifier">escape</span>( <span class="ruby-identifier">url</span> ) ).<span class="ruby-identifier">open</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">fr</span> <span class="ruby-operator">|</span>
+<span class="line-num">434</span>               <span class="ruby-identifier">f</span>.<span class="ruby-identifier">write</span>( <span class="ruby-identifier">fr</span>.<span class="ruby-identifier">read</span> )
+<span class="line-num">435</span>             <span class="ruby-keyword">end</span>
+<span class="line-num">436</span>           <span class="ruby-keyword">end</span>
+<span class="line-num">437</span>         <span class="ruby-keyword">rescue</span> <span class="ruby-constant">StandardError</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">e</span>
+<span class="line-num">438</span>           <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;[ERROR #{Time.now}] Failed to download #{url}: #{e}&quot;</span>
+<span class="line-num">439</span>           <span class="ruby-keyword">next</span>
+<span class="line-num">440</span>         <span class="ruby-keyword">end</span>
+<span class="line-num">441</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">442</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">443</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">444</span> 
+<span class="line-num">445</span>   <span class="ruby-comment"># zip up the results &amp; return the path</span>
+<span class="line-num">446</span>   <span class="ruby-identifier">zip_path</span> = <span class="ruby-node">&quot;#{work_path}.ngz&quot;</span>
+<span class="line-num">447</span>   <span class="ruby-identifier">system</span> <span class="ruby-node">&quot;cd #{work_path} &amp;&amp; zip -qr #{zip_path} #{xml_fname} #{local_asset_path}&quot;</span>
+<span class="line-num">448</span>   <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span> <span class="ruby-node">&quot;[DEBUG] options[:path]: #{options[:path]}&quot;</span>
+<span class="line-num">449</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:path</span>]
+<span class="line-num">450</span>     <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span> <span class="ruby-node">&quot;[DEBUG] moving from #{zip_path} to #{options[:path]}&quot;</span>
+<span class="line-num">451</span>     <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">mv</span>( <span class="ruby-identifier">zip_path</span>, <span class="ruby-identifier">options</span>[<span class="ruby-value">:path</span>] )
+<span class="line-num">452</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">453</span>   <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">rm_rf</span> <span class="ruby-identifier">work_path</span> <span class="ruby-comment"># clean up all those big files</span>
+<span class="line-num">454</span>   <span class="ruby-identifier">end_log_timer</span>
+<span class="line-num">455</span>   <span class="ruby-identifier">zip_path</span>
+<span class="line-num">456</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-to_s">
+            
+              <b>to_s</b>()
+            
+            <a href="../classes/Guide.html#method-i-to_s" name="method-i-to_s" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-to_s_source')" id="l_method-i-to_s_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-to_s_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/guide.rb</span>
+<span class="line-num">79</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">to_s</span>
+<span class="line-num">80</span>   <span class="ruby-node">&quot;&lt;Guide #{id} #{title}&gt;&quot;</span>
+<span class="line-num">81</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-unique_tags">
+            
+              <b>unique_tags</b>()
+            
+            <a href="../classes/Guide.html#method-i-unique_tags" name="method-i-unique_tags" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-unique_tags_source')" id="l_method-i-unique_tags_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-unique_tags_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/guide.rb</span>
+<span class="line-num">482</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">unique_tags</span>
+<span class="line-num">483</span>   <span class="ruby-constant">ActsAsTaggableOn</span><span class="ruby-operator">::</span><span class="ruby-constant">Tag</span>.<span class="ruby-identifier">joins</span>( <span class="ruby-value">:taggings</span> ).<span class="ruby-identifier">where</span>( <span class="ruby-value">taggings:</span> { <span class="ruby-value">taggable_type:</span> <span class="ruby-string">&quot;GuideTaxon&quot;</span> } )
+<span class="line-num">484</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-user_login">
+            
+              <b>user_login</b>()
+            
+            <a href="../classes/Guide.html#method-i-user_login" name="method-i-user_login" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-user_login_source')" id="l_method-i-user_login_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-user_login_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/guide.rb</span>
+<span class="line-num">458</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">user_login</span>
+<span class="line-num">459</span>   <span class="ruby-identifier">user</span>.<span class="ruby-identifier">try</span>( <span class="ruby-value">:login</span> ) <span class="ruby-operator">||</span> <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>( <span class="ruby-value">:deleted_user</span> )
+<span class="line-num">460</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

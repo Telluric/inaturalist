@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ProjectObservationField</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["ProjectObservationField"]'>
+
+
+    <meta property="og:title" value="ProjectObservationField">
+
+  
+
+    <meta name="keywords" content="ProjectObservationField class, update_project_rule, create_project_rule, destroy_project_rule, as_indexed_json, default_json_options">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            ProjectObservationField
+            
+                <span class="parent">&lt;
+                    
+                    <a href="ApplicationRecord.html">ApplicationRecord</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/app/models/project_observation_field_rb.html">app/models/project_observation_field.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-as_indexed_json">as_indexed_json</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-create_project_rule">create_project_rule</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-default_json_options">default_json_options</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-destroy_project_rule">destroy_project_rule</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update_project_rule">update_project_rule</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <h2 class="sectiontitle">Class Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-c-default_json_options">
+            
+              <b>default_json_options</b>()
+            
+            <a href="../classes/ProjectObservationField.html#method-c-default_json_options" name="method-c-default_json_options" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-default_json_options_source')" id="l_method-c-default_json_options_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-default_json_options_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/project_observation_field.rb</span>
+<span class="line-num">40</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">default_json_options</span>
+<span class="line-num">41</span>   {
+<span class="line-num">42</span>     <span class="ruby-value">:methods</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:created_at_utc</span>, <span class="ruby-value">:updated_at_utc</span>],
+<span class="line-num">43</span>     <span class="ruby-value">:include</span> <span class="ruby-operator">=&gt;</span> {
+<span class="line-num">44</span>       <span class="ruby-value">:observation_field</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-constant">ObservationField</span>.<span class="ruby-identifier">default_json_options</span>
+<span class="line-num">45</span>     }
+<span class="line-num">46</span>   }
+<span class="line-num">47</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-as_indexed_json">
+            
+              <b>as_indexed_json</b>(options={})
+            
+            <a href="../classes/ProjectObservationField.html#method-i-as_indexed_json" name="method-i-as_indexed_json" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-as_indexed_json_source')" id="l_method-i-as_indexed_json_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-as_indexed_json_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/project_observation_field.rb</span>
+<span class="line-num">31</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">as_indexed_json</span>(<span class="ruby-identifier">options</span>={})
+<span class="line-num">32</span>   <span class="ruby-keyword">return</span> {
+<span class="line-num">33</span>     <span class="ruby-value">id:</span> <span class="ruby-identifier">id</span>,
+<span class="line-num">34</span>     <span class="ruby-value">required:</span> <span class="ruby-identifier">required</span>,
+<span class="line-num">35</span>     <span class="ruby-value">observation_field:</span> <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">as_indexed_json</span>,
+<span class="line-num">36</span>     <span class="ruby-value">position:</span> <span class="ruby-identifier">position</span>
+<span class="line-num">37</span>   }
+<span class="line-num">38</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-create_project_rule">
+            
+              <b>create_project_rule</b>()
+            
+            <a href="../classes/ProjectObservationField.html#method-i-create_project_rule" name="method-i-create_project_rule" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-create_project_rule_source')" id="l_method-i-create_project_rule_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-create_project_rule_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/project_observation_field.rb</span>
+<span class="line-num">14</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">create_project_rule</span>
+<span class="line-num">15</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">required?</span>
+<span class="line-num">16</span>   <span class="ruby-identifier">project</span>.<span class="ruby-identifier">project_observation_rules</span>.<span class="ruby-identifier">create</span>(
+<span class="line-num">17</span>     <span class="ruby-value">:operator</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;has_observation_field?&quot;</span>, 
+<span class="line-num">18</span>     <span class="ruby-value">:operand</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">observation_field</span>)
+<span class="line-num">19</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">20</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-destroy_project_rule">
+            
+              <b>destroy_project_rule</b>()
+            
+            <a href="../classes/ProjectObservationField.html#method-i-destroy_project_rule" name="method-i-destroy_project_rule" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-destroy_project_rule_source')" id="l_method-i-destroy_project_rule_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-destroy_project_rule_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/project_observation_field.rb</span>
+<span class="line-num">22</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">destroy_project_rule</span>
+<span class="line-num">23</span>   <span class="ruby-identifier">project</span>.<span class="ruby-identifier">project_observation_rules</span>.<span class="ruby-identifier">where</span>(
+<span class="line-num">24</span>     <span class="ruby-value">:operator</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;has_observation_field?&quot;</span>, 
+<span class="line-num">25</span>     <span class="ruby-value">:operand_type</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;ObservationField&quot;</span>,
+<span class="line-num">26</span>     <span class="ruby-value">:operand_id</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">observation_field_id</span>
+<span class="line-num">27</span>   ).<span class="ruby-identifier">each</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:destroy</span>)
+<span class="line-num">28</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">29</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-update_project_rule">
+            
+              <b>update_project_rule</b>()
+            
+            <a href="../classes/ProjectObservationField.html#method-i-update_project_rule" name="method-i-update_project_rule" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-update_project_rule_source')" id="l_method-i-update_project_rule_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-update_project_rule_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/project_observation_field.rb</span>
+<span class="line-num">10</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">update_project_rule</span>
+<span class="line-num">11</span>   <span class="ruby-identifier">required</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">create_project_rule</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">destroy_project_rule</span>
+<span class="line-num">12</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

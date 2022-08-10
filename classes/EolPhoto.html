@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>EolPhoto</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["EolPhoto"]'>
+
+
+    <meta property="og:title" value="EolPhoto">
+
+  
+
+    <meta name="keywords" content="EolPhoto class, sync, search_eol, get_api_response, new_from_api_response, repair">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            EolPhoto
+            
+                <span class="parent">&lt;
+                    
+                    <a href="Photo.html">Photo</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/app/models/eol_photo_rb.html">app/models/eol_photo.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-get_api_response">get_api_response</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new_from_api_response">new_from_api_response</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-repair">repair</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-search_eol">search_eol</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-sync">sync</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <h2 class="sectiontitle">Class Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-c-get_api_response">
+            
+              <b>get_api_response</b>( photo_id )
+            
+            <a href="../classes/EolPhoto.html#method-c-get_api_response" name="method-c-get_api_response" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-get_api_response_source')" id="l_method-c-get_api_response_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-get_api_response_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/eol_photo.rb</span>
+<span class="line-num">44</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">get_api_response</span>( <span class="ruby-identifier">photo_id</span> )
+<span class="line-num">45</span>   <span class="ruby-identifier">xml</span> = <span class="ruby-identifier">eol</span>.<span class="ruby-identifier">data_objects</span>( <span class="ruby-identifier">photo_id</span> )
+<span class="line-num">46</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">xml</span>.<span class="ruby-identifier">at</span>( <span class="ruby-string">&quot;error&quot;</span> )
+<span class="line-num">47</span>   <span class="ruby-identifier">xml</span>
+<span class="line-num">48</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-new_from_api_response">
+            
+              <b>new_from_api_response</b>(api_response, options = {})
+            
+            <a href="../classes/EolPhoto.html#method-c-new_from_api_response" name="method-c-new_from_api_response" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-new_from_api_response_source')" id="l_method-c-new_from_api_response_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-new_from_api_response_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/eol_photo.rb</span>
+<span class="line-num"> 50</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">new_from_api_response</span>(<span class="ruby-identifier">api_response</span>, <span class="ruby-identifier">options</span> = {})
+<span class="line-num"> 51</span>   <span class="ruby-identifier">api_response</span>.<span class="ruby-identifier">remove_namespaces!</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">api_response</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:remove_namespaces!</span>)
+<span class="line-num"> 52</span>   <span class="ruby-identifier">native_photo_id</span> = <span class="ruby-identifier">api_response</span>.<span class="ruby-identifier">at</span>( <span class="ruby-string">&quot;dataObjectVersionID&quot;</span> ).<span class="ruby-identifier">try</span>(<span class="ruby-value">:content</span>)
+<span class="line-num"> 53</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">native_photo_id</span>
+<span class="line-num"> 54</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">license</span> = <span class="ruby-identifier">api_response</span>.<span class="ruby-identifier">at</span>( <span class="ruby-string">&quot;license&quot;</span> )
+<span class="line-num"> 55</span>     <span class="ruby-identifier">license_string</span> = <span class="ruby-identifier">license</span>.<span class="ruby-identifier">content</span>
+<span class="line-num"> 56</span>     <span class="ruby-identifier">license_number</span> = <span class="ruby-constant">Photo</span><span class="ruby-operator">::</span><span class="ruby-constant">C</span>
+<span class="line-num"> 57</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">license_string</span>.<span class="ruby-identifier">include?</span> <span class="ruby-string">&quot;publicdomain&quot;</span>
+<span class="line-num"> 58</span>       <span class="ruby-identifier">license_number</span> = <span class="ruby-constant">PD</span>
+<span class="line-num"> 59</span>     <span class="ruby-keyword">end</span>
+<span class="line-num"> 60</span>     [<span class="ruby-value">1</span>,<span class="ruby-value">2</span>,<span class="ruby-value">3</span>,<span class="ruby-value">4</span>,<span class="ruby-value">5</span>,<span class="ruby-value">6</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">num</span><span class="ruby-operator">|</span>
+<span class="line-num"> 61</span>       <span class="ruby-keyword">if</span> <span class="ruby-identifier">license_string</span>.<span class="ruby-identifier">include?</span> <span class="ruby-node">&quot;licenses/#{Photo.license_code_for_number(num).split(&quot;CC-&quot;)[1].downcase}/&quot;</span>
+<span class="line-num"> 62</span>         <span class="ruby-identifier">license_number</span> = <span class="ruby-identifier">num</span> 
+<span class="line-num"> 63</span>       <span class="ruby-keyword">end</span>
+<span class="line-num"> 64</span>     <span class="ruby-keyword">end</span>
+<span class="line-num"> 65</span>   <span class="ruby-keyword">else</span>
+<span class="line-num"> 66</span>     <span class="ruby-comment"># all EOL content should be CC licensed or PD, so if there&#39;s not license info we can assume it&#39;s PD</span>
+<span class="line-num"> 67</span>     <span class="ruby-identifier">license_number</span> = <span class="ruby-constant">PD</span>
+<span class="line-num"> 68</span>   <span class="ruby-keyword">end</span>
+<span class="line-num"> 69</span>   <span class="ruby-identifier">square_url</span>, <span class="ruby-identifier">thumb_url</span>, <span class="ruby-identifier">small_url</span>, <span class="ruby-identifier">medium_url</span>, <span class="ruby-identifier">original_url</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num"> 70</span>   <span class="ruby-identifier">image_url</span> = <span class="ruby-identifier">api_response</span>.<span class="ruby-identifier">at</span>( <span class="ruby-string">&quot;eolMediaURL&quot;</span> ).<span class="ruby-identifier">content</span>
+<span class="line-num"> 71</span>   <span class="ruby-keyword">unless</span> <span class="ruby-identifier">image_url</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num"> 72</span>     <span class="ruby-identifier">square_url</span> = <span class="ruby-identifier">image_url</span>.<span class="ruby-identifier">gsub</span>( <span class="ruby-regexp">/(\.\w+?)$/</span>, <span class="ruby-string">&quot;.88x88\\1&quot;</span> )
+<span class="line-num"> 73</span>     <span class="ruby-identifier">small_url</span> = <span class="ruby-identifier">image_url</span>.<span class="ruby-identifier">gsub</span>( <span class="ruby-regexp">/(\.\w+?)$/</span>, <span class="ruby-string">&quot;.260x190\\1&quot;</span> )
+<span class="line-num"> 74</span>     <span class="ruby-identifier">medium_url</span> = <span class="ruby-identifier">image_url</span>.<span class="ruby-identifier">gsub</span>( <span class="ruby-regexp">/(\.\w+?)$/</span>, <span class="ruby-string">&quot;.580x360\\1&quot;</span> )
+<span class="line-num"> 75</span>   <span class="ruby-keyword">end</span>
+<span class="line-num"> 76</span>   <span class="ruby-identifier">thumb_url</span> = <span class="ruby-identifier">api_response</span>.<span class="ruby-identifier">at</span>( <span class="ruby-string">&quot;eolThumbnailURL&quot;</span> ).<span class="ruby-identifier">content</span>
+<span class="line-num"> 77</span>   <span class="ruby-identifier">rights_holder</span> = <span class="ruby-identifier">api_response</span>.<span class="ruby-identifier">search</span>( <span class="ruby-string">&quot;dataObject rightsHolder&quot;</span> )
+<span class="line-num"> 78</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">rights_holder</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+<span class="line-num"> 79</span>     <span class="ruby-identifier">agent</span> = <span class="ruby-identifier">api_response</span>.<span class="ruby-identifier">search</span>(<span class="ruby-string">&#39;agent[role=creator]&#39;</span>).<span class="ruby-identifier">first</span>
+<span class="line-num"> 80</span>     <span class="ruby-identifier">agent</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">api_response</span>.<span class="ruby-identifier">search</span>(<span class="ruby-string">&#39;agent[role=photographer]&#39;</span>).<span class="ruby-identifier">first</span>
+<span class="line-num"> 81</span>     <span class="ruby-identifier">native_username</span> = <span class="ruby-identifier">agent</span>.<span class="ruby-identifier">inner_text</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">agent</span>
+<span class="line-num"> 82</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">rights_holder</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+<span class="line-num"> 83</span>     <span class="ruby-identifier">native_username</span> = <span class="ruby-identifier">rights_holder</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">inner_text</span>
+<span class="line-num"> 84</span>   <span class="ruby-keyword">else</span>
+<span class="line-num"> 85</span>     <span class="ruby-identifier">native_username</span> = <span class="ruby-identifier">rights_holder</span>.<span class="ruby-identifier">content</span>
+<span class="line-num"> 86</span>   <span class="ruby-keyword">end</span>
+<span class="line-num"> 87</span> 
+<span class="line-num"> 88</span>   <span class="ruby-identifier">native_page_url</span> = <span class="ruby-keyword">if</span> <span class="ruby-identifier">source</span> = <span class="ruby-identifier">api_response</span>.<span class="ruby-identifier">at</span>( <span class="ruby-string">&quot;dataObject source&quot;</span> )
+<span class="line-num"> 89</span>     <span class="ruby-identifier">source</span>.<span class="ruby-identifier">content</span>
+<span class="line-num"> 90</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">verson_id</span> = <span class="ruby-identifier">api_response</span>.<span class="ruby-identifier">at</span>( <span class="ruby-string">&quot;dataObjectVersionID&quot;</span> ).<span class="ruby-identifier">try</span>(<span class="ruby-value">:content</span>)
+<span class="line-num"> 91</span>     <span class="ruby-node">&quot;https://eol.org/media/#{verson_id}&quot;</span>
+<span class="line-num"> 92</span>   <span class="ruby-keyword">elsif</span> (<span class="ruby-identifier">eol_taxon_id</span> = <span class="ruby-identifier">api_response</span>.<span class="ruby-identifier">at</span>( <span class="ruby-string">&quot;taxon identifier&quot;</span> ).<span class="ruby-identifier">try</span>(<span class="ruby-value">:content</span>))
+<span class="line-num"> 93</span>     <span class="ruby-node">&quot;http://eol.org/pages/#{eol_taxon_id}&quot;</span>
+<span class="line-num"> 94</span>   <span class="ruby-keyword">end</span>
+<span class="line-num"> 95</span>   
+<span class="line-num"> 96</span>   <span class="ruby-identifier">new</span>( <span class="ruby-identifier">options</span>.<span class="ruby-identifier">merge</span>(
+<span class="line-num"> 97</span>     <span class="ruby-value">remote_medium_url:</span> <span class="ruby-identifier">medium_url</span>,
+<span class="line-num"> 98</span>     <span class="ruby-value">remote_small_url:</span> <span class="ruby-identifier">small_url</span>,
+<span class="line-num"> 99</span>     <span class="ruby-value">remote_thumb_url:</span> <span class="ruby-identifier">thumb_url</span>,
+<span class="line-num">100</span>     <span class="ruby-value">remote_square_url:</span> <span class="ruby-identifier">thumb_url</span>,
+<span class="line-num">101</span>     <span class="ruby-value">remote_original_url:</span> <span class="ruby-identifier">image_url</span>,
+<span class="line-num">102</span>     <span class="ruby-value">native_photo_id:</span> <span class="ruby-identifier">native_photo_id</span>,
+<span class="line-num">103</span>     <span class="ruby-value">native_page_url:</span> <span class="ruby-identifier">native_page_url</span>,
+<span class="line-num">104</span>     <span class="ruby-value">native_username:</span> <span class="ruby-identifier">native_username</span>,
+<span class="line-num">105</span>     <span class="ruby-value">native_realname:</span> <span class="ruby-identifier">native_username</span>,
+<span class="line-num">106</span>     <span class="ruby-value">license:</span> <span class="ruby-identifier">license_number</span>
+<span class="line-num">107</span>   ) )
+<span class="line-num">108</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-search_eol">
+            
+              <b>search_eol</b>(query, options = {})
+            
+            <a href="../classes/EolPhoto.html#method-c-search_eol" name="method-c-search_eol" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-search_eol_source')" id="l_method-c-search_eol_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-search_eol_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/eol_photo.rb</span>
+<span class="line-num">14</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">search_eol</span>(<span class="ruby-identifier">query</span>, <span class="ruby-identifier">options</span> = {})
+<span class="line-num">15</span>   <span class="ruby-keyword">return</span> [] <span class="ruby-keyword">if</span> <span class="ruby-identifier">query</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">16</span>   <span class="ruby-identifier">eol_page_id</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:eol_page_id</span>]
+<span class="line-num">17</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">eol_page_id</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">18</span>     <span class="ruby-identifier">search_xml</span> = <span class="ruby-identifier">eol</span>.<span class="ruby-identifier">search</span>(<span class="ruby-identifier">query</span>, <span class="ruby-value">:exact</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">1</span>)
+<span class="line-num">19</span>     <span class="ruby-keyword">return</span> [] <span class="ruby-keyword">if</span> <span class="ruby-identifier">search_xml</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">20</span>     <span class="ruby-identifier">eol_page_id</span> = <span class="ruby-identifier">search_xml</span>.<span class="ruby-identifier">at</span>(<span class="ruby-string">&quot;entry/id&quot;</span>).<span class="ruby-identifier">try</span>(<span class="ruby-value">:text</span>)
+<span class="line-num">21</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">22</span>   <span class="ruby-keyword">return</span> [] <span class="ruby-keyword">if</span> <span class="ruby-identifier">eol_page_id</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">23</span>   <span class="ruby-identifier">per_page</span> = (<span class="ruby-identifier">options</span>[<span class="ruby-value">:per_page</span>] <span class="ruby-operator">||</span> <span class="ruby-value">36</span>).<span class="ruby-identifier">to_i</span>
+<span class="line-num">24</span>   <span class="ruby-identifier">per_page</span> = <span class="ruby-value">100</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">per_page</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">100</span>
+<span class="line-num">25</span>   <span class="ruby-identifier">eol_page_xml</span> = <span class="ruby-keyword">begin</span>
+<span class="line-num">26</span>     <span class="ruby-identifier">eol</span>.<span class="ruby-identifier">page</span>(<span class="ruby-identifier">eol_page_id</span>,
+<span class="line-num">27</span>       <span class="ruby-value">licenses:</span> <span class="ruby-string">&quot;all&quot;</span>,
+<span class="line-num">28</span>       <span class="ruby-value">images_page:</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:page</span>],
+<span class="line-num">29</span>       <span class="ruby-value">images_per_page:</span> <span class="ruby-identifier">per_page</span>,
+<span class="line-num">30</span>       <span class="ruby-value">maps_per_page:</span> <span class="ruby-value">0</span>,
+<span class="line-num">31</span>       <span class="ruby-value">texts_per_page:</span> <span class="ruby-value">0</span>,
+<span class="line-num">32</span>       <span class="ruby-value">videos_per_page:</span> <span class="ruby-value">0</span>,
+<span class="line-num">33</span>       <span class="ruby-value">sounds_per_page:</span> <span class="ruby-value">0</span>,
+<span class="line-num">34</span>       <span class="ruby-value">details:</span> <span class="ruby-value">1</span>
+<span class="line-num">35</span>     )
+<span class="line-num">36</span>   <span class="ruby-keyword">rescue</span> <span class="ruby-constant">OpenURI</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTPError</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">e</span>
+<span class="line-num">37</span>     <span class="ruby-keyword">return</span> []
+<span class="line-num">38</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">39</span>   <span class="ruby-identifier">eol_page_xml</span>.<span class="ruby-identifier">xpath</span>(<span class="ruby-string">&#39;//xmlns:dataObject[.//xmlns:mediaURL]&#39;</span>).<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">data_object</span><span class="ruby-operator">|</span>
+<span class="line-num">40</span>     <span class="ruby-identifier">new_from_api_response</span>(<span class="ruby-identifier">data_object</span>)
+<span class="line-num">41</span>   <span class="ruby-keyword">end</span>.<span class="ruby-identifier">compact</span>
+<span class="line-num">42</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-repair">
+            
+              <b>repair</b>(options = {})
+            
+            <a href="../classes/EolPhoto.html#method-i-repair" name="method-i-repair" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-repair_source')" id="l_method-i-repair_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-repair_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/eol_photo.rb</span>
+<span class="line-num">110</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">repair</span>(<span class="ruby-identifier">options</span> = {})
+<span class="line-num">111</span>   <span class="ruby-identifier">r</span> = <span class="ruby-constant">EolPhoto</span>.<span class="ruby-identifier">get_api_response</span>( <span class="ruby-identifier">native_photo_id</span> )
+<span class="line-num">112</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">r</span>.<span class="ruby-identifier">blank?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">r</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">113</span>     <span class="ruby-keyword">return</span> [<span class="ruby-keyword">self</span>, { <span class="ruby-value">photo_missing:</span> <span class="ruby-node">&quot;photo not found #{self}&quot;</span> } ]
+<span class="line-num">114</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">115</span>   <span class="ruby-identifier">p</span> = <span class="ruby-constant">EolPhoto</span>.<span class="ruby-identifier">new_from_api_response</span>( <span class="ruby-identifier">r</span> )
+<span class="line-num">116</span>   (<span class="ruby-constant">EolPhoto</span>.<span class="ruby-identifier">column_names</span> <span class="ruby-operator">-</span> <span class="ruby-node">%w(id created_at updated_at)</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span>
+<span class="line-num">117</span>     <span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{a}=&quot;</span>, <span class="ruby-identifier">p</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">a</span>))
+<span class="line-num">118</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">119</span>   <span class="ruby-identifier">save</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:no_save</span>]
+<span class="line-num">120</span>   [<span class="ruby-keyword">self</span>, {}]
+<span class="line-num">121</span> <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Timeout</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span>
+<span class="line-num">122</span>   [<span class="ruby-keyword">self</span>, { <span class="ruby-value">timeout:</span> <span class="ruby-string">&quot;EOL didn&#39;t respond&quot;</span> }]
+<span class="line-num">123</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-sync">
+            
+              <b>sync</b>()
+            
+            <a href="../classes/EolPhoto.html#method-i-sync" name="method-i-sync" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-sync_source')" id="l_method-i-sync_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-sync_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/eol_photo.rb</span>
+<span class="line-num"> 5</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">sync</span>
+<span class="line-num"> 6</span>   <span class="ruby-identifier">new_photo</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new_from_api_response</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">get_api_response</span>(<span class="ruby-identifier">native_photo_id</span>))
+<span class="line-num"> 7</span>   <span class="ruby-identifier">cols</span> = <span class="ruby-constant">Photo</span>.<span class="ruby-identifier">column_names</span> <span class="ruby-operator">-</span> <span class="ruby-node">%w(id user_id native_photo_id type created_at updated_at)</span>
+<span class="line-num"> 8</span>   <span class="ruby-identifier">cols</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span>
+<span class="line-num"> 9</span>     <span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{c}=&quot;</span>, <span class="ruby-identifier">new_photo</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">c</span>))
+<span class="line-num">10</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">11</span>   <span class="ruby-identifier">save</span>
+<span class="line-num">12</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

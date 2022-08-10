@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WikiPagesHelper</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["WikiPagesHelper"]'>
+
+
+    <meta property="og:title" value="WikiPagesHelper">
+
+  
+
+    <meta name="keywords" content="WikiPagesHelper class, wiki_content, wiki_macros, wiki_nav, wiki_topnav, wiki_css, wiki_page_attachments, wiki_user">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Module</span>
+            WikiPagesHelper
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/app/helpers/wiki_pages_helper_rb.html">app/helpers/wiki_pages_helper.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>W</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-wiki_content">wiki_content</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-wiki_css">wiki_css</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-wiki_macros">wiki_macros</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-wiki_nav">wiki_nav</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-wiki_page_attachments">wiki_page_attachments</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-wiki_topnav">wiki_topnav</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-wiki_user">wiki_user</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-wiki_content">
+            
+              <b>wiki_content</b>( text )
+            
+            <a href="../classes/WikiPagesHelper.html#method-i-wiki_content" name="method-i-wiki_content" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-wiki_content_source')" id="l_method-i-wiki_content_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-wiki_content_source" class="dyn-source">
+                <pre>  <span class="ruby-comment"># File app/helpers/wiki_pages_helper.rb</span>
+<span class="line-num">5</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">wiki_content</span>( <span class="ruby-identifier">text</span> )
+<span class="line-num">6</span>   <span class="ruby-constant">Irwi</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">formatter</span>.<span class="ruby-identifier">format</span>( <span class="ruby-identifier">wiki_macros</span>( <span class="ruby-identifier">wiki_linkify</span>( <span class="ruby-identifier">wiki_show_attachments</span>( <span class="ruby-identifier">text</span> ) ) ) ).<span class="ruby-identifier">html_safe</span>
+<span class="line-num">7</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-wiki_css">
+            
+              <b>wiki_css</b>( text )
+            
+            <a href="../classes/WikiPagesHelper.html#method-i-wiki_css" name="method-i-wiki_css" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-wiki_css_source')" id="l_method-i-wiki_css_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-wiki_css_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/helpers/wiki_pages_helper.rb</span>
+<span class="line-num">56</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">wiki_css</span>( <span class="ruby-identifier">text</span> )
+<span class="line-num">57</span>   <span class="ruby-identifier">text</span>.<span class="ruby-identifier">gsub</span>( <span class="ruby-regexp">%r{&lt;style.*?&gt;(.*?)&lt;/style&gt;}m</span> ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">match</span> <span class="ruby-operator">|</span>
+<span class="line-num">58</span>     <span class="ruby-identifier">content_for</span>( <span class="ruby-value">:extracss</span> ) { <span class="ruby-identifier">match</span>.<span class="ruby-identifier">html_safe</span> }
+<span class="line-num">59</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">60</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-wiki_macros">
+            
+              <b>wiki_macros</b>( text )
+            
+            <a href="../classes/WikiPagesHelper.html#method-i-wiki_macros" name="method-i-wiki_macros" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-wiki_macros_source')" id="l_method-i-wiki_macros_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-wiki_macros_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/helpers/wiki_pages_helper.rb</span>
+<span class="line-num"> 9</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">wiki_macros</span>( <span class="ruby-identifier">text</span> )
+<span class="line-num">10</span>   <span class="ruby-identifier">wiki_css</span>( <span class="ruby-identifier">wiki_nav</span>( <span class="ruby-identifier">text</span> ) )
+<span class="line-num">11</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-wiki_nav">
+            
+              <b>wiki_nav</b>( text )
+            
+            <a href="../classes/WikiPagesHelper.html#method-i-wiki_nav" name="method-i-wiki_nav" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-wiki_nav_source')" id="l_method-i-wiki_nav_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-wiki_nav_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/helpers/wiki_pages_helper.rb</span>
+<span class="line-num">13</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">wiki_nav</span>( <span class="ruby-identifier">text</span> )
+<span class="line-num">14</span>   <span class="ruby-identifier">text</span>.<span class="ruby-identifier">gsub</span>( <span class="ruby-regexp">/\{\{nav.*?\}\}/</span> ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">match</span> <span class="ruby-operator">|</span>
+<span class="line-num">15</span>     <span class="ruby-identifier">page_titles</span> = <span class="ruby-identifier">match</span>[<span class="ruby-regexp">/nav(.*?)\}/</span>, <span class="ruby-value">1</span>].<span class="ruby-identifier">split</span>( <span class="ruby-string">&quot;,&quot;</span> )
+<span class="line-num">16</span>     <span class="ruby-identifier">html</span> = <span class="ruby-string">&quot;&lt;ul class=&#39;leftmenu&#39;&gt;&quot;</span>
+<span class="line-num">17</span>     <span class="ruby-identifier">page_titles</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">page_title</span> <span class="ruby-operator">|</span>
+<span class="line-num">18</span>       <span class="ruby-identifier">page_title</span>.<span class="ruby-identifier">strip!</span>
+<span class="line-num">19</span>       <span class="ruby-identifier">link_class</span> = <span class="ruby-ivar">@page</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@page</span>.<span class="ruby-identifier">title</span>.<span class="ruby-identifier">downcase</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">page_title</span>.<span class="ruby-identifier">downcase</span> <span class="ruby-operator">?</span> <span class="ruby-string">&quot;active&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+<span class="line-num">20</span>       <span class="ruby-identifier">html</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">content_tag</span> <span class="ruby-value">:li</span> <span class="ruby-keyword">do</span>
+<span class="line-num">21</span>         <span class="ruby-identifier">page</span> = <span class="ruby-constant">WikiPage</span>.<span class="ruby-identifier">find_by_title</span>( <span class="ruby-identifier">page_title</span> )
+<span class="line-num">22</span>         <span class="ruby-keyword">if</span> <span class="ruby-identifier">page</span>&amp;.<span class="ruby-identifier">title</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">page_title</span>
+<span class="line-num">23</span>           <span class="ruby-identifier">page</span> = <span class="ruby-constant">WikiPage</span>.<span class="ruby-identifier">find_by_path</span>( <span class="ruby-identifier">page_title</span>.<span class="ruby-identifier">parameterize</span> )
+<span class="line-num">24</span>         <span class="ruby-keyword">end</span>
+<span class="line-num">25</span>         <span class="ruby-identifier">link_to</span> ( <span class="ruby-identifier">page</span>&amp;.<span class="ruby-identifier">title</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">page_title</span> ), <span class="ruby-identifier">wiki_link</span>( <span class="ruby-identifier">page</span>&amp;.<span class="ruby-identifier">path</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">page_title</span> ), <span class="ruby-value">class:</span> <span class="ruby-identifier">link_class</span>
+<span class="line-num">26</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">27</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">28</span>     <span class="ruby-identifier">html</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;&lt;/ul&gt;&quot;</span>
+<span class="line-num">29</span>     <span class="ruby-identifier">html</span>
+<span class="line-num">30</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">31</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-wiki_page_attachments">
+            
+              <b>wiki_page_attachments</b>( page = @page )
+            
+            <a href="../classes/WikiPagesHelper.html#method-i-wiki_page_attachments" name="method-i-wiki_page_attachments" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-wiki_page_attachments_source')" id="l_method-i-wiki_page_attachments_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-wiki_page_attachments_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/helpers/wiki_pages_helper.rb</span>
+<span class="line-num"> 62</span>   <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">wiki_page_attachments</span>( <span class="ruby-identifier">page</span> = <span class="ruby-ivar">@page</span> )
+<span class="line-num"> 63</span>     <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">Irwi</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">page_attachment_class_name</span>
+<span class="line-num"> 64</span> 
+<span class="line-num"> 65</span>     <span class="ruby-identifier">html</span> = <span class="ruby-string">&quot;&quot;</span>
+<span class="line-num"> 66</span>     <span class="ruby-identifier">page</span>.<span class="ruby-identifier">attachments</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">attachment</span> <span class="ruby-operator">|</span>
+<span class="line-num"> 67</span>       <span class="ruby-identifier">img</span> = <span class="ruby-keyword">if</span> <span class="ruby-identifier">attachment</span>.<span class="ruby-identifier">image?</span>
+<span class="line-num"> 68</span>         <span class="ruby-identifier">&lt;&lt;~HTML</span>
+<span class="line-num"> 69</span> <span class="ruby-value">          &lt;a
+<span class="line-num"> 70</span>             target=&quot;_blank&quot;
+<span class="line-num"> 71</span>             href=&quot;#{attachment.wiki_page_attachment.url( :original )}&quot;
+<span class="line-num"> 72</span>           &gt;
+<span class="line-num"> 73</span>             #{image_tag( attachment.wiki_page_attachment.url( :thumb ) )}
+<span class="line-num"> 74</span>           &lt;/a&gt;
+<span class="line-num"> 75</span> </span><span class="ruby-identifier">        HTML</span>
+<span class="line-num"> 76</span>       <span class="ruby-keyword">else</span>
+<span class="line-num"> 77</span>         <span class="ruby-node">&quot;&lt;a target=\&quot;_blank\&quot; href=\&quot;#{attachment.wiki_page_attachment.url( :original )}\&quot;&gt;#{t :view}&lt;/a&gt;&quot;</span>
+<span class="line-num"> 78</span>       <span class="ruby-keyword">end</span>
+<span class="line-num"> 79</span>       <span class="ruby-identifier">html</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">image_and_content</span>( <span class="ruby-identifier">img</span>.<span class="ruby-identifier">html_safe</span>, <span class="ruby-value">image_size:</span> <span class="ruby-value">100</span>,
+<span class="line-num"> 80</span>           <span class="ruby-value">class:</span> <span class="ruby-string">&quot;stacked wiki_page_attachment&quot;</span> ) <span class="ruby-keyword">do</span>
+<span class="line-num"> 81</span>         <span class="ruby-identifier">s</span> = <span class="ruby-identifier">link_to</span>(
+<span class="line-num"> 82</span>           <span class="ruby-identifier">wt</span>( <span class="ruby-string">&quot;Remove&quot;</span> ),
+<span class="line-num"> 83</span>           <span class="ruby-identifier">wiki_remove_page_attachment_path</span>( <span class="ruby-identifier">attachment</span>.<span class="ruby-identifier">id</span> ),
+<span class="line-num"> 84</span>           <span class="ruby-value">method:</span> <span class="ruby-value">:delete</span>,
+<span class="line-num"> 85</span>           <span class="ruby-value">class:</span> <span class="ruby-string">&quot;right&quot;</span>
+<span class="line-num"> 86</span>         )
+<span class="line-num"> 87</span>         <span class="ruby-identifier">s</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">content_tag</span>( <span class="ruby-value">:label</span>, <span class="ruby-string">&quot;html&quot;</span> )
+<span class="line-num"> 88</span>         <span class="ruby-identifier">s</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;&lt;br/&gt;&quot;</span>.<span class="ruby-identifier">html_safe</span>
+<span class="line-num"> 89</span>         <span class="ruby-identifier">s</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">content_tag</span>( <span class="ruby-value">:textarea</span>, <span class="ruby-node">&quot;&lt;img src=\&quot;#{attachment.wiki_page_attachment.url( :original )}\&quot;/&gt;&quot;</span> )
+<span class="line-num"> 90</span>         <span class="ruby-identifier">s</span>.<span class="ruby-identifier">html_safe</span>
+<span class="line-num"> 91</span>       <span class="ruby-keyword">end</span>
+<span class="line-num"> 92</span>     <span class="ruby-keyword">end</span>
+<span class="line-num"> 93</span> 
+<span class="line-num"> 94</span>     <span class="ruby-identifier">html</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">form_for</span>( <span class="ruby-constant">Irwi</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">page_attachment_class</span>.<span class="ruby-identifier">new</span>,
+<span class="line-num"> 95</span>       <span class="ruby-value">as:</span> <span class="ruby-value">:wiki_page_attachment</span>,
+<span class="line-num"> 96</span>       <span class="ruby-value">url:</span> <span class="ruby-identifier">wiki_add_page_attachment_path</span>( <span class="ruby-identifier">page</span> ),
+<span class="line-num"> 97</span>       <span class="ruby-value">html:</span> { <span class="ruby-value">multipart:</span> <span class="ruby-keyword">true</span> } ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">form</span> <span class="ruby-operator">|</span>
+<span class="line-num"> 98</span>       <span class="ruby-string">&quot;&lt;label&gt;Add an attached image&lt;/label&gt;&lt;br/&gt;&quot;</span>.<span class="ruby-identifier">html_safe</span> <span class="ruby-operator">+</span>
+<span class="line-num"> 99</span>         <span class="ruby-identifier">form</span>.<span class="ruby-identifier">file_field</span>( <span class="ruby-value">:wiki_page_attachment</span> ) <span class="ruby-operator">+</span>
+<span class="line-num">100</span>         <span class="ruby-identifier">form</span>.<span class="ruby-identifier">hidden_field</span>( <span class="ruby-value">:page_id</span>, <span class="ruby-value">value:</span> <span class="ruby-identifier">page</span>.<span class="ruby-identifier">id</span> ) <span class="ruby-operator">+</span>
+<span class="line-num">101</span>         <span class="ruby-identifier">form</span>.<span class="ruby-identifier">submit</span>( <span class="ruby-string">&quot;Add attachment&quot;</span> )
+<span class="line-num">102</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">103</span>     <span class="ruby-identifier">html</span>.<span class="ruby-identifier">html_safe</span>
+<span class="line-num">104</span>   <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-wiki_topnav">
+            
+              <b>wiki_topnav</b>()
+            
+            <a href="../classes/WikiPagesHelper.html#method-i-wiki_topnav" name="method-i-wiki_topnav" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-wiki_topnav_source')" id="l_method-i-wiki_topnav_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-wiki_topnav_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/helpers/wiki_pages_helper.rb</span>
+<span class="line-num">33</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">wiki_topnav</span>
+<span class="line-num">34</span>   <span class="ruby-identifier">pattern</span> = <span class="ruby-regexp">/\{\{topnav.*?\}\}/</span>
+<span class="line-num">35</span>   <span class="ruby-identifier">navtxt</span> = <span class="ruby-ivar">@page</span>.<span class="ruby-identifier">content</span>[<span class="ruby-identifier">pattern</span>, <span class="ruby-value">0</span>]
+<span class="line-num">36</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">navtxt</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">37</span> 
+<span class="line-num">38</span>   <span class="ruby-ivar">@page</span>.<span class="ruby-identifier">content</span>.<span class="ruby-identifier">gsub!</span>( <span class="ruby-identifier">pattern</span>, <span class="ruby-string">&quot;&quot;</span> )
+<span class="line-num">39</span>   <span class="ruby-identifier">html</span> = <span class="ruby-string">&quot;&lt;ul class=&#39;topmenu&#39;&gt;&quot;</span>
+<span class="line-num">40</span>   <span class="ruby-identifier">page_titles</span> = <span class="ruby-identifier">navtxt</span>[<span class="ruby-regexp">/nav(.*?)\}/</span>, <span class="ruby-value">1</span>].<span class="ruby-identifier">split</span>( <span class="ruby-string">&quot;,&quot;</span> )
+<span class="line-num">41</span>   <span class="ruby-identifier">page_titles</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">page_title</span> <span class="ruby-operator">|</span>
+<span class="line-num">42</span>     <span class="ruby-identifier">page_title</span>.<span class="ruby-identifier">strip!</span>
+<span class="line-num">43</span>     <span class="ruby-identifier">link_class</span> = <span class="ruby-ivar">@page</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@page</span>.<span class="ruby-identifier">title</span>.<span class="ruby-identifier">downcase</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">page_title</span>.<span class="ruby-identifier">downcase</span> <span class="ruby-operator">?</span> <span class="ruby-string">&quot;active&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+<span class="line-num">44</span>     <span class="ruby-identifier">html</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">content_tag</span> <span class="ruby-value">:li</span> <span class="ruby-keyword">do</span>
+<span class="line-num">45</span>       <span class="ruby-identifier">page</span> = <span class="ruby-constant">WikiPage</span>.<span class="ruby-identifier">find_by_title</span>( <span class="ruby-identifier">page_title</span> )
+<span class="line-num">46</span>       <span class="ruby-keyword">if</span> <span class="ruby-identifier">page</span>&amp;.<span class="ruby-identifier">title</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">page_title</span>
+<span class="line-num">47</span>         <span class="ruby-identifier">page</span> = <span class="ruby-constant">WikiPage</span>.<span class="ruby-identifier">find_by_path</span>( <span class="ruby-identifier">page_title</span>.<span class="ruby-identifier">parameterize</span> )
+<span class="line-num">48</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">49</span>       <span class="ruby-identifier">link_to</span> ( <span class="ruby-identifier">page</span>&amp;.<span class="ruby-identifier">title</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">page_title</span> ), <span class="ruby-identifier">wiki_link</span>( <span class="ruby-identifier">page</span>&amp;.<span class="ruby-identifier">path</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">page_title</span> ), <span class="ruby-value">class:</span> <span class="ruby-identifier">link_class</span>
+<span class="line-num">50</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">51</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">52</span>   <span class="ruby-identifier">html</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;&lt;/ul&gt;&quot;</span>
+<span class="line-num">53</span>   <span class="ruby-identifier">raw</span> <span class="ruby-identifier">html</span>
+<span class="line-num">54</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-wiki_user">
+            
+              <b>wiki_user</b>( user )
+            
+            <a href="../classes/WikiPagesHelper.html#method-i-wiki_user" name="method-i-wiki_user" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-wiki_user_source')" id="l_method-i-wiki_user_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-wiki_user_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/helpers/wiki_pages_helper.rb</span>
+<span class="line-num">106</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">wiki_user</span>( <span class="ruby-identifier">user</span> )
+<span class="line-num">107</span>   <span class="ruby-node">&quot;#{link_to( user_image( user ), user )} #{link_to_user( user )}&quot;</span>.<span class="ruby-identifier">html_safe</span>
+<span class="line-num">108</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

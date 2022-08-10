@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ratatosk::NameProviders::UBioTaxonNameAdapter</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../../../">
+<meta name="data-tree-keys" content='["Ratatosk", "NameProviders", "UBioTaxonNameAdapter"]'>
+
+
+    <meta property="og:title" value="Ratatosk::NameProviders::UBioTaxonNameAdapter">
+
+  
+    
+    <meta name="description" content="Adapt a uBio namebank RDF response to an iNat TaxonName.">
+    <meta property="og:description" content="Adapt a uBio namebank RDF response to an iNat TaxonName.">
+  
+
+    <meta name="keywords" content="Ratatosk::NameProviders::UBioTaxonNameAdapter class, new, taxon, save, get_name, get_lexicon, get_is_valid, get_namebank_id, get_taxon, is_comname?, is_sciname?, comname_taxon, sciname_taxon">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            Ratatosk::NameProviders::UBioTaxonNameAdapter
+            
+                <span class="parent">&lt;
+                    
+                    <a href="../../Object.html">Object</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../../../files/lib/ratatosk/lib/ratatosk/name_providers/ubio_rb.html">lib/ratatosk/lib/ratatosk/name_providers/ubio.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>Adapt a uBio namebank RDF response to an iNat <a href="../../TaxonName.html"><code>TaxonName</code></a></p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-comname_taxon">comname_taxon</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-get_is_valid">get_is_valid</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get_lexicon">get_lexicon</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get_name">get_name</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get_namebank_id">get_namebank_id</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get_taxon">get_taxon</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-is_comname-3F">is_comname?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-is_sciname-3F">is_sciname?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-save">save</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-sciname_taxon">sciname_taxon</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-taxon">taxon</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="../../ModelAdapter.html">
+              ModelAdapter
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <h2 class="sectiontitle">Attributes</h2>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>hxml</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>np</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>service</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <h2 class="sectiontitle">Class Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-c-new">
+            
+              <b>new</b>(hxml, params = {})
+            
+            <a href="../../../classes/Ratatosk/NameProviders/UBioTaxonNameAdapter.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/ratatosk/lib/ratatosk/name_providers/ubio.rb</span>
+<span class="line-num">279</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">hxml</span>, <span class="ruby-identifier">params</span> = {})
+<span class="line-num">280</span>   <span class="ruby-identifier">raise</span> <span class="ruby-constant">TaxonNameAdapterError</span>, <span class="ruby-string">&quot;XML response cannot be blank&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">hxml</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">281</span>   <span class="ruby-identifier">raise</span> <span class="ruby-constant">TaxonNameAdapterError</span>, <span class="ruby-string">&quot;XML response has no elements&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">hxml</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">282</span>   <span class="ruby-ivar">@np</span> = <span class="ruby-identifier">params</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:np</span>)
+<span class="line-num">283</span>   <span class="ruby-ivar">@service</span> = <span class="ruby-ivar">@np</span>.<span class="ruby-identifier">service</span> <span class="ruby-keyword">rescue</span> <span class="ruby-operator">::</span><span class="ruby-constant">UBioService</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">CONFIG</span>.<span class="ruby-identifier">ubio</span>.<span class="ruby-identifier">key</span>)
+<span class="line-num">284</span>   <span class="ruby-ivar">@hxml</span> = <span class="ruby-identifier">hxml</span>
+<span class="line-num">285</span>   <span class="ruby-ivar">@adaptee</span> = <span class="ruby-constant">TaxonName</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>)
+<span class="line-num">286</span>   
+<span class="line-num">287</span>   <span class="ruby-identifier">taxon_name</span>.<span class="ruby-identifier">source</span> = <span class="ruby-constant">UBioNameProvider</span>.<span class="ruby-identifier">source</span>
+<span class="line-num">288</span>   <span class="ruby-identifier">taxon_name</span>.<span class="ruby-identifier">source_identifier</span> = <span class="ruby-identifier">get_namebank_id</span>
+<span class="line-num">289</span>   <span class="ruby-identifier">taxon_name</span>.<span class="ruby-identifier">source_url</span> = <span class="ruby-string">&#39;http://www.ubio.org/browser/details.php?namebankID=&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">get_namebank_id</span>
+<span class="line-num">290</span>   <span class="ruby-identifier">taxon_name</span>.<span class="ruby-identifier">name</span> = <span class="ruby-identifier">get_name</span>
+<span class="line-num">291</span>   <span class="ruby-identifier">taxon_name</span>.<span class="ruby-identifier">lexicon</span> = <span class="ruby-identifier">get_lexicon</span>
+<span class="line-num">292</span>   <span class="ruby-identifier">taxon_name</span>.<span class="ruby-identifier">is_valid</span> = <span class="ruby-identifier">get_is_valid</span>
+<span class="line-num">293</span>   <span class="ruby-identifier">taxon_name</span>.<span class="ruby-identifier">taxon</span> = <span class="ruby-identifier">taxon</span>
+<span class="line-num">294</span>   <span class="ruby-identifier">taxon_name</span>.<span class="ruby-identifier">name_provider</span> = <span class="ruby-string">&quot;UBioNameProvider&quot;</span>
+<span class="line-num">295</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-save">
+            
+              <b>save</b>()
+            
+            <a href="../../../classes/Ratatosk/NameProviders/UBioTaxonNameAdapter.html#method-i-save" name="method-i-save" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Overriden to make sure we always check to see if a taxon for this name has been saved since the creation of this name&#39;s temporary taxon</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-save_source')" id="l_method-i-save_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-save_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/ratatosk/lib/ratatosk/name_providers/ubio.rb</span>
+<span class="line-num">313</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">save</span>
+<span class="line-num">314</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">taxon_name</span>.<span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">taxon_name</span>.<span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">new_record?</span>
+<span class="line-num">315</span>     <span class="ruby-identifier">taxon_name</span>.<span class="ruby-identifier">taxon</span> = <span class="ruby-identifier">taxon</span>
+<span class="line-num">316</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">317</span>   <span class="ruby-identifier">taxon_name</span>.<span class="ruby-identifier">save</span>
+<span class="line-num">318</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-taxon">
+            
+              <b>taxon</b>()
+            
+            <a href="../../../classes/Ratatosk/NameProviders/UBioTaxonNameAdapter.html#method-i-taxon" name="method-i-taxon" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Override taxon to make sure we always check to see if a taxon for this name has been saved since the creation of this name&#39;s temporary taxon</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-taxon_source')" id="l_method-i-taxon_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-taxon_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/ratatosk/lib/ratatosk/name_providers/ubio.rb</span>
+<span class="line-num">299</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">taxon</span>
+<span class="line-num">300</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">taxon_name</span>.<span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">taxon_name</span>.<span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">new_record?</span>
+<span class="line-num">301</span>     <span class="ruby-keyword">begin</span>
+<span class="line-num">302</span>       <span class="ruby-identifier">get_taxon</span>
+<span class="line-num">303</span>     <span class="ruby-keyword">rescue</span> <span class="ruby-constant">TaxonAdapterError</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">e</span>
+<span class="line-num">304</span>       <span class="ruby-identifier">raise</span> <span class="ruby-constant">TaxonNameAdapterError</span>, <span class="ruby-node">&quot;Couldn&#39;t set a taxon.  #{e.message}&quot;</span>
+<span class="line-num">305</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">306</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">307</span>     <span class="ruby-identifier">taxon_name</span>.<span class="ruby-identifier">taxon</span>
+<span class="line-num">308</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">309</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+      <h2 class="sectiontitle">Instance Protected methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-comname_taxon">
+            
+              <b>comname_taxon</b>()
+            
+            <a href="../../../classes/Ratatosk/NameProviders/UBioTaxonNameAdapter.html#method-i-comname_taxon" name="method-i-comname_taxon" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Return a <a href="UBioTaxonAdapter.html"><code>UBioTaxonAdapter</code></a> for this name if this is a common name</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-comname_taxon_source')" id="l_method-i-comname_taxon_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-comname_taxon_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/ratatosk/lib/ratatosk/name_providers/ubio.rb</span>
+<span class="line-num">389</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">comname_taxon</span>
+<span class="line-num">390</span>   <span class="ruby-keyword">begin</span>
+<span class="line-num">391</span>     <span class="ruby-identifier">taxon_namebank_lsid</span> = <span class="ruby-ivar">@hxml</span>.<span class="ruby-identifier">at</span>(<span class="ruby-string">&#39;//gla:parent&#39;</span>)[<span class="ruby-string">&#39;resource&#39;</span>] <span class="ruby-operator">||</span> <span class="ruby-ivar">@hxml</span>.<span class="ruby-identifier">at</span>(<span class="ruby-string">&#39;//gla:parent&#39;</span>)[<span class="ruby-string">&#39;rdf:resource&#39;</span>]
+<span class="line-num">392</span>   <span class="ruby-keyword">rescue</span>
+<span class="line-num">393</span>     <span class="ruby-comment"># this is a phenomenally brittle workaround for what seems like an</span>
+<span class="line-num">394</span>     <span class="ruby-comment"># Hpricot bug with selecting certaing empty elements...</span>
+<span class="line-num">395</span>     <span class="ruby-identifier">taxon_namebank_lsid</span> = <span class="ruby-ivar">@hxml</span>.<span class="ruby-identifier">at</span>(<span class="ruby-string">&#39;//dc:language&#39;</span>).<span class="ruby-identifier">next_sibling</span>[<span class="ruby-string">&#39;resource&#39;</span>]
+<span class="line-num">396</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">397</span>   <span class="ruby-keyword">begin</span>
+<span class="line-num">398</span>     <span class="ruby-constant">UBioTaxonAdapter</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@service</span>.<span class="ruby-identifier">lsid</span>(<span class="ruby-identifier">taxon_namebank_lsid</span>)).<span class="ruby-identifier">taxon</span>
+<span class="line-num">399</span>   <span class="ruby-keyword">rescue</span> <span class="ruby-constant">UBioConnectionError</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">e</span>
+<span class="line-num">400</span>     <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span>(<span class="ruby-string">&quot;Error in UBioTaxonNameAdapter#comname_taxon while &quot;</span> <span class="ruby-operator">+</span> 
+<span class="line-num">401</span>       <span class="ruby-node">&quot;running @service.lsid(#{taxon_namebank_lsid}): #{e}&quot;</span>)
+<span class="line-num">402</span>     <span class="ruby-identifier">raise</span> <span class="ruby-constant">NameProviderError</span>, <span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span>
+<span class="line-num">403</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">404</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-get_is_valid">
+            
+              <b>get_is_valid</b>()
+            
+            <a href="../../../classes/Ratatosk/NameProviders/UBioTaxonNameAdapter.html#method-i-get_is_valid" name="method-i-get_is_valid" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-get_is_valid_source')" id="l_method-i-get_is_valid_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-get_is_valid_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/ratatosk/lib/ratatosk/name_providers/ubio.rb</span>
+<span class="line-num">341</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_is_valid</span>
+<span class="line-num">342</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">is_comname?</span>
+<span class="line-num">343</span>     <span class="ruby-keyword">true</span>
+<span class="line-num">344</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">345</span>     <span class="ruby-ivar">@hxml</span>.<span class="ruby-identifier">at</span>(<span class="ruby-string">&#39;//ubio:hasSYNConcept&#39;</span>) <span class="ruby-operator">?</span> <span class="ruby-keyword">false</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>
+<span class="line-num">346</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">347</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-get_lexicon">
+            
+              <b>get_lexicon</b>()
+            
+            <a href="../../../classes/Ratatosk/NameProviders/UBioTaxonNameAdapter.html#method-i-get_lexicon" name="method-i-get_lexicon" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-get_lexicon_source')" id="l_method-i-get_lexicon_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-get_lexicon_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/ratatosk/lib/ratatosk/name_providers/ubio.rb</span>
+<span class="line-num">337</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_lexicon</span>
+<span class="line-num">338</span>   <span class="ruby-ivar">@hxml</span>.<span class="ruby-identifier">at</span>(<span class="ruby-string">&#39;//dc:language&#39;</span>).<span class="ruby-identifier">inner_text</span>.<span class="ruby-identifier">downcase</span> <span class="ruby-keyword">rescue</span> <span class="ruby-constant">TaxonName</span><span class="ruby-operator">::</span><span class="ruby-constant">LEXICONS</span>[<span class="ruby-value">:SCIENTIFIC_NAMES</span>]
+<span class="line-num">339</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-get_name">
+            
+              <b>get_name</b>()
+            
+            <a href="../../../classes/Ratatosk/NameProviders/UBioTaxonNameAdapter.html#method-i-get_name" name="method-i-get_name" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-get_name_source')" id="l_method-i-get_name_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-get_name_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/ratatosk/lib/ratatosk/name_providers/ubio.rb</span>
+<span class="line-num">322</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_name</span>
+<span class="line-num">323</span>   <span class="ruby-keyword">begin</span>
+<span class="line-num">324</span>     <span class="ruby-identifier">name</span> = <span class="ruby-ivar">@hxml</span>.<span class="ruby-identifier">at</span>(<span class="ruby-string">&#39;//ubio:canonicalName&#39;</span>).<span class="ruby-identifier">inner_text</span>
+<span class="line-num">325</span>   <span class="ruby-keyword">rescue</span> <span class="ruby-constant">NoMethodError</span>
+<span class="line-num">326</span>     <span class="ruby-keyword">begin</span>
+<span class="line-num">327</span>       <span class="ruby-identifier">name</span> = <span class="ruby-ivar">@hxml</span>.<span class="ruby-identifier">at</span>(<span class="ruby-string">&#39;//dc:title&#39;</span>).<span class="ruby-identifier">inner_text</span>
+<span class="line-num">328</span>     <span class="ruby-keyword">rescue</span> <span class="ruby-constant">NoMethodError</span>
+<span class="line-num">329</span>       <span class="ruby-comment"># without any kind of name in the RDF response, we can&#39;t make a taxon</span>
+<span class="line-num">330</span>       <span class="ruby-identifier">raise</span> <span class="ruby-constant">TaxonNameAdapterError</span>, <span class="ruby-string">&quot;Couldn&#39;t find a name in a uBio RDF &quot;</span> <span class="ruby-operator">+</span>
+<span class="line-num">331</span>                                    <span class="ruby-string">&quot;response&quot;</span>
+<span class="line-num">332</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">333</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">334</span>   <span class="ruby-identifier">name</span>
+<span class="line-num">335</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-get_namebank_id">
+            
+              <b>get_namebank_id</b>()
+            
+            <a href="../../../classes/Ratatosk/NameProviders/UBioTaxonNameAdapter.html#method-i-get_namebank_id" name="method-i-get_namebank_id" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-get_namebank_id_source')" id="l_method-i-get_namebank_id_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-get_namebank_id_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/ratatosk/lib/ratatosk/name_providers/ubio.rb</span>
+<span class="line-num">349</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_namebank_id</span>
+<span class="line-num">350</span>   <span class="ruby-keyword">begin</span>
+<span class="line-num">351</span>     <span class="ruby-identifier">lsid</span> = <span class="ruby-ivar">@hxml</span>.<span class="ruby-identifier">at</span>(<span class="ruby-string">&#39;//dc:identifier&#39;</span>).<span class="ruby-identifier">try</span>(<span class="ruby-value">:content</span>)
+<span class="line-num">352</span>   <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">XML</span><span class="ruby-operator">::</span><span class="ruby-constant">XPath</span><span class="ruby-operator">::</span><span class="ruby-constant">SyntaxError</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">e</span>
+<span class="line-num">353</span>     <span class="ruby-identifier">lsid</span> = <span class="ruby-ivar">@hxml</span>.<span class="ruby-identifier">at</span>(<span class="ruby-string">&#39;identifier&#39;</span>).<span class="ruby-identifier">try</span>(<span class="ruby-value">:content</span>)
+<span class="line-num">354</span>     <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;@hxml: #{@hxml}&quot;</span>
+<span class="line-num">355</span>   <span class="ruby-keyword">rescue</span> <span class="ruby-constant">NoMethodError</span>
+<span class="line-num">356</span>     <span class="ruby-identifier">raise</span> <span class="ruby-constant">TaxonNameAdapterError</span>, <span class="ruby-string">&quot;uBio returned a taxon without an identifier&quot;</span>
+<span class="line-num">357</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">358</span>   <span class="ruby-identifier">lsid</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;:&#39;</span>)[<span class="ruby-value">4</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">lsid</span> <span class="ruby-comment"># 4th term should be identifier</span>
+<span class="line-num">359</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-get_taxon">
+            
+              <b>get_taxon</b>()
+            
+            <a href="../../../classes/Ratatosk/NameProviders/UBioTaxonNameAdapter.html#method-i-get_taxon" name="method-i-get_taxon" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-get_taxon_source')" id="l_method-i-get_taxon_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-get_taxon_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/ratatosk/lib/ratatosk/name_providers/ubio.rb</span>
+<span class="line-num">361</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_taxon</span>
+<span class="line-num">362</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">is_sciname?</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">is_valid?</span>
+<span class="line-num">363</span>     <span class="ruby-identifier">taxon</span> = <span class="ruby-constant">UBioTaxonAdapter</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@hxml</span>)
+<span class="line-num">364</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">365</span>     <span class="ruby-identifier">taxon</span> = <span class="ruby-identifier">is_comname?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">comname_taxon</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">sciname_taxon</span>
+<span class="line-num">366</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">367</span>   
+<span class="line-num">368</span>   <span class="ruby-comment"># This is necessary because calling save here runs the validations,</span>
+<span class="line-num">369</span>   <span class="ruby-comment"># sees that the Taxon is new and declares the lexion validation ok,</span>
+<span class="line-num">370</span>   <span class="ruby-comment"># then saves the new taxon, which would fire the after save callback</span>
+<span class="line-num">371</span>   <span class="ruby-comment"># creating another taxon name, and then this taxon name gets</span>
+<span class="line-num">372</span>   <span class="ruby-comment"># created, resulting in duplicate, invalid taxon names.</span>
+<span class="line-num">373</span>   <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">skip_new_taxon_name</span> = <span class="ruby-keyword">true</span>
+<span class="line-num">374</span>   
+<span class="line-num">375</span>   <span class="ruby-identifier">taxon</span>
+<span class="line-num">376</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-is_comname-3F">
+            
+              <b>is_comname?</b>()
+            
+            <a href="../../../classes/Ratatosk/NameProviders/UBioTaxonNameAdapter.html#method-i-is_comname-3F" name="method-i-is_comname-3F" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-is_comname-3F_source')" id="l_method-i-is_comname-3F_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-is_comname-3F_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/ratatosk/lib/ratatosk/name_providers/ubio.rb</span>
+<span class="line-num">378</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">is_comname?</span>
+<span class="line-num">379</span>   <span class="ruby-keyword">not</span> <span class="ruby-identifier">is_sciname?</span>
+<span class="line-num">380</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-is_sciname-3F">
+            
+              <b>is_sciname?</b>()
+            
+            <a href="../../../classes/Ratatosk/NameProviders/UBioTaxonNameAdapter.html#method-i-is_sciname-3F" name="method-i-is_sciname-3F" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-is_sciname-3F_source')" id="l_method-i-is_sciname-3F_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-is_sciname-3F_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/ratatosk/lib/ratatosk/name_providers/ubio.rb</span>
+<span class="line-num">382</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">is_sciname?</span>
+<span class="line-num">383</span>   <span class="ruby-ivar">@hxml</span>.<span class="ruby-identifier">at</span>(<span class="ruby-string">&#39;//dc:language&#39;</span>).<span class="ruby-identifier">nil?</span>
+<span class="line-num">384</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-sciname_taxon">
+            
+              <b>sciname_taxon</b>()
+            
+            <a href="../../../classes/Ratatosk/NameProviders/UBioTaxonNameAdapter.html#method-i-sciname_taxon" name="method-i-sciname_taxon" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Return a <a href="UBioTaxonAdapter.html"><code>UBioTaxonAdapter</code></a> for this name if this is a scientific name</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-sciname_taxon_source')" id="l_method-i-sciname_taxon_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-sciname_taxon_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/ratatosk/lib/ratatosk/name_providers/ubio.rb</span>
+<span class="line-num">410</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">sciname_taxon</span>
+<span class="line-num">411</span>   <span class="ruby-identifier">cbank_rdfs</span> = {}
+<span class="line-num">412</span>   
+<span class="line-num">413</span>   <span class="ruby-comment"># Assemble the different representations of this name within different</span>
+<span class="line-num">414</span>   <span class="ruby-comment"># classifications so we can attempt to choose one.</span>
+<span class="line-num">415</span>   <span class="ruby-ivar">@hxml</span>.<span class="ruby-identifier">search</span>(<span class="ruby-string">&#39;ubio:hasSYNConcept&#39;</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">syn</span><span class="ruby-operator">|</span>
+<span class="line-num">416</span>     <span class="ruby-comment"># Fetch the RDF for this ClassificationBank object</span>
+<span class="line-num">417</span>     <span class="ruby-keyword">begin</span>
+<span class="line-num">418</span>       <span class="ruby-identifier">cbank_lsid_rdf</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">lsid</span>(<span class="ruby-identifier">syn</span>[<span class="ruby-string">&#39;resource&#39;</span>])
+<span class="line-num">419</span>     <span class="ruby-keyword">rescue</span> <span class="ruby-constant">UBioConnectionError</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">e</span>
+<span class="line-num">420</span>       <span class="ruby-comment"># If uBio isn&#39;t responding to requests for ClassificationBank info</span>
+<span class="line-num">421</span>       <span class="ruby-comment"># (which seems to happen occasionally), use the NameBank RDF</span>
+<span class="line-num">422</span>       <span class="ruby-comment"># instead.  We probably won&#39;t be able to graft it, but at least</span>
+<span class="line-num">423</span>       <span class="ruby-comment"># we&#39;ll have a taxon</span>
+<span class="line-num">424</span>       <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span>(<span class="ruby-string">&quot;[Ratatosk] Error in &quot;</span> <span class="ruby-operator">+</span> 
+<span class="line-num">425</span>         <span class="ruby-string">&quot;UBioTaxonNameAdapter#sciname_taxon while running &quot;</span> <span class="ruby-operator">+</span> 
+<span class="line-num">426</span>         <span class="ruby-node">&quot;@service.lsid(#{syn[&#39;resource&#39;]}).  Attempting to &quot;</span> <span class="ruby-operator">+</span> 
+<span class="line-num">427</span>         <span class="ruby-node">&quot;continue using the Namebank RDF.  Error: #{e}&quot;</span>)
+<span class="line-num">428</span>       <span class="ruby-identifier">cbank_lsid_rdf</span> = <span class="ruby-ivar">@hxml</span>
+<span class="line-num">429</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">430</span>     <span class="ruby-keyword">begin</span>
+<span class="line-num">431</span>       <span class="ruby-identifier">cfn_name</span> = <span class="ruby-identifier">cbank_lsid_rdf</span>.<span class="ruby-identifier">at</span>(<span class="ruby-string">&#39;ubio:classificationName&#39;</span>).<span class="ruby-identifier">inner_text</span>
+<span class="line-num">432</span>       <span class="ruby-identifier">cbank_rdfs</span>[<span class="ruby-identifier">cfn_name</span>] = <span class="ruby-identifier">cbank_lsid_rdf</span>
+<span class="line-num">433</span>     <span class="ruby-keyword">rescue</span> <span class="ruby-constant">NoMethodError</span>
+<span class="line-num">434</span>       <span class="ruby-identifier">cbank_rdfs</span>[<span class="ruby-string">&#39;unknown&#39;</span>] = <span class="ruby-identifier">cbank_lsid_rdf</span>
+<span class="line-num">435</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">436</span> 
+<span class="line-num">437</span>     <span class="ruby-keyword">begin</span>
+<span class="line-num">438</span>       <span class="ruby-identifier">canonical_name</span> = <span class="ruby-identifier">cbank_lsid_rdf</span>.<span class="ruby-identifier">at</span>(<span class="ruby-string">&#39;ubio:canonicalName&#39;</span>).<span class="ruby-identifier">inner_text</span>
+<span class="line-num">439</span>     <span class="ruby-keyword">rescue</span> <span class="ruby-constant">NoMethodError</span>
+<span class="line-num">440</span>       <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span>(<span class="ruby-string">&quot;[Ratatosk] The ClassificationBank object for had &quot;</span> <span class="ruby-operator">+</span> 
+<span class="line-num">441</span>                   <span class="ruby-string">&quot;no canonical name, so we&#39;re ignoring it.&quot;</span>)
+<span class="line-num">442</span>       <span class="ruby-keyword">next</span>
+<span class="line-num">443</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">444</span> 
+<span class="line-num">445</span>     <span class="ruby-comment"># If we already know about its accepted scientific name, stop this</span>
+<span class="line-num">446</span>     <span class="ruby-comment"># madness</span>
+<span class="line-num">447</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">taxon</span> = <span class="ruby-constant">Taxon</span>.<span class="ruby-identifier">find_by_name</span>(<span class="ruby-identifier">canonical_name</span>)
+<span class="line-num">448</span>       <span class="ruby-keyword">return</span> <span class="ruby-identifier">taxon</span>
+<span class="line-num">449</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">450</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">451</span> 
+<span class="line-num">452</span>   <span class="ruby-comment"># if don&#39;t know about any of these taxa, try to find one in a preferred</span>
+<span class="line-num">453</span>   <span class="ruby-comment"># classification scheme to ease the grafting process, defaulting to a</span>
+<span class="line-num">454</span>   <span class="ruby-comment"># random one.</span>
+<span class="line-num">455</span>   <span class="ruby-comment"># Note: this might even be necessary.  It&#39;s not clear to me whether a</span>
+<span class="line-num">456</span>   <span class="ruby-comment"># set ubio:hasSYNConcept entities always reference the same namebank</span>
+<span class="line-num">457</span>   <span class="ruby-comment"># object in different classifications.  That seems to be the case.</span>
+<span class="line-num">458</span>   <span class="ruby-keyword">begin</span>
+<span class="line-num">459</span>     <span class="ruby-identifier">preferred_classifications</span> = <span class="ruby-ivar">@np</span>.<span class="ruby-constant">PREFERRED_CLASSIFICATIONS</span>
+<span class="line-num">460</span>   <span class="ruby-keyword">rescue</span>
+<span class="line-num">461</span>     <span class="ruby-identifier">raise</span> <span class="ruby-constant">TaxonNameAdapterError</span>, 
+<span class="line-num">462</span>           <span class="ruby-string">&quot;Can&#39;t fetch a taxon for this TaxonName from uBio without &quot;</span> <span class="ruby-operator">+</span>
+<span class="line-num">463</span>           <span class="ruby-string">&quot;a name provider object&quot;</span>
+<span class="line-num">464</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">465</span>   <span class="ruby-identifier">preferred_classifications</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span>
+<span class="line-num">466</span>     <span class="ruby-keyword">break</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">preferred_rdf</span> = <span class="ruby-identifier">cbank_rdfs</span>[<span class="ruby-identifier">c</span>]
+<span class="line-num">467</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">468</span>   <span class="ruby-identifier">preferred_rdf</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">cbank_rdfs</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">first</span>
+<span class="line-num">469</span> 
+<span class="line-num">470</span>   <span class="ruby-comment"># now that we&#39;ve chosen a classification, let&#39;s set the damn taxon</span>
+<span class="line-num">471</span>   <span class="ruby-constant">UBioTaxonAdapter</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">preferred_rdf</span>)
+<span class="line-num">472</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

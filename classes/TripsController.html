@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TripsController</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["TripsController"]'>
+
+
+    <meta property="og:title" value="TripsController">
+
+  
+
+    <meta name="keywords" content="TripsController class, index, by_login, show, new, edit, create, update, destroy, tabulate, add_taxa_from_observations, remove_taxa">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            TripsController
+            
+                <span class="parent">&lt;
+                    
+                    <a href="ApplicationController.html">ApplicationController</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/app/controllers/trips_controller_rb.html">app/controllers/trips_controller.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-add_taxa_from_observations">add_taxa_from_observations</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-by_login">by_login</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-create">create</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-destroy">destroy</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-edit">edit</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-index">index</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-remove_taxa">remove_taxa</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-show">show</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-tabulate">tabulate</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-add_taxa_from_observations">
+            
+              <b>add_taxa_from_observations</b>()
+            
+            <a href="../classes/TripsController.html#method-i-add_taxa_from_observations" name="method-i-add_taxa_from_observations" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-add_taxa_from_observations_source')" id="l_method-i-add_taxa_from_observations_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-add_taxa_from_observations_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/trips_controller.rb</span>
+<span class="line-num">337</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">add_taxa_from_observations</span>
+<span class="line-num">338</span>   <span class="ruby-ivar">@trip_taxa</span> = <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">add_taxa_from_observations</span>
+<span class="line-num">339</span>   <span class="ruby-ivar">@saved</span>, <span class="ruby-ivar">@unsaved</span> = [], []
+<span class="line-num">340</span>   <span class="ruby-ivar">@trip_taxa</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">tt</span><span class="ruby-operator">|</span>
+<span class="line-num">341</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">tt</span>.<span class="ruby-identifier">persisted?</span>
+<span class="line-num">342</span>       <span class="ruby-ivar">@saved</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">tt</span>
+<span class="line-num">343</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">344</span>       <span class="ruby-ivar">@unsaved</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">tt</span>
+<span class="line-num">345</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">346</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">347</span>   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@saved</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@unsaved</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+<span class="line-num">348</span>     <span class="ruby-identifier">msg</span> = <span class="ruby-string">&quot;Nothing new to add!&quot;</span>
+<span class="line-num">349</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">350</span>     <span class="ruby-identifier">msg</span> = <span class="ruby-node">&quot;Saved #{@saved.size} taxa&quot;</span>
+<span class="line-num">351</span>     <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@unsaved</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">352</span>       <span class="ruby-identifier">msg</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;, failed to add #{@unsaved.size}: #{@unsaved.map{|tt| &quot;#{tt.taxon.try(:name)}: &quot;+tt.errors.full_messages.to_sentence}.join(&#39;, &#39;)}&quot;</span>
+<span class="line-num">353</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">354</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">355</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">356</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> <span class="ruby-keyword">do</span>
+<span class="line-num">357</span>       <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-identifier">msg</span>
+<span class="line-num">358</span>       <span class="ruby-identifier">redirect_back_or_default</span>(<span class="ruby-identifier">edit_trip_path</span>(<span class="ruby-ivar">@trip</span>))
+<span class="line-num">359</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">360</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> <span class="ruby-keyword">do</span>
+<span class="line-num">361</span>       <span class="ruby-ivar">@saved</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">tt</span>,<span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+<span class="line-num">362</span>         <span class="ruby-keyword">if</span> <span class="ruby-ivar">@saved</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">taxon</span>
+<span class="line-num">363</span>           <span class="ruby-ivar">@saved</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">html</span> = <span class="ruby-identifier">view_context</span>.<span class="ruby-identifier">render_in_format</span>(
+<span class="line-num">364</span>             <span class="ruby-value">:html</span>,
+<span class="line-num">365</span>             <span class="ruby-value">partial:</span> <span class="ruby-string">&quot;shared/taxon&quot;</span>,
+<span class="line-num">366</span>             <span class="ruby-value">object:</span> <span class="ruby-ivar">@saved</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">taxon</span>,
+<span class="line-num">367</span>             <span class="ruby-value">current_user:</span> <span class="ruby-identifier">current_user</span>
+<span class="line-num">368</span>           )
+<span class="line-num">369</span>         <span class="ruby-keyword">end</span>
+<span class="line-num">370</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">371</span>       <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> <span class="ruby-operator">=&gt;</span> {
+<span class="line-num">372</span>         <span class="ruby-value">:msg</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">msg</span>,
+<span class="line-num">373</span>         <span class="ruby-value">:saved</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-ivar">@saved</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-value">:include</span> <span class="ruby-operator">=&gt;</span> {<span class="ruby-value">:taxon</span> <span class="ruby-operator">=&gt;</span> {<span class="ruby-value">:methods</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:iconic_taxon_name</span>, <span class="ruby-value">:html</span>]}}),
+<span class="line-num">374</span>         <span class="ruby-value">:unsaved</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-ivar">@saved</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-value">:include</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:taxon</span>], <span class="ruby-value">:methods</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:errors</span>])
+<span class="line-num">375</span>       }
+<span class="line-num">376</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">377</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">378</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-by_login">
+            
+              <b>by_login</b>()
+            
+            <a href="../classes/TripsController.html#method-i-by_login" name="method-i-by_login" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>api :GET, &#39;/trips/:login&#39;, &#39;Retrieve recently created trips by a particular user&#39; description &lt;&lt;-EOT</p>
+
+<pre><code>If you&#39;re looking for
+pagination info, check the X headers in the response. You should see 
+&lt;code&gt;X-Total-Entries&lt;/code&gt;, &lt;code&gt;X-Page&lt;/code&gt;, and 
+&lt;code&gt;X-Per-Page&lt;/code&gt;
+</code></pre>
+
+<p>EOT param :login, String, :desc =&gt; “User login (username)” param :page, :number, :desc =&gt; “Page of results” param :per_page, PER_PAGES, :desc =&gt; “Results per page” param :published, [true,false,&#39;any&#39;], :desc =&gt; “Whether or not to return draft posts.”, :default =&gt; true</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-by_login_source')" id="l_method-i-by_login_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-by_login_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/trips_controller.rb</span>
+<span class="line-num">73</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">by_login</span>
+<span class="line-num">74</span>   <span class="ruby-identifier">per_page</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:per_page</span>] <span class="ruby-keyword">unless</span> <span class="ruby-constant">PER_PAGES</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:per_page</span>].<span class="ruby-identifier">to_i</span>)
+<span class="line-num">75</span>   <span class="ruby-identifier">per_page</span> <span class="ruby-operator">||=</span> <span class="ruby-value">30</span>
+<span class="line-num">76</span>   <span class="ruby-ivar">@trips</span> = <span class="ruby-constant">Trip</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:user_id</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-ivar">@selected_user</span>).<span class="ruby-identifier">page</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>]).<span class="ruby-identifier">per_page</span>(<span class="ruby-identifier">per_page</span>).<span class="ruby-identifier">order</span>(<span class="ruby-string">&quot;posts.id DESC&quot;</span>)
+<span class="line-num">77</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">current_user</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@selected_user</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:published</span>].<span class="ruby-identifier">noish?</span>
+<span class="line-num">78</span>     <span class="ruby-ivar">@trips</span> = <span class="ruby-ivar">@trips</span>.<span class="ruby-identifier">unpublished</span>
+<span class="line-num">79</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">current_user</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@selected_user</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:published</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;any&#39;</span>
+<span class="line-num">80</span>     <span class="ruby-comment"># return both</span>
+<span class="line-num">81</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">82</span>     <span class="ruby-ivar">@trips</span> = <span class="ruby-ivar">@trips</span>.<span class="ruby-identifier">published</span>
+<span class="line-num">83</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">84</span>   <span class="ruby-identifier">pagination_headers_for</span>(<span class="ruby-ivar">@trips</span>)
+<span class="line-num">85</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">86</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> {<span class="ruby-value">:trips</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-ivar">@trips</span>.<span class="ruby-identifier">as_json</span>} }
+<span class="line-num">87</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">88</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-create">
+            
+              <b>create</b>()
+            
+            <a href="../classes/TripsController.html#method-i-create" name="method-i-create" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>api :POST, &#39;/trips&#39;, “Create a new trip” param :trip, Hash, :required =&gt; true, :desc =&gt; “Trip info” do</p>
+
+<pre><code>param :title, String, :required =&gt; true
+param :body, String, :desc =&gt; &quot;Description of the trip.&quot;
+param :latitude, :number, :desc =&gt; &quot;Latitude of a point approximating the trip location.&quot;
+param :longitude, :number, :desc =&gt; &quot;Longitude of a point approximating the trip location.&quot;
+param :radius, :number, :desc =&gt; &quot;Radius in meters within which the trip occurred.&quot;
+param :place_id, :number, :desc =&gt; &quot;Site place ID of place where the trip occurred.&quot;
+param :trip_taxa_attributes, Hash, :desc =&gt; &quot;
+  Nested trip taxa, i.e. taxa on the trip&#39;s check list. Note that this
+  hash should be indexed uniquely for each trip taxon, e.g. &lt;code&gt;trip[trip_taxa_attributes][0][taxon_id]=xxx&lt;/code&gt;
+&quot; do
+  param :taxon_id, :number, :desc =&gt; &quot;Taxon ID&quot;
+  param :observed, [true, false], :desc =&gt; &quot;Whether or not the taxon was observed&quot;
+end
+param :trip_purposes_attributes, Hash, :desc =&gt; &quot;
+  Nested trip purposes, i.e. things sought on the trip (at this time only taxa are supported. Note that this
+  hash should be indexed uniquely for each trip purpose, e.g. &lt;code&gt;trip[trip_purposes_attributes][0][taxon_id]=xxx&lt;/code&gt;
+&quot; do
+  param :resource_type, [&#39;Taxon&#39;], :desc =&gt; &quot;Purpose type. Only Taxon for now&quot;
+  param :resource_id, :number, :desc =&gt; &quot;Taxon ID&quot;
+  param :complete, [true,false], :desc =&gt; &quot;Whether or not this purposes should be considered accomplished, e.g. the user saught Homo sapiens and found one.&quot;
+end
+</code></pre>
+
+<p>end</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-create_source')" id="l_method-i-create_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-create_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/trips_controller.rb</span>
+<span class="line-num">199</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">create</span>
+<span class="line-num">200</span>   <span class="ruby-ivar">@trip</span> = <span class="ruby-constant">Trip</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:trip</span>])
+<span class="line-num">201</span>   <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">user</span> = <span class="ruby-identifier">current_user</span>
+<span class="line-num">202</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:publish</span>]
+<span class="line-num">203</span>     <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">published_at</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+<span class="line-num">204</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:unpublish</span>]
+<span class="line-num">205</span>     <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">published_at</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">206</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">207</span> 
+<span class="line-num">208</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">209</span>     <span class="ruby-keyword">if</span> <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">save</span>
+<span class="line-num">210</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span> <span class="ruby-ivar">@trip</span>, <span class="ruby-value">notice:</span> <span class="ruby-string">&#39;Trip was successfully created.&#39;</span> }
+<span class="line-num">211</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-value">:root</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">true</span>), <span class="ruby-value">status:</span> <span class="ruby-value">:created</span>, <span class="ruby-value">location:</span> <span class="ruby-ivar">@trip</span> }
+<span class="line-num">212</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">213</span>       <span class="ruby-identifier">load_form_data</span>
+<span class="line-num">214</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">action:</span> <span class="ruby-string">&quot;new&quot;</span> }
+<span class="line-num">215</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">errors</span>, <span class="ruby-value">status:</span> <span class="ruby-value">:unprocessable_entity</span> }
+<span class="line-num">216</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">217</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">218</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-destroy">
+            
+              <b>destroy</b>()
+            
+            <a href="../classes/TripsController.html#method-i-destroy" name="method-i-destroy" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>api :DELETE, “/trips/:id”, “Delete an existing trip” param :id, :number, :required =&gt; true</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-destroy_source')" id="l_method-i-destroy_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-destroy_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/trips_controller.rb</span>
+<span class="line-num">276</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">destroy</span>
+<span class="line-num">277</span>   <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">destroy</span>
+<span class="line-num">278</span> 
+<span class="line-num">279</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">280</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">trips_url</span> }
+<span class="line-num">281</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">head</span> <span class="ruby-value">:no_content</span> }
+<span class="line-num">282</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">283</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-edit">
+            
+              <b>edit</b>()
+            
+            <a href="../classes/TripsController.html#method-i-edit" name="method-i-edit" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-edit_source')" id="l_method-i-edit_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-edit_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/trips_controller.rb</span>
+<span class="line-num">171</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">edit</span>
+<span class="line-num">172</span>   <span class="ruby-ivar">@trip_taxa</span> = <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">trip_taxa</span>
+<span class="line-num">173</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-index">
+            
+              <b>index</b>()
+            
+            <a href="../classes/TripsController.html#method-i-index" name="method-i-index" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p># api :GET, &#39;/trips&#39;, &#39;Retrieve recently created trips&#39; # description &lt;&lt;-EOT #   If you&#39;re looking for #   pagination info, check the X headers in the response. You should see  #   <code>X-Total-Entries</code>, <code>X-Page</code>, and  #   <code>X-Per-Page</code> # EOT param :page, :number, :desc =&gt; “Page of results” param :per_page, PER_PAGES, :desc =&gt; “Results per page”</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-index_source')" id="l_method-i-index_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-index_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/trips_controller.rb</span>
+<span class="line-num">32</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">index</span>
+<span class="line-num">33</span>   <span class="ruby-identifier">filter_params</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:filters</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">params</span>
+<span class="line-num">34</span>   <span class="ruby-ivar">@taxon</span> = <span class="ruby-constant">Taxon</span>.<span class="ruby-identifier">find_by_id</span>( <span class="ruby-identifier">filter_params</span>[<span class="ruby-value">:taxon_id</span>].<span class="ruby-identifier">to_i</span> ) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">filter_params</span>[<span class="ruby-value">:taxon_id</span>].<span class="ruby-identifier">blank?</span>
+<span class="line-num">35</span>   <span class="ruby-ivar">@year</span> = <span class="ruby-identifier">filter_params</span>[<span class="ruby-value">:year</span>] <span class="ruby-keyword">unless</span> <span class="ruby-identifier">filter_params</span>[<span class="ruby-value">:year</span>].<span class="ruby-identifier">blank?</span>
+<span class="line-num">36</span>   <span class="ruby-ivar">@month</span> = <span class="ruby-identifier">filter_params</span>[<span class="ruby-value">:month</span>] <span class="ruby-keyword">unless</span> <span class="ruby-identifier">filter_params</span>[<span class="ruby-value">:month</span>].<span class="ruby-identifier">blank?</span>
+<span class="line-num">37</span>   <span class="ruby-identifier">place_id</span> = <span class="ruby-identifier">filter_params</span>[<span class="ruby-value">:place_id</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:place_id</span>]
+<span class="line-num">38</span>   <span class="ruby-ivar">@place</span> = <span class="ruby-constant">Place</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">place_id</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">place_id</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">39</span>   <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_id</span>( <span class="ruby-identifier">filter_params</span>[<span class="ruby-value">:user_id</span>].<span class="ruby-identifier">to_i</span> ) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">filter_params</span>[<span class="ruby-value">:user_id</span>].<span class="ruby-identifier">blank?</span>
+<span class="line-num">40</span>   
+<span class="line-num">41</span>   <span class="ruby-identifier">per_page</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:per_page</span>]
+<span class="line-num">42</span>   <span class="ruby-identifier">per_page</span> <span class="ruby-operator">||=</span> <span class="ruby-value">30</span>
+<span class="line-num">43</span>   <span class="ruby-identifier">per_page</span> = <span class="ruby-identifier">per_page</span>.<span class="ruby-identifier">to_i</span>
+<span class="line-num">44</span>   
+<span class="line-num">45</span>   <span class="ruby-identifier">scope</span> = <span class="ruby-constant">Trip</span>.<span class="ruby-identifier">all</span>
+<span class="line-num">46</span>   <span class="ruby-identifier">scope</span> = <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">taxon</span>( <span class="ruby-ivar">@taxon</span> ) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@taxon</span>
+<span class="line-num">47</span>   <span class="ruby-identifier">scope</span> = <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">year</span>( <span class="ruby-ivar">@year</span> ) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@year</span>
+<span class="line-num">48</span>   <span class="ruby-identifier">scope</span> = <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">month</span>( <span class="ruby-ivar">@month</span> ) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@month</span>
+<span class="line-num">49</span>   <span class="ruby-identifier">scope</span> = <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">in_place</span>( <span class="ruby-ivar">@place</span>.<span class="ruby-identifier">id</span> ) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@place</span>
+<span class="line-num">50</span>   <span class="ruby-identifier">scope</span> = <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">user</span>( <span class="ruby-ivar">@user</span> ) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user</span>
+<span class="line-num">51</span>   <span class="ruby-ivar">@trips</span> = <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">published</span>.<span class="ruby-identifier">page</span>( <span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>] ).<span class="ruby-identifier">per_page</span>( <span class="ruby-identifier">per_page</span> ).<span class="ruby-identifier">order</span>( <span class="ruby-string">&quot;posts.id DESC&quot;</span> )
+<span class="line-num">52</span>   
+<span class="line-num">53</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">54</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> <span class="ruby-comment"># index.html.erb</span>
+<span class="line-num">55</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> <span class="ruby-keyword">do</span>
+<span class="line-num">56</span>       <span class="ruby-identifier">pagination_headers_for</span>(<span class="ruby-ivar">@trips</span>)
+<span class="line-num">57</span>       <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> {<span class="ruby-value">:trips</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-ivar">@trips</span>.<span class="ruby-identifier">as_json</span>}
+<span class="line-num">58</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">59</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">60</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/TripsController.html#method-i-new" name="method-i-new" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-new_source')" id="l_method-i-new_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-new_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/trips_controller.rb</span>
+<span class="line-num">162</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">new</span>
+<span class="line-num">163</span>   <span class="ruby-ivar">@first_trip</span> = <span class="ruby-constant">Trip</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">user_id:</span> <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">id</span>).<span class="ruby-identifier">count</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+<span class="line-num">164</span>   <span class="ruby-ivar">@trip</span> = <span class="ruby-constant">Trip</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:user</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">current_user</span>)
+<span class="line-num">165</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">166</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span>
+<span class="line-num">167</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-value">:root</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">true</span>) }
+<span class="line-num">168</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">169</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-remove_taxa">
+            
+              <b>remove_taxa</b>()
+            
+            <a href="../classes/TripsController.html#method-i-remove_taxa" name="method-i-remove_taxa" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-remove_taxa_source')" id="l_method-i-remove_taxa_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-remove_taxa_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/trips_controller.rb</span>
+<span class="line-num">380</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">remove_taxa</span>
+<span class="line-num">381</span>   <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">trip_taxa</span>.<span class="ruby-identifier">destroy_all</span>
+<span class="line-num">382</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">383</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> <span class="ruby-keyword">do</span>
+<span class="line-num">384</span>       <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notoce</span>] = <span class="ruby-string">&quot;Removed trip taxa&quot;</span>
+<span class="line-num">385</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">386</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">head</span> <span class="ruby-value">:no_content</span> }
+<span class="line-num">387</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">388</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-show">
+            
+              <b>show</b>()
+            
+            <a href="../classes/TripsController.html#method-i-show" name="method-i-show" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>api :GET, &#39;/trips/:id&#39;, “Get info about an existing trip” param :id, :number, :required =&gt; true</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-show_source')" id="l_method-i-show_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-show_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/trips_controller.rb</span>
+<span class="line-num"> 92</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">show</span>
+<span class="line-num"> 93</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num"> 94</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> <span class="ruby-keyword">do</span>
+<span class="line-num"> 95</span>       <span class="ruby-identifier">user_viewed_updates_for</span>( <span class="ruby-ivar">@trip</span> ) <span class="ruby-keyword">if</span> <span class="ruby-identifier">logged_in?</span>
+<span class="line-num"> 96</span>       <span class="ruby-ivar">@next</span> = <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">parent</span>.<span class="ruby-identifier">journal_posts</span>.<span class="ruby-identifier">published</span>.<span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;published_at &gt; ?&quot;</span>, <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">published_at</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">updated_at</span>).<span class="ruby-identifier">order</span>(<span class="ruby-string">&quot;published_at ASC&quot;</span>).<span class="ruby-identifier">first</span>
+<span class="line-num"> 97</span>       <span class="ruby-ivar">@prev</span> = <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">parent</span>.<span class="ruby-identifier">journal_posts</span>.<span class="ruby-identifier">published</span>.<span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;published_at &lt; ?&quot;</span>, <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">published_at</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">updated_at</span>).<span class="ruby-identifier">order</span>(<span class="ruby-string">&quot;published_at DESC&quot;</span>).<span class="ruby-identifier">first</span>
+<span class="line-num"> 98</span>       <span class="ruby-ivar">@shareable_image_url</span> = <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">body</span>[<span class="ruby-regexp">/img.+?src=&quot;(.+?)&quot;/</span>, <span class="ruby-value">1</span>] <span class="ruby-keyword">if</span> <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">body</span>
+<span class="line-num"> 99</span>       <span class="ruby-ivar">@shareable_image_url</span> <span class="ruby-operator">||=</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">parent_type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;Project&quot;</span>
+<span class="line-num">100</span>         <span class="ruby-identifier">helpers</span>.<span class="ruby-identifier">image_url</span>(<span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">parent</span>.<span class="ruby-identifier">icon</span>.<span class="ruby-identifier">url</span>(<span class="ruby-value">:original</span>))
+<span class="line-num">101</span>       <span class="ruby-keyword">else</span>
+<span class="line-num">102</span>         <span class="ruby-identifier">helpers</span>.<span class="ruby-identifier">image_url</span>(<span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">user</span>.<span class="ruby-identifier">icon</span>.<span class="ruby-identifier">url</span>(<span class="ruby-value">:original</span>))
+<span class="line-num">103</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">104</span>       <span class="ruby-ivar">@shareable_description</span> = <span class="ruby-identifier">helpers</span>.<span class="ruby-identifier">shareable_description</span>( <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">body</span> ) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">body</span>
+<span class="line-num">105</span>       <span class="ruby-identifier">trip_purpose_taxon_ids</span> = <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">trip_purposes</span>.<span class="ruby-identifier">where</span>( <span class="ruby-value">complete:</span> <span class="ruby-keyword">true</span> ).<span class="ruby-identifier">map</span>( <span class="ruby-operator">&amp;</span><span class="ruby-value">:resource_id</span> ).<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">uniq</span>
+<span class="line-num">106</span>       <span class="ruby-keyword">if</span> <span class="ruby-identifier">trip_purpose_taxon_ids</span>.<span class="ruby-identifier">include?</span> <span class="ruby-constant">Taxon</span><span class="ruby-operator">::</span><span class="ruby-constant">LIFE</span>.<span class="ruby-identifier">id</span>
+<span class="line-num">107</span>         <span class="ruby-ivar">@target_list_taxa</span> = [<span class="ruby-constant">Taxon</span><span class="ruby-operator">::</span><span class="ruby-constant">LIFE</span>]
+<span class="line-num">108</span>       <span class="ruby-keyword">else</span>
+<span class="line-num">109</span>         <span class="ruby-ivar">@target_list_taxa</span> = <span class="ruby-constant">Taxon</span>.<span class="ruby-identifier">find</span>( <span class="ruby-identifier">trip_purpose_taxon_ids</span> ).<span class="ruby-identifier">sort_by</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">ancestry</span>}.<span class="ruby-identifier">reverse</span>.<span class="ruby-identifier">select</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> ( <span class="ruby-identifier">t</span>.<span class="ruby-identifier">ancestor_ids</span> <span class="ruby-operator">&amp;</span> <span class="ruby-identifier">trip_purpose_taxon_ids</span> ).<span class="ruby-identifier">count</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> }
+<span class="line-num">110</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">111</span>       <span class="ruby-keyword">if</span> <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">radius</span>.<span class="ruby-identifier">blank?</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">radius</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+<span class="line-num">112</span>         <span class="ruby-ivar">@trip_obsevations</span> = <span class="ruby-constant">Observation</span>.<span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;1 = 2&quot;</span>)
+<span class="line-num">113</span>       <span class="ruby-keyword">else</span>
+<span class="line-num">114</span>         <span class="ruby-identifier">observations</span> = <span class="ruby-constant">INatAPIService</span>.<span class="ruby-identifier">observations</span>( {
+<span class="line-num">115</span>           <span class="ruby-value">taxon_is_active:</span> <span class="ruby-keyword">true</span>,
+<span class="line-num">116</span>           <span class="ruby-value">lat:</span> <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">latitude</span>,
+<span class="line-num">117</span>           <span class="ruby-value">lng:</span> <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">longitude</span>,
+<span class="line-num">118</span>           <span class="ruby-value">radius:</span> (<span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">radius</span> <span class="ruby-operator">/</span> <span class="ruby-value">1000</span>.<span class="ruby-identifier">to_f</span> ),
+<span class="line-num">119</span>           <span class="ruby-value">d1:</span> <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">start_time</span>.<span class="ruby-identifier">iso8601</span>,
+<span class="line-num">120</span>           <span class="ruby-value">d2:</span> <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">stop_time</span>.<span class="ruby-identifier">iso8601</span>,
+<span class="line-num">121</span>           <span class="ruby-value">user_id:</span> <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">user_id</span>,
+<span class="line-num">122</span>           <span class="ruby-value">per_page:</span> <span class="ruby-value">200</span>
+<span class="line-num">123</span>         } ).<span class="ruby-identifier">results</span>
+<span class="line-num">124</span>         <span class="ruby-ivar">@trip_obsevations</span> = <span class="ruby-constant">Observation</span>.<span class="ruby-identifier">where</span>( <span class="ruby-value">id:</span> <span class="ruby-identifier">observations</span>.<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span>[<span class="ruby-string">&quot;id&quot;</span>] } )
+<span class="line-num">125</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">126</span>       <span class="ruby-ivar">@target_list_set</span> = []
+<span class="line-num">127</span>       <span class="ruby-ivar">@target_list_taxa</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">tlt</span><span class="ruby-operator">|</span>
+<span class="line-num">128</span>         <span class="ruby-identifier">tlt_observations</span> = <span class="ruby-keyword">if</span> <span class="ruby-identifier">observations</span>
+<span class="line-num">129</span>           <span class="ruby-identifier">observations</span>.<span class="ruby-identifier">select</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">o</span><span class="ruby-operator">|</span> <span class="ruby-identifier">o</span>[<span class="ruby-string">&quot;taxon&quot;</span>][<span class="ruby-string">&quot;ancestor_ids&quot;</span>].<span class="ruby-identifier">include?</span> <span class="ruby-identifier">tlt</span>.<span class="ruby-identifier">id</span> }[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">8</span>]
+<span class="line-num">130</span>         <span class="ruby-keyword">end</span>
+<span class="line-num">131</span>         <span class="ruby-identifier">tlt_observations</span> <span class="ruby-operator">||=</span> []
+<span class="line-num">132</span>         <span class="ruby-ivar">@target_list_set</span> <span class="ruby-operator">&lt;&lt;</span> { <span class="ruby-value">taxon:</span> <span class="ruby-identifier">tlt</span>, <span class="ruby-value">observations:</span> <span class="ruby-identifier">tlt_observations</span> }
+<span class="line-num">133</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">134</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">135</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> <span class="ruby-keyword">do</span>
+<span class="line-num">136</span>       <span class="ruby-ivar">@trip</span> = <span class="ruby-constant">Trip</span>.<span class="ruby-identifier">includes</span>(<span class="ruby-value">:trip_taxa</span> <span class="ruby-operator">=&gt;</span> {<span class="ruby-value">:taxon</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:taxon_names</span>, {<span class="ruby-value">:taxon_photos</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:photo</span>}]}, <span class="ruby-value">:trip_purposes</span> <span class="ruby-operator">=&gt;</span> {}).<span class="ruby-identifier">where</span>(<span class="ruby-value">:id</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">id</span>).<span class="ruby-identifier">first</span>
+<span class="line-num">137</span>       <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">as_json</span>(<span class="ruby-value">:root</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">:include</span> <span class="ruby-operator">=&gt;</span> {
+<span class="line-num">138</span>         <span class="ruby-value">:trip_taxa</span> <span class="ruby-operator">=&gt;</span> {
+<span class="line-num">139</span>           <span class="ruby-value">:include</span> <span class="ruby-operator">=&gt;</span> {
+<span class="line-num">140</span>             <span class="ruby-value">:taxon</span> <span class="ruby-operator">=&gt;</span> {
+<span class="line-num">141</span>               <span class="ruby-value">:only</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:id</span>, <span class="ruby-value">:name</span>, <span class="ruby-value">:ancestry</span>], 
+<span class="line-num">142</span>               <span class="ruby-value">:methods</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:default_name</span>, <span class="ruby-value">:photo_url</span>, <span class="ruby-value">:iconic_taxon_name</span>, <span class="ruby-value">:conservation_status_name</span>]
+<span class="line-num">143</span>             }
+<span class="line-num">144</span>           }
+<span class="line-num">145</span>         },
+<span class="line-num">146</span>         <span class="ruby-value">:trip_purposes</span> <span class="ruby-operator">=&gt;</span> {
+<span class="line-num">147</span>           <span class="ruby-value">:include</span> <span class="ruby-operator">=&gt;</span> {
+<span class="line-num">148</span>             <span class="ruby-value">:resource</span> <span class="ruby-operator">=&gt;</span> {
+<span class="line-num">149</span>               <span class="ruby-value">:except</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:delta</span>, <span class="ruby-value">:auto_description</span>, <span class="ruby-value">:source_url</span>,
+<span class="line-num">150</span>                 <span class="ruby-value">:source_identifier</span>, <span class="ruby-value">:creator_id</span>, <span class="ruby-value">:updater_id</span>, <span class="ruby-value">:version</span>,
+<span class="line-num">151</span>                 <span class="ruby-value">:featured_at</span>, <span class="ruby-value">:auto_photos</span>, <span class="ruby-value">:locked</span>, <span class="ruby-value">:wikipedia_summary</span>,
+<span class="line-num">152</span>                 <span class="ruby-value">:wikipedia_title</span>, <span class="ruby-value">:name_provider</span>, <span class="ruby-value">:source_id</span>,
+<span class="line-num">153</span>                 <span class="ruby-value">:conservation_status</span>]
+<span class="line-num">154</span>             }
+<span class="line-num">155</span>         }
+<span class="line-num">156</span>         }
+<span class="line-num">157</span>       })
+<span class="line-num">158</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">159</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">160</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-tabulate">
+            
+              <b>tabulate</b>()
+            
+            <a href="../classes/TripsController.html#method-i-tabulate" name="method-i-tabulate" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-tabulate_source')" id="l_method-i-tabulate_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-tabulate_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/trips_controller.rb</span>
+<span class="line-num">285</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">tabulate</span>
+<span class="line-num">286</span>   <span class="ruby-identifier">filter_params</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:filters</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">params</span>
+<span class="line-num">287</span>   <span class="ruby-ivar">@taxon</span> = <span class="ruby-constant">Taxon</span>.<span class="ruby-identifier">find_by_id</span>( <span class="ruby-identifier">filter_params</span>[<span class="ruby-value">:taxon_id</span>].<span class="ruby-identifier">to_i</span> ) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">filter_params</span>[<span class="ruby-value">:taxon_id</span>].<span class="ruby-identifier">blank?</span>
+<span class="line-num">288</span>   <span class="ruby-ivar">@year</span> = <span class="ruby-identifier">filter_params</span>[<span class="ruby-value">:year</span>] <span class="ruby-keyword">unless</span> <span class="ruby-identifier">filter_params</span>[<span class="ruby-value">:year</span>].<span class="ruby-identifier">blank?</span>
+<span class="line-num">289</span>   <span class="ruby-ivar">@month</span> = <span class="ruby-identifier">filter_params</span>[<span class="ruby-value">:month</span>] <span class="ruby-keyword">unless</span> <span class="ruby-identifier">filter_params</span>[<span class="ruby-value">:month</span>].<span class="ruby-identifier">blank?</span>
+<span class="line-num">290</span>   <span class="ruby-identifier">place_id</span> = <span class="ruby-identifier">filter_params</span>[<span class="ruby-value">:place_id</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:place_id</span>]
+<span class="line-num">291</span>   <span class="ruby-ivar">@place</span> = <span class="ruby-constant">Place</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">place_id</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">place_id</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">292</span>   <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_id</span>( <span class="ruby-identifier">filter_params</span>[<span class="ruby-value">:user_id</span>].<span class="ruby-identifier">to_i</span> ) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">filter_params</span>[<span class="ruby-value">:user_id</span>].<span class="ruby-identifier">blank?</span>
+<span class="line-num">293</span>   
+<span class="line-num">294</span>   <span class="ruby-identifier">per_page</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:per_page</span>]
+<span class="line-num">295</span>   <span class="ruby-identifier">per_page</span> <span class="ruby-operator">||=</span> <span class="ruby-value">30</span>
+<span class="line-num">296</span>   <span class="ruby-identifier">per_page</span> = <span class="ruby-identifier">per_page</span>.<span class="ruby-identifier">to_i</span>
+<span class="line-num">297</span>   
+<span class="line-num">298</span>   <span class="ruby-identifier">scope</span> = <span class="ruby-constant">Trip</span>.<span class="ruby-identifier">all</span>.<span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;start_time IS NOT NULL AND stop_time IS NOT NULL&quot;</span>).
+<span class="line-num">299</span>     <span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;latitude IS NOT NULL AND longitude IS NOT NULL AND radius IS NOT NULL AND radius &gt; 0&quot;</span>)
+<span class="line-num">300</span>   <span class="ruby-identifier">scope</span> = <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">taxon</span>( <span class="ruby-ivar">@taxon</span> ) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@taxon</span>
+<span class="line-num">301</span>   <span class="ruby-identifier">scope</span> = <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">year</span>( <span class="ruby-ivar">@year</span> ) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@year</span>
+<span class="line-num">302</span>   <span class="ruby-identifier">scope</span> = <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">month</span>( <span class="ruby-ivar">@month</span> ) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@month</span>
+<span class="line-num">303</span>   <span class="ruby-identifier">scope</span> = <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">in_place</span>( <span class="ruby-ivar">@place</span>.<span class="ruby-identifier">id</span> ) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@place</span>
+<span class="line-num">304</span>   <span class="ruby-identifier">scope</span> = <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">user</span>( <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">id</span> ) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user</span>
+<span class="line-num">305</span>   <span class="ruby-ivar">@trips</span> = <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">published</span>.<span class="ruby-identifier">page</span>( <span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>] ).<span class="ruby-identifier">per_page</span>( <span class="ruby-identifier">per_page</span> ).<span class="ruby-identifier">order</span>( <span class="ruby-string">&quot;posts.id DESC&quot;</span> )
+<span class="line-num">306</span>   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@taxon</span>
+<span class="line-num">307</span>     <span class="ruby-ivar">@occupancy</span> = <span class="ruby-constant">Trip</span>.<span class="ruby-identifier">presence_absence</span>( <span class="ruby-ivar">@trips</span>, <span class="ruby-ivar">@taxon</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">place_id</span><span class="ruby-operator">||=</span><span class="ruby-keyword">nil</span>, <span class="ruby-ivar">@year</span><span class="ruby-operator">||=</span><span class="ruby-keyword">nil</span>, <span class="ruby-ivar">@month</span><span class="ruby-operator">||=</span><span class="ruby-keyword">nil</span> )
+<span class="line-num">308</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">309</span> 
+<span class="line-num">310</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">311</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span>
+<span class="line-num">312</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> <span class="ruby-keyword">do</span>
+<span class="line-num">313</span>       <span class="ruby-keyword">if</span> <span class="ruby-ivar">@taxon</span>
+<span class="line-num">314</span>         <span class="ruby-identifier">json_results</span> =  { <span class="ruby-value">results:</span> <span class="ruby-ivar">@trips</span>.<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">trip</span><span class="ruby-operator">|</span> 
+<span class="line-num">315</span>               {
+<span class="line-num">316</span>                 <span class="ruby-value">trip:</span> <span class="ruby-identifier">trip</span>.<span class="ruby-identifier">id</span>, 
+<span class="line-num">317</span>                 <span class="ruby-value">title:</span> <span class="ruby-identifier">trip</span>.<span class="ruby-identifier">title</span>, 
+<span class="line-num">318</span>                 <span class="ruby-value">user:</span> <span class="ruby-identifier">trip</span>.<span class="ruby-identifier">user</span>.<span class="ruby-identifier">login</span>, 
+<span class="line-num">319</span>                 <span class="ruby-value">latitude:</span> <span class="ruby-identifier">trip</span>.<span class="ruby-identifier">latitude</span>, 
+<span class="line-num">320</span>                 <span class="ruby-value">longitude:</span> <span class="ruby-identifier">trip</span>.<span class="ruby-identifier">longitude</span>, 
+<span class="line-num">321</span>                 <span class="ruby-value">date:</span> <span class="ruby-identifier">trip</span>.<span class="ruby-identifier">start_time</span>, 
+<span class="line-num">322</span>                 <span class="ruby-value">duration:</span> (( <span class="ruby-identifier">trip</span>.<span class="ruby-identifier">stop_time</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">trip</span>.<span class="ruby-identifier">start_time</span> ) <span class="ruby-operator">/</span> <span class="ruby-value">1</span>.<span class="ruby-identifier">minutes</span> ).<span class="ruby-identifier">to_i</span>, 
+<span class="line-num">323</span>                 <span class="ruby-value">distance:</span> <span class="ruby-identifier">trip</span>.<span class="ruby-identifier">distance</span>, 
+<span class="line-num">324</span>                 <span class="ruby-value">observers:</span> <span class="ruby-identifier">trip</span>.<span class="ruby-identifier">number</span>, 
+<span class="line-num">325</span>                 <span class="ruby-value">taxon:</span> <span class="ruby-ivar">@taxon</span>.<span class="ruby-identifier">name</span>, 
+<span class="line-num">326</span>                 <span class="ruby-value">occupancy:</span> <span class="ruby-ivar">@occupancy</span>[<span class="ruby-identifier">trip</span>.<span class="ruby-identifier">id</span>]
+<span class="line-num">327</span>               }
+<span class="line-num">328</span>         }}
+<span class="line-num">329</span>       <span class="ruby-keyword">else</span>
+<span class="line-num">330</span>         <span class="ruby-identifier">json_results</span> = { <span class="ruby-value">results:</span> [] }
+<span class="line-num">331</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">332</span>       <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">json_results</span>
+<span class="line-num">333</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">334</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">335</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/TripsController.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>api :PUT, &#39;/trips/:id&#39;, “Update an existing trip” param :id, :number, :required =&gt; true param :trip, Hash, :required =&gt; true, :desc =&gt; “Trip info” do</p>
+
+<pre><code>param :title, String, :required =&gt; true
+param :body, String, :desc =&gt; &quot;Description of the trip.&quot;
+param :latitude, :number, :desc =&gt; &quot;Latitude of a point approximating the trip location.&quot;
+param :longitude, :number, :desc =&gt; &quot;Longitude of a point approximating the trip location.&quot;
+param :radius, :number, :desc =&gt; &quot;Radius in meters within which the trip occurred.&quot;
+param :place_id, :number, :desc =&gt; &quot;Site place ID of place where the trip occurred.&quot;
+param :trip_taxa_attributes, Hash, :desc =&gt; &quot;
+  Nested trip taxa, i.e. taxa on the trip&#39;s check list. Note that this
+  hash should be indexed uniquely for each trip taxon, e.g.
+  &lt;code&gt;trip[trip_taxa_attributes][0][taxon_id]=xxx&lt;/code&gt;. When updating
+  existing trip taxa, make sure you include their IDs, e.g.
+  &lt;code&gt;trip[trip_taxa_attributes][0][id]=xxx&lt;/code&gt;
+&quot; do
+  param :id, :number, :desc =&gt; &quot;Trip taxon ID, required if you&#39;re updating an existing trip taxon&quot;
+  param :taxon_id, :number, :desc =&gt; &quot;Taxon ID&quot;
+  param :observed, [true, false], :desc =&gt; &quot;Whether or not the taxon was observed&quot;
+end
+param :trip_purposes_attributes, Hash, :desc =&gt; &quot;
+  Nested trip purposes, i.e. things sought on the trip (at this time only
+  taxa are supported. Note that this hash should be indexed uniquely for
+  each trip taxon, e.g.
+  &lt;code&gt;trip[trip_purposes_attributes][0][resource_id]=xxx&lt;/code&gt;. When updating
+  existing trip purposes, make sure you include their IDs, e.g.
+  &lt;code&gt;trip[trip_purposes_attributes][0][id]=xxx&lt;/code&gt;
+&quot; do
+  param :id, :number, :desc =&gt; &quot;Trip purpose ID, required if you&#39;re updating an existing trip taxon&quot;
+  param :resource_type, [&#39;Taxon&#39;], :desc =&gt; &quot;Purpose type. Only Taxon for now&quot;
+  param :resource_id, :number, :desc =&gt; &quot;Taxon ID&quot;
+  param :complete, [true,false], :desc =&gt; &quot;Whether or not this purposes should be considered accomplished, e.g. the user saught Homo sapiens and found one.&quot;
+end
+</code></pre>
+
+<p>end</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/trips_controller.rb</span>
+<span class="line-num">254</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">update</span>
+<span class="line-num">255</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:publish</span>]
+<span class="line-num">256</span>     <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">published_at</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+<span class="line-num">257</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:unpublish</span>]
+<span class="line-num">258</span>     <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">published_at</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">259</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">260</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">261</span>     <span class="ruby-keyword">if</span> <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:trip</span>])
+<span class="line-num">262</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span> <span class="ruby-ivar">@trip</span>, <span class="ruby-value">notice:</span> <span class="ruby-string">&#39;Trip was successfully updated.&#39;</span> }
+<span class="line-num">263</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">head</span> <span class="ruby-value">:no_content</span> }
+<span class="line-num">264</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">265</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> <span class="ruby-keyword">do</span>
+<span class="line-num">266</span>         <span class="ruby-identifier">load_form_data</span>
+<span class="line-num">267</span>         <span class="ruby-identifier">render</span> <span class="ruby-value">action:</span> <span class="ruby-string">&quot;edit&quot;</span>
+<span class="line-num">268</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">269</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> <span class="ruby-ivar">@trip</span>.<span class="ruby-identifier">errors</span>, <span class="ruby-value">status:</span> <span class="ruby-value">:unprocessable_entity</span> }
+<span class="line-num">270</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">271</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">272</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

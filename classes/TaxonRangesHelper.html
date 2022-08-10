@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TaxonRangesHelper</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["TaxonRangesHelper"]'>
+
+
+    <meta property="og:title" value="TaxonRangesHelper">
+
+  
+
+    <meta name="keywords" content="TaxonRangesHelper class, iucn_relationship_text, taxon_range_file_display_name, taxon_range_creator, taxon_range_updater">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Module</span>
+            TaxonRangesHelper
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/app/helpers/taxon_ranges_helper_rb.html">app/helpers/taxon_ranges_helper.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-iucn_relationship_text">iucn_relationship_text</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-taxon_range_creator">taxon_range_creator</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-taxon_range_file_display_name">taxon_range_file_display_name</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-taxon_range_updater">taxon_range_updater</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-iucn_relationship_text">
+            
+              <b>iucn_relationship_text</b>( taxon_range_iucn_relationship )
+            
+            <a href="../classes/TaxonRangesHelper.html#method-i-iucn_relationship_text" name="method-i-iucn_relationship_text" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-iucn_relationship_text_source')" id="l_method-i-iucn_relationship_text_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-iucn_relationship_text_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/helpers/taxon_ranges_helper.rb</span>
+<span class="line-num"> 2</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">iucn_relationship_text</span>( <span class="ruby-identifier">taxon_range_iucn_relationship</span> )
+<span class="line-num"> 3</span>   <span class="ruby-keyword">case</span> <span class="ruby-identifier">taxon_range_iucn_relationship</span>
+<span class="line-num"> 4</span>   <span class="ruby-keyword">when</span> <span class="ruby-constant">TaxonRange</span><span class="ruby-operator">::</span><span class="ruby-constant">IUCN_RED_LIST_MAP</span>
+<span class="line-num"> 5</span>     <span class="ruby-identifier">t</span>( <span class="ruby-value">:taxon_range_iucn_relationship_this_is_an_iucn_red_list_range_map</span> )
+<span class="line-num"> 6</span>   <span class="ruby-keyword">when</span> <span class="ruby-constant">TaxonRange</span><span class="ruby-operator">::</span><span class="ruby-constant">IUCN_RED_LIST_MAP_UNSUITABLE</span>
+<span class="line-num"> 7</span>     <span class="ruby-identifier">t</span>( <span class="ruby-value">:taxon_range_iucn_relationship_iucn_red_list_map_unsuitable</span> )
+<span class="line-num"> 8</span>   <span class="ruby-keyword">when</span> <span class="ruby-constant">TaxonRange</span><span class="ruby-operator">::</span><span class="ruby-constant">NOT_ON_IUCN_RED_LIST</span>
+<span class="line-num"> 9</span>     <span class="ruby-identifier">t</span>( <span class="ruby-value">:taxon_range_iucn_relationship_taxon_not_on_the_iucn_red_list</span> )
+<span class="line-num">10</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">11</span>     <span class="ruby-identifier">t</span>( <span class="ruby-value">:unknown</span> )
+<span class="line-num">12</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">13</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-taxon_range_creator">
+            
+              <b>taxon_range_creator</b>( taxon_range )
+            
+            <a href="../classes/TaxonRangesHelper.html#method-i-taxon_range_creator" name="method-i-taxon_range_creator" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-taxon_range_creator_source')" id="l_method-i-taxon_range_creator_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-taxon_range_creator_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/helpers/taxon_ranges_helper.rb</span>
+<span class="line-num">38</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">taxon_range_creator</span>( <span class="ruby-identifier">taxon_range</span> )
+<span class="line-num">39</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">taxon_range</span>.<span class="ruby-identifier">user_id</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+<span class="line-num">40</span>     <span class="ruby-keyword">return</span> <span class="ruby-string">&quot;iNat&quot;</span>
+<span class="line-num">41</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">taxon_range</span>.<span class="ruby-identifier">user</span>
+<span class="line-num">42</span>     <span class="ruby-identifier">link_to</span>( <span class="ruby-identifier">taxon_range</span>.<span class="ruby-identifier">user</span>.<span class="ruby-identifier">login</span>, <span class="ruby-identifier">taxon_range</span>.<span class="ruby-identifier">user</span> )
+<span class="line-num">43</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">44</span>     <span class="ruby-keyword">return</span> <span class="ruby-identifier">t</span>( <span class="ruby-value">:deleted_user</span> )
+<span class="line-num">45</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">46</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-taxon_range_file_display_name">
+            
+              <b>taxon_range_file_display_name</b>( tr )
+            
+            <a href="../classes/TaxonRangesHelper.html#method-i-taxon_range_file_display_name" name="method-i-taxon_range_file_display_name" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-taxon_range_file_display_name_source')" id="l_method-i-taxon_range_file_display_name_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-taxon_range_file_display_name_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/helpers/taxon_ranges_helper.rb</span>
+<span class="line-num">15</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">taxon_range_file_display_name</span>( <span class="ruby-identifier">tr</span> )
+<span class="line-num">16</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">tr</span>.<span class="ruby-identifier">range_file_size</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Numeric</span>
+<span class="line-num">17</span>     <span class="ruby-identifier">filesize</span> = <span class="ruby-node">&quot;(#{ tr.range_file_size / 1000.to_f.round } KB)&quot;</span>
+<span class="line-num">18</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">19</span>     <span class="ruby-identifier">filesize</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">20</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">21</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">tr</span>.<span class="ruby-identifier">range_file_name</span>
+<span class="line-num">22</span>     <span class="ruby-identifier">filename</span> = <span class="ruby-identifier">tr</span>.<span class="ruby-identifier">range_file_name</span>
+<span class="line-num">23</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">24</span>     <span class="ruby-identifier">filename</span> = <span class="ruby-identifier">t</span>( <span class="ruby-value">:range_file</span> )
+<span class="line-num">25</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">26</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">filesize</span>
+<span class="line-num">27</span>     <span class="ruby-identifier">display_name</span> = [<span class="ruby-identifier">filename</span>, <span class="ruby-identifier">filesize</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot; &quot;</span>)
+<span class="line-num">28</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">29</span>     <span class="ruby-identifier">display_name</span> = <span class="ruby-identifier">filename</span>
+<span class="line-num">30</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">31</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">tr</span>.<span class="ruby-identifier">range</span>.<span class="ruby-identifier">url</span>
+<span class="line-num">32</span>     <span class="ruby-keyword">return</span> <span class="ruby-identifier">link_to</span> <span class="ruby-identifier">display_name</span>, <span class="ruby-identifier">tr</span>.<span class="ruby-identifier">range</span>.<span class="ruby-identifier">url</span>
+<span class="line-num">33</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">34</span>     <span class="ruby-keyword">return</span> <span class="ruby-identifier">display_name</span>
+<span class="line-num">35</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">36</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-taxon_range_updater">
+            
+              <b>taxon_range_updater</b>( taxon_range )
+            
+            <a href="../classes/TaxonRangesHelper.html#method-i-taxon_range_updater" name="method-i-taxon_range_updater" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-taxon_range_updater_source')" id="l_method-i-taxon_range_updater_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-taxon_range_updater_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/helpers/taxon_ranges_helper.rb</span>
+<span class="line-num">48</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">taxon_range_updater</span>( <span class="ruby-identifier">taxon_range</span> )
+<span class="line-num">49</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">taxon_range</span>.<span class="ruby-identifier">updater_id</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+<span class="line-num">50</span>     <span class="ruby-keyword">return</span> <span class="ruby-string">&quot;iNat&quot;</span>
+<span class="line-num">51</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">taxon_range</span>.<span class="ruby-identifier">updater</span>
+<span class="line-num">52</span>     <span class="ruby-identifier">link_to</span>( <span class="ruby-identifier">taxon_range</span>.<span class="ruby-identifier">updater</span>.<span class="ruby-identifier">login</span>, <span class="ruby-identifier">taxon_range</span>.<span class="ruby-identifier">updater</span> )
+<span class="line-num">53</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">54</span>     <span class="ruby-keyword">return</span> <span class="ruby-identifier">t</span>( <span class="ruby-value">:deleted_user</span> )
+<span class="line-num">55</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">56</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

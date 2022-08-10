@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ComputerVisionDemoUpload</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["ComputerVisionDemoUpload"]'>
+
+
+    <meta property="og:title" value="ComputerVisionDemoUpload">
+
+  
+
+    <meta name="keywords" content="ComputerVisionDemoUpload class, set_urls, photo=, extract_metadata, to_observation">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            ComputerVisionDemoUpload
+            
+                <span class="parent">&lt;
+                    
+                    <a href="ApplicationRecord.html">ApplicationRecord</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/app/models/computer_vision_demo_upload_rb.html">app/models/computer_vision_demo_upload.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-extract_metadata">extract_metadata</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-photo-3D">photo=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-set_urls">set_urls</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-to_observation">to_observation</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-extract_metadata">
+            
+              <b>extract_metadata</b>( path )
+            
+            <a href="../classes/ComputerVisionDemoUpload.html#method-i-extract_metadata" name="method-i-extract_metadata" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-extract_metadata_source')" id="l_method-i-extract_metadata_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-extract_metadata_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/computer_vision_demo_upload.rb</span>
+<span class="line-num">32</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">extract_metadata</span>( <span class="ruby-identifier">path</span> )
+<span class="line-num">33</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">path</span>
+<span class="line-num">34</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">metadata</span> <span class="ruby-operator">||=</span> { }
+<span class="line-num">35</span>   <span class="ruby-keyword">begin</span>
+<span class="line-num">36</span>     <span class="ruby-identifier">exif_data</span> = <span class="ruby-constant">ExifMetadata</span>.<span class="ruby-identifier">new</span>( <span class="ruby-value">path:</span> <span class="ruby-identifier">path</span>, <span class="ruby-value">type:</span> <span class="ruby-identifier">photo_content_type</span> ).<span class="ruby-identifier">extract</span>
+<span class="line-num">37</span>     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">metadata</span>.<span class="ruby-identifier">merge!</span>( <span class="ruby-identifier">exif_data</span> )
+<span class="line-num">38</span>   <span class="ruby-keyword">rescue</span> <span class="ruby-constant">EXIFR</span><span class="ruby-operator">::</span><span class="ruby-constant">MalformedImage</span>, <span class="ruby-constant">EOFError</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">e</span>
+<span class="line-num">39</span>     <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;[ERROR #{Time.now}] Failed to parse EXIF for #{self}: #{e}&quot;</span>
+<span class="line-num">40</span>   <span class="ruby-keyword">rescue</span> <span class="ruby-constant">NoMethodError</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">e</span>
+<span class="line-num">41</span>     <span class="ruby-identifier">raise</span> <span class="ruby-identifier">e</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/path.*StringIO/</span>
+<span class="line-num">42</span>     <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;[ERROR #{Time.now}] Failed to parse EXIF for #{self}: #{e}&quot;</span>
+<span class="line-num">43</span>   <span class="ruby-keyword">rescue</span> <span class="ruby-constant">TypeError</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">e</span>
+<span class="line-num">44</span>     <span class="ruby-identifier">raise</span> <span class="ruby-identifier">e</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/no implicit conversion of Integer into String/</span>
+<span class="line-num">45</span>     <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;[ERROR #{Time.now}] Failed to parse EXIF for #{self}: #{e}&quot;</span>
+<span class="line-num">46</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">47</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">metadata</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">metadata</span>.<span class="ruby-identifier">force_utf8</span>
+<span class="line-num">48</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-photo-3D">
+            
+              <b>photo=</b>(data)
+            
+            <a href="../classes/ComputerVisionDemoUpload.html#method-i-photo-3D" name="method-i-photo-3D" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-photo-3D_source')" id="l_method-i-photo-3D_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-photo-3D_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/computer_vision_demo_upload.rb</span>
+<span class="line-num">25</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">photo=</span>(<span class="ruby-identifier">data</span>)
+<span class="line-num">26</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">photo</span>.<span class="ruby-identifier">assign</span>(<span class="ruby-identifier">data</span>)
+<span class="line-num">27</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">data</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">ActionDispatch</span><span class="ruby-operator">::</span><span class="ruby-constant">Http</span><span class="ruby-operator">::</span><span class="ruby-constant">UploadedFile</span>)
+<span class="line-num">28</span>     <span class="ruby-identifier">extract_metadata</span>(<span class="ruby-identifier">data</span>.<span class="ruby-identifier">path</span>)
+<span class="line-num">29</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">30</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-set_urls">
+            
+              <b>set_urls</b>()
+            
+            <a href="../classes/ComputerVisionDemoUpload.html#method-i-set_urls" name="method-i-set_urls" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-set_urls_source')" id="l_method-i-set_urls_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-set_urls_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/computer_vision_demo_upload.rb</span>
+<span class="line-num">19</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">set_urls</span>
+<span class="line-num">20</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">original_url</span> = <span class="ruby-identifier">photo</span>.<span class="ruby-identifier">url</span>(<span class="ruby-value">:original</span>)
+<span class="line-num">21</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">thumbnail_url</span> = <span class="ruby-identifier">photo</span>.<span class="ruby-identifier">url</span>(<span class="ruby-value">:thumbnail</span>)
+<span class="line-num">22</span>   <span class="ruby-identifier">save</span>
+<span class="line-num">23</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-to_observation">
+            
+              <b>to_observation</b>(options = {})
+            
+            <a href="../classes/ComputerVisionDemoUpload.html#method-i-to_observation" name="method-i-to_observation" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-to_observation_source')" id="l_method-i-to_observation_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-to_observation_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/computer_vision_demo_upload.rb</span>
+<span class="line-num">50</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">to_observation</span>(<span class="ruby-identifier">options</span> = {})
+<span class="line-num">51</span>   <span class="ruby-identifier">o</span> = <span class="ruby-constant">Observation</span>.<span class="ruby-identifier">new</span>
+<span class="line-num">52</span>   <span class="ruby-keyword">return</span> <span class="ruby-identifier">o</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">metadata</span>
+<span class="line-num">53</span>   <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">metadata</span>[<span class="ruby-value">:gps_latitude</span>].<span class="ruby-identifier">blank?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">metadata</span>[<span class="ruby-value">:gps_latitude</span>].<span class="ruby-identifier">to_f</span>.<span class="ruby-identifier">nan?</span>
+<span class="line-num">54</span>     <span class="ruby-identifier">o</span>.<span class="ruby-identifier">latitude</span> = <span class="ruby-identifier">metadata</span>[<span class="ruby-value">:gps_latitude</span>].<span class="ruby-identifier">to_f</span>
+<span class="line-num">55</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">metadata</span>[<span class="ruby-value">:gps_latitude_ref</span>].<span class="ruby-identifier">to_s</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;S&#39;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">o</span>.<span class="ruby-identifier">latitude</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+<span class="line-num">56</span>       <span class="ruby-identifier">o</span>.<span class="ruby-identifier">latitude</span> = <span class="ruby-identifier">o</span>.<span class="ruby-identifier">latitude</span> <span class="ruby-operator">*</span> <span class="ruby-value">-1</span>
+<span class="line-num">57</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">58</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">59</span>   <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">metadata</span>[<span class="ruby-value">:gps_longitude</span>].<span class="ruby-identifier">blank?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">metadata</span>[<span class="ruby-value">:gps_longitude</span>].<span class="ruby-identifier">to_f</span>.<span class="ruby-identifier">nan?</span>
+<span class="line-num">60</span>     <span class="ruby-identifier">o</span>.<span class="ruby-identifier">longitude</span> = <span class="ruby-identifier">metadata</span>[<span class="ruby-value">:gps_longitude</span>].<span class="ruby-identifier">to_f</span>
+<span class="line-num">61</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">metadata</span>[<span class="ruby-value">:gps_longitude_ref</span>].<span class="ruby-identifier">to_s</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;W&#39;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">o</span>.<span class="ruby-identifier">longitude</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+<span class="line-num">62</span>       <span class="ruby-identifier">o</span>.<span class="ruby-identifier">longitude</span> = <span class="ruby-identifier">o</span>.<span class="ruby-identifier">longitude</span> <span class="ruby-operator">*</span> <span class="ruby-value">-1</span>
+<span class="line-num">63</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">64</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">65</span>   <span class="ruby-keyword">if</span> (<span class="ruby-identifier">o</span>.<span class="ruby-identifier">latitude</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">o</span>.<span class="ruby-identifier">latitude</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">90</span>) <span class="ruby-operator">||</span> (<span class="ruby-identifier">o</span>.<span class="ruby-identifier">longitude</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">o</span>.<span class="ruby-identifier">longitude</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">180</span>)
+<span class="line-num">66</span>     <span class="ruby-identifier">o</span>.<span class="ruby-identifier">latitude</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">67</span>     <span class="ruby-identifier">o</span>.<span class="ruby-identifier">longitude</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">68</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">69</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">o</span>.<span class="ruby-identifier">georeferenced?</span>
+<span class="line-num">70</span>     <span class="ruby-identifier">o</span>.<span class="ruby-identifier">place_guess</span> = <span class="ruby-identifier">o</span>.<span class="ruby-identifier">system_places</span>.<span class="ruby-identifier">sort_by</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">bbox_area</span> <span class="ruby-operator">||</span> <span class="ruby-value">0</span>}.<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:name</span>).<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;, &#39;</span>)
+<span class="line-num">71</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">72</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">capture_time</span> = (<span class="ruby-identifier">metadata</span>[<span class="ruby-value">:date_time_original</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">metadata</span>[<span class="ruby-value">:date_time_digitized</span>])
+<span class="line-num">73</span>     <span class="ruby-identifier">o</span>.<span class="ruby-identifier">set_time_zone</span>
+<span class="line-num">74</span>     <span class="ruby-identifier">o</span>.<span class="ruby-identifier">time_observed_at</span> = <span class="ruby-identifier">capture_time</span>
+<span class="line-num">75</span>     <span class="ruby-identifier">o</span>.<span class="ruby-identifier">set_time_in_time_zone</span>
+<span class="line-num">76</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">o</span>.<span class="ruby-identifier">time_observed_at</span>
+<span class="line-num">77</span>       <span class="ruby-identifier">o</span>.<span class="ruby-identifier">observed_on_string</span> = <span class="ruby-identifier">o</span>.<span class="ruby-identifier">time_observed_at</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&quot;%Y-%m-%d %H:%M:%S&quot;</span>)
+<span class="line-num">78</span>       <span class="ruby-identifier">o</span>.<span class="ruby-identifier">observed_on</span> = <span class="ruby-identifier">o</span>.<span class="ruby-identifier">time_observed_at</span>.<span class="ruby-identifier">to_date</span>
+<span class="line-num">79</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">80</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">81</span>   <span class="ruby-identifier">o</span>
+<span class="line-num">82</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

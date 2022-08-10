@@ -1,0 +1,1548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>UpdateAction</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["UpdateAction"]'>
+
+
+    <meta property="og:title" value="UpdateAction">
+
+  
+
+    <meta name="keywords" content="UpdateAction class, as_indexed_json, to_s, set_resource_owner, user_ids_without_blocked_and_muted, bulk_insert_subscribers, sort_by_date, components_of_class, components_with_assoc, email_updates, email_updates_to_user, load_additional_activity_updates, group_and_sort, user_viewed_updates, delete_and_purge, first_with_attributes, arel_attributes_to_es_filters, append_subscribers, restrict_to_subscribers, users_with_unviewed_updates_from_query, unviewed_by_user_from_query">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            UpdateAction
+            
+                <span class="parent">&lt;
+                    
+                    <a href="ApplicationRecord.html">ApplicationRecord</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/app/es_indices/update_action_index_rb.html">app/es_indices/update_action_index.rb</a></li>
+            
+            <li><a href="../files/app/helpers/application_helper_rb.html">app/helpers/application_helper.rb</a></li>
+            
+            <li><a href="../files/app/models/project_observation_rb.html">app/models/project_observation.rb</a></li>
+            
+            <li><a href="../files/app/models/update_action_rb.html">app/models/update_action.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-append_subscribers">append_subscribers</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-arel_attributes_to_es_filters">arel_attributes_to_es_filters</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-as_indexed_json">as_indexed_json</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-bulk_insert_subscribers">bulk_insert_subscribers</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-components_of_class">components_of_class</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-components_with_assoc">components_with_assoc</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-delete_and_purge">delete_and_purge</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-email_updates">email_updates</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-email_updates_to_user">email_updates_to_user</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-first_with_attributes">first_with_attributes</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-group_and_sort">group_and_sort</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-load_additional_activity_updates">load_additional_activity_updates</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-restrict_to_subscribers">restrict_to_subscribers</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-set_resource_owner">set_resource_owner</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-sort_by_date">sort_by_date</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-to_s">to_s</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-unviewed_by_user_from_query">unviewed_by_user_from_query</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-user_ids_without_blocked_and_muted">user_ids_without_blocked_and_muted</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-user_viewed_updates">user_viewed_updates</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-users_with_unviewed_updates_from_query">users_with_unviewed_updates_from_query</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="ActsAsElasticModel.html">
+              ActsAsElasticModel
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <h2 class="sectiontitle">Constants</h2>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">YOUR_OBSERVATIONS_ADDED</td>
+            <td>=</td>
+            <td class="attr-value">&quot;your_observations_added&quot;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+      <!-- Section attributes -->
+      <h2 class="sectiontitle">Attributes</h2>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>created_but_not_indexed</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>filtered_subscriber_ids</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <h2 class="sectiontitle">Class Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-c-arel_attributes_to_es_filters">
+            
+              <b>arel_attributes_to_es_filters</b>( attrs )
+            
+            <a href="../classes/UpdateAction.html#method-c-arel_attributes_to_es_filters" name="method-c-arel_attributes_to_es_filters" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-arel_attributes_to_es_filters_source')" id="l_method-c-arel_attributes_to_es_filters_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-arel_attributes_to_es_filters_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/update_action.rb</span>
+<span class="line-num">286</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">arel_attributes_to_es_filters</span>( <span class="ruby-identifier">attrs</span> )
+<span class="line-num">287</span>   <span class="ruby-identifier">filters</span> = []
+<span class="line-num">288</span>   <span class="ruby-identifier">attrs</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+<span class="line-num">289</span>     <span class="ruby-comment"># base_class is used because UpdateAction uses polymorphic associations</span>
+<span class="line-num">290</span>     <span class="ruby-comment"># for resource and notifier which use base_class for setting `*_type`</span>
+<span class="line-num">291</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">to_sym</span> <span class="ruby-operator">==</span> <span class="ruby-value">:resource</span>
+<span class="line-num">292</span>       <span class="ruby-identifier">filters</span> <span class="ruby-operator">&lt;&lt;</span> { <span class="ruby-value">term:</span> { <span class="ruby-value">resource_id:</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">id</span> } }
+<span class="line-num">293</span>       <span class="ruby-identifier">filters</span> <span class="ruby-operator">&lt;&lt;</span> { <span class="ruby-value">term:</span> { <span class="ruby-value">resource_type:</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">base_class</span>.<span class="ruby-identifier">name</span> } }
+<span class="line-num">294</span>     <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">to_sym</span> <span class="ruby-operator">==</span> <span class="ruby-value">:notifier</span>
+<span class="line-num">295</span>       <span class="ruby-identifier">filters</span> <span class="ruby-operator">&lt;&lt;</span> { <span class="ruby-value">term:</span> { <span class="ruby-value">notifier_id:</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">id</span> } }
+<span class="line-num">296</span>       <span class="ruby-identifier">filters</span> <span class="ruby-operator">&lt;&lt;</span> { <span class="ruby-value">term:</span> { <span class="ruby-value">notifier_type:</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">base_class</span>.<span class="ruby-identifier">name</span> } }
+<span class="line-num">297</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">298</span>       <span class="ruby-identifier">filters</span> <span class="ruby-operator">&lt;&lt;</span> { <span class="ruby-value">term:</span> { <span class="ruby-identifier">k</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">try</span>(<span class="ruby-value">:id</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">v</span> } }
+<span class="line-num">299</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">300</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">301</span>   <span class="ruby-identifier">filters</span>
+<span class="line-num">302</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-components_of_class">
+            
+              <b>components_of_class</b>(klass, updates)
+            
+            <a href="../classes/UpdateAction.html#method-c-components_of_class" name="method-c-components_of_class" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-components_of_class_source')" id="l_method-c-components_of_class_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-components_of_class_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/update_action.rb</span>
+<span class="line-num">51</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">components_of_class</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">updates</span>)
+<span class="line-num">52</span>   (<span class="ruby-identifier">updates</span>.<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">u</span><span class="ruby-operator">|</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">resource</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">resource_type</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">resource</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span> } <span class="ruby-operator">+</span>
+<span class="line-num">53</span>     <span class="ruby-identifier">updates</span>.<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">u</span><span class="ruby-operator">|</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">notifier</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">notifier_type</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">notifier</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span> }).
+<span class="line-num">54</span>     <span class="ruby-identifier">compact</span>.<span class="ruby-identifier">uniq</span>
+<span class="line-num">55</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-components_with_assoc">
+            
+              <b>components_with_assoc</b>(assoc, updates)
+            
+            <a href="../classes/UpdateAction.html#method-c-components_with_assoc" name="method-c-components_with_assoc" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-components_with_assoc_source')" id="l_method-c-components_with_assoc_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-components_with_assoc_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/update_action.rb</span>
+<span class="line-num">57</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">components_with_assoc</span>(<span class="ruby-identifier">assoc</span>, <span class="ruby-identifier">updates</span>)
+<span class="line-num">58</span>   (<span class="ruby-identifier">updates</span>.<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">u</span><span class="ruby-operator">|</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">resource</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">resource</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">reflect_on_association</span>(<span class="ruby-identifier">assoc</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">resource</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span> } <span class="ruby-operator">+</span>
+<span class="line-num">59</span>     <span class="ruby-identifier">updates</span>.<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">u</span><span class="ruby-operator">|</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">notifier</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">notifier</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">reflect_on_association</span>(<span class="ruby-identifier">assoc</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">notifier</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span> }).
+<span class="line-num">60</span>     <span class="ruby-identifier">compact</span>.<span class="ruby-identifier">uniq</span>
+<span class="line-num">61</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-delete_and_purge">
+            
+              <b>delete_and_purge</b>(*args)
+            
+            <a href="../classes/UpdateAction.html#method-c-delete_and_purge" name="method-c-delete_and_purge" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-delete_and_purge_source')" id="l_method-c-delete_and_purge_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-delete_and_purge_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/update_action.rb</span>
+<span class="line-num">247</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">delete_and_purge</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="line-num">248</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">249</span>   <span class="ruby-comment"># first delete all entries from Elasticearch</span>
+<span class="line-num">250</span>   <span class="ruby-constant">UpdateAction</span>.<span class="ruby-identifier">where</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>).<span class="ruby-identifier">select</span>(<span class="ruby-value">:id</span>).<span class="ruby-identifier">find_in_batches</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">batch</span><span class="ruby-operator">|</span>
+<span class="line-num">251</span>     <span class="ruby-constant">UpdateAction</span>.<span class="ruby-identifier">elastic_delete_by_ids!</span>( <span class="ruby-identifier">batch</span>.<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:id</span>) )
+<span class="line-num">252</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">253</span>   <span class="ruby-comment"># then delete them from Postgres</span>
+<span class="line-num">254</span>   <span class="ruby-constant">UpdateAction</span>.<span class="ruby-identifier">where</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>).<span class="ruby-identifier">delete_all</span>
+<span class="line-num">255</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-email_updates">
+            
+              <b>email_updates</b>()
+            
+            <a href="../classes/UpdateAction.html#method-c-email_updates" name="method-c-email_updates" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-email_updates_source')" id="l_method-c-email_updates_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-email_updates_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/update_action.rb</span>
+<span class="line-num">64</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">email_updates</span>
+<span class="line-num">65</span>   <span class="ruby-identifier">start</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+<span class="line-num">66</span>   <span class="ruby-identifier">start_time</span> = <span class="ruby-value">1</span>.<span class="ruby-identifier">day</span>.<span class="ruby-identifier">ago</span>.<span class="ruby-identifier">utc</span>
+<span class="line-num">67</span>   <span class="ruby-identifier">end_time</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">utc</span>
+<span class="line-num">68</span>   <span class="ruby-identifier">batch_date</span> = <span class="ruby-identifier">end_time</span>.<span class="ruby-identifier">to_date</span>.<span class="ruby-identifier">to_s</span>
+<span class="line-num">69</span>   <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;[INFO] UpdateAction.email_updates START start_time: #{start_time}, end_time: #{end_time}&quot;</span>
+<span class="line-num">70</span>   <span class="ruby-identifier">user_ids</span> = <span class="ruby-constant">UpdateAction</span>.<span class="ruby-identifier">elastic_search</span>(
+<span class="line-num">71</span>     <span class="ruby-value">size:</span> <span class="ruby-value">0</span>,
+<span class="line-num">72</span>     <span class="ruby-value">filters:</span> [
+<span class="line-num">73</span>       { <span class="ruby-value">range:</span> { <span class="ruby-value">created_at:</span> { <span class="ruby-value">gte:</span> <span class="ruby-identifier">start_time</span> } } },
+<span class="line-num">74</span>       { <span class="ruby-value">range:</span> { <span class="ruby-value">created_at:</span> { <span class="ruby-value">lte:</span> <span class="ruby-identifier">end_time</span> } } }
+<span class="line-num">75</span>     ],
+<span class="line-num">76</span>     <span class="ruby-value">aggregate:</span> {
+<span class="line-num">77</span>       <span class="ruby-value">distinct_subscribers:</span> {
+<span class="line-num">78</span>         <span class="ruby-value">terms:</span> {
+<span class="line-num">79</span>           <span class="ruby-value">field:</span> <span class="ruby-string">&quot;subscriber_ids&quot;</span>,
+<span class="line-num">80</span>           <span class="ruby-value">size:</span> <span class="ruby-value">200000</span>
+<span class="line-num">81</span>         }
+<span class="line-num">82</span>       }
+<span class="line-num">83</span>     }
+<span class="line-num">84</span>   ).<span class="ruby-identifier">response</span>.<span class="ruby-identifier">aggregations</span>.<span class="ruby-identifier">distinct_subscribers</span>.<span class="ruby-identifier">buckets</span>.<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-identifier">b</span>[<span class="ruby-string">&quot;key&quot;</span>] }
+<span class="line-num">85</span>   <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;[INFO] UpdateAction.email_updates queing #{user_ids.size} jobs...&quot;</span>
+<span class="line-num">86</span>   <span class="ruby-identifier">user_ids</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">subscriber_id</span><span class="ruby-operator">|</span>
+<span class="line-num">87</span>     <span class="ruby-constant">UpdateAction</span>.<span class="ruby-identifier">delay</span>(
+<span class="line-num">88</span>       <span class="ruby-value">priority:</span> <span class="ruby-constant">INTEGRITY_PRIORITY</span>,
+<span class="line-num">89</span>       <span class="ruby-value">queue:</span> <span class="ruby-string">&quot;slow&quot;</span>,
+<span class="line-num">90</span>       <span class="ruby-value">unique_hash:</span> {
+<span class="line-num">91</span>         <span class="ruby-value">&quot;UpdateAction::email_updates_to_user&quot;:</span> <span class="ruby-identifier">subscriber_id</span>,
+<span class="line-num">92</span>         <span class="ruby-value">date:</span> <span class="ruby-identifier">batch_date</span>
+<span class="line-num">93</span>       }
+<span class="line-num">94</span>     ).<span class="ruby-identifier">email_updates_to_user</span>( <span class="ruby-identifier">subscriber_id</span>, <span class="ruby-identifier">start_time</span>, <span class="ruby-identifier">end_time</span> )
+<span class="line-num">95</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">96</span>   <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;[INFO] UpdateAction.email_updates FINISHED start_time: #{start_time}, end_time: #{end_time} in #{Time.now - start}s&quot;</span>
+<span class="line-num">97</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-email_updates_to_user">
+            
+              <b>email_updates_to_user</b>(subscriber, start_time, end_time)
+            
+            <a href="../classes/UpdateAction.html#method-c-email_updates_to_user" name="method-c-email_updates_to_user" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-email_updates_to_user_source')" id="l_method-c-email_updates_to_user_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-email_updates_to_user_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/update_action.rb</span>
+<span class="line-num"> 99</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">email_updates_to_user</span>(<span class="ruby-identifier">subscriber</span>, <span class="ruby-identifier">start_time</span>, <span class="ruby-identifier">end_time</span>)
+<span class="line-num">100</span>   <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span> <span class="ruby-node">&quot;email_updates_to_user: #{subscriber}&quot;</span>
+<span class="line-num">101</span>   <span class="ruby-identifier">user</span> = <span class="ruby-identifier">subscriber</span>
+<span class="line-num">102</span>   <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">subscriber</span>.<span class="ruby-identifier">to_i</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">subscriber</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">User</span>)
+<span class="line-num">103</span>   <span class="ruby-identifier">user</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_login</span>(<span class="ruby-identifier">subscriber</span>)
+<span class="line-num">104</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">User</span>)
+<span class="line-num">105</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">email</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">106</span>   <span class="ruby-constant">User</span>.<span class="ruby-identifier">preload_associations</span>(<span class="ruby-identifier">user</span>, <span class="ruby-value">:stored_preferences</span>)
+<span class="line-num">107</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">prefers_no_email</span>
+<span class="line-num">108</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">email_suppressed_in_group?</span>( <span class="ruby-constant">EmailSuppression</span><span class="ruby-operator">::</span><span class="ruby-constant">TRANSACTIONAL_EMAILS</span> )
+<span class="line-num">109</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">active?</span> <span class="ruby-comment"># email verified</span>
+<span class="line-num">110</span>   <span class="ruby-identifier">updates</span> = <span class="ruby-constant">UpdateAction</span>.<span class="ruby-identifier">elastic_paginate</span>(
+<span class="line-num">111</span>     <span class="ruby-value">filters:</span> [
+<span class="line-num">112</span>       { <span class="ruby-value">term:</span> { <span class="ruby-value">&quot;subscriber_ids.keyword&quot;:</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span> } },
+<span class="line-num">113</span>       { <span class="ruby-value">range:</span> { <span class="ruby-value">created_at:</span> { <span class="ruby-value">gte:</span> <span class="ruby-identifier">start_time</span> } } },
+<span class="line-num">114</span>       { <span class="ruby-value">range:</span> { <span class="ruby-value">created_at:</span> { <span class="ruby-value">lte:</span> <span class="ruby-identifier">end_time</span> } } }
+<span class="line-num">115</span>     ],
+<span class="line-num">116</span>     <span class="ruby-value">per_page:</span> <span class="ruby-value">100</span>,
+<span class="line-num">117</span>     <span class="ruby-value">sort:</span> { <span class="ruby-value">id:</span> <span class="ruby-value">:asc</span> })
+<span class="line-num">118</span>   <span class="ruby-identifier">updates</span> = <span class="ruby-identifier">updates</span>.<span class="ruby-identifier">to_a</span>.<span class="ruby-identifier">delete_if</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">u</span><span class="ruby-operator">|</span>
+<span class="line-num">119</span>     <span class="ruby-operator">!</span><span class="ruby-identifier">user</span>.<span class="ruby-identifier">prefers_project_journal_post_email_notification?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">resource_type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;Project&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">notifier_type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;Post&quot;</span> <span class="ruby-operator">||</span>
+<span class="line-num">120</span>     <span class="ruby-operator">!</span><span class="ruby-identifier">user</span>.<span class="ruby-identifier">prefers_comment_email_notification?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">notifier_type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;Comment&quot;</span> <span class="ruby-operator">||</span>
+<span class="line-num">121</span>     <span class="ruby-operator">!</span><span class="ruby-identifier">user</span>.<span class="ruby-identifier">prefers_identification_email_notification?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">notifier_type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;Identification&quot;</span> <span class="ruby-operator">||</span>
+<span class="line-num">122</span>     <span class="ruby-operator">!</span><span class="ruby-identifier">user</span>.<span class="ruby-identifier">prefers_mention_email_notification?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">notification</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;mention&quot;</span> <span class="ruby-operator">||</span>
+<span class="line-num">123</span>     <span class="ruby-operator">!</span><span class="ruby-identifier">user</span>.<span class="ruby-identifier">prefers_project_added_your_observation_email_notification?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">notification</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;your_observations_added&quot;</span> <span class="ruby-operator">||</span>
+<span class="line-num">124</span>     <span class="ruby-operator">!</span><span class="ruby-identifier">user</span>.<span class="ruby-identifier">prefers_project_curator_change_email_notification?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">notification</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;curator_change&quot;</span> <span class="ruby-operator">||</span>
+<span class="line-num">125</span>     <span class="ruby-operator">!</span><span class="ruby-identifier">user</span>.<span class="ruby-identifier">prefers_taxon_change_email_notification?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">notification</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;committed&quot;</span> <span class="ruby-operator">||</span>
+<span class="line-num">126</span>     <span class="ruby-operator">!</span><span class="ruby-identifier">user</span>.<span class="ruby-identifier">prefers_user_observation_email_notification?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">notification</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;created_observations&quot;</span> <span class="ruby-operator">||</span>
+<span class="line-num">127</span>     <span class="ruby-operator">!</span><span class="ruby-identifier">user</span>.<span class="ruby-identifier">prefers_taxon_or_place_observation_email_notification?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">notification</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;new_observations&quot;</span>
+<span class="line-num">128</span>   <span class="ruby-keyword">end</span>.<span class="ruby-identifier">compact</span>
+<span class="line-num">129</span>   <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span> <span class="ruby-node">&quot;email_updates_to_user: #{subscriber}, updates: #{updates.size}&quot;</span>
+<span class="line-num">130</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">updates</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">131</span> 
+<span class="line-num">132</span>   <span class="ruby-constant">UpdateAction</span>.<span class="ruby-identifier">preload_associations</span>(<span class="ruby-identifier">updates</span>, [ <span class="ruby-value">:resource</span>, <span class="ruby-value">:notifier</span>, <span class="ruby-value">:resource_owner</span> ] )
+<span class="line-num">133</span>   <span class="ruby-identifier">obs</span> = <span class="ruby-constant">UpdateAction</span>.<span class="ruby-identifier">components_of_class</span>(<span class="ruby-constant">Observation</span>, <span class="ruby-identifier">updates</span>)
+<span class="line-num">134</span>   <span class="ruby-identifier">ids</span> = <span class="ruby-constant">UpdateAction</span>.<span class="ruby-identifier">components_of_class</span>(<span class="ruby-constant">Identification</span>, <span class="ruby-identifier">updates</span>)
+<span class="line-num">135</span>   <span class="ruby-identifier">with_users</span> = <span class="ruby-constant">UpdateAction</span>.<span class="ruby-identifier">components_with_assoc</span>(<span class="ruby-value">:user</span>, <span class="ruby-identifier">updates</span>)
+<span class="line-num">136</span>   <span class="ruby-constant">Observation</span>.<span class="ruby-identifier">preload_associations</span>(<span class="ruby-identifier">obs</span>, [<span class="ruby-value">:photos</span>, <span class="ruby-value">:site</span> ])
+<span class="line-num">137</span>   <span class="ruby-constant">Taxon</span>.<span class="ruby-identifier">preload_associations</span>(<span class="ruby-identifier">ids</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">obs</span>, { <span class="ruby-value">taxon:</span> [ <span class="ruby-value">:photos</span>, { <span class="ruby-value">taxon_names:</span> <span class="ruby-value">:place_taxon_names</span> } ] } )
+<span class="line-num">138</span>   <span class="ruby-constant">User</span>.<span class="ruby-identifier">preload_associations</span>(<span class="ruby-identifier">with_users</span>, { <span class="ruby-value">user:</span> <span class="ruby-value">:site</span> })
+<span class="line-num">139</span>   <span class="ruby-identifier">updates</span>.<span class="ruby-identifier">delete_if</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">u</span><span class="ruby-operator">|</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">resource</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">notifier</span>.<span class="ruby-identifier">nil?</span> }
+<span class="line-num">140</span>   <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span> <span class="ruby-node">&quot;email_updates_to_user: #{subscriber}, emailing updates: #{updates.size}&quot;</span>
+<span class="line-num">141</span>   <span class="ruby-constant">Emailer</span>.<span class="ruby-identifier">updates_notification</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">updates</span>).<span class="ruby-identifier">deliver_now</span>
+<span class="line-num">142</span>   <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span> <span class="ruby-node">&quot;email_updates_to_user: #{subscriber} finished&quot;</span>
+<span class="line-num">143</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-first_with_attributes">
+            
+              <b>first_with_attributes</b>(attrs, options = {})
+            
+            <a href="../classes/UpdateAction.html#method-c-first_with_attributes" name="method-c-first_with_attributes" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-first_with_attributes_source')" id="l_method-c-first_with_attributes_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-first_with_attributes_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/update_action.rb</span>
+<span class="line-num">257</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">first_with_attributes</span>(<span class="ruby-identifier">attrs</span>, <span class="ruby-identifier">options</span> = {})
+<span class="line-num">258</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">CONFIG</span>.<span class="ruby-identifier">has_subscribers</span> <span class="ruby-operator">==</span> <span class="ruby-value">:disabled</span>
+<span class="line-num">259</span>   <span class="ruby-identifier">skip_validations</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:skip_validations</span>)
+<span class="line-num">260</span>   <span class="ruby-identifier">filters</span> = <span class="ruby-constant">UpdateAction</span>.<span class="ruby-identifier">arel_attributes_to_es_filters</span>( <span class="ruby-identifier">attrs</span> )
+<span class="line-num">261</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">action</span> = <span class="ruby-constant">UpdateAction</span>.<span class="ruby-identifier">elastic_paginate</span>(<span class="ruby-value">filters:</span> <span class="ruby-identifier">filters</span>, <span class="ruby-value">keep_es_source:</span> <span class="ruby-keyword">true</span>).<span class="ruby-identifier">first</span>
+<span class="line-num">262</span>     <span class="ruby-keyword">return</span> <span class="ruby-identifier">action</span>
+<span class="line-num">263</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">264</span>   <span class="ruby-keyword">begin</span>
+<span class="line-num">265</span>     <span class="ruby-identifier">action</span> = <span class="ruby-constant">UpdateAction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">attrs</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-value">created_at:</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>, <span class="ruby-value">skip_indexing:</span> <span class="ruby-keyword">true</span>).<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">options</span>))
+<span class="line-num">266</span>     <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">action</span>.<span class="ruby-identifier">save</span>(<span class="ruby-value">validate:</span> <span class="ruby-operator">!</span><span class="ruby-identifier">skip_validations</span>)
+<span class="line-num">267</span>       <span class="ruby-keyword">return</span>
+<span class="line-num">268</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">269</span>     <span class="ruby-identifier">action</span>.<span class="ruby-identifier">created_but_not_indexed</span> = <span class="ruby-keyword">true</span>
+<span class="line-num">270</span>     <span class="ruby-keyword">return</span> <span class="ruby-identifier">action</span>
+<span class="line-num">271</span>   <span class="ruby-keyword">rescue</span> <span class="ruby-constant">PG</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span>, <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">RecordNotUnique</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">e</span>
+<span class="line-num">272</span>     <span class="ruby-comment"># caught a record not unique error. Try ES once more before returning</span>
+<span class="line-num">273</span>     <span class="ruby-constant">Logstasher</span>.<span class="ruby-identifier">write_exception</span>(<span class="ruby-identifier">e</span>, <span class="ruby-value">reference:</span> <span class="ruby-string">&quot;UpdateAction.first_with_attributes RecordNotUnique&quot;</span>)
+<span class="line-num">274</span>     <span class="ruby-identifier">sleep</span>( <span class="ruby-value">1</span> )
+<span class="line-num">275</span>     <span class="ruby-value">10</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">iteration</span><span class="ruby-operator">|</span>
+<span class="line-num">276</span>       <span class="ruby-keyword">if</span> <span class="ruby-identifier">action</span> = <span class="ruby-constant">UpdateAction</span>.<span class="ruby-identifier">elastic_paginate</span>(<span class="ruby-value">filters:</span> <span class="ruby-identifier">filters</span>, <span class="ruby-value">keep_es_source:</span> <span class="ruby-keyword">true</span>).<span class="ruby-identifier">first</span>
+<span class="line-num">277</span>         <span class="ruby-keyword">return</span> <span class="ruby-identifier">action</span>
+<span class="line-num">278</span>       <span class="ruby-keyword">else</span>
+<span class="line-num">279</span>         <span class="ruby-identifier">sleep</span>( <span class="ruby-value">1</span> )
+<span class="line-num">280</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">281</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">282</span>     <span class="ruby-keyword">return</span>
+<span class="line-num">283</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">284</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-group_and_sort">
+            
+              <b>group_and_sort</b>(updates, options = {})
+            
+            <a href="../classes/UpdateAction.html#method-c-group_and_sort" name="method-c-group_and_sort" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-group_and_sort_source')" id="l_method-c-group_and_sort_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-group_and_sort_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/update_action.rb</span>
+<span class="line-num">178</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">group_and_sort</span>(<span class="ruby-identifier">updates</span>, <span class="ruby-identifier">options</span> = {})
+<span class="line-num">179</span>   <span class="ruby-identifier">grouped_updates</span> = []
+<span class="line-num">180</span>   <span class="ruby-identifier">updates</span>.<span class="ruby-identifier">group_by</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">u</span><span class="ruby-operator">|</span> [<span class="ruby-identifier">u</span>.<span class="ruby-identifier">resource_type</span>, <span class="ruby-identifier">u</span>.<span class="ruby-identifier">resource_id</span>, <span class="ruby-identifier">u</span>.<span class="ruby-identifier">notification</span>]}.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">batch</span><span class="ruby-operator">|</span>
+<span class="line-num">181</span>     <span class="ruby-identifier">resource_type</span>, <span class="ruby-identifier">resource_id</span>, <span class="ruby-identifier">notification</span> = <span class="ruby-identifier">key</span>
+<span class="line-num">182</span>     <span class="ruby-identifier">batch</span> = <span class="ruby-identifier">batch</span>.<span class="ruby-identifier">sort_by</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">u</span><span class="ruby-operator">|</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">sort_by_date</span>}
+<span class="line-num">183</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:hour_groups</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-string">&quot;created_observations new_observations&quot;</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">notification</span>.<span class="ruby-identifier">to_s</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">batch</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>
+<span class="line-num">184</span>       <span class="ruby-identifier">batch</span>.<span class="ruby-identifier">group_by</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">u</span><span class="ruby-operator">|</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">created_at</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&quot;%Y-%m-%d %H&quot;</span>)}.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">hour</span>, <span class="ruby-identifier">hour_updates</span><span class="ruby-operator">|</span>
+<span class="line-num">185</span>         <span class="ruby-identifier">grouped_updates</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-identifier">key</span>, <span class="ruby-identifier">hour_updates</span>]
+<span class="line-num">186</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">187</span>     <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">notification</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;activity&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">options</span>[<span class="ruby-value">:skip_past_activity</span>]
+<span class="line-num">188</span>       <span class="ruby-comment"># get the resource that has all this activity</span>
+<span class="line-num">189</span>       <span class="ruby-identifier">resource</span> = <span class="ruby-identifier">batch</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">resource</span>
+<span class="line-num">190</span>       <span class="ruby-keyword">if</span> <span class="ruby-identifier">resource</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">191</span>         <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;[ERROR #{Time.now}] couldn&#39;t find resource #{resource_type} #{resource_id}, first update: #{batch.first}&quot;</span>
+<span class="line-num">192</span>         <span class="ruby-keyword">next</span>
+<span class="line-num">193</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">194</span> 
+<span class="line-num">195</span>       <span class="ruby-comment"># get the associations on that resource that generate activity updates</span>
+<span class="line-num">196</span>       <span class="ruby-identifier">activity_assocs</span> = <span class="ruby-identifier">resource</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">notifying_associations</span>.<span class="ruby-identifier">select</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">assoc</span>, <span class="ruby-identifier">assoc_options</span><span class="ruby-operator">|</span>
+<span class="line-num">197</span>         <span class="ruby-identifier">assoc_options</span>[<span class="ruby-value">:notification</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&quot;activity&quot;</span>
+<span class="line-num">198</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">199</span> 
+<span class="line-num">200</span>       <span class="ruby-comment"># create pseudo updates for all activity objects</span>
+<span class="line-num">201</span>       <span class="ruby-identifier">activity_assocs</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">assoc</span>, <span class="ruby-identifier">assoc_options</span><span class="ruby-operator">|</span>
+<span class="line-num">202</span>         <span class="ruby-comment"># this is going to lazy load assoc&#39;s of the associate (e.g. a comment&#39;s user) which might not be ideal</span>
+<span class="line-num">203</span>         <span class="ruby-identifier">resource</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">assoc</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">associate</span><span class="ruby-operator">|</span>
+<span class="line-num">204</span>           <span class="ruby-keyword">unless</span> <span class="ruby-identifier">batch</span>.<span class="ruby-identifier">detect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">u</span><span class="ruby-operator">|</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">notifier_type</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">associate</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">notifier_id</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">associate</span>.<span class="ruby-identifier">id</span>}
+<span class="line-num">205</span>             <span class="ruby-identifier">batch</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">UpdateAction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:resource</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">resource</span>, <span class="ruby-value">:notifier</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">associate</span>, <span class="ruby-value">:notification</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;activity&quot;</span>)
+<span class="line-num">206</span>           <span class="ruby-keyword">end</span>
+<span class="line-num">207</span>         <span class="ruby-keyword">end</span>
+<span class="line-num">208</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">209</span>       <span class="ruby-identifier">grouped_updates</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-identifier">key</span>, <span class="ruby-identifier">batch</span>.<span class="ruby-identifier">sort_by</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">u</span><span class="ruby-operator">|</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">sort_by_date</span>}]
+<span class="line-num">210</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">211</span>       <span class="ruby-identifier">grouped_updates</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-identifier">key</span>, <span class="ruby-identifier">batch</span>]
+<span class="line-num">212</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">213</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">214</span>   <span class="ruby-identifier">grouped_updates</span>.<span class="ruby-identifier">sort_by</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">updates</span><span class="ruby-operator">|</span> <span class="ruby-identifier">updates</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">sort_by_date</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">*</span> <span class="ruby-value">-1</span>}
+<span class="line-num">215</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-load_additional_activity_updates">
+            
+              <b>load_additional_activity_updates</b>(updates, user_id)
+            
+            <a href="../classes/UpdateAction.html#method-c-load_additional_activity_updates" name="method-c-load_additional_activity_updates" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-load_additional_activity_updates_source')" id="l_method-c-load_additional_activity_updates_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-load_additional_activity_updates_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/update_action.rb</span>
+<span class="line-num">145</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">load_additional_activity_updates</span>(<span class="ruby-identifier">updates</span>, <span class="ruby-identifier">user_id</span>)
+<span class="line-num">146</span>   <span class="ruby-comment"># fetch all other activity updates for the loaded resources</span>
+<span class="line-num">147</span>   <span class="ruby-identifier">activity_updates</span> = <span class="ruby-identifier">updates</span>.<span class="ruby-identifier">select</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">u</span><span class="ruby-operator">|</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">notification</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;activity&quot;</span> }
+<span class="line-num">148</span>   <span class="ruby-keyword">return</span> <span class="ruby-identifier">updates</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">activity_updates</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">149</span>   <span class="ruby-identifier">action_ids</span> = <span class="ruby-identifier">activity_updates</span>.<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">u</span><span class="ruby-operator">|</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">id</span> }
+<span class="line-num">150</span>   <span class="ruby-identifier">clauses</span> = []
+<span class="line-num">151</span>   <span class="ruby-identifier">activity_updates</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">update</span><span class="ruby-operator">|</span>
+<span class="line-num">152</span>     <span class="ruby-identifier">clauses</span> <span class="ruby-operator">&lt;&lt;</span> {
+<span class="line-num">153</span>       <span class="ruby-value">bool:</span> {
+<span class="line-num">154</span>         <span class="ruby-value">must:</span> [
+<span class="line-num">155</span>           { <span class="ruby-value">term:</span> { <span class="ruby-value">resource_type:</span> <span class="ruby-identifier">update</span>.<span class="ruby-identifier">resource_type</span> } },
+<span class="line-num">156</span>           { <span class="ruby-value">term:</span> { <span class="ruby-value">resource_id:</span> <span class="ruby-identifier">update</span>.<span class="ruby-identifier">resource_id</span> } }
+<span class="line-num">157</span>         ]
+<span class="line-num">158</span>       }
+<span class="line-num">159</span>     }
+<span class="line-num">160</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">161</span>   <span class="ruby-identifier">filters</span> = [
+<span class="line-num">162</span>     { <span class="ruby-value">term:</span> { <span class="ruby-value">notification:</span> <span class="ruby-string">&quot;activity&quot;</span> } },
+<span class="line-num">163</span>     { <span class="ruby-value">term:</span> { <span class="ruby-value">&quot;subscriber_ids.keyword&quot;:</span> <span class="ruby-identifier">user_id</span> } }
+<span class="line-num">164</span>   ]
+<span class="line-num">165</span>   <span class="ruby-identifier">inverse_filters</span> = { <span class="ruby-value">terms:</span> { <span class="ruby-value">id:</span> <span class="ruby-identifier">action_ids</span> } }
+<span class="line-num">166</span>   <span class="ruby-keyword">unless</span> <span class="ruby-identifier">clauses</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">167</span>     <span class="ruby-identifier">filters</span> <span class="ruby-operator">&lt;&lt;</span> { <span class="ruby-value">bool:</span> { <span class="ruby-value">should:</span> <span class="ruby-identifier">clauses</span> } }
+<span class="line-num">168</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">169</span>   <span class="ruby-identifier">updates</span> <span class="ruby-operator">+=</span> <span class="ruby-constant">UpdateAction</span>.<span class="ruby-identifier">elastic_paginate</span>(
+<span class="line-num">170</span>     <span class="ruby-value">filters:</span> <span class="ruby-identifier">filters</span>,
+<span class="line-num">171</span>     <span class="ruby-value">inverse_filters:</span> <span class="ruby-identifier">inverse_filters</span>,
+<span class="line-num">172</span>     <span class="ruby-value">per_page:</span> <span class="ruby-value">200</span>,
+<span class="line-num">173</span>     <span class="ruby-value">sort:</span> { <span class="ruby-value">id:</span> <span class="ruby-value">:desc</span> }
+<span class="line-num">174</span>   )
+<span class="line-num">175</span>   <span class="ruby-identifier">updates</span>
+<span class="line-num">176</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-unviewed_by_user_from_query">
+            
+              <b>unviewed_by_user_from_query</b>(user, attrs, options={})
+            
+            <a href="../classes/UpdateAction.html#method-c-unviewed_by_user_from_query" name="method-c-unviewed_by_user_from_query" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Only used in specs</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-unviewed_by_user_from_query_source')" id="l_method-c-unviewed_by_user_from_query_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-unviewed_by_user_from_query_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/update_action.rb</span>
+<span class="line-num">395</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">unviewed_by_user_from_query</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">attrs</span>, <span class="ruby-identifier">options</span>={})
+<span class="line-num">396</span>   <span class="ruby-identifier">user_id</span> = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">try</span>(<span class="ruby-value">:id</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">user</span>
+<span class="line-num">397</span>   <span class="ruby-identifier">unviewed_user_ids</span> = <span class="ruby-constant">UpdateAction</span>.<span class="ruby-identifier">users_with_unviewed_updates_from_query</span>( <span class="ruby-identifier">attrs</span> )
+<span class="line-num">398</span>   <span class="ruby-identifier">unviewed_user_ids</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">user_id</span>)
+<span class="line-num">399</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-user_viewed_updates">
+            
+              <b>user_viewed_updates</b>(updates, user_id)
+            
+            <a href="../classes/UpdateAction.html#method-c-user_viewed_updates" name="method-c-user_viewed_updates" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-user_viewed_updates_source')" id="l_method-c-user_viewed_updates_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-user_viewed_updates_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/update_action.rb</span>
+<span class="line-num">217</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">user_viewed_updates</span>(<span class="ruby-identifier">updates</span>, <span class="ruby-identifier">user_id</span>)
+<span class="line-num">218</span>   <span class="ruby-identifier">updates</span> = <span class="ruby-identifier">updates</span>.<span class="ruby-identifier">to_a</span>.<span class="ruby-identifier">compact</span>
+<span class="line-num">219</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">updates</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">220</span>   <span class="ruby-identifier">update_script</span> = {
+<span class="line-num">221</span>     <span class="ruby-value">script:</span> {
+<span class="line-num">222</span>       <span class="ruby-value">source:</span> <span class="ruby-string">&quot;
+<span class="line-num">223</span>         if ( ctx._source.subscriber_ids.contains( params.user_id ) &amp;&amp;
+<span class="line-num">224</span>           !ctx._source.viewed_subscriber_ids.contains( params.user_id )
+<span class="line-num">225</span>         ) {
+<span class="line-num">226</span>           ctx._source.viewed_subscriber_ids.add( params.user_id );
+<span class="line-num">227</span>         } else { ctx.op = &#39;none&#39; }&quot;</span>,
+<span class="line-num">228</span>       <span class="ruby-value">params:</span> {
+<span class="line-num">229</span>         <span class="ruby-value">user_id:</span> <span class="ruby-identifier">user_id</span>
+<span class="line-num">230</span>       }
+<span class="line-num">231</span>     }
+<span class="line-num">232</span>   }
+<span class="line-num">233</span>   <span class="ruby-constant">UpdateAction</span>.<span class="ruby-identifier">__elasticsearch__</span>.<span class="ruby-identifier">client</span>.<span class="ruby-identifier">bulk</span>(
+<span class="line-num">234</span>     <span class="ruby-value">index:</span> <span class="ruby-constant">UpdateAction</span>.<span class="ruby-identifier">index_name</span>,
+<span class="line-num">235</span>     <span class="ruby-value">refresh:</span> <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">env</span>.<span class="ruby-identifier">test?</span>,
+<span class="line-num">236</span>     <span class="ruby-value">body:</span> <span class="ruby-identifier">updates</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">update</span><span class="ruby-operator">|</span>
+<span class="line-num">237</span>       [{
+<span class="line-num">238</span>         <span class="ruby-value">update:</span> {
+<span class="line-num">239</span>           <span class="ruby-value">_id:</span> <span class="ruby-identifier">update</span>.<span class="ruby-identifier">id</span>,
+<span class="line-num">240</span>           <span class="ruby-value">retry_on_conflict:</span> <span class="ruby-value">10</span>
+<span class="line-num">241</span>         }
+<span class="line-num">242</span>       }, <span class="ruby-identifier">update_script</span>]
+<span class="line-num">243</span>     <span class="ruby-keyword">end</span>.<span class="ruby-identifier">flatten</span>
+<span class="line-num">244</span>   )
+<span class="line-num">245</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-users_with_unviewed_updates_from_query">
+            
+              <b>users_with_unviewed_updates_from_query</b>(attrs, options={})
+            
+            <a href="../classes/UpdateAction.html#method-c-users_with_unviewed_updates_from_query" name="method-c-users_with_unviewed_updates_from_query" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Only used in specs</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-users_with_unviewed_updates_from_query_source')" id="l_method-c-users_with_unviewed_updates_from_query_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-users_with_unviewed_updates_from_query_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/update_action.rb</span>
+<span class="line-num">376</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">users_with_unviewed_updates_from_query</span>(<span class="ruby-identifier">attrs</span>, <span class="ruby-identifier">options</span>={})
+<span class="line-num">377</span>   <span class="ruby-identifier">filters</span> = <span class="ruby-constant">UpdateAction</span>.<span class="ruby-identifier">arel_attributes_to_es_filters</span>( <span class="ruby-identifier">attrs</span> )
+<span class="line-num">378</span>   <span class="ruby-identifier">es_response</span> = <span class="ruby-constant">UpdateAction</span>.<span class="ruby-identifier">elastic_search</span>(
+<span class="line-num">379</span>     <span class="ruby-value">filters:</span> <span class="ruby-identifier">filters</span>,
+<span class="line-num">380</span>     <span class="ruby-value">sort:</span> { <span class="ruby-value">id:</span> <span class="ruby-value">:desc</span> }
+<span class="line-num">381</span>   ).<span class="ruby-identifier">per_page</span>(<span class="ruby-value">100</span>).<span class="ruby-identifier">page</span>(<span class="ruby-value">1</span>)
+<span class="line-num">382</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">es_response</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">es_response</span>.<span class="ruby-identifier">results</span>
+<span class="line-num">383</span>     <span class="ruby-identifier">subscriber_ids</span> = []
+<span class="line-num">384</span>     <span class="ruby-identifier">viewed_subscriber_ids</span> = []
+<span class="line-num">385</span>     <span class="ruby-identifier">es_response</span>.<span class="ruby-identifier">results</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">result</span><span class="ruby-operator">|</span>
+<span class="line-num">386</span>       <span class="ruby-identifier">subscriber_ids</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">subscriber_ids</span>
+<span class="line-num">387</span>       <span class="ruby-identifier">viewed_subscriber_ids</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">viewed_subscriber_ids</span>
+<span class="line-num">388</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">389</span>     <span class="ruby-keyword">return</span> <span class="ruby-identifier">subscriber_ids</span>.<span class="ruby-identifier">uniq</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">viewed_subscriber_ids</span>.<span class="ruby-identifier">uniq</span>
+<span class="line-num">390</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">391</span>   []
+<span class="line-num">392</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-append_subscribers">
+            
+              <b>append_subscribers</b>( user_ids )
+            
+            <a href="../classes/UpdateAction.html#method-i-append_subscribers" name="method-i-append_subscribers" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-append_subscribers_source')" id="l_method-i-append_subscribers_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-append_subscribers_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/update_action.rb</span>
+<span class="line-num">304</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">append_subscribers</span>( <span class="ruby-identifier">user_ids</span> )
+<span class="line-num">305</span>   <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;UpdateAction cannot append_subscribers&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">created_but_not_indexed</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">es_source</span>
+<span class="line-num">306</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">es_source</span>
+<span class="line-num">307</span>     <span class="ruby-constant">UpdateAction</span>.<span class="ruby-identifier">__elasticsearch__</span>.<span class="ruby-identifier">client</span>.<span class="ruby-identifier">bulk</span>(
+<span class="line-num">308</span>       <span class="ruby-value">index:</span> <span class="ruby-constant">UpdateAction</span>.<span class="ruby-identifier">index_name</span>,
+<span class="line-num">309</span>       <span class="ruby-value">refresh:</span> <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">env</span>.<span class="ruby-identifier">test?</span>,
+<span class="line-num">310</span>       <span class="ruby-value">body:</span> [{
+<span class="line-num">311</span>         <span class="ruby-value">update:</span> {
+<span class="line-num">312</span>           <span class="ruby-value">_id:</span> <span class="ruby-identifier">id</span>,
+<span class="line-num">313</span>           <span class="ruby-value">retry_on_conflict:</span> <span class="ruby-value">10</span>
+<span class="line-num">314</span>         }
+<span class="line-num">315</span>       }, {
+<span class="line-num">316</span>         <span class="ruby-value">script:</span> {
+<span class="line-num">317</span>           <span class="ruby-value">source:</span> <span class="ruby-string">&quot;
+<span class="line-num">318</span>             boolean updated = false;
+<span class="line-num">319</span>             for ( entry in params.user_ids ) {
+<span class="line-num">320</span>               if ( !ctx._source.subscriber_ids.contains( entry ) ) {
+<span class="line-num">321</span>                 ctx._source.subscriber_ids.add( entry );
+<span class="line-num">322</span>                 updated = true;
+<span class="line-num">323</span>               }
+<span class="line-num">324</span>             }
+<span class="line-num">325</span>             if ( !updated ) {
+<span class="line-num">326</span>               ctx.op = &#39;none&#39;;
+<span class="line-num">327</span>             }&quot;</span>,
+<span class="line-num">328</span>           <span class="ruby-value">params:</span> {
+<span class="line-num">329</span>             <span class="ruby-value">user_ids:</span> <span class="ruby-identifier">user_ids_without_blocked_and_muted</span>( <span class="ruby-identifier">user_ids</span> )
+<span class="line-num">330</span>           }
+<span class="line-num">331</span>         }
+<span class="line-num">332</span>       }]
+<span class="line-num">333</span>     )
+<span class="line-num">334</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">335</span>     <span class="ruby-identifier">bulk_insert_subscribers</span>( <span class="ruby-identifier">user_ids</span> )
+<span class="line-num">336</span>     <span class="ruby-identifier">elastic_index!</span>
+<span class="line-num">337</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">338</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-as_indexed_json">
+            
+              <b>as_indexed_json</b>(options={})
+            
+            <a href="../classes/UpdateAction.html#method-i-as_indexed_json" name="method-i-as_indexed_json" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-as_indexed_json_source')" id="l_method-i-as_indexed_json_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-as_indexed_json_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/es_indices/update_action_index.rb</span>
+<span class="line-num">23</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">as_indexed_json</span>(<span class="ruby-identifier">options</span>={})
+<span class="line-num">24</span>   <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;UpdateAction being indexed improperly&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">created_but_not_indexed</span> <span class="ruby-operator">||</span> <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">env</span>.<span class="ruby-identifier">test?</span>
+<span class="line-num">25</span>   {
+<span class="line-num">26</span>     <span class="ruby-value">id:</span> <span class="ruby-identifier">id</span>,
+<span class="line-num">27</span>     <span class="ruby-value">subscriber_ids:</span> <span class="ruby-identifier">filtered_subscriber_ids</span> <span class="ruby-operator">||</span> [],
+<span class="line-num">28</span>     <span class="ruby-value">viewed_subscriber_ids:</span> [],
+<span class="line-num">29</span>     <span class="ruby-value">resource_id:</span> <span class="ruby-identifier">resource_id</span>,
+<span class="line-num">30</span>     <span class="ruby-value">resource_type:</span> <span class="ruby-identifier">resource_type</span>,
+<span class="line-num">31</span>     <span class="ruby-value">notifier_type:</span> <span class="ruby-identifier">notifier_type</span>,
+<span class="line-num">32</span>     <span class="ruby-value">notifier_id:</span> <span class="ruby-identifier">notifier_id</span>,
+<span class="line-num">33</span>     <span class="ruby-value">notification:</span> <span class="ruby-identifier">notification</span>,
+<span class="line-num">34</span>     <span class="ruby-value">created_at:</span> <span class="ruby-identifier">created_at</span>,
+<span class="line-num">35</span>     <span class="ruby-value">resource_owner_id:</span> <span class="ruby-identifier">resource_owner_id</span>
+<span class="line-num">36</span>   }
+<span class="line-num">37</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-bulk_insert_subscribers">
+            
+              <b>bulk_insert_subscribers</b>(subscriber_ids)
+            
+            <a href="../classes/UpdateAction.html#method-i-bulk_insert_subscribers" name="method-i-bulk_insert_subscribers" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-bulk_insert_subscribers_source')" id="l_method-i-bulk_insert_subscribers_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-bulk_insert_subscribers_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/update_action.rb</span>
+<span class="line-num">41</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">bulk_insert_subscribers</span>(<span class="ruby-identifier">subscriber_ids</span>)
+<span class="line-num">42</span>   <span class="ruby-identifier">potential_subscriber_ids</span> = <span class="ruby-identifier">user_ids_without_blocked_and_muted</span>( <span class="ruby-identifier">subscriber_ids</span> )
+<span class="line-num">43</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">filtered_subscriber_ids</span> <span class="ruby-operator">||=</span> []
+<span class="line-num">44</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">filtered_subscriber_ids</span> = ( <span class="ruby-keyword">self</span>.<span class="ruby-identifier">filtered_subscriber_ids</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">potential_subscriber_ids</span> ).<span class="ruby-identifier">uniq</span>
+<span class="line-num">45</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-restrict_to_subscribers">
+            
+              <b>restrict_to_subscribers</b>( user_ids )
+            
+            <a href="../classes/UpdateAction.html#method-i-restrict_to_subscribers" name="method-i-restrict_to_subscribers" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-restrict_to_subscribers_source')" id="l_method-i-restrict_to_subscribers_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-restrict_to_subscribers_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/update_action.rb</span>
+<span class="line-num">340</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">restrict_to_subscribers</span>( <span class="ruby-identifier">user_ids</span> )
+<span class="line-num">341</span>   <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;UpdateAction cannot append_subscribers&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">created_but_not_indexed</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">es_source</span>
+<span class="line-num">342</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">es_source</span>
+<span class="line-num">343</span>     <span class="ruby-constant">UpdateAction</span>.<span class="ruby-identifier">__elasticsearch__</span>.<span class="ruby-identifier">client</span>.<span class="ruby-identifier">bulk</span>(
+<span class="line-num">344</span>       <span class="ruby-value">index:</span> <span class="ruby-constant">UpdateAction</span>.<span class="ruby-identifier">index_name</span>,
+<span class="line-num">345</span>       <span class="ruby-value">refresh:</span> <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">env</span>.<span class="ruby-identifier">test?</span>,
+<span class="line-num">346</span>       <span class="ruby-value">body:</span> [{
+<span class="line-num">347</span>         <span class="ruby-value">update:</span> {
+<span class="line-num">348</span>           <span class="ruby-value">_id:</span> <span class="ruby-identifier">id</span>,
+<span class="line-num">349</span>           <span class="ruby-value">retry_on_conflict:</span> <span class="ruby-value">10</span>
+<span class="line-num">350</span>         }
+<span class="line-num">351</span>       }, {
+<span class="line-num">352</span>         <span class="ruby-value">script:</span> {
+<span class="line-num">353</span>           <span class="ruby-value">source:</span> <span class="ruby-string">&quot;
+<span class="line-num">354</span>             if ( !ctx._source.subscriber_ids.retainAll( params.user_ids ) ) {
+<span class="line-num">355</span>               ctx.op = &#39;none&#39;;
+<span class="line-num">356</span>             }&quot;</span>,
+<span class="line-num">357</span>           <span class="ruby-value">params:</span> {
+<span class="line-num">358</span>             <span class="ruby-value">user_ids:</span> <span class="ruby-identifier">user_ids_without_blocked_and_muted</span>( <span class="ruby-identifier">user_ids</span> )
+<span class="line-num">359</span>           }
+<span class="line-num">360</span>         }
+<span class="line-num">361</span>       }]
+<span class="line-num">362</span>     )
+<span class="line-num">363</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">364</span>     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">filtered_subscriber_ids</span> <span class="ruby-operator">||=</span> []
+<span class="line-num">365</span>     <span class="ruby-identifier">restricted_subscriber_ids</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">filtered_subscriber_ids</span>.<span class="ruby-identifier">dup</span>
+<span class="line-num">366</span>     <span class="ruby-comment"># using &amp; for array intersection</span>
+<span class="line-num">367</span>     <span class="ruby-identifier">restricted_subscriber_ids</span> = <span class="ruby-identifier">restricted_subscriber_ids</span> <span class="ruby-operator">&amp;</span> <span class="ruby-identifier">user_ids</span>
+<span class="line-num">368</span>     <span class="ruby-keyword">unless</span> <span class="ruby-identifier">restricted_subscriber_ids</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">filtered_subscriber_ids</span>
+<span class="line-num">369</span>       <span class="ruby-keyword">self</span>.<span class="ruby-identifier">filtered_subscriber_ids</span> = <span class="ruby-identifier">restricted_subscriber_ids</span>
+<span class="line-num">370</span>       <span class="ruby-identifier">elastic_index!</span>
+<span class="line-num">371</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">372</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">373</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-set_resource_owner">
+            
+              <b>set_resource_owner</b>()
+            
+            <a href="../classes/UpdateAction.html#method-i-set_resource_owner" name="method-i-set_resource_owner" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-set_resource_owner_source')" id="l_method-i-set_resource_owner_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-set_resource_owner_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/update_action.rb</span>
+<span class="line-num">23</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">set_resource_owner</span>
+<span class="line-num">24</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">resource_owner_id</span>
+<span class="line-num">25</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">resource_owner</span> = <span class="ruby-identifier">resource</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">resource</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:user</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">resource</span>.<span class="ruby-identifier">user</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+<span class="line-num">26</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-sort_by_date">
+            
+              <b>sort_by_date</b>()
+            
+            <a href="../classes/UpdateAction.html#method-i-sort_by_date" name="method-i-sort_by_date" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-sort_by_date_source')" id="l_method-i-sort_by_date_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-sort_by_date_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/update_action.rb</span>
+<span class="line-num">47</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">sort_by_date</span>
+<span class="line-num">48</span>   <span class="ruby-identifier">created_at</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">notifier</span>.<span class="ruby-identifier">try</span>(<span class="ruby-value">:created_at</span>) <span class="ruby-operator">||</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+<span class="line-num">49</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-to_s">
+            
+              <b>to_s</b>()
+            
+            <a href="../classes/UpdateAction.html#method-i-to_s" name="method-i-to_s" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-to_s_source')" id="l_method-i-to_s_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-to_s_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/update_action.rb</span>
+<span class="line-num">18</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">to_s</span>
+<span class="line-num">19</span>   <span class="ruby-node">&quot;&lt;UpdateAction #{id} resource_type: #{resource_type} &quot;</span> <span class="ruby-operator">+</span>
+<span class="line-num">20</span>     <span class="ruby-node">&quot;resource_id: #{resource_id} notifier_type: #{notifier_type} notifier_id: #{notifier_id}&gt;&quot;</span>
+<span class="line-num">21</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-user_ids_without_blocked_and_muted">
+            
+              <b>user_ids_without_blocked_and_muted</b>( user_ids )
+            
+            <a href="../classes/UpdateAction.html#method-i-user_ids_without_blocked_and_muted" name="method-i-user_ids_without_blocked_and_muted" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-user_ids_without_blocked_and_muted_source')" id="l_method-i-user_ids_without_blocked_and_muted_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-user_ids_without_blocked_and_muted_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/update_action.rb</span>
+<span class="line-num">28</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">user_ids_without_blocked_and_muted</span>( <span class="ruby-identifier">user_ids</span> )
+<span class="line-num">29</span>   <span class="ruby-identifier">notifier_user</span> = <span class="ruby-identifier">notifier</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">notifier</span>.<span class="ruby-identifier">is_a?</span>( <span class="ruby-constant">User</span> )
+<span class="line-num">30</span>   <span class="ruby-identifier">notifier_user</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">notifier</span>.<span class="ruby-identifier">try</span>(<span class="ruby-value">:user</span>)
+<span class="line-num">31</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">notifier_user</span>
+<span class="line-num">32</span>     <span class="ruby-identifier">excepted_user_ids</span> = <span class="ruby-constant">UserBlock</span>.
+<span class="line-num">33</span>       <span class="ruby-identifier">where</span>( <span class="ruby-string">&quot;user_id = ? OR blocked_user_id = ?&quot;</span>, <span class="ruby-identifier">notifier_user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">notifier_user</span>.<span class="ruby-identifier">id</span> ).
+<span class="line-num">34</span>       <span class="ruby-identifier">pluck</span>(<span class="ruby-value">:user_id</span>, <span class="ruby-value">:blocked_user_id</span>).<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">uniq</span>
+<span class="line-num">35</span>     <span class="ruby-identifier">excepted_user_ids</span> <span class="ruby-operator">+=</span> <span class="ruby-constant">UserMute</span>.<span class="ruby-identifier">where</span>( <span class="ruby-value">muted_user_id:</span> <span class="ruby-identifier">notifier_user</span>.<span class="ruby-identifier">id</span> ).<span class="ruby-identifier">pluck</span>(<span class="ruby-value">:user_id</span>)
+<span class="line-num">36</span>     <span class="ruby-keyword">return</span> <span class="ruby-identifier">user_ids</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">excepted_user_ids</span>.<span class="ruby-identifier">uniq</span>
+<span class="line-num">37</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">38</span>   <span class="ruby-identifier">user_ids</span>
+<span class="line-num">39</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

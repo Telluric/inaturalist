@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CloudfrontACLUpdater</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["CloudfrontACLUpdater"]'>
+
+
+    <meta property="og:title" value="CloudfrontACLUpdater">
+
+  
+
+    <meta name="keywords" content="CloudfrontACLUpdater class, new, update_acl">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            CloudfrontACLUpdater
+            
+                <span class="parent">&lt;
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/lib/cloudfront_acl_updater_rb.html">lib/cloudfront_acl_updater.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update_acl">update_acl</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <h2 class="sectiontitle">Constants</h2>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">HOUR_LIMIT</td>
+            <td>=</td>
+            <td class="attr-value">5.gigabytes</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">IP_SET_NAME</td>
+            <td>=</td>
+            <td class="attr-value">&quot;Rate-based Block Set&quot;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">PREFIXES_TO_GROUP</td>
+            <td>=</td>
+            <td class="attr-value">CONFIG.cloudfront_ip_prefixes_to_group || []</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">PREFIXES_TO_LIMIT</td>
+            <td>=</td>
+            <td class="attr-value">CONFIG.cloudfront_ip_prefixes_to_limit || []</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">TWELVE_HOUR_LIMIT</td>
+            <td>=</td>
+            <td class="attr-value">24.gigabytes</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">TWENTY_FOUR_HOUR_LIMIT</td>
+            <td>=</td>
+            <td class="attr-value">48.gigabytes</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+      <!-- Section attributes -->
+      <h2 class="sectiontitle">Attributes</h2>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>aws_client</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>ip_set_id</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <h2 class="sectiontitle">Class Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-c-new">
+            
+              <b>new</b>()
+            
+            <a href="../classes/CloudfrontACLUpdater.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/cloudfront_acl_updater.rb</span>
+<span class="line-num">12</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>
+<span class="line-num">13</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">CONFIG</span>.<span class="ruby-identifier">kibana_es_uri</span>
+<span class="line-num">14</span>   <span class="ruby-identifier">aws_config</span> = <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load_file</span>( <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>( <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">root</span>, <span class="ruby-string">&quot;config&quot;</span>, <span class="ruby-string">&quot;s3.yml&quot;</span> ) )
+<span class="line-num">15</span>   <span class="ruby-ivar">@aws_client</span> = <span class="ruby-operator">::</span><span class="ruby-constant">Aws</span><span class="ruby-operator">::</span><span class="ruby-constant">WAF</span><span class="ruby-operator">::</span><span class="ruby-constant">Client</span>.<span class="ruby-identifier">new</span>(
+<span class="line-num">16</span>     <span class="ruby-value">access_key_id:</span> <span class="ruby-identifier">aws_config</span>[<span class="ruby-string">&quot;access_key_id&quot;</span>],
+<span class="line-num">17</span>     <span class="ruby-value">secret_access_key:</span> <span class="ruby-identifier">aws_config</span>[<span class="ruby-string">&quot;secret_access_key&quot;</span>],
+<span class="line-num">18</span>     <span class="ruby-value">region:</span> <span class="ruby-constant">CONFIG</span>.<span class="ruby-identifier">s3_region</span>
+<span class="line-num">19</span>   )
+<span class="line-num">20</span>   <span class="ruby-ivar">@ip_set_id</span> = <span class="ruby-identifier">rate_based_ip_set_id</span>
+<span class="line-num">21</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-update_acl">
+            
+              <b>update_acl</b>()
+            
+            <a href="../classes/CloudfrontACLUpdater.html#method-i-update_acl" name="method-i-update_acl" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-update_acl_source')" id="l_method-i-update_acl_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-update_acl_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/cloudfront_acl_updater.rb</span>
+<span class="line-num">23</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">update_acl</span>
+<span class="line-num">24</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@aws_client</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@ip_set_id</span>
+<span class="line-num">25</span>   <span class="ruby-identifier">one_hour_ips</span> = <span class="ruby-identifier">query_for_ips_to_block</span>( <span class="ruby-value">1</span>.<span class="ruby-identifier">hour</span>, <span class="ruby-constant">CloudfrontACLUpdater</span><span class="ruby-operator">::</span><span class="ruby-constant">HOUR_LIMIT</span> ) <span class="ruby-operator">||</span> []
+<span class="line-num">26</span>   <span class="ruby-identifier">twelve_hour_ips</span> = <span class="ruby-identifier">query_for_ips_to_block</span>( <span class="ruby-value">12</span>.<span class="ruby-identifier">hour</span>, <span class="ruby-constant">CloudfrontACLUpdater</span><span class="ruby-operator">::</span><span class="ruby-constant">TWELVE_HOUR_LIMIT</span> ) <span class="ruby-operator">||</span> []
+<span class="line-num">27</span>   <span class="ruby-identifier">twenty_four_hour_ips</span> = <span class="ruby-identifier">query_for_ips_to_block</span>( <span class="ruby-value">24</span>.<span class="ruby-identifier">hour</span>, <span class="ruby-constant">CloudfrontACLUpdater</span><span class="ruby-operator">::</span><span class="ruby-constant">TWENTY_FOUR_HOUR_LIMIT</span> ) <span class="ruby-operator">||</span> []
+<span class="line-num">28</span>   <span class="ruby-identifier">restrict_acl_to_ips</span>( <span class="ruby-identifier">one_hour_ips</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">twelve_hour_ips</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">twenty_four_hour_ips</span> )
+<span class="line-num">29</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

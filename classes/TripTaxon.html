@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TripTaxon</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["TripTaxon"]'>
+
+
+    <meta property="og:title" value="TripTaxon">
+
+  
+
+    <meta name="keywords" content="TripTaxon class, serializable_hash">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            TripTaxon
+            
+                <span class="parent">&lt;
+                    
+                    <a href="ApplicationRecord.html">ApplicationRecord</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/app/models/trip_taxon_rb.html">app/models/trip_taxon.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-serializable_hash">serializable_hash</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-serializable_hash">
+            
+              <b>serializable_hash</b>(opts = nil)
+            
+            <a href="../classes/TripTaxon.html#method-i-serializable_hash" name="method-i-serializable_hash" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-serializable_hash_source')" id="l_method-i-serializable_hash_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-serializable_hash_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/trip_taxon.rb</span>
+<span class="line-num"> 9</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">serializable_hash</span>(<span class="ruby-identifier">opts</span> = <span class="ruby-keyword">nil</span>)
+<span class="line-num">10</span>   <span class="ruby-comment"># don&#39;t use delete here, it will just remove the option for all</span>
+<span class="line-num">11</span>   <span class="ruby-comment"># subsequent records in an array</span>
+<span class="line-num">12</span>   <span class="ruby-identifier">options</span> = <span class="ruby-identifier">opts</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">clone</span> <span class="ruby-operator">:</span> { }
+<span class="line-num">13</span>   <span class="ruby-identifier">options</span>[<span class="ruby-value">:methods</span>] <span class="ruby-operator">||=</span> []
+<span class="line-num">14</span>   <span class="ruby-identifier">options</span>[<span class="ruby-value">:methods</span>] <span class="ruby-operator">+=</span> [<span class="ruby-value">:created_at_utc</span>, <span class="ruby-value">:updated_at_utc</span>]
+<span class="line-num">15</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:except</span>]
+<span class="line-num">16</span>     <span class="ruby-identifier">options</span>[<span class="ruby-value">:methods</span>] = <span class="ruby-identifier">options</span>[<span class="ruby-value">:methods</span>] <span class="ruby-operator">-</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:except</span>]
+<span class="line-num">17</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">18</span>   <span class="ruby-identifier">options</span>[<span class="ruby-value">:methods</span>].<span class="ruby-identifier">uniq!</span>
+<span class="line-num">19</span>   <span class="ruby-identifier">h</span> = <span class="ruby-keyword">super</span>(<span class="ruby-identifier">options</span>)
+<span class="line-num">20</span>   <span class="ruby-identifier">h</span>
+<span class="line-num">21</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

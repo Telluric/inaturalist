@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>EolService</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["EolService"]'>
+
+
+    <meta property="og:title" value="EolService">
+
+  
+    
+    <meta name="description" content="encoding: utf-8.">
+    <meta property="og:description" content="encoding: utf-8.">
+  
+
+    <meta name="keywords" content="EolService class, new, api_endpoint, request, method_missing, page, search, get_uri, method_missing, data_objects">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            EolService
+            
+                <span class="parent">&lt;
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/lib/eol_service_rb.html">lib/eol_service.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>encoding: utf-8</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-api_endpoint">api_endpoint</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-data_objects">data_objects</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-get_uri">get_uri</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-method_missing">method_missing</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-method_missing">method_missing</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-page">page</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-request">request</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-search">search</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <h2 class="sectiontitle">Constants</h2>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">SERVICE_VERSION</td>
+            <td>=</td>
+            <td class="attr-value">1.0</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+      <!-- Section attributes -->
+      <h2 class="sectiontitle">Attributes</h2>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>service_name</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>timeout</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <h2 class="sectiontitle">Class Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-c-method_missing">
+            
+              <b>method_missing</b>(method, *args)
+            
+            <a href="../classes/EolService.html#method-c-method_missing" name="method-c-method_missing" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-method_missing_source')" id="l_method-c-method_missing_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-method_missing_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/eol_service.rb</span>
+<span class="line-num">69</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">method_missing</span>(<span class="ruby-identifier">method</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="line-num">70</span>   <span class="ruby-identifier">@@service</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">new</span>
+<span class="line-num">71</span>   <span class="ruby-identifier">@@service</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">method</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="line-num">72</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-new">
+            
+              <b>new</b>(options = {})
+            
+            <a href="../classes/EolService.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/eol_service.rb</span>
+<span class="line-num"> 7</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">options</span> = {})
+<span class="line-num"> 8</span>   <span class="ruby-ivar">@service_name</span> = <span class="ruby-string">&#39;EOL Service&#39;</span>
+<span class="line-num"> 9</span>   <span class="ruby-ivar">@timeout</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:timeout</span>] <span class="ruby-operator">||</span> <span class="ruby-value">5</span>
+<span class="line-num">10</span>   <span class="ruby-ivar">@debug</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:debug</span>]
+<span class="line-num">11</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-api_endpoint">
+            
+              <b>api_endpoint</b>()
+            
+            <a href="../classes/EolService.html#method-i-api_endpoint" name="method-i-api_endpoint" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-api_endpoint_source')" id="l_method-i-api_endpoint_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-api_endpoint_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/eol_service.rb</span>
+<span class="line-num">13</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">api_endpoint</span>
+<span class="line-num">14</span>   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@api_endpoint</span>.<span class="ruby-identifier">blank?</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@api_endpoint</span>.<span class="ruby-identifier">new_record?</span> 
+<span class="line-num">15</span>     <span class="ruby-ivar">@api_endpoint</span> = <span class="ruby-constant">ApiEndpoint</span>.<span class="ruby-identifier">find_or_create_by!</span>(
+<span class="line-num">16</span>       <span class="ruby-value">title:</span> <span class="ruby-string">&quot;EOL Service&quot;</span>,
+<span class="line-num">17</span>       <span class="ruby-value">documentation_url:</span> <span class="ruby-string">&quot;https://eol.org/api&quot;</span>,
+<span class="line-num">18</span>       <span class="ruby-value">base_url:</span> <span class="ruby-string">&quot;https://eol.org/api/&quot;</span>,
+<span class="line-num">19</span>       <span class="ruby-value">cache_hours:</span> <span class="ruby-value">720</span>
+<span class="line-num">20</span>     )
+<span class="line-num">21</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">22</span>   <span class="ruby-ivar">@api_endpoint</span>
+<span class="line-num">23</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-data_objects">
+            
+              <b>data_objects</b>(*args)
+            
+            <a href="../classes/EolService.html#method-i-data_objects" name="method-i-data_objects" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>This is a temporary workaround until EOL fixes their data objects API.  See <a href="https://github.com/EOL/tramea/issues/137">github.com/EOL/tramea/issues/137</a></p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-data_objects_source')" id="l_method-i-data_objects_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-data_objects_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/eol_service.rb</span>
+<span class="line-num">76</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">data_objects</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="line-num">77</span>   <span class="ruby-identifier">options</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">pop</span> <span class="ruby-operator">:</span> {}
+<span class="line-num">78</span>   <span class="ruby-identifier">options</span>[<span class="ruby-value">:images</span>] = <span class="ruby-value">1</span>
+<span class="line-num">79</span>   <span class="ruby-identifier">options</span>[<span class="ruby-value">:sounds</span>] = <span class="ruby-value">1</span>
+<span class="line-num">80</span>   <span class="ruby-identifier">options</span>[<span class="ruby-value">:text</span>] = <span class="ruby-value">1</span>
+<span class="line-num">81</span>   <span class="ruby-identifier">options</span>[<span class="ruby-value">:details</span>] = <span class="ruby-value">1</span>
+<span class="line-num">82</span>   <span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;data_objects&#39;</span>, <span class="ruby-operator">*</span>[<span class="ruby-identifier">args</span>, <span class="ruby-identifier">options</span>].<span class="ruby-identifier">flatten</span>)
+<span class="line-num">83</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-get_uri">
+            
+              <b>get_uri</b>(method, *args)
+            
+            <a href="../classes/EolService.html#method-i-get_uri" name="method-i-get_uri" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-get_uri_source')" id="l_method-i-get_uri_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-get_uri_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/eol_service.rb</span>
+<span class="line-num">56</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_uri</span>(<span class="ruby-identifier">method</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="line-num">57</span>   <span class="ruby-identifier">arg</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">first</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+<span class="line-num">58</span>   <span class="ruby-identifier">params</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">detect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)} <span class="ruby-operator">||</span> {}
+<span class="line-num">59</span>   <span class="ruby-identifier">uri</span> = <span class="ruby-node">&quot;#{ api_endpoint.base_url }#{ method }/#{ SERVICE_VERSION }&quot;</span>
+<span class="line-num">60</span>   <span class="ruby-identifier">uri</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;/#{arg}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">arg</span>
+<span class="line-num">61</span>   <span class="ruby-identifier">uri</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;.xml&quot;</span>
+<span class="line-num">62</span>   <span class="ruby-keyword">unless</span> <span class="ruby-identifier">params</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">63</span>     <span class="ruby-identifier">uri</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;?&quot;</span>
+<span class="line-num">64</span>     <span class="ruby-identifier">uri</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">params</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;#{k}=#{v}&quot;</span>}.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;&amp;&#39;</span>) 
+<span class="line-num">65</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">66</span>   <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-constant">URI</span>.<span class="ruby-identifier">encode</span>(<span class="ruby-identifier">uri</span>))
+<span class="line-num">67</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-method_missing">
+            
+              <b>method_missing</b>(method, *args)
+            
+            <a href="../classes/EolService.html#method-i-method_missing" name="method-i-method_missing" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-method_missing_source')" id="l_method-i-method_missing_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-method_missing_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/eol_service.rb</span>
+<span class="line-num">37</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">method_missing</span>(<span class="ruby-identifier">method</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="line-num">38</span>   <span class="ruby-identifier">request</span>(<span class="ruby-identifier">method</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>) 
+<span class="line-num">39</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-page">
+            
+              <b>page</b>(id, params = {})
+            
+            <a href="../classes/EolService.html#method-i-page" name="method-i-page" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-page_source')" id="l_method-i-page_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-page_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/eol_service.rb</span>
+<span class="line-num">41</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">page</span>(<span class="ruby-identifier">id</span>, <span class="ruby-identifier">params</span> = {})
+<span class="line-num">42</span>   <span class="ruby-identifier">eol_params</span> = <span class="ruby-identifier">params</span>.<span class="ruby-identifier">dup</span>
+<span class="line-num">43</span>   <span class="ruby-identifier">eol_params</span>[<span class="ruby-value">:language</span>] <span class="ruby-operator">||=</span> <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">locale</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">split</span>( <span class="ruby-string">&quot;-&quot;</span> ).<span class="ruby-identifier">first</span>
+<span class="line-num">44</span>   <span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;pages&#39;</span>, <span class="ruby-identifier">id</span>, <span class="ruby-identifier">params</span>)
+<span class="line-num">45</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-request">
+            
+              <b>request</b>(method, *args)
+            
+            <a href="../classes/EolService.html#method-i-request" name="method-i-request" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-request_source')" id="l_method-i-request_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-request_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/eol_service.rb</span>
+<span class="line-num">25</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">request</span>(<span class="ruby-identifier">method</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="line-num">26</span>   <span class="ruby-identifier">request_uri</span> = <span class="ruby-identifier">get_uri</span>(<span class="ruby-identifier">method</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="line-num">27</span>   <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span> <span class="ruby-node">&quot;[DEBUG] getting #{request_uri}, args: #{args.inspect}&quot;</span>
+<span class="line-num">28</span>   <span class="ruby-keyword">begin</span>
+<span class="line-num">29</span>     <span class="ruby-constant">MetaService</span>.<span class="ruby-identifier">fetch_request_uri</span>(<span class="ruby-value">request_uri:</span> <span class="ruby-identifier">request_uri</span>, <span class="ruby-value">timeout:</span> <span class="ruby-ivar">@timeout</span>,
+<span class="line-num">30</span>       <span class="ruby-value">api_endpoint:</span> <span class="ruby-identifier">api_endpoint</span>,
+<span class="line-num">31</span>       <span class="ruby-value">user_agent:</span> <span class="ruby-node">&quot;#{Site.default.name}/#{self.class}/#{SERVICE_VERSION}&quot;</span>)
+<span class="line-num">32</span>   <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Timeout</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span>
+<span class="line-num">33</span>     <span class="ruby-identifier">raise</span> <span class="ruby-constant">Timeout</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span>, <span class="ruby-node">&quot;#{@service_name} didn&#39;t respond within #{@timeout} seconds.&quot;</span>
+<span class="line-num">34</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">35</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-search">
+            
+              <b>search</b>(term, params = {})
+            
+            <a href="../classes/EolService.html#method-i-search" name="method-i-search" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-search_source')" id="l_method-i-search_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-search_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/eol_service.rb</span>
+<span class="line-num">47</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">search</span>(<span class="ruby-identifier">term</span>, <span class="ruby-identifier">params</span> = {})
+<span class="line-num">48</span>   <span class="ruby-identifier">params</span> = <span class="ruby-keyword">if</span> <span class="ruby-identifier">term</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+<span class="line-num">49</span>     <span class="ruby-identifier">params</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">term</span>)
+<span class="line-num">50</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">51</span>     <span class="ruby-identifier">params</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-value">:q</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">term</span>)
+<span class="line-num">52</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">53</span>   <span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;search&#39;</span>, <span class="ruby-identifier">params</span>)
+<span class="line-num">54</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

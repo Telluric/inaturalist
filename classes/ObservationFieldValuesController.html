@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ObservationFieldValuesController</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["ObservationFieldValuesController"]'>
+
+
+    <meta property="og:title" value="ObservationFieldValuesController">
+
+  
+
+    <meta name="keywords" content="ObservationFieldValuesController class, index, create, update, destroy">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            ObservationFieldValuesController
+            
+                <span class="parent">&lt;
+                    
+                    <a href="ApplicationController.html">ApplicationController</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/app/controllers/observation_field_values_controller_rb.html">app/controllers/observation_field_values_controller.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-create">create</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-destroy">destroy</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-index">index</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update">update</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-create">
+            
+              <b>create</b>()
+            
+            <a href="../classes/ObservationFieldValuesController.html#method-i-create" name="method-i-create" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-create_source')" id="l_method-i-create_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-create_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/observation_field_values_controller.rb</span>
+<span class="line-num">67</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">create</span>
+<span class="line-num">68</span>   <span class="ruby-identifier">ofv_params</span> = <span class="ruby-identifier">observation_field_value_params</span>
+<span class="line-num">69</span>   <span class="ruby-identifier">ofv_params</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:id</span>) <span class="ruby-comment"># why does rails even allow this...</span>
+<span class="line-num">70</span>   <span class="ruby-ivar">@observation_field_value</span> = <span class="ruby-constant">ObservationFieldValue</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ofv_params</span>)
+<span class="line-num">71</span>   <span class="ruby-ivar">@observation_field_value</span>.<span class="ruby-identifier">user</span> = <span class="ruby-identifier">current_user</span>
+<span class="line-num">72</span>   <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@observation_field_value</span>.<span class="ruby-identifier">valid?</span>
+<span class="line-num">73</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">existing</span> = <span class="ruby-constant">ObservationFieldValue</span>.<span class="ruby-identifier">where</span>(
+<span class="line-num">74</span>         <span class="ruby-string">&quot;observation_field_id = ? AND observation_id = ?&quot;</span>, 
+<span class="line-num">75</span>         <span class="ruby-ivar">@observation_field_value</span>.<span class="ruby-identifier">observation_field_id</span>, 
+<span class="line-num">76</span>         <span class="ruby-ivar">@observation_field_value</span>.<span class="ruby-identifier">observation_id</span>).<span class="ruby-identifier">first</span>
+<span class="line-num">77</span>       <span class="ruby-ivar">@observation_field_value</span> = <span class="ruby-identifier">existing</span>
+<span class="line-num">78</span>       <span class="ruby-ivar">@observation_field_value</span>.<span class="ruby-identifier">attributes</span> = <span class="ruby-identifier">ofv_params</span>
+<span class="line-num">79</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">80</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">81</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">82</span>     <span class="ruby-keyword">if</span> <span class="ruby-ivar">@observation_field_value</span>.<span class="ruby-identifier">save</span>
+<span class="line-num">83</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-ivar">@observation_field_value</span> }
+<span class="line-num">84</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">85</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> <span class="ruby-keyword">do</span>
+<span class="line-num">86</span>         <span class="ruby-identifier">render</span> <span class="ruby-value">:status</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:unprocessable_entity</span>, <span class="ruby-value">:json</span> <span class="ruby-operator">=&gt;</span> { <span class="ruby-value">:errors</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-ivar">@observation_field_value</span>.<span class="ruby-identifier">errors</span>.<span class="ruby-identifier">full_messages</span> }
+<span class="line-num">87</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">88</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">89</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">90</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-destroy">
+            
+              <b>destroy</b>()
+            
+            <a href="../classes/ObservationFieldValuesController.html#method-i-destroy" name="method-i-destroy" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-destroy_source')" id="l_method-i-destroy_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-destroy_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/observation_field_values_controller.rb</span>
+<span class="line-num">109</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">destroy</span>
+<span class="line-num">110</span>   <span class="ruby-identifier">errors</span> = []
+<span class="line-num">111</span>   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@observation_field_value</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">112</span>     <span class="ruby-identifier">status</span> = <span class="ruby-value">:gone</span>
+<span class="line-num">113</span>     <span class="ruby-identifier">errors</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;Observation field value #{params[:id]} does not exist.&quot;</span>
+<span class="line-num">114</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@observation_field_value</span>.<span class="ruby-identifier">observation</span>.<span class="ruby-identifier">user_id</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">id</span> <span class="ruby-operator">&amp;&amp;</span>
+<span class="line-num">115</span>         <span class="ruby-ivar">@observation_field_value</span>.<span class="ruby-identifier">user_id</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">id</span>
+<span class="line-num">116</span>     <span class="ruby-identifier">status</span> = <span class="ruby-value">:forbidden</span>
+<span class="line-num">117</span>     <span class="ruby-identifier">errors</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">t</span>(<span class="ruby-value">:you_dont_have_permission_to_do_that</span>)
+<span class="line-num">118</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">119</span>     <span class="ruby-identifier">proj_requiring_field</span> = <span class="ruby-ivar">@observation_field_value</span>.<span class="ruby-identifier">observation</span>.<span class="ruby-identifier">projects</span>.<span class="ruby-identifier">detect</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">proj</span><span class="ruby-operator">|</span>
+<span class="line-num">120</span>       <span class="ruby-identifier">proj</span>.<span class="ruby-identifier">project_observation_fields</span>.<span class="ruby-identifier">detect</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">pof</span><span class="ruby-operator">|</span>
+<span class="line-num">121</span>         <span class="ruby-identifier">pof</span>.<span class="ruby-identifier">required?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">pof</span>.<span class="ruby-identifier">observation_field_id</span> <span class="ruby-operator">===</span> <span class="ruby-ivar">@observation_field_value</span>.<span class="ruby-identifier">observation_field_id</span>
+<span class="line-num">122</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">123</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">124</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">proj_requiring_field</span>
+<span class="line-num">125</span>       <span class="ruby-identifier">status</span> = <span class="ruby-value">:unprocessable_entity</span>
+<span class="line-num">126</span>       <span class="ruby-identifier">errors</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">t</span>(<span class="ruby-value">:observation_belongs_to_project_requiring_field</span>)
+<span class="line-num">127</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">128</span>       <span class="ruby-ivar">@observation_field_value</span>.<span class="ruby-identifier">destroy</span>
+<span class="line-num">129</span>       <span class="ruby-identifier">status</span> = <span class="ruby-value">:ok</span>
+<span class="line-num">130</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">131</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">132</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">133</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">any</span> <span class="ruby-keyword">do</span>
+<span class="line-num">134</span>       <span class="ruby-identifier">render</span> <span class="ruby-value">status:</span> <span class="ruby-identifier">status</span>, <span class="ruby-value">plain:</span> <span class="ruby-identifier">errors</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">join</span>( <span class="ruby-string">&quot;, &quot;</span> ) <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+<span class="line-num">135</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">136</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> <span class="ruby-keyword">do</span> 
+<span class="line-num">137</span>       <span class="ruby-identifier">render</span> <span class="ruby-value">status:</span> <span class="ruby-identifier">status</span>, <span class="ruby-value">json:</span> <span class="ruby-identifier">errors</span> <span class="ruby-operator">?</span> { <span class="ruby-value">errors:</span> <span class="ruby-identifier">errors</span> } <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+<span class="line-num">138</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">139</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">140</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-index">
+            
+              <b>index</b>()
+            
+            <a href="../classes/ObservationFieldValuesController.html#method-i-index" name="method-i-index" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-index_source')" id="l_method-i-index_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-index_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/observation_field_values_controller.rb</span>
+<span class="line-num"> 6</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">index</span>
+<span class="line-num"> 7</span>   <span class="ruby-identifier">per_page</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:per_page</span>].<span class="ruby-identifier">to_i</span>
+<span class="line-num"> 8</span>   <span class="ruby-identifier">per_page</span> = <span class="ruby-value">30</span> <span class="ruby-keyword">if</span> (<span class="ruby-identifier">per_page</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">per_page</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">200</span>)
+<span class="line-num"> 9</span>   <span class="ruby-ivar">@ofvs</span> = <span class="ruby-constant">ObservationFieldValue</span>.<span class="ruby-identifier">page</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>]).<span class="ruby-identifier">per_page</span>(<span class="ruby-identifier">per_page</span>)
+<span class="line-num">10</span>   <span class="ruby-ivar">@ofvs</span> = <span class="ruby-ivar">@ofvs</span>.<span class="ruby-identifier">datatype</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:type</span>]) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:type</span>].<span class="ruby-identifier">blank?</span>
+<span class="line-num">11</span>   <span class="ruby-ivar">@ofvs</span> = <span class="ruby-ivar">@ofvs</span>.<span class="ruby-identifier">field</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:field</span>]) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:field</span>].<span class="ruby-identifier">blank?</span>
+<span class="line-num">12</span>   <span class="ruby-ivar">@ofvs</span> = <span class="ruby-ivar">@ofvs</span>.<span class="ruby-identifier">license</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:license</span>]) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:license</span>].<span class="ruby-identifier">blank?</span>
+<span class="line-num">13</span>   <span class="ruby-ivar">@ofvs</span> = <span class="ruby-ivar">@ofvs</span>.<span class="ruby-identifier">quality_grade</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:quality_grade</span>]) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:quality_grade</span>].<span class="ruby-identifier">blank?</span>
+<span class="line-num">14</span>   <span class="ruby-constant">ObservationFieldValue</span>.<span class="ruby-identifier">preload_associations</span>( <span class="ruby-ivar">@ofvs</span>, {
+<span class="line-num">15</span>     <span class="ruby-value">observation_field:</span> {},
+<span class="line-num">16</span>     <span class="ruby-value">observation:</span> [ { <span class="ruby-value">taxon:</span> [<span class="ruby-value">:source</span>] }, <span class="ruby-value">:user</span> ]
+<span class="line-num">17</span>   } )
+<span class="line-num">18</span>   <span class="ruby-identifier">pagination_headers_for</span>(<span class="ruby-ivar">@ofvs</span>)
+<span class="line-num">19</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">20</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> <span class="ruby-keyword">do</span>
+<span class="line-num">21</span>       <span class="ruby-identifier">taxon_json_opts</span> = {
+<span class="line-num">22</span>         <span class="ruby-value">:only</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:id</span>, <span class="ruby-value">:name</span>, <span class="ruby-value">:rank</span>, <span class="ruby-value">:source_identifier</span>], 
+<span class="line-num">23</span>         <span class="ruby-value">:include</span> <span class="ruby-operator">=&gt;</span> [
+<span class="line-num">24</span>           {
+<span class="line-num">25</span>             <span class="ruby-value">:source</span> <span class="ruby-operator">=&gt;</span> {
+<span class="line-num">26</span>               <span class="ruby-value">:only</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:id</span>, <span class="ruby-value">:title</span>, <span class="ruby-value">:in_text</span>, <span class="ruby-value">:url</span>]
+<span class="line-num">27</span>             } 
+<span class="line-num">28</span>           },
+<span class="line-num">29</span>           {
+<span class="line-num">30</span>             <span class="ruby-value">:taxon_scheme_taxa</span> <span class="ruby-operator">=&gt;</span> {
+<span class="line-num">31</span>               <span class="ruby-value">:only</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:id</span>, <span class="ruby-value">:taxon_scheme_id</span>, <span class="ruby-value">:source_identifier</span>],
+<span class="line-num">32</span>               <span class="ruby-value">:include</span> <span class="ruby-operator">=&gt;</span> {
+<span class="line-num">33</span>                 <span class="ruby-value">:taxon_scheme</span> <span class="ruby-operator">=&gt;</span> {
+<span class="line-num">34</span>                   <span class="ruby-value">:only</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:id</span>, <span class="ruby-value">:title</span>]
+<span class="line-num">35</span>                 }
+<span class="line-num">36</span>               }
+<span class="line-num">37</span>             }
+<span class="line-num">38</span>           }
+<span class="line-num">39</span>         ]
+<span class="line-num">40</span>       }
+<span class="line-num">41</span>       <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:type</span>] <span class="ruby-operator">==</span> <span class="ruby-constant">ObservationField</span><span class="ruby-operator">::</span><span class="ruby-constant">TAXON</span>
+<span class="line-num">42</span>         <span class="ruby-identifier">taxa</span> = <span class="ruby-constant">Taxon</span>.<span class="ruby-identifier">includes</span>(<span class="ruby-value">:source</span>, <span class="ruby-value">:taxon_scheme_taxa</span>).<span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;id IN (?)&quot;</span>, <span class="ruby-ivar">@ofvs</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">ofv</span><span class="ruby-operator">|</span> <span class="ruby-identifier">ofv</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_i</span>}.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">uniq</span>).<span class="ruby-identifier">index_by</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:id</span>)
+<span class="line-num">43</span>         <span class="ruby-ivar">@ofvs</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ofv</span>,<span class="ruby-identifier">i</span><span class="ruby-operator">|</span> 
+<span class="line-num">44</span>           <span class="ruby-ivar">@ofvs</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">taxon</span> = <span class="ruby-identifier">taxa</span>[<span class="ruby-ivar">@ofvs</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_i</span>].<span class="ruby-identifier">as_json</span>(<span class="ruby-identifier">taxon_json_opts</span>)
+<span class="line-num">45</span>         <span class="ruby-keyword">end</span>
+<span class="line-num">46</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">47</span>       <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-ivar">@ofvs</span>.<span class="ruby-identifier">to_json</span>(
+<span class="line-num">48</span>         <span class="ruby-value">:methods</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:taxon</span>],
+<span class="line-num">49</span>         <span class="ruby-value">:include</span> <span class="ruby-operator">=&gt;</span> {
+<span class="line-num">50</span>           <span class="ruby-value">:observation_field</span> <span class="ruby-operator">=&gt;</span> {
+<span class="line-num">51</span>             <span class="ruby-value">:only</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:id</span>, <span class="ruby-value">:datatype</span>, <span class="ruby-value">:name</span>]
+<span class="line-num">52</span>           }, 
+<span class="line-num">53</span>           <span class="ruby-value">:observation</span> <span class="ruby-operator">=&gt;</span> {
+<span class="line-num">54</span>             <span class="ruby-value">:only</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:id</span>, <span class="ruby-value">:license</span>, <span class="ruby-value">:latitude</span>, <span class="ruby-value">:longitude</span>, <span class="ruby-value">:positional_accuracy</span>, <span class="ruby-value">:observed_on</span>],
+<span class="line-num">55</span>             <span class="ruby-value">:methods</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:time_observed_at_utc</span>, <span class="ruby-value">:coordinates_obscured</span>],
+<span class="line-num">56</span>             <span class="ruby-value">:include</span> <span class="ruby-operator">=&gt;</span> {
+<span class="line-num">57</span>               <span class="ruby-value">:taxon</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">taxon_json_opts</span>, 
+<span class="line-num">58</span>               <span class="ruby-value">:user</span> <span class="ruby-operator">=&gt;</span> {<span class="ruby-value">:only</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:id</span>, <span class="ruby-value">:name</span>, <span class="ruby-value">:login</span>]}
+<span class="line-num">59</span>             }
+<span class="line-num">60</span>           }
+<span class="line-num">61</span>         }
+<span class="line-num">62</span>       )
+<span class="line-num">63</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">64</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">65</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-update">
+            
+              <b>update</b>()
+            
+            <a href="../classes/ObservationFieldValuesController.html#method-i-update" name="method-i-update" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-update_source')" id="l_method-i-update_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-update_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/observation_field_values_controller.rb</span>
+<span class="line-num"> 92</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">update</span>
+<span class="line-num"> 93</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num"> 94</span>     <span class="ruby-identifier">update_params</span> = <span class="ruby-identifier">observation_field_value_params</span>
+<span class="line-num"> 95</span>     <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">update_params</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Integer</span>
+<span class="line-num"> 96</span>       <span class="ruby-identifier">update_params</span>[<span class="ruby-value">:uuid</span>] = <span class="ruby-identifier">update_params</span>[<span class="ruby-value">:id</span>]
+<span class="line-num"> 97</span>       <span class="ruby-identifier">update_params</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:id</span>)
+<span class="line-num"> 98</span>     <span class="ruby-keyword">end</span>
+<span class="line-num"> 99</span>     <span class="ruby-keyword">if</span> <span class="ruby-ivar">@observation_field_value</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">update_params</span>)
+<span class="line-num">100</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-ivar">@observation_field_value</span> }
+<span class="line-num">101</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">102</span>       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> <span class="ruby-keyword">do</span>
+<span class="line-num">103</span>         <span class="ruby-identifier">render</span> <span class="ruby-value">:status</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:unprocessable_entity</span>, <span class="ruby-value">:json</span> <span class="ruby-operator">=&gt;</span> { <span class="ruby-value">:errors</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-ivar">@observation_field_value</span>.<span class="ruby-identifier">errors</span>.<span class="ruby-identifier">full_messages</span> }
+<span class="line-num">104</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">105</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">106</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">107</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

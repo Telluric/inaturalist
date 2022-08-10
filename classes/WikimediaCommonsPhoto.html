@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WikimediaCommonsPhoto</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["WikimediaCommonsPhoto"]'>
+
+
+    <meta property="og:title" value="WikimediaCommonsPhoto">
+
+  
+    
+    <meta name="description" content="encoding: utf-8.">
+    <meta property="og:description" content="encoding: utf-8.">
+  
+
+    <meta name="keywords" content="WikimediaCommonsPhoto class, search_wikimedia_for_taxon, wikipedia_image_filename_for_title, get_api_response, new_from_api_response, repair">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            WikimediaCommonsPhoto
+            
+                <span class="parent">&lt;
+                    
+                    <a href="Photo.html">Photo</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/app/models/wikimedia_commons_photo_rb.html">app/models/wikimedia_commons_photo.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>encoding: utf-8</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-get_api_response">get_api_response</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new_from_api_response">new_from_api_response</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-repair">repair</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-search_wikimedia_for_taxon">search_wikimedia_for_taxon</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>W</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-wikipedia_image_filename_for_title">wikipedia_image_filename_for_title</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <h2 class="sectiontitle">Constants</h2>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">FILTERED_WORDS_BASE64</td>
+            <td>=</td>
+            <td class="attr-value">[
+&quot;YmFsbHN0cmV0Y2hlcg==\n&quot;,
+&quot;Y2FnZWQgd29tYW4=\n&quot;,
+&quot;Y2hhbmNyb2lkIGxlc2lvbg==\n&quot;,
+&quot;Y29uZG9t\n&quot;,
+&quot;Z2xhbnM=\n&quot;,
+&quot;bnVkZSBtYW4=\n&quot;,
+&quot;bnVkZSB3b21hbg==\n&quot;,
+&quot;cGVuaXM=\n&quot;,
+&quot;c2Nyb3R1bQ==\n&quot;,
+&quot;dGVzdGljbGU=\n&quot;,
+&quot;dG9wbGVzcw==\n&quot;
+]</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><p><a href="List.html"><code>List</code></a> of base64-encoded words that appear in Wikimedia Commons images that we wouldn&#39;t allow according to our Community Guidelines</p></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">FILTERED_WORDS_PATTERN</td>
+            <td>=</td>
+            <td class="attr-value">/#{FILTERED_WORDS_BASE64.map{|w| Base64.decode64( w ) }.join( &quot;|&quot; )}/i</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <h2 class="sectiontitle">Class Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-c-get_api_response">
+            
+              <b>get_api_response</b>(file_name)
+            
+            <a href="../classes/WikimediaCommonsPhoto.html#method-c-get_api_response" name="method-c-get_api_response" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-get_api_response_source')" id="l_method-c-get_api_response_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-get_api_response_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/wikimedia_commons_photo.rb</span>
+<span class="line-num">104</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">get_api_response</span>(<span class="ruby-identifier">file_name</span>)
+<span class="line-num">105</span>   <span class="ruby-identifier">url</span> = <span class="ruby-node">&quot;https://commons.wikimedia.org/w/index.php?title=File:#{file_name}&quot;</span>
+<span class="line-num">106</span>   <span class="ruby-identifier">opts</span> = {<span class="ruby-string">&#39;User-Agent&#39;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;iNaturalist&quot;</span>}
+<span class="line-num">107</span>   <span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">HTML</span>(<span class="ruby-identifier">open</span>(<span class="ruby-identifier">url</span>, <span class="ruby-identifier">opts</span>))
+<span class="line-num">108</span> <span class="ruby-keyword">rescue</span> <span class="ruby-constant">OpenURI</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTPError</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">e</span>
+<span class="line-num">109</span>   <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;[ERROR #{Time.now}] Failed to retrieve #{url}: #{e}&quot;</span>
+<span class="line-num">110</span>   <span class="ruby-keyword">nil</span>
+<span class="line-num">111</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-new_from_api_response">
+            
+              <b>new_from_api_response</b>(api_response, options = {})
+            
+            <a href="../classes/WikimediaCommonsPhoto.html#method-c-new_from_api_response" name="method-c-new_from_api_response" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-new_from_api_response_source')" id="l_method-c-new_from_api_response_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-new_from_api_response_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/wikimedia_commons_photo.rb</span>
+<span class="line-num">113</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">new_from_api_response</span>(<span class="ruby-identifier">api_response</span>, <span class="ruby-identifier">options</span> = {})
+<span class="line-num">114</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">api_response</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">115</span>   <span class="ruby-identifier">file_name</span> = <span class="ruby-identifier">api_response</span>.<span class="ruby-identifier">at</span>(<span class="ruby-string">&#39;link[rel=canonical]&#39;</span>).<span class="ruby-identifier">try</span>(<span class="ruby-value">:[]</span>, <span class="ruby-string">&#39;href&#39;</span>)
+<span class="line-num">116</span>   <span class="ruby-identifier">file_name</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">api_response</span>.<span class="ruby-identifier">at</span>(<span class="ruby-string">&#39;#firstHeading&#39;</span>).<span class="ruby-identifier">children</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">children</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">inner_text</span>
+<span class="line-num">117</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">file_name</span>
+<span class="line-num">118</span>   <span class="ruby-identifier">file_name</span> = <span class="ruby-identifier">file_name</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/\s/</span>, <span class="ruby-string">&#39;_&#39;</span>).<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;File:&quot;</span>)[<span class="ruby-value">1</span>]
+<span class="line-num">119</span> 
+<span class="line-num">120</span>   <span class="ruby-identifier">photo</span> = <span class="ruby-constant">WikimediaCommonsPhoto</span>.<span class="ruby-identifier">new</span>
+<span class="line-num">121</span>   <span class="ruby-identifier">photo</span>.<span class="ruby-identifier">native_page_url</span> = <span class="ruby-node">&quot;http://commons.wikimedia.org/wiki/File:#{file_name}&quot;</span>
+<span class="line-num">122</span>   <span class="ruby-identifier">photo</span>.<span class="ruby-identifier">native_photo_id</span> = <span class="ruby-identifier">file_name</span>
+<span class="line-num">123</span> 
+<span class="line-num">124</span>   <span class="ruby-identifier">license</span> = <span class="ruby-identifier">api_response</span>.<span class="ruby-identifier">search</span>(<span class="ruby-string">&#39;.licensetpl_short&#39;</span>).<span class="ruby-identifier">inner_text</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">downcase</span>
+<span class="line-num">125</span>   <span class="ruby-identifier">license_code</span> = <span class="ruby-identifier">license</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/\s/</span>, <span class="ruby-string">&#39;-&#39;</span>)
+<span class="line-num">126</span>   <span class="ruby-identifier">photo</span>.<span class="ruby-identifier">license</span> = <span class="ruby-keyword">if</span> (<span class="ruby-identifier">license</span>.<span class="ruby-identifier">include?</span> <span class="ruby-string">&quot;public domain&quot;</span>) <span class="ruby-operator">||</span> (<span class="ruby-identifier">license</span>.<span class="ruby-identifier">include?</span> <span class="ruby-string">&quot;pd&quot;</span>) <span class="ruby-operator">||</span>
+<span class="line-num">127</span>                      (<span class="ruby-identifier">license</span>.<span class="ruby-identifier">include?</span> <span class="ruby-string">&quot;cc0&quot;</span>) <span class="ruby-operator">||</span> (<span class="ruby-identifier">license</span>.<span class="ruby-identifier">include?</span> <span class="ruby-string">&quot;no restrictions&quot;</span>)
+<span class="line-num">128</span>     <span class="ruby-constant">Photo</span><span class="ruby-operator">::</span><span class="ruby-constant">PD</span>
+<span class="line-num">129</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">license_code</span>.<span class="ruby-identifier">include?</span> <span class="ruby-string">&quot;cc-by-nc-sa&quot;</span>
+<span class="line-num">130</span>     <span class="ruby-constant">Photo</span><span class="ruby-operator">::</span><span class="ruby-constant">CC_BY_NC_SA</span>
+<span class="line-num">131</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">license_code</span>.<span class="ruby-identifier">include?</span> <span class="ruby-string">&quot;cc-by-nc-nd&quot;</span>
+<span class="line-num">132</span>     <span class="ruby-constant">Photo</span><span class="ruby-operator">::</span><span class="ruby-constant">CC_BY_NC_ND</span>
+<span class="line-num">133</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">license_code</span>.<span class="ruby-identifier">include?</span> <span class="ruby-string">&quot;cc-by-nc&quot;</span>
+<span class="line-num">134</span>     <span class="ruby-constant">Photo</span><span class="ruby-operator">::</span><span class="ruby-constant">CC_BY_NC</span>
+<span class="line-num">135</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">license_code</span>.<span class="ruby-identifier">include?</span> <span class="ruby-string">&quot;cc-by-sa&quot;</span>
+<span class="line-num">136</span>     <span class="ruby-constant">Photo</span><span class="ruby-operator">::</span><span class="ruby-constant">CC_BY_SA</span>
+<span class="line-num">137</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">license_code</span>.<span class="ruby-identifier">include?</span> <span class="ruby-string">&quot;cc-by-nd&quot;</span>
+<span class="line-num">138</span>     <span class="ruby-constant">Photo</span><span class="ruby-operator">::</span><span class="ruby-constant">CC_BY_ND</span>
+<span class="line-num">139</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">license_code</span>.<span class="ruby-identifier">include?</span> <span class="ruby-string">&quot;cc-by&quot;</span>
+<span class="line-num">140</span>     <span class="ruby-constant">Photo</span><span class="ruby-operator">::</span><span class="ruby-constant">CC_BY</span>
+<span class="line-num">141</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">license_code</span>.<span class="ruby-identifier">include?</span> <span class="ruby-string">&quot;gfdl&quot;</span>
+<span class="line-num">142</span>     <span class="ruby-constant">Photo</span><span class="ruby-operator">::</span><span class="ruby-constant">GFDL</span>
+<span class="line-num">143</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">144</span>   <span class="ruby-keyword">return</span> <span class="ruby-identifier">photo</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">photo</span>.<span class="ruby-identifier">license</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">145</span> 
+<span class="line-num">146</span>   <span class="ruby-identifier">author</span> = <span class="ruby-keyword">if</span> <span class="ruby-identifier">api_response</span>.<span class="ruby-identifier">at</span>(<span class="ruby-string">&#39;#fileinfotpl_aut&#39;</span>)
+<span class="line-num">147</span>     <span class="ruby-identifier">author_elt</span> = <span class="ruby-identifier">api_response</span>.<span class="ruby-identifier">at</span>(<span class="ruby-string">&#39;#fileinfotpl_aut&#39;</span>).<span class="ruby-identifier">parent</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">last</span>
+<span class="line-num">148</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">author_elt</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+<span class="line-num">149</span>       <span class="ruby-identifier">author_elt</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">search</span>(<span class="ruby-string">&#39;a, span&#39;</span>).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">try</span>(<span class="ruby-value">:inner_text</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">author_elt</span>.<span class="ruby-identifier">inner_text</span>
+<span class="line-num">150</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">151</span>       <span class="ruby-identifier">author_elt</span>.<span class="ruby-identifier">inner_text</span>
+<span class="line-num">152</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">153</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">api_response</span>.<span class="ruby-identifier">at</span>(<span class="ruby-string">&#39;.licensetpl_attr&#39;</span>)
+<span class="line-num">154</span>     <span class="ruby-identifier">api_response</span>.<span class="ruby-identifier">at</span>(<span class="ruby-string">&#39;.licensetpl_attr&#39;</span>).<span class="ruby-identifier">inner_text</span>
+<span class="line-num">155</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">156</span>     <span class="ruby-string">&quot;anonymous&quot;</span>
+<span class="line-num">157</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">158</span>   <span class="ruby-identifier">photo</span>.<span class="ruby-identifier">native_username</span> = <span class="ruby-identifier">author</span>
+<span class="line-num">159</span>   <span class="ruby-identifier">photo</span>.<span class="ruby-identifier">native_realname</span> = <span class="ruby-identifier">author</span>
+<span class="line-num">160</span> 
+<span class="line-num">161</span>   <span class="ruby-identifier">width</span> = <span class="ruby-identifier">api_response</span>.<span class="ruby-identifier">at</span>(<span class="ruby-string">&#39;.fileInfo&#39;</span>).<span class="ruby-identifier">inner_html</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;(&quot;</span>)[<span class="ruby-value">1</span>].<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot; &quot;</span>)[<span class="ruby-value">0</span>].<span class="ruby-identifier">gsub</span>(<span class="ruby-string">&quot;,&quot;</span>,<span class="ruby-string">&quot;&quot;</span>).<span class="ruby-identifier">to_i</span>
+<span class="line-num">162</span>   <span class="ruby-identifier">md5_hash</span> = <span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">MD5</span>.<span class="ruby-identifier">hexdigest</span>(<span class="ruby-constant">URI</span>.<span class="ruby-identifier">unescape</span>(<span class="ruby-identifier">file_name</span>))
+<span class="line-num">163</span>   <span class="ruby-identifier">url_base</span> = <span class="ruby-string">&quot;http://upload.wikimedia.org/wikipedia/commons&quot;</span>
+<span class="line-num">164</span>   <span class="ruby-identifier">url_identifier</span> = <span class="ruby-node">&quot;#{md5_hash[0..0]}/#{md5_hash[0..1]}/#{file_name}&quot;</span>
+<span class="line-num">165</span>   <span class="ruby-identifier">photo</span>.<span class="ruby-identifier">remote_original_url</span> = <span class="ruby-node">&quot;#{url_base}/#{url_identifier}&quot;</span>
+<span class="line-num">166</span>   <span class="ruby-identifier">photo</span>
+<span class="line-num">167</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-search_wikimedia_for_taxon">
+            
+              <b>search_wikimedia_for_taxon</b>(taxon_name, options = {})
+            
+            <a href="../classes/WikimediaCommonsPhoto.html#method-c-search_wikimedia_for_taxon" name="method-c-search_wikimedia_for_taxon" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Retrieve WikimediaCommonsPhotos from Wikimedia Commons based on a taxon_name. Note that this is deeply imperfect, and is made to serve search-and-paginate interfaces that show photos from a variety of providers and rely on the number of photos in the response to determine whether or not a next page exists. This method filters out some content that would not be acceptable according to our community guidelines, which messes up this assumption, so we overselect to always return the maximum number images available within the requested limit. This results in some unpleasant effects in which some images near the border will appear on the next page. This method <strong>does</strong> return content that could not be made into <a href="Photo.html"><code>Photo</code></a> records, e.g PDFs.</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-search_wikimedia_for_taxon_source')" id="l_method-c-search_wikimedia_for_taxon_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-search_wikimedia_for_taxon_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/wikimedia_commons_photo.rb</span>
+<span class="line-num">33</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">search_wikimedia_for_taxon</span>(<span class="ruby-identifier">taxon_name</span>, <span class="ruby-identifier">options</span> = {})
+<span class="line-num">34</span>   <span class="ruby-identifier">wm</span> = <span class="ruby-constant">WikimediaCommonsService</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:debug</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">true</span>)
+<span class="line-num">35</span>   <span class="ruby-identifier">wikimedia_photos</span> = []
+<span class="line-num">36</span>   <span class="ruby-identifier">page</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:page</span>].<span class="ruby-identifier">to_i</span>
+<span class="line-num">37</span>   <span class="ruby-identifier">page</span> = <span class="ruby-value">1</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">page</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">1</span>
+<span class="line-num">38</span>   <span class="ruby-identifier">per_page</span> = (<span class="ruby-identifier">options</span>[<span class="ruby-value">:per_page</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:limit</span>]).<span class="ruby-identifier">to_i</span>
+<span class="line-num">39</span>   <span class="ruby-identifier">per_page</span> = <span class="ruby-value">30</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">per_page</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">1</span>
+<span class="line-num">40</span>   <span class="ruby-identifier">limit</span> = <span class="ruby-identifier">per_page</span>
+<span class="line-num">41</span>   <span class="ruby-identifier">offset</span> = <span class="ruby-identifier">page</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">per_page</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">per_page</span>
+<span class="line-num">42</span>   <span class="ruby-identifier">query_results</span> = <span class="ruby-keyword">begin</span>
+<span class="line-num">43</span>     <span class="ruby-identifier">wm</span>.<span class="ruby-identifier">query</span>(
+<span class="line-num">44</span>       <span class="ruby-value">generator:</span> <span class="ruby-string">&quot;search&quot;</span>,
+<span class="line-num">45</span>       <span class="ruby-value">gsrsearch:</span> <span class="ruby-identifier">taxon_name</span>,
+<span class="line-num">46</span>       <span class="ruby-value">gsrnamespace:</span> <span class="ruby-value">6</span>,
+<span class="line-num">47</span>       <span class="ruby-value">prop:</span> <span class="ruby-string">&quot;imageinfo&quot;</span>,
+<span class="line-num">48</span>       <span class="ruby-value">iiprop:</span> <span class="ruby-string">&quot;size|mime|url&quot;</span>,
+<span class="line-num">49</span>       <span class="ruby-value">gsrlimit:</span> <span class="ruby-identifier">limit</span> <span class="ruby-operator">*</span> <span class="ruby-value">2</span>,
+<span class="line-num">50</span>       <span class="ruby-value">gsroffset:</span> <span class="ruby-identifier">offset</span>
+<span class="line-num">51</span>     )
+<span class="line-num">52</span>   <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Timeout</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">e</span>
+<span class="line-num">53</span>     <span class="ruby-keyword">nil</span>
+<span class="line-num">54</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">55</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">query_results</span>
+<span class="line-num">56</span>   <span class="ruby-identifier">images</span> = <span class="ruby-identifier">query_results</span>.<span class="ruby-identifier">search</span>(<span class="ruby-string">&#39;ii&#39;</span>).<span class="ruby-identifier">select</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ii</span><span class="ruby-operator">|</span>
+<span class="line-num">57</span>     <span class="ruby-identifier">ii</span>[<span class="ruby-string">&quot;url&quot;</span>].<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/_+/</span>, <span class="ruby-string">&quot; &quot;</span>) <span class="ruby-operator">!~</span> <span class="ruby-constant">FILTERED_WORDS_PATTERN</span>
+<span class="line-num">58</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">59</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">images</span>.<span class="ruby-identifier">blank?</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">taxon</span> = <span class="ruby-constant">Taxon</span>.<span class="ruby-identifier">find_by_name</span>(<span class="ruby-identifier">taxon_name</span>))
+<span class="line-num">60</span>     <span class="ruby-identifier">title</span> = <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">try</span>(<span class="ruby-value">:wikipedia_title</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">taxon_name</span>
+<span class="line-num">61</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">filename</span> = <span class="ruby-identifier">wikipedia_image_filename_for_title</span>(<span class="ruby-identifier">taxon_name</span>)
+<span class="line-num">62</span>       [<span class="ruby-identifier">new_from_api_response</span>(<span class="ruby-identifier">get_api_response</span>(<span class="ruby-identifier">filename</span>))]
+<span class="line-num">63</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">64</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">65</span>     <span class="ruby-identifier">images</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ii</span><span class="ruby-operator">|</span>
+<span class="line-num">66</span>       <span class="ruby-identifier">file_name</span> = <span class="ruby-identifier">ii</span>[<span class="ruby-string">&#39;descriptionurl&#39;</span>][<span class="ruby-regexp">/File:(.+)/</span>,<span class="ruby-value">1</span>]
+<span class="line-num">67</span>       <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">file_name</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">68</span>       <span class="ruby-identifier">width</span> = <span class="ruby-identifier">ii</span>[<span class="ruby-string">&#39;width&#39;</span>].<span class="ruby-identifier">to_i</span>
+<span class="line-num">69</span>       <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">width</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+<span class="line-num">70</span>       <span class="ruby-identifier">md5_hash</span> = <span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">MD5</span>.<span class="ruby-identifier">hexdigest</span>(<span class="ruby-constant">URI</span>.<span class="ruby-identifier">unescape</span>(<span class="ruby-identifier">file_name</span>)) 
+<span class="line-num">71</span>       <span class="ruby-constant">WikimediaCommonsPhoto</span>.<span class="ruby-identifier">new</span>(
+<span class="line-num">72</span>         <span class="ruby-value">native_photo_id:</span> <span class="ruby-identifier">file_name</span>,
+<span class="line-num">73</span>         <span class="ruby-value">remote_original_url:</span> <span class="ruby-node">&quot;http://upload.wikimedia.org/wikipedia/commons/#{md5_hash[0]}/#{md5_hash[0..1]}/#{file_name}&quot;</span>,
+<span class="line-num">74</span>         <span class="ruby-value">remote_large_url:</span> <span class="ruby-node">&quot;http://upload.wikimedia.org/wikipedia/commons/thumb/#{md5_hash[0]}/#{md5_hash[0..1]}/#{file_name}/#{1024 &gt; width ? width : 1024}px-#{file_name}&quot;</span>,
+<span class="line-num">75</span>         <span class="ruby-value">remote_medium_url:</span> <span class="ruby-node">&quot;http://upload.wikimedia.org/wikipedia/commons/thumb/#{md5_hash[0]}/#{md5_hash[0..1]}/#{file_name}/#{500 &gt; width ? width : 500}px-#{file_name}&quot;</span>,
+<span class="line-num">76</span>         <span class="ruby-value">remote_small_url:</span> <span class="ruby-node">&quot;http://upload.wikimedia.org/wikipedia/commons/thumb/#{md5_hash[0]}/#{md5_hash[0..1]}/#{file_name}/#{240 &gt; width ? width : 240}px-#{file_name}&quot;</span>,
+<span class="line-num">77</span>         <span class="ruby-value">remote_square_url:</span> <span class="ruby-node">&quot;http://upload.wikimedia.org/wikipedia/commons/thumb/#{md5_hash[0]}/#{md5_hash[0..1]}/#{file_name}/#{100 &gt; width ? width : 100}px-#{file_name}&quot;</span>,
+<span class="line-num">78</span>         <span class="ruby-value">remote_thumb_url:</span> <span class="ruby-node">&quot;http://upload.wikimedia.org/wikipedia/commons/thumb/#{md5_hash[0]}/#{md5_hash[0..1]}/#{file_name}/#{75 &gt; width ? width : 75}px-#{file_name}&quot;</span>,
+<span class="line-num">79</span>         <span class="ruby-value">native_page_url:</span> <span class="ruby-node">&quot;http://commons.wikimedia.org/wiki/File:#{file_name}&quot;</span>
+<span class="line-num">80</span>       )
+<span class="line-num">81</span>     <span class="ruby-keyword">end</span>.<span class="ruby-identifier">compact</span>[<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">limit</span>]
+<span class="line-num">82</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">83</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-wikipedia_image_filename_for_title">
+            
+              <b>wikipedia_image_filename_for_title</b>(title)
+            
+            <a href="../classes/WikimediaCommonsPhoto.html#method-c-wikipedia_image_filename_for_title" name="method-c-wikipedia_image_filename_for_title" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-wikipedia_image_filename_for_title_source')" id="l_method-c-wikipedia_image_filename_for_title_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-wikipedia_image_filename_for_title_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/wikimedia_commons_photo.rb</span>
+<span class="line-num"> 85</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">wikipedia_image_filename_for_title</span>(<span class="ruby-identifier">title</span>)
+<span class="line-num"> 86</span>   <span class="ruby-identifier">w</span> = <span class="ruby-constant">WikipediaService</span>.<span class="ruby-identifier">new</span>
+<span class="line-num"> 87</span>   <span class="ruby-identifier">query_results</span> = <span class="ruby-keyword">begin</span>
+<span class="line-num"> 88</span>     <span class="ruby-identifier">w</span>.<span class="ruby-identifier">query</span>(
+<span class="line-num"> 89</span>       <span class="ruby-value">:titles</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">title</span>,
+<span class="line-num"> 90</span>       <span class="ruby-value">:redirects</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&#39;&#39;</span>,
+<span class="line-num"> 91</span>       <span class="ruby-value">:prop</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&#39;revisions&#39;</span>,
+<span class="line-num"> 92</span>       <span class="ruby-value">:rvprop</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&#39;content&#39;</span>
+<span class="line-num"> 93</span>     )
+<span class="line-num"> 94</span>   <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Timeout</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">e</span>
+<span class="line-num"> 95</span>     <span class="ruby-keyword">nil</span>
+<span class="line-num"> 96</span>   <span class="ruby-keyword">end</span>
+<span class="line-num"> 97</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">query_results</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num"> 98</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">raw</span> = <span class="ruby-identifier">query_results</span>.<span class="ruby-identifier">at</span>(<span class="ruby-string">&#39;page&#39;</span>)
+<span class="line-num"> 99</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">taxobox</span> = <span class="ruby-identifier">raw</span>.<span class="ruby-identifier">to_s</span>[<span class="ruby-regexp">/\{\{[^\|^\}]*Taxobox(.*)\}\}/im</span>, <span class="ruby-value">1</span>]
+<span class="line-num">100</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">image_title</span> = <span class="ruby-identifier">taxobox</span>[<span class="ruby-regexp">/image\s*=\s*([^\|^\}]*)/i</span>, <span class="ruby-value">1</span>]
+<span class="line-num">101</span>   <span class="ruby-string">&quot;File:&quot;</span><span class="ruby-operator">+</span><span class="ruby-identifier">image_title</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/\s/</span>, <span class="ruby-string">&#39;_&#39;</span>)
+<span class="line-num">102</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-repair">
+            
+              <b>repair</b>( options = {} )
+            
+            <a href="../classes/WikimediaCommonsPhoto.html#method-i-repair" name="method-i-repair" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-repair_source')" id="l_method-i-repair_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-repair_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/wikimedia_commons_photo.rb</span>
+<span class="line-num">169</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">repair</span>( <span class="ruby-identifier">options</span> = {} )
+<span class="line-num">170</span>   <span class="ruby-identifier">r</span> = <span class="ruby-constant">WikimediaCommonsPhoto</span>.<span class="ruby-identifier">get_api_response</span>( <span class="ruby-identifier">native_photo_id</span> )
+<span class="line-num">171</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">r</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">172</span>     <span class="ruby-keyword">return</span> [<span class="ruby-keyword">self</span>, { <span class="ruby-value">photo_missing:</span> <span class="ruby-node">&quot;photo not found #{self}&quot;</span> } ]
+<span class="line-num">173</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">174</span>   <span class="ruby-identifier">p</span> = <span class="ruby-constant">WikimediaCommonsPhoto</span>.<span class="ruby-identifier">new_from_api_response</span>( <span class="ruby-identifier">r</span> )
+<span class="line-num">175</span>   ( <span class="ruby-constant">WikimediaCommonsPhoto</span>.<span class="ruby-identifier">column_names</span> <span class="ruby-operator">-</span> <span class="ruby-node">%w(id created_at updated_at)</span> ).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span>
+<span class="line-num">176</span>     <span class="ruby-identifier">send</span>( <span class="ruby-node">&quot;#{a}=&quot;</span>, <span class="ruby-identifier">p</span>.<span class="ruby-identifier">send</span>( <span class="ruby-identifier">a</span> ) )
+<span class="line-num">177</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">178</span>   <span class="ruby-identifier">save</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:no_save</span>]
+<span class="line-num">179</span>   [<span class="ruby-keyword">self</span>, {}]
+<span class="line-num">180</span> <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Timeout</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span>
+<span class="line-num">181</span>   [<span class="ruby-keyword">self</span>, { <span class="ruby-value">timeout:</span> <span class="ruby-string">&quot;Wikimedia didn&#39;t respond&quot;</span> }]
+<span class="line-num">182</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PlaceGeometry</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["PlaceGeometry"]'>
+
+
+    <meta property="og:title" value="PlaceGeometry">
+
+  
+    
+    <meta name="description" content="Stores the geometries of places.">
+    <meta property="og:description" content="Stores the geometries of places.">
+  
+
+    <meta name="keywords" content="PlaceGeometry class, to_s, validate_geometry, geom, refresh_place_check_list, process_geometry_if_changed, process_geometry, update_observations_places_later, notify_trusting_project_members, simplified_geom, update_observations_places">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            PlaceGeometry
+            
+                <span class="parent">&lt;
+                    
+                    <a href="ApplicationRecord.html">ApplicationRecord</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/app/models/place_geometry_rb.html">app/models/place_geometry.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>Stores the geometries of places.  We COULD have had a geometry column in the places table, but geometries can get rather large, and loading them into memory every time you want to work with a place is expensive.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-geom">geom</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-notify_trusting_project_members">notify_trusting_project_members</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-process_geometry">process_geometry</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-process_geometry_if_changed">process_geometry_if_changed</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-refresh_place_check_list">refresh_place_check_list</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-simplified_geom">simplified_geom</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-to_s">to_s</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-update_observations_places">update_observations_places</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_observations_places_later">update_observations_places_later</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-validate_geometry">validate_geometry</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <h2 class="sectiontitle">Class Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-c-update_observations_places">
+            
+              <b>update_observations_places</b>(place_geometry_id)
+            
+            <a href="../classes/PlaceGeometry.html#method-c-update_observations_places" name="method-c-update_observations_places" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-update_observations_places_source')" id="l_method-c-update_observations_places_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-update_observations_places_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/place_geometry.rb</span>
+<span class="line-num">177</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">update_observations_places</span>(<span class="ruby-identifier">place_geometry_id</span>)
+<span class="line-num">178</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">pg</span> = <span class="ruby-constant">PlaceGeometry</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">id:</span> <span class="ruby-identifier">place_geometry_id</span>).<span class="ruby-identifier">first</span>
+<span class="line-num">179</span>     <span class="ruby-constant">Place</span>.<span class="ruby-identifier">update_observations_places</span>(<span class="ruby-identifier">pg</span>.<span class="ruby-identifier">place_id</span>)
+<span class="line-num">180</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">181</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-geom">
+            
+              <b>geom</b>()
+            
+            <a href="../classes/PlaceGeometry.html#method-i-geom" name="method-i-geom" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>During the Rails 5 upgrade, invalid WKT assigned to geom raised this error when the geometry tried to be read. This seems like a problem with RGeo that hasn&#39;t been fixed yet, so this is a rough kluge. Alternatively, we could raise something more specific and catch it elsewhere. This might fail a bit silently. ~~kueda 20210702</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-geom_source')" id="l_method-i-geom_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-geom_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/place_geometry.rb</span>
+<span class="line-num">47</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">geom</span>
+<span class="line-num">48</span>   <span class="ruby-keyword">begin</span>
+<span class="line-num">49</span>     <span class="ruby-keyword">super</span>
+<span class="line-num">50</span>   <span class="ruby-keyword">rescue</span> <span class="ruby-constant">NoMethodError</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">e</span>
+<span class="line-num">51</span>     <span class="ruby-identifier">raise</span> <span class="ruby-identifier">e</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/undefined method.*factory/</span>
+<span class="line-num">52</span>     <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">add</span>(<span class="ruby-value">:geom</span>, <span class="ruby-string">&quot;could not be parsed&quot;</span>)
+<span class="line-num">53</span>     <span class="ruby-keyword">nil</span>
+<span class="line-num">54</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">55</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-notify_trusting_project_members">
+            
+              <b>notify_trusting_project_members</b>()
+            
+            <a href="../classes/PlaceGeometry.html#method-i-notify_trusting_project_members" name="method-i-notify_trusting_project_members" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-notify_trusting_project_members_source')" id="l_method-i-notify_trusting_project_members_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-notify_trusting_project_members_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/place_geometry.rb</span>
+<span class="line-num">134</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">notify_trusting_project_members</span>
+<span class="line-num">135</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">saved_change_to_geom?</span>
+<span class="line-num">136</span>   <span class="ruby-constant">Project</span>.
+<span class="line-num">137</span>       <span class="ruby-identifier">joins</span>(<span class="ruby-value">:project_observation_rules</span>).
+<span class="line-num">138</span>       <span class="ruby-identifier">where</span>( <span class="ruby-string">&quot;rules.operator = &#39;observed_in_place?&#39;&quot;</span> ).
+<span class="line-num">139</span>       <span class="ruby-identifier">where</span>( <span class="ruby-string">&quot;rules.operand_type = &#39;Place&#39;&quot;</span> ).
+<span class="line-num">140</span>       <span class="ruby-identifier">where</span>( <span class="ruby-string">&quot;rules.operand_id = ?&quot;</span>, <span class="ruby-identifier">place_id</span> ).
+<span class="line-num">141</span>       <span class="ruby-identifier">where</span>( <span class="ruby-value">project_type:</span> <span class="ruby-node">%w(collection umbrella)</span> ).
+<span class="line-num">142</span>       <span class="ruby-identifier">find_each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">proj</span><span class="ruby-operator">|</span>
+<span class="line-num">143</span>     <span class="ruby-identifier">proj</span>.<span class="ruby-identifier">notify_trusting_members_about_changes_later</span>
+<span class="line-num">144</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">145</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">146</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-process_geometry">
+            
+              <b>process_geometry</b>()
+            
+            <a href="../classes/PlaceGeometry.html#method-i-process_geometry" name="method-i-process_geometry" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-process_geometry_source')" id="l_method-i-process_geometry_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-process_geometry_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/place_geometry.rb</span>
+<span class="line-num"> 77</span>   <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">process_geometry</span>
+<span class="line-num"> 78</span>     <span class="ruby-constant">PlaceGeometry</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">execute</span> <span class="ruby-identifier">&lt;&lt;-SQL</span>
+<span class="line-num"> 79</span> <span class="ruby-value">      UPDATE place_geometries SET geom = reuonioned_geoms.new_geom FROM (
+<span class="line-num"> 80</span>         SELECT
+<span class="line-num"> 81</span>           ST_RemoveRepeatedPoints(ST_Multi(ST_Union(ST_MakeValid(geom)))) AS new_geom
+<span class="line-num"> 82</span>         FROM (
+<span class="line-num"> 83</span>           SELECT (ST_Dump(geom)).geom
+<span class="line-num"> 84</span>           FROM place_geometries
+<span class="line-num"> 85</span>           WHERE id = #{id}
+<span class="line-num"> 86</span>         ) AS expanded_geoms
+<span class="line-num"> 87</span>       ) AS reuonioned_geoms
+<span class="line-num"> 88</span>       WHERE id = #{id}
+<span class="line-num"> 89</span> </span><span class="ruby-identifier">    SQL</span>
+<span class="line-num"> 90</span>   <span class="ruby-keyword">rescue</span> <span class="ruby-constant">StandardError</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">e</span>
+<span class="line-num"> 91</span>     <span class="ruby-identifier">raise</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/conversion failed/</span>
+<span class="line-num"> 92</span>     <span class="ruby-keyword">begin</span>
+<span class="line-num"> 93</span>       <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;[ERROR #{Time.now}] Failed to dissolve for PlaceGeometry #{id}, attempting to simplify: #{e}&quot;</span>
+<span class="line-num"> 94</span>       <span class="ruby-identifier">connection</span>.<span class="ruby-identifier">execute</span> <span class="ruby-identifier">&lt;&lt;-SQL</span>
+<span class="line-num"> 95</span> <span class="ruby-value">        UPDATE place_geometries SET geom = reuonioned_geoms.new_geom FROM (
+<span class="line-num"> 96</span>           SELECT
+<span class="line-num"> 97</span>             ST_RemoveRepeatedPoints(ST_Multi(ST_Union(geom))) AS new_geom
+<span class="line-num"> 98</span>           FROM (
+<span class="line-num"> 99</span>             SELECT ST_SimplifyPreserveTopology((ST_Dump(geom)).geom, 0.0001) AS geom
+<span class="line-num">100</span>             FROM place_geometries
+<span class="line-num">101</span>             WHERE id = #{id}
+<span class="line-num">102</span>           ) AS expanded_geoms
+<span class="line-num">103</span>         ) AS reuonioned_geoms
+<span class="line-num">104</span>         WHERE id = #{id}
+<span class="line-num">105</span> </span><span class="ruby-identifier">      SQL</span>
+<span class="line-num">106</span>     <span class="ruby-keyword">rescue</span> <span class="ruby-constant">StandardError</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">e</span>
+<span class="line-num">107</span>       <span class="ruby-identifier">raise</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/conversion failed/</span>
+<span class="line-num">108</span>       <span class="ruby-comment"># sucks to lose data, but we really don&#39;t want invalid geometries</span>
+<span class="line-num">109</span>       <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;[ERROR #{Time.now}] Failed to dissolve for PlaceGeometry #{id}, filtering invalid geoms: #{e}&quot;</span>
+<span class="line-num">110</span>       <span class="ruby-identifier">connection</span>.<span class="ruby-identifier">execute</span> <span class="ruby-identifier">&lt;&lt;-SQL</span>
+<span class="line-num">111</span> <span class="ruby-value">        UPDATE place_geometries SET geom = reuonioned_geoms.new_geom FROM (
+<span class="line-num">112</span>           SELECT
+<span class="line-num">113</span>             ST_RemoveRepeatedPoints(ST_Multi(ST_Union(geom))) AS new_geom
+<span class="line-num">114</span>           FROM (
+<span class="line-num">115</span>             SELECT (ST_Dump(geom)).geom
+<span class="line-num">116</span>             FROM place_geometries
+<span class="line-num">117</span>             WHERE id = #{id}
+<span class="line-num">118</span>           ) AS expanded_geoms
+<span class="line-num">119</span>           WHERE ST_IsValid(geom)
+<span class="line-num">120</span>         ) AS reuonioned_geoms
+<span class="line-num">121</span>         WHERE id = #{id}
+<span class="line-num">122</span> </span><span class="ruby-identifier">      SQL</span>
+<span class="line-num">123</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">124</span>   <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-process_geometry_if_changed">
+            
+              <b>process_geometry_if_changed</b>()
+            
+            <a href="../classes/PlaceGeometry.html#method-i-process_geometry_if_changed" name="method-i-process_geometry_if_changed" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-process_geometry_if_changed_source')" id="l_method-i-process_geometry_if_changed_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-process_geometry_if_changed_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/place_geometry.rb</span>
+<span class="line-num">72</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">process_geometry_if_changed</span>
+<span class="line-num">73</span>   <span class="ruby-identifier">process_geometry</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">saved_change_to_geom?</span>
+<span class="line-num">74</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">75</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-refresh_place_check_list">
+            
+              <b>refresh_place_check_list</b>()
+            
+            <a href="../classes/PlaceGeometry.html#method-i-refresh_place_check_list" name="method-i-refresh_place_check_list" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-refresh_place_check_list_source')" id="l_method-i-refresh_place_check_list_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-refresh_place_check_list_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/place_geometry.rb</span>
+<span class="line-num">57</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">refresh_place_check_list</span>
+<span class="line-num">58</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">place</span>.<span class="ruby-identifier">check_list</span>
+<span class="line-num">59</span>     <span class="ruby-identifier">priority</span> = <span class="ruby-identifier">place</span>.<span class="ruby-identifier">user_id</span>.<span class="ruby-identifier">blank?</span> <span class="ruby-operator">?</span> <span class="ruby-constant">INTEGRITY_PRIORITY</span> <span class="ruby-operator">:</span> <span class="ruby-constant">USER_PRIORITY</span>
+<span class="line-num">60</span>     <span class="ruby-keyword">unless</span> <span class="ruby-identifier">new_record?</span>
+<span class="line-num">61</span>       <span class="ruby-keyword">self</span>.<span class="ruby-identifier">place</span>.<span class="ruby-identifier">check_list</span>.<span class="ruby-identifier">delay</span>(
+<span class="line-num">62</span>         <span class="ruby-value">unique_hash:</span> { <span class="ruby-value">&quot;CheckList::refresh&quot;:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">place</span>.<span class="ruby-identifier">check_list</span>.<span class="ruby-identifier">id</span> },
+<span class="line-num">63</span>         <span class="ruby-value">queue:</span> <span class="ruby-string">&quot;slow&quot;</span>, <span class="ruby-value">priority:</span> <span class="ruby-identifier">priority</span>).<span class="ruby-identifier">refresh</span>
+<span class="line-num">64</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">65</span>     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">place</span>.<span class="ruby-identifier">check_list</span>.<span class="ruby-identifier">delay</span>(
+<span class="line-num">66</span>       <span class="ruby-value">unique_hash:</span> { <span class="ruby-value">&quot;CheckList::add_observed_taxa&quot;:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">place</span>.<span class="ruby-identifier">check_list</span>.<span class="ruby-identifier">id</span> },
+<span class="line-num">67</span>       <span class="ruby-value">queue:</span> <span class="ruby-string">&quot;slow&quot;</span>, <span class="ruby-value">priority:</span> <span class="ruby-identifier">priority</span>).<span class="ruby-identifier">add_observed_taxa</span>
+<span class="line-num">68</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">69</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">70</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-simplified_geom">
+            
+              <b>simplified_geom</b>()
+            
+            <a href="../classes/PlaceGeometry.html#method-i-simplified_geom" name="method-i-simplified_geom" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-simplified_geom_source')" id="l_method-i-simplified_geom_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-simplified_geom_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/place_geometry.rb</span>
+<span class="line-num">148</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">simplified_geom</span>
+<span class="line-num">149</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">geom</span>
+<span class="line-num">150</span>   <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">place</span>.<span class="ruby-identifier">bbox_area</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">place</span>.<span class="ruby-identifier">bbox_area</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0.1</span>
+<span class="line-num">151</span>     <span class="ruby-comment"># this method is currently only used for indexing places in Elasticsearch.</span>
+<span class="line-num">152</span>     <span class="ruby-comment"># Running the cleangeometry method here helps fix geom validation errors</span>
+<span class="line-num">153</span>     <span class="ruby-comment"># which psql is comfortable with but might cause ES to throw errors</span>
+<span class="line-num">154</span>     <span class="ruby-keyword">return</span> <span class="ruby-constant">PlaceGeometry</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">id:</span> <span class="ruby-identifier">id</span>).
+<span class="line-num">155</span>       <span class="ruby-identifier">select</span>(<span class="ruby-string">&quot;id, cleangeometry(geom) as simpl&quot;</span>).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">try</span>(<span class="ruby-value">:simpl</span>)
+<span class="line-num">156</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">157</span>   <span class="ruby-identifier">tolerance</span> =
+<span class="line-num">158</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">place</span>.<span class="ruby-identifier">bbox_area</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">1</span>
+<span class="line-num">159</span>       <span class="ruby-value">0.001</span>
+<span class="line-num">160</span>     <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">place</span>.<span class="ruby-identifier">bbox_area</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">10</span>
+<span class="line-num">161</span>       <span class="ruby-value">0.01</span>
+<span class="line-num">162</span>     <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">place</span>.<span class="ruby-identifier">bbox_area</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">100</span>
+<span class="line-num">163</span>       <span class="ruby-value">0.017</span>
+<span class="line-num">164</span>     <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">place</span>.<span class="ruby-identifier">bbox_area</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">500</span>
+<span class="line-num">165</span>       <span class="ruby-value">0.04</span>
+<span class="line-num">166</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">167</span>       <span class="ruby-value">0.075</span>
+<span class="line-num">168</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">169</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">s</span> = <span class="ruby-constant">PlaceGeometry</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">id:</span> <span class="ruby-identifier">id</span>).
+<span class="line-num">170</span>     <span class="ruby-identifier">select</span>(<span class="ruby-node">&quot;id, cleangeometry(ST_SimplifyPreserveTopology(geom, #{ tolerance })) as simpl&quot;</span>).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">simpl</span> <span class="ruby-keyword">rescue</span> <span class="ruby-keyword">nil</span>
+<span class="line-num">171</span>     <span class="ruby-keyword">return</span> <span class="ruby-identifier">s</span>
+<span class="line-num">172</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">173</span>   <span class="ruby-constant">PlaceGeometry</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">id:</span> <span class="ruby-identifier">id</span>).
+<span class="line-num">174</span>     <span class="ruby-identifier">select</span>(<span class="ruby-node">&quot;id, cleangeometry(ST_Buffer(ST_SimplifyPreserveTopology(geom, #{ tolerance }),0)) as simpl&quot;</span>).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">simpl</span>
+<span class="line-num">175</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-to_s">
+            
+              <b>to_s</b>()
+            
+            <a href="../classes/PlaceGeometry.html#method-i-to_s" name="method-i-to_s" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-to_s_source')" id="l_method-i-to_s_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-to_s_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/place_geometry.rb</span>
+<span class="line-num">21</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">to_s</span>
+<span class="line-num">22</span>   <span class="ruby-node">&quot;&lt;PlaceGeometry #{id} place_id: #{place_id}&gt;&quot;</span>
+<span class="line-num">23</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-update_observations_places_later">
+            
+              <b>update_observations_places_later</b>()
+            
+            <a href="../classes/PlaceGeometry.html#method-i-update_observations_places_later" name="method-i-update_observations_places_later" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-update_observations_places_later_source')" id="l_method-i-update_observations_places_later_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-update_observations_places_later_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/place_geometry.rb</span>
+<span class="line-num">126</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">update_observations_places_later</span>
+<span class="line-num">127</span>   <span class="ruby-constant">Place</span>.<span class="ruby-identifier">delay</span>(
+<span class="line-num">128</span>     <span class="ruby-value">unique_hash:</span> { <span class="ruby-value">&quot;Place::update_observations_places&quot;:</span> <span class="ruby-identifier">place_id</span> },
+<span class="line-num">129</span>     <span class="ruby-value">run_at:</span> <span class="ruby-value">5</span>.<span class="ruby-identifier">minutes</span>.<span class="ruby-identifier">from_now</span>,
+<span class="line-num">130</span>     <span class="ruby-value">queue:</span> <span class="ruby-string">&quot;throttled&quot;</span>
+<span class="line-num">131</span>   ).<span class="ruby-identifier">update_observations_places</span>( <span class="ruby-identifier">place_id</span> )
+<span class="line-num">132</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-validate_geometry">
+            
+              <b>validate_geometry</b>()
+            
+            <a href="../classes/PlaceGeometry.html#method-i-validate_geometry" name="method-i-validate_geometry" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-validate_geometry_source')" id="l_method-i-validate_geometry_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-validate_geometry_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/place_geometry.rb</span>
+<span class="line-num">25</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">validate_geometry</span>
+<span class="line-num">26</span>   <span class="ruby-comment"># not sure why this is necessary, but validates_presence_of :geom doesn&#39;t always seem to run first</span>
+<span class="line-num">27</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">geom</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">28</span>     <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">add</span>(<span class="ruby-value">:geom</span>, <span class="ruby-value">:cannot_be_blank</span>)
+<span class="line-num">29</span>     <span class="ruby-keyword">return</span>
+<span class="line-num">30</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">31</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">geom</span>.<span class="ruby-identifier">num_points</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">4</span>
+<span class="line-num">32</span>     <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">add</span>(<span class="ruby-value">:geom</span>, <span class="ruby-value">:must_have_more_than_three_points</span>)
+<span class="line-num">33</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">34</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">geom</span>.<span class="ruby-identifier">detect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">g</span><span class="ruby-operator">|</span> <span class="ruby-identifier">g</span>.<span class="ruby-identifier">num_points</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">4</span>}
+<span class="line-num">35</span>     <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">add</span>(<span class="ruby-value">:geom</span>, <span class="ruby-value">:polygon_with_less_than_four_points</span>)
+<span class="line-num">36</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">37</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">geom</span>.<span class="ruby-identifier">detect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">g</span><span class="ruby-operator">|</span> <span class="ruby-identifier">g</span>.<span class="ruby-identifier">points</span>.<span class="ruby-identifier">detect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">pt</span><span class="ruby-operator">|</span> <span class="ruby-identifier">pt</span>.<span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">-180</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">pt</span>.<span class="ruby-identifier">x</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">180</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">pt</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">-90</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">pt</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">90</span>}}
+<span class="line-num">38</span>     <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">add</span>(<span class="ruby-value">:geom</span>, <span class="ruby-value">:invalid_point</span>)
+<span class="line-num">39</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">40</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

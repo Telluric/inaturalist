@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>StatsController</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["StatsController"]'>
+
+
+    <meta property="og:title" value="StatsController">
+
+  
+
+    <meta name="keywords" content="StatsController class, index, summary, year, your_year, generate_year, observation_weeks, observation_weeks_json, nps_bioblitz, canada_150, parks_canada_2017, cnc2017, cnc2017_stats, cnc2016, wed_bioblitz">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            StatsController
+            
+                <span class="parent">&lt;
+                    
+                    <a href="ApplicationController.html">ApplicationController</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/app/controllers/stats_controller_rb.html">app/controllers/stats_controller.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-canada_150">canada_150</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cnc2016">cnc2016</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cnc2017">cnc2017</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-cnc2017_stats">cnc2017_stats</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-generate_year">generate_year</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-index">index</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-nps_bioblitz">nps_bioblitz</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-observation_weeks">observation_weeks</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-observation_weeks_json">observation_weeks_json</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-parks_canada_2017">parks_canada_2017</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-summary">summary</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>W</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-wed_bioblitz">wed_bioblitz</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>Y</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-year">year</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-your_year">your_year</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-canada_150">
+            
+              <b>canada_150</b>()
+            
+            <a href="../classes/StatsController.html#method-i-canada_150" name="method-i-canada_150" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-canada_150_source')" id="l_method-i-canada_150_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-canada_150_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/stats_controller.rb</span>
+<span class="line-num">174</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">canada_150</span>
+<span class="line-num">175</span>   <span class="ruby-identifier">project_slideshow_data</span>( <span class="ruby-value">12849</span>,
+<span class="line-num">176</span>     <span class="ruby-value">umbrella_project_ids:</span> [<span class="ruby-value">12849</span>],
+<span class="line-num">177</span>     <span class="ruby-value">sub_project_ids:</span> {
+<span class="line-num">178</span>       <span class="ruby-value">12849</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">16484</span>, <span class="ruby-value">13474</span>, <span class="ruby-value">14980</span>, <span class="ruby-value">15583</span>, <span class="ruby-value">14782</span>, <span class="ruby-value">14342</span>, <span class="ruby-value">11863</span>, <span class="ruby-value">12646</span>, <span class="ruby-value">12281</span>, <span class="ruby-value">11396</span>, <span class="ruby-value">11693</span>, <span class="ruby-value">10595</span>, <span class="ruby-value">12189</span>, <span class="ruby-value">12192</span>, <span class="ruby-value">12743</span>, <span class="ruby-value">12511</span>, <span class="ruby-value">12872</span>, <span class="ruby-value">12748</span>, <span class="ruby-value">11440</span>, <span class="ruby-value">12806</span>, <span class="ruby-value">13124</span>, <span class="ruby-value">12210</span>, <span class="ruby-value">13176</span>, <span class="ruby-value">12024</span>, <span class="ruby-value">13377</span>, <span class="ruby-value">13376</span>, <span class="ruby-value">13375</span>, <span class="ruby-value">13374</span>, <span class="ruby-value">12597</span>, <span class="ruby-value">12166</span>, <span class="ruby-value">11451</span>]
+<span class="line-num">179</span>     },
+<span class="line-num">180</span>     <span class="ruby-value">title:</span> <span class="ruby-string">&quot;Bioblitz Canada 150&quot;</span>
+<span class="line-num">181</span>   ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">all_project_data</span><span class="ruby-operator">|</span>
+<span class="line-num">182</span>     <span class="ruby-identifier">all_project_data</span>[<span class="ruby-value">12849</span>][<span class="ruby-value">:place_id</span>] = <span class="ruby-value">6712</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">all_project_data</span>[<span class="ruby-value">12849</span>]
+<span class="line-num">183</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">184</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-cnc2016">
+            
+              <b>cnc2016</b>()
+            
+            <a href="../classes/StatsController.html#method-i-cnc2016" name="method-i-cnc2016" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-cnc2016_source')" id="l_method-i-cnc2016_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-cnc2016_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/stats_controller.rb</span>
+<span class="line-num">315</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">cnc2016</span>
+<span class="line-num">316</span>   <span class="ruby-identifier">project_slideshow_data</span>( <span class="ruby-value">11765</span>,
+<span class="line-num">317</span>     <span class="ruby-value">umbrella_project_ids:</span> [<span class="ruby-value">11765</span>],
+<span class="line-num">318</span>     <span class="ruby-value">sub_project_ids:</span> {
+<span class="line-num">319</span>       <span class="ruby-value">11765</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">6345</span>, <span class="ruby-value">6365</span>]
+<span class="line-num">320</span>     },
+<span class="line-num">321</span>     <span class="ruby-value">title:</span> <span class="ruby-string">&quot;City Nature Challenge 2016&quot;</span>
+<span class="line-num">322</span>   ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">all_project_data</span><span class="ruby-operator">|</span>
+<span class="line-num">323</span>     <span class="ruby-identifier">all_project_data</span>[<span class="ruby-value">11765</span>][<span class="ruby-value">:place_id</span>] = <span class="ruby-value">14</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">all_project_data</span>[<span class="ruby-value">11765</span>]
+<span class="line-num">324</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">325</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-cnc2017">
+            
+              <b>cnc2017</b>()
+            
+            <a href="../classes/StatsController.html#method-i-cnc2017" name="method-i-cnc2017" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-cnc2017_source')" id="l_method-i-cnc2017_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-cnc2017_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/stats_controller.rb</span>
+<span class="line-num">198</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">cnc2017</span>
+<span class="line-num">199</span>   <span class="ruby-identifier">project_slideshow_data</span>( <span class="ruby-value">11753</span>,
+<span class="line-num">200</span>     <span class="ruby-value">umbrella_project_ids:</span> [<span class="ruby-value">11753</span>],
+<span class="line-num">201</span>     <span class="ruby-value">sub_project_ids:</span> {
+<span class="line-num">202</span>       <span class="ruby-value">11753</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">10931</span>, <span class="ruby-value">11013</span>, <span class="ruby-value">11053</span>, <span class="ruby-value">11126</span>, <span class="ruby-value">10768</span>, <span class="ruby-value">10769</span>, <span class="ruby-value">10752</span>, <span class="ruby-value">10764</span>,
+<span class="line-num">203</span>         <span class="ruby-value">11047</span>, <span class="ruby-value">11110</span>, <span class="ruby-value">10788</span>, <span class="ruby-value">10695</span>, <span class="ruby-value">10945</span>, <span class="ruby-value">10917</span>, <span class="ruby-value">10763</span>, <span class="ruby-value">11042</span>]
+<span class="line-num">204</span>     },
+<span class="line-num">205</span>     <span class="ruby-value">title:</span> <span class="ruby-string">&quot;City Nature Challenge 2017&quot;</span>
+<span class="line-num">206</span>   ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">all_project_data</span><span class="ruby-operator">|</span>
+<span class="line-num">207</span>     <span class="ruby-identifier">all_project_data</span>[<span class="ruby-value">11753</span>][<span class="ruby-value">:place_id</span>] = <span class="ruby-value">0</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">all_project_data</span>[<span class="ruby-value">11753</span>]
+<span class="line-num">208</span>     <span class="ruby-identifier">all_project_data</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">project_id</span>, <span class="ruby-identifier">project</span><span class="ruby-operator">|</span>
+<span class="line-num">209</span>       <span class="ruby-identifier">all_project_data</span>[<span class="ruby-identifier">project_id</span>][<span class="ruby-value">:title</span>] = <span class="ruby-identifier">project</span>[<span class="ruby-value">:title</span>].<span class="ruby-identifier">sub</span>( <span class="ruby-string">&quot;City Nature Challenge 2017: &quot;</span>, <span class="ruby-string">&quot;&quot;</span> )
+<span class="line-num">210</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">211</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">212</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-cnc2017_stats">
+            
+              <b>cnc2017_stats</b>()
+            
+            <a href="../classes/StatsController.html#method-i-cnc2017_stats" name="method-i-cnc2017_stats" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-cnc2017_stats_source')" id="l_method-i-cnc2017_stats_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-cnc2017_stats_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/stats_controller.rb</span>
+<span class="line-num">214</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">cnc2017_stats</span>
+<span class="line-num">215</span>   <span class="ruby-identifier">project_ids</span> = [<span class="ruby-value">10931</span>, <span class="ruby-value">11013</span>, <span class="ruby-value">11053</span>, <span class="ruby-value">11126</span>, <span class="ruby-value">10768</span>, <span class="ruby-value">10769</span>, <span class="ruby-value">10752</span>, <span class="ruby-value">10764</span>, <span class="ruby-value">11047</span>, <span class="ruby-value">11110</span>, <span class="ruby-value">10788</span>, <span class="ruby-value">10695</span>, <span class="ruby-value">10945</span>, <span class="ruby-value">10917</span>, <span class="ruby-value">10763</span>, <span class="ruby-value">11042</span>]
+<span class="line-num">216</span>   <span class="ruby-comment"># project_ids = [1,2,3,4]</span>
+<span class="line-num">217</span>   <span class="ruby-identifier">project_id</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:project_id</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">project_ids</span>.<span class="ruby-identifier">include?</span>( <span class="ruby-identifier">params</span>[<span class="ruby-value">:project_id</span>].<span class="ruby-identifier">to_i</span> )
+<span class="line-num">218</span>   <span class="ruby-identifier">project_id</span> <span class="ruby-operator">||=</span> <span class="ruby-value">11753</span>
+<span class="line-num">219</span>   <span class="ruby-ivar">@projects</span> = <span class="ruby-constant">Project</span>.<span class="ruby-identifier">where</span>( <span class="ruby-value">id:</span> <span class="ruby-identifier">project_ids</span> )
+<span class="line-num">220</span>   <span class="ruby-ivar">@project</span> = <span class="ruby-constant">Project</span>.<span class="ruby-identifier">find</span>( <span class="ruby-identifier">project_id</span> )
+<span class="line-num">221</span> 
+<span class="line-num">222</span>   <span class="ruby-comment"># prepare the data needed for the slideshow</span>
+<span class="line-num">223</span>   <span class="ruby-ivar">@data</span> = []
+<span class="line-num">224</span>   <span class="ruby-ivar">@projects</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span>
+<span class="line-num">225</span>     <span class="ruby-identifier">node_params</span> = {
+<span class="line-num">226</span>       <span class="ruby-value">project_id:</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">id</span>,
+<span class="line-num">227</span>       <span class="ruby-value">per_page:</span> <span class="ruby-value">0</span>,
+<span class="line-num">228</span>       <span class="ruby-value">ttl:</span> <span class="ruby-value">300</span>
+<span class="line-num">229</span>     }
+<span class="line-num">230</span>     <span class="ruby-keyword">case</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:quality</span>]
+<span class="line-num">231</span>     <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;research&quot;</span>
+<span class="line-num">232</span>       <span class="ruby-identifier">node_params</span>[<span class="ruby-value">:quality_grade</span>] = <span class="ruby-string">&quot;research&quot;</span>
+<span class="line-num">233</span>     <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;verifiable&quot;</span>
+<span class="line-num">234</span>       <span class="ruby-identifier">node_params</span>[<span class="ruby-value">:quality_grade</span>] = <span class="ruby-string">&quot;research,needs_id&quot;</span>
+<span class="line-num">235</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">236</span>     <span class="ruby-identifier">species_count_response</span> = <span class="ruby-constant">INatAPIService</span>.<span class="ruby-identifier">observations_species_counts</span>( <span class="ruby-identifier">node_params</span> )
+<span class="line-num">237</span>     <span class="ruby-identifier">species_count</span> = (<span class="ruby-identifier">species_count_response</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">species_count_response</span>.<span class="ruby-identifier">total_results</span>) <span class="ruby-operator">||</span> <span class="ruby-value">0</span>
+<span class="line-num">238</span>     <span class="ruby-identifier">observations_count_response</span> = <span class="ruby-constant">INatAPIService</span>.<span class="ruby-identifier">observations</span>( <span class="ruby-identifier">node_params</span> )
+<span class="line-num">239</span>     <span class="ruby-identifier">observations_count</span> = (<span class="ruby-identifier">observations_count_response</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">observations_count_response</span>.<span class="ruby-identifier">total_results</span>) <span class="ruby-operator">||</span> <span class="ruby-value">0</span>
+<span class="line-num">240</span>     <span class="ruby-identifier">identifiers_count_response</span> = <span class="ruby-constant">INatAPIService</span>.<span class="ruby-identifier">get</span>( <span class="ruby-string">&quot;/observations/identifiers&quot;</span>, <span class="ruby-identifier">node_params</span> )
+<span class="line-num">241</span>     <span class="ruby-identifier">identifiers_count</span> = (<span class="ruby-identifier">identifiers_count_response</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">identifiers_count_response</span>.<span class="ruby-identifier">total_results</span>) <span class="ruby-operator">||</span> <span class="ruby-value">0</span>
+<span class="line-num">242</span>     <span class="ruby-identifier">observers_count_response</span> = <span class="ruby-constant">INatAPIService</span>.<span class="ruby-identifier">get</span>( <span class="ruby-string">&quot;/observations/observers&quot;</span>, <span class="ruby-identifier">node_params</span> )
+<span class="line-num">243</span>     <span class="ruby-identifier">observers_count</span> = (<span class="ruby-identifier">observers_count_response</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">observers_count_response</span>.<span class="ruby-identifier">total_results</span>) <span class="ruby-operator">||</span> <span class="ruby-value">0</span>
+<span class="line-num">244</span> 
+<span class="line-num">245</span>     <span class="ruby-comment"># Descriptive stats are cool but really, really slow to calculate</span>
+<span class="line-num">246</span>     <span class="ruby-comment"># sql = &lt;&lt;-SQL</span>
+<span class="line-num">247</span>     <span class="ruby-comment">#   SELECT</span>
+<span class="line-num">248</span>     <span class="ruby-comment">#     slug,</span>
+<span class="line-num">249</span>     <span class="ruby-comment">#     avg( obs_count ),</span>
+<span class="line-num">250</span>     <span class="ruby-comment">#     max( obs_count ),</span>
+<span class="line-num">251</span>     <span class="ruby-comment">#     median( obs_count )</span>
+<span class="line-num">252</span>     <span class="ruby-comment">#   FROM</span>
+<span class="line-num">253</span>     <span class="ruby-comment">#     (</span>
+<span class="line-num">254</span>     <span class="ruby-comment">#       SELECT p.slug, o.user_id, count(*) AS obs_count</span>
+<span class="line-num">255</span>     <span class="ruby-comment">#       FROM observations o JOIN project_observations po ON o.id = po.observation_id JOIN projects p ON p.id = po.project_id</span>
+<span class="line-num">256</span>     <span class="ruby-comment">#       WHERE po.project_id IN (10931, 11013, 11053, 11126, 10768, 10769, 10752, 10764, 11047, 11110, 10788, 10695, 10945, 10917, 10763, 11042)</span>
+<span class="line-num">257</span>     <span class="ruby-comment">#       GROUP BY p.slug, o.user_id</span>
+<span class="line-num">258</span>     <span class="ruby-comment">#     ) AS foo</span>
+<span class="line-num">259</span>     <span class="ruby-comment">#   GROUP BY slug</span>
+<span class="line-num">260</span>     <span class="ruby-comment"># SQL</span>
+<span class="line-num">261</span>     
+<span class="line-num">262</span>     <span class="ruby-ivar">@data</span> <span class="ruby-operator">&lt;&lt;</span> {
+<span class="line-num">263</span>       <span class="ruby-value">id:</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">id</span>,
+<span class="line-num">264</span>       <span class="ruby-value">title:</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">title</span>.<span class="ruby-identifier">gsub</span>( <span class="ruby-regexp">/City Nature Challenge: /</span>, <span class="ruby-string">&quot;&quot;</span> ),
+<span class="line-num">265</span>       <span class="ruby-value">slug:</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">slug</span>,
+<span class="line-num">266</span>       <span class="ruby-value">observation_count:</span> <span class="ruby-identifier">observations_count</span>,
+<span class="line-num">267</span>       <span class="ruby-value">in_progress:</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">event_in_progress?</span>,
+<span class="line-num">268</span>       <span class="ruby-value">species_count:</span> <span class="ruby-identifier">species_count</span>,
+<span class="line-num">269</span>       <span class="ruby-value">observers_count:</span> <span class="ruby-identifier">observers_count</span>,
+<span class="line-num">270</span>       <span class="ruby-value">identifiers_count:</span> <span class="ruby-identifier">identifiers_count</span>
+<span class="line-num">271</span>     }
+<span class="line-num">272</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">273</span> 
+<span class="line-num">274</span>   <span class="ruby-ivar">@in_project_params</span> = { <span class="ruby-value">projects:</span> [<span class="ruby-ivar">@project</span>.<span class="ruby-identifier">id</span>] }
+<span class="line-num">275</span>   <span class="ruby-ivar">@in_project_params</span>[<span class="ruby-value">:quality_grade</span>] = <span class="ruby-keyword">case</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:quality</span>]
+<span class="line-num">276</span>   <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;research&quot;</span> <span class="ruby-keyword">then</span> <span class="ruby-string">&quot;research&quot;</span>
+<span class="line-num">277</span>   <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;verifiable&quot;</span> <span class="ruby-keyword">then</span> <span class="ruby-string">&quot;research,needs_id&quot;</span>
+<span class="line-num">278</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">279</span>   <span class="ruby-identifier">in_project_elastic_params</span> = <span class="ruby-constant">Observation</span>.<span class="ruby-identifier">params_to_elastic_query</span>( <span class="ruby-ivar">@in_project_params</span> )
+<span class="line-num">280</span>   <span class="ruby-identifier">in_project_leaf_taxon_ids</span> = <span class="ruby-constant">Observation</span>.<span class="ruby-identifier">elastic_taxon_leaf_ids</span>( <span class="ruby-identifier">in_project_elastic_params</span> )
+<span class="line-num">281</span>   <span class="ruby-identifier">in_project_leaf_taxon_ids</span> = [<span class="ruby-value">-1</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">in_project_leaf_taxon_ids</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">282</span>   <span class="ruby-identifier">unique_taxon_ids</span> = <span class="ruby-constant">Observation</span>.<span class="ruby-identifier">elastic_taxon_leaf_counts</span>( <span class="ruby-identifier">in_project_elastic_params</span> ).<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">taxon_id</span>, <span class="ruby-identifier">count</span><span class="ruby-operator">|</span> <span class="ruby-identifier">count</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">taxon_id</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>}.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">uniq</span>
+<span class="line-num">283</span>   <span class="ruby-ivar">@unique_contributors</span> = <span class="ruby-constant">User</span>.
+<span class="line-num">284</span>     <span class="ruby-identifier">select</span>( <span class="ruby-string">&quot;users.*, count(*) AS unique_count, array_agg(observations.taxon_id) AS taxon_ids&quot;</span> ).
+<span class="line-num">285</span>     <span class="ruby-identifier">joins</span>( <span class="ruby-value">observations:</span> <span class="ruby-value">:project_observations</span> ).
+<span class="line-num">286</span>     <span class="ruby-identifier">where</span>( <span class="ruby-string">&quot;project_observations.project_id = ?&quot;</span>, <span class="ruby-ivar">@project</span> ).
+<span class="line-num">287</span>     <span class="ruby-identifier">where</span>( <span class="ruby-string">&quot;observations.taxon_id IN (?)&quot;</span>, <span class="ruby-identifier">unique_taxon_ids</span> ).
+<span class="line-num">288</span>     <span class="ruby-identifier">group</span>( <span class="ruby-string">&quot;users.id&quot;</span> ).
+<span class="line-num">289</span>     <span class="ruby-identifier">order</span>( <span class="ruby-constant">Arel</span>.<span class="ruby-identifier">sql</span>( <span class="ruby-string">&quot;count(*) DESC&quot;</span> ) ).
+<span class="line-num">290</span>     <span class="ruby-identifier">limit</span>( <span class="ruby-value">100</span> )
+<span class="line-num">291</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:quality</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&quot;research&quot;</span>
+<span class="line-num">292</span>     <span class="ruby-ivar">@unique_contributors</span> = <span class="ruby-ivar">@unique_contributors</span>.<span class="ruby-identifier">where</span> ( <span class="ruby-string">&quot;observations.quality_grade = &#39;research&#39;&quot;</span> )
+<span class="line-num">293</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:quality</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&quot;verifiable&quot;</span>
+<span class="line-num">294</span>     <span class="ruby-ivar">@unique_contributors</span> = <span class="ruby-ivar">@unique_contributors</span>.<span class="ruby-identifier">where</span> ( <span class="ruby-string">&quot;observations.quality_grade IN (&#39;research&#39;, &#39;needs_id&#39;)&quot;</span> )
+<span class="line-num">295</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">296</span> 
+<span class="line-num">297</span>   <span class="ruby-ivar">@rank_counts</span> = <span class="ruby-constant">Observation</span>.
+<span class="line-num">298</span>     <span class="ruby-identifier">query</span>( <span class="ruby-value">projects:</span> <span class="ruby-identifier">project_ids</span> ).
+<span class="line-num">299</span>     <span class="ruby-identifier">joins</span>( <span class="ruby-value">:projects</span> ).
+<span class="line-num">300</span>     <span class="ruby-identifier">joins</span>( <span class="ruby-string">&quot;LEFT OUTER JOIN taxa ON taxa.id = observations.taxon_id&quot;</span> ).
+<span class="line-num">301</span>     <span class="ruby-identifier">select</span>( <span class="ruby-string">&quot;projects.slug, taxa.rank, count(*)&quot;</span> ).
+<span class="line-num">302</span>     <span class="ruby-identifier">group</span>( <span class="ruby-string">&quot;projects.slug, taxa.rank&quot;</span> )
+<span class="line-num">303</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:quality</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&quot;research&quot;</span>
+<span class="line-num">304</span>     <span class="ruby-ivar">@rank_counts</span> = <span class="ruby-ivar">@rank_counts</span>.<span class="ruby-identifier">where</span>( <span class="ruby-value">quality_grade:</span> <span class="ruby-string">&quot;research&quot;</span> )
+<span class="line-num">305</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:quality</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&quot;verifiable&quot;</span>
+<span class="line-num">306</span>     <span class="ruby-ivar">@rank_counts</span> = <span class="ruby-ivar">@rank_counts</span>.<span class="ruby-identifier">where</span>( <span class="ruby-string">&quot;quality_grade IN (&#39;research&#39;, &#39;needs_id&#39;)&quot;</span> )
+<span class="line-num">307</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">308</span>   <span class="ruby-ivar">@rank_counts</span> = <span class="ruby-ivar">@rank_counts</span>.<span class="ruby-identifier">group_by</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">o</span><span class="ruby-operator">|</span> <span class="ruby-identifier">o</span>.<span class="ruby-identifier">slug</span> }
+<span class="line-num">309</span> 
+<span class="line-num">310</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">311</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span>{ <span class="ruby-identifier">render</span> <span class="ruby-value">layout:</span> <span class="ruby-string">&quot;bootstrap&quot;</span> }
+<span class="line-num">312</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">313</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-generate_year">
+            
+              <b>generate_year</b>()
+            
+            <a href="../classes/StatsController.html#method-i-generate_year" name="method-i-generate_year" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-generate_year_source')" id="l_method-i-generate_year_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-generate_year_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/stats_controller.rb</span>
+<span class="line-num">111</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">generate_year</span>
+<span class="line-num">112</span>   <span class="ruby-ivar">@year</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:year</span>].<span class="ruby-identifier">to_i</span>
+<span class="line-num">113</span>   <span class="ruby-keyword">if</span> (<span class="ruby-ivar">@year</span> <span class="ruby-operator">&gt;</span> <span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span>.<span class="ruby-identifier">year</span>) <span class="ruby-operator">||</span> (<span class="ruby-ivar">@year</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">1950</span>)
+<span class="line-num">114</span>     <span class="ruby-keyword">return</span> <span class="ruby-identifier">render_404</span>
+<span class="line-num">115</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">116</span>   <span class="ruby-identifier">delayed_progress</span>( <span class="ruby-node">&quot;stats/generate_year?user_id=#{current_user.id}&amp;year=#{@year}&quot;</span> ) <span class="ruby-keyword">do</span>
+<span class="line-num">117</span>     <span class="ruby-ivar">@job</span> = <span class="ruby-constant">YearStatistic</span>.<span class="ruby-identifier">delay</span>(
+<span class="line-num">118</span>       <span class="ruby-value">priority:</span> <span class="ruby-constant">USER_PRIORITY</span>,
+<span class="line-num">119</span>       <span class="ruby-value">unique_hash:</span> <span class="ruby-node">&quot;YearStatistic::generate_for_user_year::#{current_user.id}::#{@year}&quot;</span>
+<span class="line-num">120</span>     ).<span class="ruby-identifier">generate_for_user_year</span>( <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-ivar">@year</span> )
+<span class="line-num">121</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">122</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">123</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> <span class="ruby-keyword">do</span>
+<span class="line-num">124</span>       <span class="ruby-identifier">status</span> = <span class="ruby-keyword">case</span> <span class="ruby-ivar">@status</span>
+<span class="line-num">125</span>       <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;done&quot;</span> <span class="ruby-keyword">then</span> <span class="ruby-value">:ok</span>
+<span class="line-num">126</span>       <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;error&quot;</span> <span class="ruby-keyword">then</span> <span class="ruby-value">:unprocessable_entity</span>
+<span class="line-num">127</span>       <span class="ruby-keyword">else</span>
+<span class="line-num">128</span>         <span class="ruby-value">202</span>
+<span class="line-num">129</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">130</span>       <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> { <span class="ruby-value">status:</span> <span class="ruby-identifier">status</span> }, <span class="ruby-value">status:</span> <span class="ruby-identifier">status</span>
+<span class="line-num">131</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">132</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">133</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-index">
+            
+              <b>index</b>()
+            
+            <a href="../classes/StatsController.html#method-i-index" name="method-i-index" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-index_source')" id="l_method-i-index_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-index_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/stats_controller.rb</span>
+<span class="line-num">18</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">index</span>
+<span class="line-num">19</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">20</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> {
+<span class="line-num">21</span>       <span class="ruby-identifier">fetch_statistics</span>
+<span class="line-num">22</span>       <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> <span class="ruby-ivar">@stats</span>, <span class="ruby-value">except:</span> <span class="ruby-value">:id</span>, <span class="ruby-value">callback:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:callback</span>]
+<span class="line-num">23</span>     }
+<span class="line-num">24</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> {
+<span class="line-num">25</span>       <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:start_date</span>].<span class="ruby-identifier">nil?</span>
+<span class="line-num">26</span>         <span class="ruby-ivar">@start_date</span> = <span class="ruby-ivar">@end_date</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>.<span class="ruby-identifier">year</span>
+<span class="line-num">27</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">28</span>       <span class="ruby-identifier">fetch_statistics</span>
+<span class="line-num">29</span>       <span class="ruby-identifier">render</span> <span class="ruby-value">layout:</span> <span class="ruby-string">&#39;bootstrap&#39;</span>
+<span class="line-num">30</span>     }
+<span class="line-num">31</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">32</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-nps_bioblitz">
+            
+              <b>nps_bioblitz</b>()
+            
+            <a href="../classes/StatsController.html#method-i-nps_bioblitz" name="method-i-nps_bioblitz" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-nps_bioblitz_source')" id="l_method-i-nps_bioblitz_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-nps_bioblitz_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/stats_controller.rb</span>
+<span class="line-num">143</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">nps_bioblitz</span>
+<span class="line-num">144</span>   <span class="ruby-ivar">@overall_id</span> = <span class="ruby-value">6810</span>
+<span class="line-num">145</span>   <span class="ruby-identifier">umbrella_project_ids</span> = [ <span class="ruby-value">6810</span>, <span class="ruby-value">7109</span>, <span class="ruby-value">7110</span>, <span class="ruby-value">7107</span>, <span class="ruby-value">6790</span> ]
+<span class="line-num">146</span>   <span class="ruby-identifier">sub_project_ids</span> = {
+<span class="line-num">147</span>     <span class="ruby-value">6810</span> <span class="ruby-operator">=&gt;</span> [ ],
+<span class="line-num">148</span>     <span class="ruby-value">7109</span> <span class="ruby-operator">=&gt;</span> [ <span class="ruby-value">6818</span>, <span class="ruby-value">6846</span>, <span class="ruby-value">6864</span>, <span class="ruby-value">7026</span>, <span class="ruby-value">6832</span>, <span class="ruby-value">7069</span>, <span class="ruby-value">6859</span> ],
+<span class="line-num">149</span>     <span class="ruby-value">7110</span> <span class="ruby-operator">=&gt;</span> [ <span class="ruby-value">6835</span>, <span class="ruby-value">6833</span>, <span class="ruby-value">6840</span>, <span class="ruby-value">7298</span>, <span class="ruby-value">6819</span>, <span class="ruby-value">7299</span>, <span class="ruby-value">6815</span>,
+<span class="line-num">150</span>       <span class="ruby-value">6814</span>, <span class="ruby-value">7025</span>, <span class="ruby-value">7281</span>, <span class="ruby-value">6816</span>, <span class="ruby-value">7302</span>, <span class="ruby-value">7301</span>, <span class="ruby-value">6822</span> ],
+<span class="line-num">151</span>     <span class="ruby-value">7107</span> <span class="ruby-operator">=&gt;</span> [ <span class="ruby-value">6824</span>, <span class="ruby-value">6465</span>, <span class="ruby-value">6478</span> ],
+<span class="line-num">152</span>     <span class="ruby-value">6790</span> <span class="ruby-operator">=&gt;</span> [ <span class="ruby-value">6850</span>, <span class="ruby-value">6851</span>, <span class="ruby-value">7167</span>, <span class="ruby-value">6852</span>, <span class="ruby-value">7168</span>, <span class="ruby-value">7169</span> ]
+<span class="line-num">153</span>   }
+<span class="line-num">154</span>   <span class="ruby-identifier">project_slideshow_data</span>( <span class="ruby-ivar">@overall_id</span>, {
+<span class="line-num">155</span>     <span class="ruby-value">umbrella_project_ids:</span> <span class="ruby-identifier">umbrella_project_ids</span>,
+<span class="line-num">156</span>     <span class="ruby-value">sub_project_ids:</span> <span class="ruby-identifier">sub_project_ids</span>,
+<span class="line-num">157</span>     <span class="ruby-value">trim_slackers:</span> <span class="ruby-keyword">true</span>,
+<span class="line-num">158</span>     <span class="ruby-value">group:</span> <span class="ruby-constant">Project</span><span class="ruby-operator">::</span><span class="ruby-constant">NPS_BIOBLITZ_GROUP_NAME</span>,
+<span class="line-num">159</span>     <span class="ruby-value">title:</span> <span class="ruby-string">&quot;NPS Servicewide&quot;</span>,
+<span class="line-num">160</span>     <span class="ruby-value">logo_paths:</span> [<span class="ruby-string">&quot;/logo-nps.svg&quot;</span>, <span class="ruby-string">&quot;/logo-natgeo.svg&quot;</span>]
+<span class="line-num">161</span>   } ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">all_project_data</span><span class="ruby-operator">|</span>
+<span class="line-num">162</span>     <span class="ruby-comment"># hard-coding umbrella project places</span>
+<span class="line-num">163</span>     <span class="ruby-identifier">all_project_data</span>[<span class="ruby-value">6810</span>][<span class="ruby-value">:place_id</span>] = <span class="ruby-value">0</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">all_project_data</span>[<span class="ruby-value">6810</span>]
+<span class="line-num">164</span>     <span class="ruby-identifier">all_project_data</span>[<span class="ruby-value">7109</span>][<span class="ruby-value">:place_id</span>] = <span class="ruby-value">46</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">all_project_data</span>[<span class="ruby-value">7109</span>]
+<span class="line-num">165</span>     <span class="ruby-identifier">all_project_data</span>[<span class="ruby-value">7110</span>][<span class="ruby-value">:place_id</span>] = <span class="ruby-value">5</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">all_project_data</span>[<span class="ruby-value">7110</span>]
+<span class="line-num">166</span>     <span class="ruby-identifier">all_project_data</span>[<span class="ruby-value">7107</span>][<span class="ruby-value">:place_id</span>] = <span class="ruby-value">51727</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">all_project_data</span>[<span class="ruby-value">7107</span>]
+<span class="line-num">167</span>     <span class="ruby-identifier">all_project_data</span>[<span class="ruby-value">6790</span>][<span class="ruby-value">:place_id</span>] = <span class="ruby-value">43</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">all_project_data</span>[<span class="ruby-value">6790</span>]
+<span class="line-num">168</span>     <span class="ruby-identifier">all_project_data</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">project_id</span>, <span class="ruby-identifier">project</span><span class="ruby-operator">|</span>
+<span class="line-num">169</span>       <span class="ruby-identifier">all_project_data</span>[<span class="ruby-identifier">project_id</span>][<span class="ruby-value">:title</span>] = <span class="ruby-identifier">project</span>[<span class="ruby-value">:title</span>].<span class="ruby-identifier">sub</span>( <span class="ruby-string">&quot;2016 National Parks BioBlitz - &quot;</span>, <span class="ruby-string">&quot;&quot;</span> )
+<span class="line-num">170</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">171</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">172</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-observation_weeks">
+            
+              <b>observation_weeks</b>()
+            
+            <a href="../classes/StatsController.html#method-i-observation_weeks" name="method-i-observation_weeks" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-observation_weeks_source')" id="l_method-i-observation_weeks_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-observation_weeks_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/stats_controller.rb</span>
+<span class="line-num">135</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">observation_weeks</span>
+<span class="line-num">136</span>   <span class="ruby-identifier">render</span> <span class="ruby-value">layout:</span> <span class="ruby-string">&quot;basic&quot;</span>
+<span class="line-num">137</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-observation_weeks_json">
+            
+              <b>observation_weeks_json</b>()
+            
+            <a href="../classes/StatsController.html#method-i-observation_weeks_json" name="method-i-observation_weeks_json" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-observation_weeks_json_source')" id="l_method-i-observation_weeks_json_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-observation_weeks_json_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/stats_controller.rb</span>
+<span class="line-num">139</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">observation_weeks_json</span>
+<span class="line-num">140</span>   <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> <span class="ruby-identifier">observation_weeks_data</span>
+<span class="line-num">141</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-parks_canada_2017">
+            
+              <b>parks_canada_2017</b>()
+            
+            <a href="../classes/StatsController.html#method-i-parks_canada_2017" name="method-i-parks_canada_2017" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-parks_canada_2017_source')" id="l_method-i-parks_canada_2017_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-parks_canada_2017_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/stats_controller.rb</span>
+<span class="line-num">186</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">parks_canada_2017</span>
+<span class="line-num">187</span>   <span class="ruby-identifier">project_slideshow_data</span>( <span class="ruby-value">12851</span>,
+<span class="line-num">188</span>     <span class="ruby-value">umbrella_project_ids:</span> [<span class="ruby-value">12851</span>],
+<span class="line-num">189</span>     <span class="ruby-value">sub_project_ids:</span> {
+<span class="line-num">190</span>       <span class="ruby-value">12851</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">11728</span>, <span class="ruby-value">11360</span>, <span class="ruby-value">12038</span>, <span class="ruby-value">11487</span>, <span class="ruby-value">12085</span>, <span class="ruby-value">12719</span>, <span class="ruby-value">12720</span>, <span class="ruby-value">11348</span>, <span class="ruby-value">12637</span>, <span class="ruby-value">12231</span>, <span class="ruby-value">13322</span>, <span class="ruby-value">13179</span>, <span class="ruby-value">12315</span>, <span class="ruby-value">12799</span>, <span class="ruby-value">13324</span>, <span class="ruby-value">13091</span>, <span class="ruby-value">13215</span>, <span class="ruby-value">13327</span>, <span class="ruby-value">12956</span>, <span class="ruby-value">11337</span>, <span class="ruby-value">12034</span>, <span class="ruby-value">12510</span>]
+<span class="line-num">191</span>     },
+<span class="line-num">192</span>     <span class="ruby-value">title:</span> <span class="ruby-string">&quot;Parks Canada Bioblitz 2017&quot;</span>
+<span class="line-num">193</span>   ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">all_project_data</span><span class="ruby-operator">|</span>
+<span class="line-num">194</span>     <span class="ruby-identifier">all_project_data</span>[<span class="ruby-value">12851</span>][<span class="ruby-value">:place_id</span>] = <span class="ruby-value">6712</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">all_project_data</span>[<span class="ruby-value">12851</span>]
+<span class="line-num">195</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">196</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-summary">
+            
+              <b>summary</b>()
+            
+            <a href="../classes/StatsController.html#method-i-summary" name="method-i-summary" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-summary_source')" id="l_method-i-summary_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-summary_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/stats_controller.rb</span>
+<span class="line-num">34</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">summary</span>
+<span class="line-num">35</span>   <span class="ruby-identifier">params</span> = { <span class="ruby-value">verifiable:</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">per_page:</span> <span class="ruby-value">1</span> }
+<span class="line-num">36</span>   <span class="ruby-identifier">params</span>[<span class="ruby-value">:place_id</span>] = <span class="ruby-ivar">@site</span>.<span class="ruby-identifier">place_id</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@site</span>.<span class="ruby-identifier">place_id</span>
+<span class="line-num">37</span>   <span class="ruby-identifier">observations</span> = <span class="ruby-constant">INatAPIService</span>.<span class="ruby-identifier">observations</span>(<span class="ruby-identifier">params</span>)
+<span class="line-num">38</span>   <span class="ruby-identifier">observers</span> = <span class="ruby-constant">INatAPIService</span>.<span class="ruby-identifier">observations_observers</span>(<span class="ruby-identifier">params</span>)
+<span class="line-num">39</span>   <span class="ruby-identifier">species_counts</span> = <span class="ruby-constant">INatAPIService</span>.<span class="ruby-identifier">observations_species_counts</span>(<span class="ruby-identifier">params</span>)
+<span class="line-num">40</span>   <span class="ruby-identifier">user_count_scope</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;suspended_at IS NULL&quot;</span>)
+<span class="line-num">41</span>   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@site</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@site</span> <span class="ruby-operator">!=</span> <span class="ruby-constant">Site</span>.<span class="ruby-identifier">default</span>
+<span class="line-num">42</span>     <span class="ruby-identifier">user_count_scope</span> = <span class="ruby-identifier">user_count_scope</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">site_id:</span> <span class="ruby-ivar">@site</span>.<span class="ruby-identifier">id</span>)
+<span class="line-num">43</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">44</span>   <span class="ruby-ivar">@stats</span> = {
+<span class="line-num">45</span>     <span class="ruby-value">total_users:</span> <span class="ruby-identifier">user_count_scope</span>.<span class="ruby-identifier">count</span>,
+<span class="line-num">46</span>     <span class="ruby-value">total_leaf_taxa:</span> (<span class="ruby-identifier">species_counts</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">species_counts</span>.<span class="ruby-identifier">total_results</span>) <span class="ruby-operator">||</span> <span class="ruby-value">0</span>,
+<span class="line-num">47</span>     <span class="ruby-value">total_observations:</span> (<span class="ruby-identifier">observations</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">observations</span>.<span class="ruby-identifier">total_results</span>) <span class="ruby-operator">||</span> <span class="ruby-value">0</span>,
+<span class="line-num">48</span>     <span class="ruby-value">total_observed_taxa:</span> (<span class="ruby-identifier">species_counts</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">species_counts</span>.<span class="ruby-identifier">total_results</span>) <span class="ruby-operator">||</span> <span class="ruby-value">0</span>,
+<span class="line-num">49</span>     <span class="ruby-value">total_observers:</span> (<span class="ruby-identifier">observers</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">observers</span>.<span class="ruby-identifier">total_results</span>) <span class="ruby-operator">||</span> <span class="ruby-value">0</span>,
+<span class="line-num">50</span>     <span class="ruby-value">updated_at:</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+<span class="line-num">51</span>   }
+<span class="line-num">52</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">53</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> <span class="ruby-ivar">@stats</span>}
+<span class="line-num">54</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">55</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-wed_bioblitz">
+            
+              <b>wed_bioblitz</b>()
+            
+            <a href="../classes/StatsController.html#method-i-wed_bioblitz" name="method-i-wed_bioblitz" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-wed_bioblitz_source')" id="l_method-i-wed_bioblitz_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-wed_bioblitz_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/stats_controller.rb</span>
+<span class="line-num">327</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">wed_bioblitz</span>
+<span class="line-num">328</span>   <span class="ruby-identifier">render</span> <span class="ruby-value">layout:</span> <span class="ruby-string">&quot;basic&quot;</span>
+<span class="line-num">329</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-year">
+            
+              <b>year</b>()
+            
+            <a href="../classes/StatsController.html#method-i-year" name="method-i-year" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-year_source')" id="l_method-i-year_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-year_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/stats_controller.rb</span>
+<span class="line-num">57</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">year</span>
+<span class="line-num">58</span>   <span class="ruby-ivar">@year</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:year</span>].<span class="ruby-identifier">to_i</span>
+<span class="line-num">59</span>   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@year</span> <span class="ruby-operator">&gt;</span> <span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span>.<span class="ruby-identifier">year</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@year</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">1950</span>
+<span class="line-num">60</span>     <span class="ruby-keyword">return</span> <span class="ruby-identifier">render_404</span>
+<span class="line-num">61</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">62</span>   <span class="ruby-ivar">@display_user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_login</span>( <span class="ruby-identifier">params</span>[<span class="ruby-value">:login</span>] )
+<span class="line-num">63</span>   <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:login</span>].<span class="ruby-identifier">blank?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@display_user</span>
+<span class="line-num">64</span>     <span class="ruby-keyword">return</span> <span class="ruby-identifier">render_404</span>
+<span class="line-num">65</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">66</span>   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@display_user</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">current_user</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@display_user</span>.<span class="ruby-identifier">locale</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">67</span>     <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">locale</span> = <span class="ruby-ivar">@display_user</span>.<span class="ruby-identifier">locale</span>
+<span class="line-num">68</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">69</span>   <span class="ruby-ivar">@year_statistic</span> = <span class="ruby-keyword">if</span> <span class="ruby-ivar">@display_user</span>
+<span class="line-num">70</span>     <span class="ruby-constant">YearStatistic</span>.<span class="ruby-identifier">where</span>( <span class="ruby-string">&quot;user_id = ? AND year = ?&quot;</span>, <span class="ruby-ivar">@display_user</span>, <span class="ruby-ivar">@year</span> ).<span class="ruby-identifier">first</span>
+<span class="line-num">71</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-constant">Site</span>.<span class="ruby-identifier">default</span>.<span class="ruby-identifier">try</span>(<span class="ruby-value">:id</span>) <span class="ruby-operator">==</span> <span class="ruby-ivar">@site</span>.<span class="ruby-identifier">id</span>
+<span class="line-num">72</span>     <span class="ruby-constant">YearStatistic</span>.<span class="ruby-identifier">where</span>( <span class="ruby-string">&quot;user_id IS NULL and site_id IS NULL and year = ?&quot;</span>, <span class="ruby-ivar">@year</span> ).<span class="ruby-identifier">first</span>
+<span class="line-num">73</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">74</span>     <span class="ruby-constant">YearStatistic</span>.<span class="ruby-identifier">where</span>( <span class="ruby-value">site_id:</span> <span class="ruby-ivar">@site</span>, <span class="ruby-value">year:</span> <span class="ruby-ivar">@year</span> ).<span class="ruby-identifier">where</span>( <span class="ruby-string">&quot;user_id IS NULL&quot;</span> ).<span class="ruby-identifier">first</span>
+<span class="line-num">75</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">76</span>   <span class="ruby-ivar">@headless</span> = <span class="ruby-ivar">@footless</span> = <span class="ruby-keyword">true</span>
+<span class="line-num">77</span>   <span class="ruby-ivar">@shareable_image_url</span> = <span class="ruby-keyword">if</span> <span class="ruby-ivar">@year_statistic</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@year_statistic</span>.<span class="ruby-identifier">shareable_image?</span>
+<span class="line-num">78</span>     <span class="ruby-ivar">@year_statistic</span>.<span class="ruby-identifier">shareable_image</span>
+<span class="line-num">79</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@display_user</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@display_user</span>.<span class="ruby-identifier">icon?</span>
+<span class="line-num">80</span>     <span class="ruby-ivar">@display_user</span>.<span class="ruby-identifier">icon</span>.<span class="ruby-identifier">url</span>(<span class="ruby-value">:large</span>)
+<span class="line-num">81</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@site</span>.<span class="ruby-identifier">shareable_image?</span>
+<span class="line-num">82</span>     <span class="ruby-ivar">@site</span>.<span class="ruby-identifier">shareable_image</span>.<span class="ruby-identifier">url</span>
+<span class="line-num">83</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">84</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">85</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> <span class="ruby-keyword">do</span>
+<span class="line-num">86</span>       <span class="ruby-ivar">@responsive</span> = <span class="ruby-keyword">true</span>
+<span class="line-num">87</span>       <span class="ruby-identifier">render</span> <span class="ruby-value">layout:</span> <span class="ruby-string">&quot;bootstrap&quot;</span>
+<span class="line-num">88</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">89</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> {
+<span class="line-num">90</span>       <span class="ruby-keyword">if</span> <span class="ruby-ivar">@year_statistic</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">91</span>         <span class="ruby-identifier">render_404</span>
+<span class="line-num">92</span>         <span class="ruby-keyword">return</span>
+<span class="line-num">93</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">94</span>       <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> <span class="ruby-ivar">@year_statistic</span>.<span class="ruby-identifier">data</span>
+<span class="line-num">95</span>     }
+<span class="line-num">96</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">97</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-your_year">
+            
+              <b>your_year</b>()
+            
+            <a href="../classes/StatsController.html#method-i-your_year" name="method-i-your_year" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-your_year_source')" id="l_method-i-your_year_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-your_year_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/stats_controller.rb</span>
+<span class="line-num"> 99</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">your_year</span>
+<span class="line-num">100</span>   <span class="ruby-ivar">@year</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:year</span>].<span class="ruby-identifier">to_i</span>
+<span class="line-num">101</span>   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@year</span> <span class="ruby-operator">&gt;</span> <span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span>.<span class="ruby-identifier">year</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@year</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">1950</span>
+<span class="line-num">102</span>     <span class="ruby-keyword">return</span> <span class="ruby-identifier">render_404</span>
+<span class="line-num">103</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">104</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">current_user</span>
+<span class="line-num">105</span>     <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">user_year_stats_path</span>( <span class="ruby-value">login:</span> <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">login</span>, <span class="ruby-value">year:</span> <span class="ruby-ivar">@year</span> )
+<span class="line-num">106</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">107</span>     <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">login_path</span>( <span class="ruby-value">return_to:</span> <span class="ruby-identifier">your_year_stats_path</span>( <span class="ruby-value">year:</span> <span class="ruby-ivar">@year</span> ) )
+<span class="line-num">108</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">109</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WikipediaService</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["WikipediaService"]'>
+
+
+    <meta property="og:title" value="WikipediaService">
+
+  
+
+    <meta name="keywords" content="WikipediaService class, new, url_for_title, page_details, summary, summary_from_parsed, parsed_response, sanitizer">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            WikipediaService
+            
+                <span class="parent">&lt;
+                    
+                    <a href="MetaService.html">MetaService</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/lib/wikipedia_service_rb.html">lib/wikipedia_service.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-page_details">page_details</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-parsed_response">parsed_response</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-sanitizer">sanitizer</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-summary">summary</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-summary_from_parsed">summary_from_parsed</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-url_for_title">url_for_title</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <h2 class="sectiontitle">Attributes</h2>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>base_url</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <h2 class="sectiontitle">Class Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-c-new">
+            
+              <b>new</b>(options = {})
+            
+            <a href="../classes/WikipediaService.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/wikipedia_service.rb</span>
+<span class="line-num"> 4</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">options</span> = {})
+<span class="line-num"> 5</span>   <span class="ruby-keyword">super</span>(<span class="ruby-identifier">options</span>)
+<span class="line-num"> 6</span>   <span class="ruby-identifier">locale</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:locale</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">locale</span> <span class="ruby-operator">||</span> <span class="ruby-string">&#39;en&#39;</span>
+<span class="line-num"> 7</span>   <span class="ruby-identifier">subdomain</span> = <span class="ruby-identifier">locale</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;-&#39;</span>).<span class="ruby-identifier">first</span>
+<span class="line-num"> 8</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">base_url</span> = <span class="ruby-node">&quot;https://#{subdomain}.wikipedia.org&quot;</span>
+<span class="line-num"> 9</span>   <span class="ruby-ivar">@method_param</span> = <span class="ruby-string">&#39;action&#39;</span>
+<span class="line-num">10</span>   <span class="ruby-ivar">@api_endpoint</span> = <span class="ruby-constant">ApiEndpoint</span>.<span class="ruby-identifier">find_or_create_by</span>(
+<span class="line-num">11</span>     <span class="ruby-value">title:</span> <span class="ruby-node">&quot;Wikipedia (#{ subdomain.upcase })&quot;</span>,
+<span class="line-num">12</span>     <span class="ruby-value">documentation_url:</span> <span class="ruby-node">&quot;#{ self.base_url }/w/api.php&quot;</span>,
+<span class="line-num">13</span>     <span class="ruby-value">base_url:</span> <span class="ruby-node">&quot;#{ self.base_url }/w/api.php?&quot;</span>,
+<span class="line-num">14</span>     <span class="ruby-value">cache_hours:</span> <span class="ruby-value">168</span>)
+<span class="line-num">15</span>   <span class="ruby-ivar">@default_params</span> = { <span class="ruby-value">:format</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&#39;xml&#39;</span> }
+<span class="line-num">16</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-page_details">
+            
+              <b>page_details</b>(title, options = {})
+            
+            <a href="../classes/WikipediaService.html#method-i-page_details" name="method-i-page_details" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-page_details_source')" id="l_method-i-page_details_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-page_details_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/wikipedia_service.rb</span>
+<span class="line-num">22</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">page_details</span>(<span class="ruby-identifier">title</span>, <span class="ruby-identifier">options</span> = {})
+<span class="line-num">23</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">parsed</span> = <span class="ruby-identifier">parsed_response</span>(<span class="ruby-identifier">title</span>, <span class="ruby-identifier">options</span>)
+<span class="line-num">24</span>     <span class="ruby-identifier">title</span> = <span class="ruby-identifier">parsed</span>.<span class="ruby-identifier">at</span>(<span class="ruby-string">&quot;parse&quot;</span>).<span class="ruby-identifier">attribute</span>(<span class="ruby-string">&quot;title&quot;</span>).<span class="ruby-identifier">value</span>
+<span class="line-num">25</span>     <span class="ruby-identifier">pageid</span> = <span class="ruby-identifier">parsed</span>.<span class="ruby-identifier">at</span>(<span class="ruby-string">&quot;parse&quot;</span>).<span class="ruby-identifier">attribute</span>(<span class="ruby-string">&quot;pageid&quot;</span>).<span class="ruby-identifier">value</span>
+<span class="line-num">26</span>     <span class="ruby-identifier">summary</span> = <span class="ruby-identifier">summary_from_parsed</span>( <span class="ruby-identifier">parsed</span> )
+<span class="line-num">27</span>     {
+<span class="line-num">28</span>       <span class="ruby-value">id:</span> <span class="ruby-identifier">pageid</span>,
+<span class="line-num">29</span>       <span class="ruby-value">title:</span> <span class="ruby-identifier">title</span>,
+<span class="line-num">30</span>       <span class="ruby-value">url:</span> <span class="ruby-identifier">url_for_title</span>( <span class="ruby-identifier">title</span>.<span class="ruby-identifier">tr</span>(<span class="ruby-string">&quot; &quot;</span>, <span class="ruby-string">&quot;_&quot;</span>) ),
+<span class="line-num">31</span>       <span class="ruby-value">summary:</span> <span class="ruby-identifier">summary</span>
+<span class="line-num">32</span>     }
+<span class="line-num">33</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">34</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-parsed_response">
+            
+              <b>parsed_response</b>(title, options = {})
+            
+            <a href="../classes/WikipediaService.html#method-i-parsed_response" name="method-i-parsed_response" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-parsed_response_source')" id="l_method-i-parsed_response_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-parsed_response_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/wikipedia_service.rb</span>
+<span class="line-num">54</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">parsed_response</span>(<span class="ruby-identifier">title</span>, <span class="ruby-identifier">options</span> = {})
+<span class="line-num">55</span>   <span class="ruby-identifier">parsed</span> = <span class="ruby-identifier">parse</span>( <span class="ruby-identifier">options</span>.<span class="ruby-identifier">merge</span>( <span class="ruby-value">page:</span> <span class="ruby-identifier">title</span>, <span class="ruby-value">redirects:</span> <span class="ruby-keyword">true</span> ))
+<span class="line-num">56</span>   <span class="ruby-identifier">parsed</span>.<span class="ruby-identifier">at</span>(<span class="ruby-string">&quot;text&quot;</span>).<span class="ruby-identifier">try</span>(<span class="ruby-value">:inner_text</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">parsed</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+<span class="line-num">57</span> <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Timeout</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">e</span>
+<span class="line-num">58</span>   <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;[INFO] Wikipedia API call failed while setting taxon summary: #{e.message}&quot;</span>
+<span class="line-num">59</span>   <span class="ruby-keyword">return</span>
+<span class="line-num">60</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-sanitizer">
+            
+              <b>sanitizer</b>()
+            
+            <a href="../classes/WikipediaService.html#method-i-sanitizer" name="method-i-sanitizer" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-sanitizer_source')" id="l_method-i-sanitizer_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-sanitizer_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/wikipedia_service.rb</span>
+<span class="line-num">62</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">sanitizer</span>
+<span class="line-num">63</span>   <span class="ruby-ivar">@sanitizer</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Rails</span><span class="ruby-operator">::</span><span class="ruby-constant">Html</span><span class="ruby-operator">::</span><span class="ruby-constant">SafeListSanitizer</span>.<span class="ruby-identifier">new</span>
+<span class="line-num">64</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-summary">
+            
+              <b>summary</b>(title, options = {})
+            
+            <a href="../classes/WikipediaService.html#method-i-summary" name="method-i-summary" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-summary_source')" id="l_method-i-summary_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-summary_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/wikipedia_service.rb</span>
+<span class="line-num">36</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">summary</span>(<span class="ruby-identifier">title</span>, <span class="ruby-identifier">options</span> = {})
+<span class="line-num">37</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">parsed</span> = <span class="ruby-identifier">parsed_response</span>(<span class="ruby-identifier">title</span>, <span class="ruby-identifier">options</span>)
+<span class="line-num">38</span>     <span class="ruby-identifier">summary_from_parsed</span>(<span class="ruby-identifier">parsed</span>)
+<span class="line-num">39</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">40</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-summary_from_parsed">
+            
+              <b>summary_from_parsed</b>( parsed )
+            
+            <a href="../classes/WikipediaService.html#method-i-summary_from_parsed" name="method-i-summary_from_parsed" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-summary_from_parsed_source')" id="l_method-i-summary_from_parsed_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-summary_from_parsed_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/wikipedia_service.rb</span>
+<span class="line-num">42</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">summary_from_parsed</span>( <span class="ruby-identifier">parsed</span> )
+<span class="line-num">43</span>   <span class="ruby-identifier">hxml</span> = <span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">HTML</span>(<span class="ruby-constant">HTMLEntities</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">decode</span>(<span class="ruby-identifier">parsed</span>.<span class="ruby-identifier">at</span>( <span class="ruby-string">&quot;text&quot;</span> ).<span class="ruby-identifier">try</span>( <span class="ruby-value">:inner_text</span> )))
+<span class="line-num">44</span>   <span class="ruby-identifier">hxml</span>.<span class="ruby-identifier">search</span>(<span class="ruby-string">&#39;table&#39;</span>).<span class="ruby-identifier">remove</span>
+<span class="line-num">45</span>   <span class="ruby-identifier">hxml</span>.<span class="ruby-identifier">search</span>(<span class="ruby-string">&quot;//comment()&quot;</span>).<span class="ruby-identifier">remove</span>
+<span class="line-num">46</span>   <span class="ruby-comment"># Remove all elements that aren&#39;t displayed</span>
+<span class="line-num">47</span>   <span class="ruby-identifier">hxml</span>.<span class="ruby-identifier">search</span>( <span class="ruby-string">&quot;//*[contains(@style,&#39;display:none&#39;)]/text()&quot;</span> ).<span class="ruby-identifier">remove</span>
+<span class="line-num">48</span>   <span class="ruby-identifier">summary</span> = ( <span class="ruby-identifier">hxml</span>.<span class="ruby-identifier">search</span>(<span class="ruby-string">&quot;//p&quot;</span>).<span class="ruby-identifier">detect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">node</span><span class="ruby-operator">|</span> <span class="ruby-operator">!</span><span class="ruby-identifier">node</span>.<span class="ruby-identifier">inner_html</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">blank?</span>} <span class="ruby-operator">||</span> <span class="ruby-identifier">hxml</span> ).<span class="ruby-identifier">inner_html</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">strip</span>
+<span class="line-num">49</span>   <span class="ruby-identifier">summary</span> = <span class="ruby-identifier">sanitizer</span>.<span class="ruby-identifier">sanitize</span>(<span class="ruby-identifier">summary</span>, <span class="ruby-value">:tags</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-node">%w(p i em b strong)</span>)
+<span class="line-num">50</span>   <span class="ruby-identifier">summary</span>.<span class="ruby-identifier">gsub!</span> <span class="ruby-regexp">/\[.*?\]/</span>, <span class="ruby-string">&#39;&#39;</span>
+<span class="line-num">51</span>   <span class="ruby-identifier">summary</span>
+<span class="line-num">52</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-url_for_title">
+            
+              <b>url_for_title</b>(title)
+            
+            <a href="../classes/WikipediaService.html#method-i-url_for_title" name="method-i-url_for_title" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-url_for_title_source')" id="l_method-i-url_for_title_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-url_for_title_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/wikipedia_service.rb</span>
+<span class="line-num">18</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">url_for_title</span>(<span class="ruby-identifier">title</span>)
+<span class="line-num">19</span>   <span class="ruby-node">&quot;#{self.base_url}/wiki/#{title}&quot;</span>
+<span class="line-num">20</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

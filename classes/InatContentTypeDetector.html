@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>InatContentTypeDetector</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["InatContentTypeDetector"]'>
+
+
+    <meta property="og:title" value="InatContentTypeDetector">
+
+  
+    
+    <meta name="description" content="Custom Paperclip content detector.">
+    <meta property="og:description" content="Custom Paperclip content detector.">
+  
+
+    <meta name="keywords" content="InatContentTypeDetector class, new, detect, css?, type_from_file_command, type_from_mime_magic, mime_types_for_filename">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            InatContentTypeDetector
+            
+                <span class="parent">&lt;
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/lib/inat_content_type_detector_rb.html">lib/inat_content_type_detector.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>Custom <a href="Paperclip.html"><code>Paperclip</code></a> content detector. Generally we want to rely on the file command to ensure images get the right content type even if the file name is absurd, but it doesn&#39;t work for CSS files b/c the file command just views them as text/plain, so here we&#39;re making an exception for that, even though this does open us up to some arbitrary text uploads for places where we allow css. It might be necessary to do the same for other other file types in the future.</p>
+
+<p>See config/initializers/paperclip.rb for usage</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-css-3F">css?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-detect">detect</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-mime_types_for_filename">mime_types_for_filename</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-type_from_file_command">type_from_file_command</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-type_from_mime_magic">type_from_mime_magic</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <h2 class="sectiontitle">Class Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-c-new">
+            
+              <b>new</b>(filename)
+            
+            <a href="../classes/InatContentTypeDetector.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/inat_content_type_detector.rb</span>
+<span class="line-num">12</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">filename</span>)
+<span class="line-num">13</span>   <span class="ruby-ivar">@filename</span> = <span class="ruby-identifier">filename</span>
+<span class="line-num">14</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-css-3F">
+            
+              <b>css?</b>()
+            
+            <a href="../classes/InatContentTypeDetector.html#method-i-css-3F" name="method-i-css-3F" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-css-3F_source')" id="l_method-i-css-3F_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-css-3F_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/inat_content_type_detector.rb</span>
+<span class="line-num">35</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">css?</span>
+<span class="line-num">36</span>   <span class="ruby-identifier">css_filename</span> = <span class="ruby-identifier">mime_types_for_filename</span>.<span class="ruby-identifier">include?</span>( <span class="ruby-string">&quot;text/css&quot;</span> )
+<span class="line-num">37</span>   <span class="ruby-identifier">css_or_plain_type</span> = [<span class="ruby-string">&quot;text/plain&quot;</span>, <span class="ruby-string">&quot;text/css&quot;</span>].<span class="ruby-identifier">include?</span>( <span class="ruby-identifier">type_from_file_command</span> )
+<span class="line-num">38</span>   <span class="ruby-identifier">css_filename</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">css_or_plain_type</span>
+<span class="line-num">39</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-detect">
+            
+              <b>detect</b>()
+            
+            <a href="../classes/InatContentTypeDetector.html#method-i-detect" name="method-i-detect" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-detect_source')" id="l_method-i-detect_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-detect_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/inat_content_type_detector.rb</span>
+<span class="line-num">16</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">detect</span>
+<span class="line-num">17</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">css?</span>
+<span class="line-num">18</span>     <span class="ruby-string">&quot;text/css&quot;</span>
+<span class="line-num">19</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">20</span>     <span class="ruby-identifier">type</span> = <span class="ruby-identifier">type_from_file_command</span>
+<span class="line-num">21</span>     <span class="ruby-comment"># fix for some .m4a audio files in 3GP format coming from smartphones</span>
+<span class="line-num">22</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;application/octet-stream&quot;</span> <span class="ruby-operator">&amp;&amp;</span>
+<span class="line-num">23</span>        <span class="ruby-identifier">mime_types_for_filename</span>.<span class="ruby-identifier">include?</span>( <span class="ruby-string">&quot;audio/mp4&quot;</span> ) <span class="ruby-operator">&amp;&amp;</span>
+<span class="line-num">24</span>        <span class="ruby-identifier">type_from_mime_magic</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;video/3gpp&quot;</span>
+<span class="line-num">25</span>       <span class="ruby-keyword">return</span> <span class="ruby-string">&quot;audio/mp4&quot;</span>
+<span class="line-num">26</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">27</span>     <span class="ruby-comment"># fix for some .m4a audio files that file detects as video</span>
+<span class="line-num">28</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;video/mp4&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">mime_types_for_filename</span>.<span class="ruby-identifier">include?</span>( <span class="ruby-string">&quot;audio/mp4&quot;</span> )
+<span class="line-num">29</span>       <span class="ruby-keyword">return</span> <span class="ruby-string">&quot;audio/mp4&quot;</span>
+<span class="line-num">30</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">31</span>     <span class="ruby-identifier">type</span>
+<span class="line-num">32</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">33</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-mime_types_for_filename">
+            
+              <b>mime_types_for_filename</b>()
+            
+            <a href="../classes/InatContentTypeDetector.html#method-i-mime_types_for_filename" name="method-i-mime_types_for_filename" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-mime_types_for_filename_source')" id="l_method-i-mime_types_for_filename_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-mime_types_for_filename_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/inat_content_type_detector.rb</span>
+<span class="line-num">51</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">mime_types_for_filename</span>
+<span class="line-num">52</span>   <span class="ruby-constant">MIME</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span>.<span class="ruby-identifier">type_for</span>( <span class="ruby-ivar">@filename</span> ).<span class="ruby-identifier">collect</span>( <span class="ruby-operator">&amp;</span><span class="ruby-value">:content_type</span> )
+<span class="line-num">53</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-type_from_file_command">
+            
+              <b>type_from_file_command</b>()
+            
+            <a href="../classes/InatContentTypeDetector.html#method-i-type_from_file_command" name="method-i-type_from_file_command" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-type_from_file_command_source')" id="l_method-i-type_from_file_command_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-type_from_file_command_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/inat_content_type_detector.rb</span>
+<span class="line-num">41</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">type_from_file_command</span>
+<span class="line-num">42</span>   <span class="ruby-ivar">@type_from_file_command</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Paperclip</span><span class="ruby-operator">::</span><span class="ruby-constant">FileCommandContentTypeDetector</span>.<span class="ruby-identifier">new</span>( <span class="ruby-ivar">@filename</span> ).<span class="ruby-identifier">detect</span>
+<span class="line-num">43</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-type_from_mime_magic">
+            
+              <b>type_from_mime_magic</b>()
+            
+            <a href="../classes/InatContentTypeDetector.html#method-i-type_from_mime_magic" name="method-i-type_from_mime_magic" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-type_from_mime_magic_source')" id="l_method-i-type_from_mime_magic_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-type_from_mime_magic_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/inat_content_type_detector.rb</span>
+<span class="line-num">45</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">type_from_mime_magic</span>
+<span class="line-num">46</span>   <span class="ruby-ivar">@type_from_mime_magic</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>( <span class="ruby-ivar">@filename</span> ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+<span class="line-num">47</span>     <span class="ruby-constant">MimeMagic</span>.<span class="ruby-identifier">by_magic</span>( <span class="ruby-identifier">file</span> ).<span class="ruby-identifier">try</span>( <span class="ruby-value">:type</span> )
+<span class="line-num">48</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">49</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

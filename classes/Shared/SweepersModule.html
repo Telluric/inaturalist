@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shared::SweepersModule</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../../">
+<meta name="data-tree-keys" content='["Shared", "SweepersModule"]'>
+
+
+    <meta property="og:title" value="Shared::SweepersModule">
+
+  
+
+    <meta name="keywords" content="Shared::SweepersModule class, expire_listed_taxon, expire_listed_taxa, expire_taxon">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Module</span>
+            Shared::SweepersModule
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../../files/app/models/shared/sweepers_module_rb.html">app/models/shared/sweepers_module.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-expire_listed_taxa">expire_listed_taxa</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-expire_listed_taxon">expire_listed_taxon</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-expire_taxon">expire_taxon</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-expire_listed_taxa">
+            
+              <b>expire_listed_taxa</b>(taxon)
+            
+            <a href="../../classes/Shared/SweepersModule.html#method-i-expire_listed_taxa" name="method-i-expire_listed_taxa" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-expire_listed_taxa_source')" id="l_method-i-expire_listed_taxa_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-expire_listed_taxa_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/shared/sweepers_module.rb</span>
+<span class="line-num"> 7</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">expire_listed_taxa</span>(<span class="ruby-identifier">taxon</span>)
+<span class="line-num"> 8</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num"> 9</span>   <span class="ruby-identifier">tid</span> = <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">id</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Taxon</span>)
+<span class="line-num">10</span>   <span class="ruby-constant">ListedTaxon</span>.<span class="ruby-identifier">delay</span>(<span class="ruby-value">priority:</span> <span class="ruby-constant">USER_INTEGRITY_PRIORITY</span>,
+<span class="line-num">11</span>     <span class="ruby-value">unique_hash:</span> { <span class="ruby-value">&quot;ListedTaxon::expire_caches_for&quot;:</span> <span class="ruby-identifier">tid</span> }
+<span class="line-num">12</span>   ).<span class="ruby-identifier">expire_caches_for</span>(<span class="ruby-identifier">tid</span>)
+<span class="line-num">13</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-expire_listed_taxon">
+            
+              <b>expire_listed_taxon</b>(listed_taxon)
+            
+            <a href="../../classes/Shared/SweepersModule.html#method-i-expire_listed_taxon" name="method-i-expire_listed_taxon" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-expire_listed_taxon_source')" id="l_method-i-expire_listed_taxon_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-expire_listed_taxon_source" class="dyn-source">
+                <pre>  <span class="ruby-comment"># File app/models/shared/sweepers_module.rb</span>
+<span class="line-num">2</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">expire_listed_taxon</span>(<span class="ruby-identifier">listed_taxon</span>)
+<span class="line-num">3</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">listed_taxon</span>.<span class="ruby-identifier">list</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">CheckList</span>)
+<span class="line-num">4</span>   <span class="ruby-identifier">listed_taxon</span>.<span class="ruby-identifier">expire_caches</span>
+<span class="line-num">5</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-expire_taxon">
+            
+              <b>expire_taxon</b>(taxon)
+            
+            <a href="../../classes/Shared/SweepersModule.html#method-i-expire_taxon" name="method-i-expire_taxon" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-expire_taxon_source')" id="l_method-i-expire_taxon_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-expire_taxon_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/shared/sweepers_module.rb</span>
+<span class="line-num">15</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">expire_taxon</span>(<span class="ruby-identifier">taxon</span>)
+<span class="line-num">16</span>   <span class="ruby-identifier">taxon</span> = <span class="ruby-constant">Taxon</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">taxon</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Taxon</span>)
+<span class="line-num">17</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">taxon</span>
+<span class="line-num">18</span>   <span class="ruby-identifier">expire_listed_taxa</span>(<span class="ruby-identifier">taxon</span>)
+<span class="line-num">19</span>   <span class="ruby-identifier">ctrl</span> = <span class="ruby-constant">ActionController</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">new</span>
+<span class="line-num">20</span>   <span class="ruby-identifier">ctrl</span>.<span class="ruby-identifier">expire_fragment</span>(<span class="ruby-constant">FakeView</span>.<span class="ruby-identifier">url_for</span>(<span class="ruby-value">:controller</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&#39;taxa&#39;</span>, <span class="ruby-value">:action</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&#39;photos&#39;</span>, <span class="ruby-value">:id</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:partial</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;photo&quot;</span>))
+<span class="line-num">21</span>   <span class="ruby-constant">I18N_SUPPORTED_LOCALES</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">locale</span><span class="ruby-operator">|</span>
+<span class="line-num">22</span>     [<span class="ruby-keyword">true</span>, <span class="ruby-keyword">false</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ssl</span><span class="ruby-operator">|</span>
+<span class="line-num">23</span>       <span class="ruby-identifier">ctrl</span>.<span class="ruby-identifier">send</span>( <span class="ruby-value">:expire_action</span>, <span class="ruby-constant">FakeView</span>.<span class="ruby-identifier">url_for</span>( <span class="ruby-value">controller:</span> <span class="ruby-string">&quot;taxa&quot;</span>, <span class="ruby-value">action:</span> <span class="ruby-string">&quot;show&quot;</span>, <span class="ruby-value">id:</span> <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">locale:</span> <span class="ruby-identifier">locale</span>, <span class="ruby-value">ssl:</span> <span class="ruby-identifier">ssl</span> ) )
+<span class="line-num">24</span>       <span class="ruby-identifier">ctrl</span>.<span class="ruby-identifier">send</span>( <span class="ruby-value">:expire_action</span>, <span class="ruby-constant">FakeView</span>.<span class="ruby-identifier">url_for</span>( <span class="ruby-value">controller:</span> <span class="ruby-string">&quot;taxa&quot;</span>, <span class="ruby-value">action:</span> <span class="ruby-string">&quot;show&quot;</span>, <span class="ruby-value">id:</span> <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">to_param</span>, <span class="ruby-value">locale:</span> <span class="ruby-identifier">locale</span>, <span class="ruby-value">ssl:</span> <span class="ruby-identifier">ssl</span> ) )
+<span class="line-num">25</span>       <span class="ruby-identifier">ctrl</span>.<span class="ruby-identifier">send</span>( <span class="ruby-value">:expire_action</span>, <span class="ruby-constant">FakeView</span>.<span class="ruby-identifier">taxon_path</span>( <span class="ruby-value">id:</span> <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">locale:</span> <span class="ruby-identifier">locale</span>, <span class="ruby-value">format:</span> <span class="ruby-string">&quot;json&quot;</span> ) )
+<span class="line-num">26</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">27</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">28</span>   <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">cache</span>.<span class="ruby-identifier">delete</span>( <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">photos_cache_key</span> )
+<span class="line-num">29</span>   <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">cache</span>.<span class="ruby-identifier">delete</span>( <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">photos_with_external_cache_key</span> )
+<span class="line-num">30</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

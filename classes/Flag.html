@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Flag</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["Flag"]'>
+
+
+    <meta property="og:title" value="Flag">
+
+  
+
+    <meta name="keywords" content="Flag class, set_uuid, to_s, flaggable_type_valid, flag_not_about_duplicate, notify_flaggable_on_create, notify_flaggable_on_update, notify_flaggable_on_destroy, is_akismet_spam_flag?, as_indexed_json, find_flags_by_user, find_flags_for_flaggable, find_flaggable, flagged_object, check_resolved, get_flaggable_user, set_flaggable_user_id, set_flaggable_content, flaggable_content_viewable_by?, deletable_by?, resolvable_by?">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            Flag
+            
+                <span class="parent">&lt;
+                    
+                    <a href="ActiveRecord/Base.html">ActiveRecord::Base</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/lib/acts_as_flaggable/flag_rb.html">lib/acts_as_flaggable/flag.rb</a></li>
+            
+            <li><a href="../files/lib/acts_as_spammable/active_record/base_rb.html">lib/acts_as_spammable/active_record/base.rb</a></li>
+            
+            <li><a href="../files/lib/acts_as_spammable/rakismet_rb.html">lib/acts_as_spammable/rakismet.rb</a></li>
+            
+            <li><a href="../files/lib/acts_as_spammable/user_rb.html">lib/acts_as_spammable/user.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-as_indexed_json">as_indexed_json</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-check_resolved">check_resolved</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-deletable_by-3F">deletable_by?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-find_flaggable">find_flaggable</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-find_flags_by_user">find_flags_by_user</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-find_flags_for_flaggable">find_flags_for_flaggable</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-flag_not_about_duplicate">flag_not_about_duplicate</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-flaggable_content_viewable_by-3F">flaggable_content_viewable_by?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-flaggable_type_valid">flaggable_type_valid</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-flagged_object">flagged_object</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-get_flaggable_user">get_flaggable_user</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-is_akismet_spam_flag-3F">is_akismet_spam_flag?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-notify_flaggable_on_create">notify_flaggable_on_create</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-notify_flaggable_on_destroy">notify_flaggable_on_destroy</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-notify_flaggable_on_update">notify_flaggable_on_update</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-resolvable_by-3F">resolvable_by?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-set_flaggable_content">set_flaggable_content</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_flaggable_user_id">set_flaggable_user_id</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-set_uuid">set_uuid</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-to_s">to_s</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <h2 class="sectiontitle">Constants</h2>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">COPYRIGHT_INFRINGEMENT</td>
+            <td>=</td>
+            <td class="attr-value">&quot;copyright infringement&quot;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">FLAGS</td>
+            <td>=</td>
+            <td class="attr-value">[
+SPAM,
+INAPPROPRIATE,
+COPYRIGHT_INFRINGEMENT
+]</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">INAPPROPRIATE</td>
+            <td>=</td>
+            <td class="attr-value">&quot;inappropriate&quot;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">SPAM</td>
+            <td>=</td>
+            <td class="attr-value">&quot;spam&quot;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">TYPES</td>
+            <td>=</td>
+            <td class="attr-value">%w[CheckList Comment Guide GuideSection Identification List Message Observation Photo Place Post Project Sound
+Taxon User]</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+      <!-- Section attributes -->
+      <h2 class="sectiontitle">Attributes</h2>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>initial_comment_body</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <h2 class="sectiontitle">Class Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-c-find_flaggable">
+            
+              <b>find_flaggable</b>(flaggable_str, flaggable_id)
+            
+            <a href="../classes/Flag.html#method-c-find_flaggable" name="method-c-find_flaggable" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Helper class method to look up a flaggable object given the flaggable class name and id</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-find_flaggable_source')" id="l_method-c-find_flaggable_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-find_flaggable_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/acts_as_flaggable/flag.rb</span>
+<span class="line-num">148</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">find_flaggable</span>(<span class="ruby-identifier">flaggable_str</span>, <span class="ruby-identifier">flaggable_id</span>)
+<span class="line-num">149</span>   <span class="ruby-identifier">flaggable_str</span>.<span class="ruby-identifier">constantize</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">flaggable_id</span>)
+<span class="line-num">150</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-find_flags_by_user">
+            
+              <b>find_flags_by_user</b>(user)
+            
+            <a href="../classes/Flag.html#method-c-find_flags_by_user" name="method-c-find_flags_by_user" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Helper class method to lookup all flags assigned to all flaggable types for a given user.</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-find_flags_by_user_source')" id="l_method-c-find_flags_by_user_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-find_flags_by_user_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/acts_as_flaggable/flag.rb</span>
+<span class="line-num">130</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">find_flags_by_user</span>(<span class="ruby-identifier">user</span>)
+<span class="line-num">131</span>   <span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>,
+<span class="line-num">132</span>     <span class="ruby-value">:conditions</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-string">&quot;user_id = ?&quot;</span>, <span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>],
+<span class="line-num">133</span>     <span class="ruby-value">:order</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;created_at DESC&quot;</span>
+<span class="line-num">134</span>   )
+<span class="line-num">135</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-find_flags_for_flaggable">
+            
+              <b>find_flags_for_flaggable</b>(flaggable_str, flaggable_id)
+            
+            <a href="../classes/Flag.html#method-c-find_flags_for_flaggable" name="method-c-find_flags_for_flaggable" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Helper class method to look up all flags for flaggable class name and flaggable id.</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-find_flags_for_flaggable_source')" id="l_method-c-find_flags_for_flaggable_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-find_flags_for_flaggable_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/acts_as_flaggable/flag.rb</span>
+<span class="line-num">139</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">find_flags_for_flaggable</span>(<span class="ruby-identifier">flaggable_str</span>, <span class="ruby-identifier">flaggable_id</span>)
+<span class="line-num">140</span>   <span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>,
+<span class="line-num">141</span>     <span class="ruby-value">:conditions</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-string">&quot;flaggable_type = ? and flaggable_id = ?&quot;</span>, <span class="ruby-identifier">flaggable_str</span>, <span class="ruby-identifier">flaggable_id</span>],
+<span class="line-num">142</span>     <span class="ruby-value">:order</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;created_at DESC&quot;</span>
+<span class="line-num">143</span>   )
+<span class="line-num">144</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-as_indexed_json">
+            
+              <b>as_indexed_json</b>()
+            
+            <a href="../classes/Flag.html#method-i-as_indexed_json" name="method-i-as_indexed_json" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-as_indexed_json_source')" id="l_method-i-as_indexed_json_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-as_indexed_json_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/acts_as_flaggable/flag.rb</span>
+<span class="line-num">115</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">as_indexed_json</span>
+<span class="line-num">116</span>   {
+<span class="line-num">117</span>     <span class="ruby-value">id:</span> <span class="ruby-identifier">id</span>,
+<span class="line-num">118</span>     <span class="ruby-value">flag:</span> <span class="ruby-identifier">flag</span>,
+<span class="line-num">119</span>     <span class="ruby-value">comment:</span> <span class="ruby-identifier">comment</span>,
+<span class="line-num">120</span>     <span class="ruby-value">user_id:</span> <span class="ruby-identifier">user_id</span>,
+<span class="line-num">121</span>     <span class="ruby-value">resolver_id:</span> <span class="ruby-identifier">resolver_id</span>,
+<span class="line-num">122</span>     <span class="ruby-value">resolved:</span> <span class="ruby-identifier">resolved</span>,
+<span class="line-num">123</span>     <span class="ruby-value">created_at:</span> <span class="ruby-identifier">created_at</span>,
+<span class="line-num">124</span>     <span class="ruby-value">updated_at:</span> <span class="ruby-identifier">updated_at</span>
+<span class="line-num">125</span>   }
+<span class="line-num">126</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-check_resolved">
+            
+              <b>check_resolved</b>()
+            
+            <a href="../classes/Flag.html#method-i-check_resolved" name="method-i-check_resolved" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-check_resolved_source')" id="l_method-i-check_resolved_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-check_resolved_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/acts_as_flaggable/flag.rb</span>
+<span class="line-num">158</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">check_resolved</span>
+<span class="line-num">159</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">will_save_change_to_resolved?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">resolved</span>
+<span class="line-num">160</span>     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">resolved_at</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+<span class="line-num">161</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">will_save_change_to_resolved?</span>
+<span class="line-num">162</span>     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">resolved_at</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">163</span>     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">resolver</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">164</span>     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">comment</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">165</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">166</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">167</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-deletable_by-3F">
+            
+              <b>deletable_by?</b>( user )
+            
+            <a href="../classes/Flag.html#method-i-deletable_by-3F" name="method-i-deletable_by-3F" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-deletable_by-3F_source')" id="l_method-i-deletable_by-3F_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-deletable_by-3F_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/acts_as_flaggable/flag.rb</span>
+<span class="line-num">204</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">deletable_by?</span>( <span class="ruby-identifier">user</span> )
+<span class="line-num">205</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">new_record?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">206</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">is_admin?</span>
+<span class="line-num">207</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span> <span class="ruby-operator">===</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">user_id</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">resolved?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">comments</span>.<span class="ruby-identifier">any?</span>
+<span class="line-num">208</span>   <span class="ruby-keyword">false</span>
+<span class="line-num">209</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-flag_not_about_duplicate">
+            
+              <b>flag_not_about_duplicate</b>()
+            
+            <a href="../classes/Flag.html#method-i-flag_not_about_duplicate" name="method-i-flag_not_about_duplicate" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-flag_not_about_duplicate_source')" id="l_method-i-flag_not_about_duplicate_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-flag_not_about_duplicate_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/acts_as_flaggable/flag.rb</span>
+<span class="line-num">78</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">flag_not_about_duplicate</span>
+<span class="line-num">79</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-node">%w(Observation Photo)</span>.<span class="ruby-identifier">include?</span>( <span class="ruby-identifier">flaggable_type</span> )
+<span class="line-num">80</span> 
+<span class="line-num">81</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">flag</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">downcase</span>.<span class="ruby-identifier">include?</span> ( <span class="ruby-string">&quot;duplicate&quot;</span> )
+<span class="line-num">82</span> 
+<span class="line-num">83</span>   <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">add</span>( <span class="ruby-value">:flag</span>, <span class="ruby-value">:not_about_duplicate</span> )
+<span class="line-num">84</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-flaggable_content_viewable_by-3F">
+            
+              <b>flaggable_content_viewable_by?</b>( user )
+            
+            <a href="../classes/Flag.html#method-i-flaggable_content_viewable_by-3F" name="method-i-flaggable_content_viewable_by-3F" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-flaggable_content_viewable_by-3F_source')" id="l_method-i-flaggable_content_viewable_by-3F_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-flaggable_content_viewable_by-3F_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/acts_as_flaggable/flag.rb</span>
+<span class="line-num">197</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">flaggable_content_viewable_by?</span>( <span class="ruby-identifier">user</span> )
+<span class="line-num">198</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">flaggable_type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;Message&quot;</span>
+<span class="line-num">199</span>     <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">user</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">is_admin?</span>
+<span class="line-num">200</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">201</span>   <span class="ruby-operator">!</span><span class="ruby-identifier">flaggable_content</span>.<span class="ruby-identifier">blank?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">user</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">is_curator?</span>
+<span class="line-num">202</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-flaggable_type_valid">
+            
+              <b>flaggable_type_valid</b>()
+            
+            <a href="../classes/Flag.html#method-i-flaggable_type_valid" name="method-i-flaggable_type_valid" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-flaggable_type_valid_source')" id="l_method-i-flaggable_type_valid_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-flaggable_type_valid_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/acts_as_flaggable/flag.rb</span>
+<span class="line-num">70</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">flaggable_type_valid</span>
+<span class="line-num">71</span>   <span class="ruby-keyword">if</span> <span class="ruby-constant">Flag</span><span class="ruby-operator">::</span><span class="ruby-constant">TYPES</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">flaggable_type</span>)
+<span class="line-num">72</span>     <span class="ruby-keyword">true</span>
+<span class="line-num">73</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">74</span>     <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">add</span>(<span class="ruby-value">:flaggable_type</span>, <span class="ruby-string">&quot;can&#39;t be flagged&quot;</span>)
+<span class="line-num">75</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">76</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-flagged_object">
+            
+              <b>flagged_object</b>()
+            
+            <a href="../classes/Flag.html#method-i-flagged_object" name="method-i-flagged_object" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-flagged_object_source')" id="l_method-i-flagged_object_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-flagged_object_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/acts_as_flaggable/flag.rb</span>
+<span class="line-num">152</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">flagged_object</span>
+<span class="line-num">153</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">klass</span> = <span class="ruby-constant">Object</span>.<span class="ruby-identifier">const_get</span>( <span class="ruby-identifier">flaggable_type</span> )
+<span class="line-num">154</span>     <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">find_by_id</span>( <span class="ruby-identifier">flaggable_id</span> )
+<span class="line-num">155</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">156</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-get_flaggable_user">
+            
+              <b>get_flaggable_user</b>()
+            
+            <a href="../classes/Flag.html#method-i-get_flaggable_user" name="method-i-get_flaggable_user" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-get_flaggable_user_source')" id="l_method-i-get_flaggable_user_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-get_flaggable_user_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/acts_as_flaggable/flag.rb</span>
+<span class="line-num">169</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_flaggable_user</span>
+<span class="line-num">170</span>   <span class="ruby-keyword">case</span> <span class="ruby-identifier">flaggable_type</span>
+<span class="line-num">171</span>   <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;User&quot;</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">flaggable</span>
+<span class="line-num">172</span>   <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;Message&quot;</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">flaggable</span>.<span class="ruby-identifier">from_user</span>
+<span class="line-num">173</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">174</span>     <span class="ruby-identifier">k</span>, <span class="ruby-identifier">reflection</span> = <span class="ruby-identifier">flaggable</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">reflections</span>.<span class="ruby-identifier">detect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span> <span class="ruby-identifier">r</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">class_name</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;User&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">r</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">macro</span> <span class="ruby-operator">==</span> <span class="ruby-value">:belongs_to</span> }
+<span class="line-num">175</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">reflection</span>
+<span class="line-num">176</span>       <span class="ruby-identifier">flaggable</span>.<span class="ruby-identifier">send</span>( <span class="ruby-identifier">k</span> )
+<span class="line-num">177</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">178</span>       <span class="ruby-keyword">nil</span>
+<span class="line-num">179</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">180</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">181</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-is_akismet_spam_flag-3F">
+            
+              <b>is_akismet_spam_flag?</b>()
+            
+            <a href="../classes/Flag.html#method-i-is_akismet_spam_flag-3F" name="method-i-is_akismet_spam_flag-3F" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-is_akismet_spam_flag-3F_source')" id="l_method-i-is_akismet_spam_flag-3F_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-is_akismet_spam_flag-3F_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/acts_as_flaggable/flag.rb</span>
+<span class="line-num">111</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">is_akismet_spam_flag?</span>
+<span class="line-num">112</span>   <span class="ruby-identifier">user_id</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">flag</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Flag</span><span class="ruby-operator">::</span><span class="ruby-constant">SPAM</span>
+<span class="line-num">113</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-notify_flaggable_on_create">
+            
+              <b>notify_flaggable_on_create</b>()
+            
+            <a href="../classes/Flag.html#method-i-notify_flaggable_on_create" name="method-i-notify_flaggable_on_create" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-notify_flaggable_on_create_source')" id="l_method-i-notify_flaggable_on_create_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-notify_flaggable_on_create_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/acts_as_flaggable/flag.rb</span>
+<span class="line-num">86</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">notify_flaggable_on_create</span>
+<span class="line-num">87</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">flaggable</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">flaggable</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:flagged_with</span>)
+<span class="line-num">88</span>     <span class="ruby-identifier">flaggable</span>.<span class="ruby-identifier">flagged_with</span>(<span class="ruby-keyword">self</span>, <span class="ruby-value">action:</span> <span class="ruby-string">&quot;created&quot;</span>)
+<span class="line-num">89</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">90</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">91</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-notify_flaggable_on_destroy">
+            
+              <b>notify_flaggable_on_destroy</b>()
+            
+            <a href="../classes/Flag.html#method-i-notify_flaggable_on_destroy" name="method-i-notify_flaggable_on_destroy" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-notify_flaggable_on_destroy_source')" id="l_method-i-notify_flaggable_on_destroy_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-notify_flaggable_on_destroy_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/acts_as_flaggable/flag.rb</span>
+<span class="line-num">104</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">notify_flaggable_on_destroy</span>
+<span class="line-num">105</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">flaggable</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">flaggable</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:flagged_with</span>)
+<span class="line-num">106</span>     <span class="ruby-identifier">flaggable</span>.<span class="ruby-identifier">flagged_with</span>(<span class="ruby-keyword">self</span>, <span class="ruby-value">action:</span> <span class="ruby-string">&quot;destroyed&quot;</span>)
+<span class="line-num">107</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">108</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">109</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-notify_flaggable_on_update">
+            
+              <b>notify_flaggable_on_update</b>()
+            
+            <a href="../classes/Flag.html#method-i-notify_flaggable_on_update" name="method-i-notify_flaggable_on_update" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-notify_flaggable_on_update_source')" id="l_method-i-notify_flaggable_on_update_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-notify_flaggable_on_update_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/acts_as_flaggable/flag.rb</span>
+<span class="line-num"> 93</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">notify_flaggable_on_update</span>
+<span class="line-num"> 94</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">flaggable</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">flaggable</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:flagged_with</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">saved_change_to_resolved?</span>
+<span class="line-num"> 95</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">resolved?</span>
+<span class="line-num"> 96</span>       <span class="ruby-identifier">flaggable</span>.<span class="ruby-identifier">flagged_with</span>(<span class="ruby-keyword">self</span>, <span class="ruby-value">action:</span> <span class="ruby-string">&quot;resolved&quot;</span>)
+<span class="line-num"> 97</span>     <span class="ruby-keyword">else</span>
+<span class="line-num"> 98</span>       <span class="ruby-identifier">flaggable</span>.<span class="ruby-identifier">flagged_with</span>(<span class="ruby-keyword">self</span>, <span class="ruby-value">action:</span> <span class="ruby-string">&quot;unresolved&quot;</span>)
+<span class="line-num"> 99</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">100</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">101</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">102</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-resolvable_by-3F">
+            
+              <b>resolvable_by?</b>( user )
+            
+            <a href="../classes/Flag.html#method-i-resolvable_by-3F" name="method-i-resolvable_by-3F" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-resolvable_by-3F_source')" id="l_method-i-resolvable_by-3F_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-resolvable_by-3F_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/acts_as_flaggable/flag.rb</span>
+<span class="line-num">211</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">resolvable_by?</span>( <span class="ruby-identifier">user</span> )
+<span class="line-num">212</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">user</span>
+<span class="line-num">213</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">is_curator?</span> <span class="ruby-operator">&amp;&amp;</span> ( <span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">flaggable_user_id</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">flaggable_type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;Taxon&quot;</span> )
+<span class="line-num">214</span> 
+<span class="line-num">215</span>   <span class="ruby-keyword">false</span>
+<span class="line-num">216</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-set_flaggable_content">
+            
+              <b>set_flaggable_content</b>()
+            
+            <a href="../classes/Flag.html#method-i-set_flaggable_content" name="method-i-set_flaggable_content" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-set_flaggable_content_source')" id="l_method-i-set_flaggable_content_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-set_flaggable_content_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/acts_as_flaggable/flag.rb</span>
+<span class="line-num">191</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">set_flaggable_content</span>
+<span class="line-num">192</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">flaggable</span>
+<span class="line-num">193</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">flaggable_content</span> = <span class="ruby-identifier">flaggable</span>.<span class="ruby-identifier">try_methods</span>(<span class="ruby-value">:body</span>, <span class="ruby-value">:description</span>)
+<span class="line-num">194</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">195</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-set_flaggable_user_id">
+            
+              <b>set_flaggable_user_id</b>()
+            
+            <a href="../classes/Flag.html#method-i-set_flaggable_user_id" name="method-i-set_flaggable_user_id" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-set_flaggable_user_id_source')" id="l_method-i-set_flaggable_user_id_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-set_flaggable_user_id_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/acts_as_flaggable/flag.rb</span>
+<span class="line-num">183</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">set_flaggable_user_id</span>
+<span class="line-num">184</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">flaggable</span>
+<span class="line-num">185</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">u</span> = <span class="ruby-identifier">get_flaggable_user</span>
+<span class="line-num">186</span>     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">flaggable_user_id</span> = <span class="ruby-identifier">u</span>.<span class="ruby-identifier">id</span>
+<span class="line-num">187</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">188</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">189</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-set_uuid">
+            
+              <b>set_uuid</b>()
+            
+            <a href="../classes/Flag.html#method-i-set_uuid" name="method-i-set_uuid" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-set_uuid_source')" id="l_method-i-set_uuid_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-set_uuid_source" class="dyn-source">
+                <pre>  <span class="ruby-comment"># File lib/acts_as_flaggable/flag.rb</span>
+<span class="line-num">4</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">set_uuid</span>
+<span class="line-num">5</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">uuid</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">SecureRandom</span>.<span class="ruby-identifier">uuid</span>
+<span class="line-num">6</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">uuid</span> = <span class="ruby-identifier">uuid</span>.<span class="ruby-identifier">downcase</span>
+<span class="line-num">7</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">8</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-to_s">
+            
+              <b>to_s</b>()
+            
+            <a href="../classes/Flag.html#method-i-to_s" name="method-i-to_s" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-to_s_source')" id="l_method-i-to_s_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-to_s_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/acts_as_flaggable/flag.rb</span>
+<span class="line-num">66</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">to_s</span>
+<span class="line-num">67</span>   <span class="ruby-node">&quot;&lt;Flag #{id} user_id: #{user_id} flaggable_type: #{flaggable_type} flaggable_id: #{flaggable_id}&gt;&quot;</span>
+<span class="line-num">68</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

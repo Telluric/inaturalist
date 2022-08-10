@@ -1,8 +1,0 @@
-- unless flags.blank?
-  %h3= t :existing_flags
-  %ul
-    - if flags.empty?
-      %li.quiet.description= t :no_flags
-    - for flag in flags
-      %li
-        = render partial: "flag", object: flag

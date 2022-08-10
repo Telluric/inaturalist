@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TaxonRange</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["TaxonRange"]'>
+
+
+    <meta property="og:title" value="TaxonRange">
+
+  
+
+    <meta name="keywords" content="TaxonRange class, iucn_relationship_must_be_an_accepted_value, validate_geometry, kml_url, derive_missing_values, create_kml_attachment, create_geom_from_kml_attachment, range_delete, range_delete=, destroy_range?, range_changed?, bounds">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            TaxonRange
+            
+                <span class="parent">&lt;
+                    
+                    <a href="ApplicationRecord.html">ApplicationRecord</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/app/models/taxon_range_rb.html">app/models/taxon_range.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-bounds">bounds</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-create_geom_from_kml_attachment">create_geom_from_kml_attachment</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_kml_attachment">create_kml_attachment</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-derive_missing_values">derive_missing_values</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-destroy_range-3F">destroy_range?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-iucn_relationship_must_be_an_accepted_value">iucn_relationship_must_be_an_accepted_value</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>K</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-kml_url">kml_url</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-range_changed-3F">range_changed?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-range_delete">range_delete</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-range_delete-3D">range_delete=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-validate_geometry">validate_geometry</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <h2 class="sectiontitle">Constants</h2>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">IUCN_RED_LIST_MAP</td>
+            <td>=</td>
+            <td class="attr-value">0</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">IUCN_RED_LIST_MAP_UNSUITABLE</td>
+            <td>=</td>
+            <td class="attr-value">1</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">NOT_ON_IUCN_RED_LIST</td>
+            <td>=</td>
+            <td class="attr-value">2</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+      <!-- Section attributes -->
+      <h2 class="sectiontitle">Attributes</h2>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>geom_processed</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-bounds">
+            
+              <b>bounds</b>()
+            
+            <a href="../classes/TaxonRange.html#method-i-bounds" name="method-i-bounds" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-bounds_source')" id="l_method-i-bounds_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-bounds_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_range.rb</span>
+<span class="line-num">140</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">bounds</span>
+<span class="line-num">141</span>   <span class="ruby-keyword">return</span> <span class="ruby-ivar">@bounds</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@bounds</span>
+<span class="line-num">142</span>   <span class="ruby-identifier">result</span> = <span class="ruby-constant">TaxonRange</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">id:</span> <span class="ruby-identifier">id</span>).<span class="ruby-identifier">select</span>(<span class="ruby-string">&quot;
+<span class="line-num">143</span>     ST_YMIN(geom) min_y, ST_YMAX(geom) max_y,
+<span class="line-num">144</span>     ST_XMIN(geom) min_x, ST_XMAX(geom) max_x&quot;</span>).<span class="ruby-identifier">first</span>
+<span class="line-num">145</span>   <span class="ruby-ivar">@bounds</span> = {
+<span class="line-num">146</span>     <span class="ruby-value">min_x:</span> [<span class="ruby-identifier">result</span>.<span class="ruby-identifier">min_x</span>.<span class="ruby-identifier">to_f</span>, <span class="ruby-value">-179.9</span>].<span class="ruby-identifier">max</span>,
+<span class="line-num">147</span>     <span class="ruby-value">min_y:</span> [<span class="ruby-identifier">result</span>.<span class="ruby-identifier">min_y</span>.<span class="ruby-identifier">to_f</span>, <span class="ruby-value">-89.9</span>].<span class="ruby-identifier">max</span>,
+<span class="line-num">148</span>     <span class="ruby-value">max_x:</span> [<span class="ruby-identifier">result</span>.<span class="ruby-identifier">max_x</span>.<span class="ruby-identifier">to_f</span>, <span class="ruby-value">179.9</span>].<span class="ruby-identifier">min</span>,
+<span class="line-num">149</span>     <span class="ruby-value">max_y:</span> [<span class="ruby-identifier">result</span>.<span class="ruby-identifier">max_y</span>.<span class="ruby-identifier">to_f</span>, <span class="ruby-value">89.9</span>].<span class="ruby-identifier">min</span>
+<span class="line-num">150</span>   }
+<span class="line-num">151</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-create_geom_from_kml_attachment">
+            
+              <b>create_geom_from_kml_attachment</b>()
+            
+            <a href="../classes/TaxonRange.html#method-i-create_geom_from_kml_attachment" name="method-i-create_geom_from_kml_attachment" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-create_geom_from_kml_attachment_source')" id="l_method-i-create_geom_from_kml_attachment_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-create_geom_from_kml_attachment_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_range.rb</span>
+<span class="line-num"> 99</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">create_geom_from_kml_attachment</span>
+<span class="line-num">100</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">range</span>.<span class="ruby-identifier">path</span>)
+<span class="line-num">101</span>   <span class="ruby-identifier">tmp_path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">Dir</span><span class="ruby-operator">::</span><span class="ruby-identifier">tmpdir</span>, <span class="ruby-node">&quot;#{self.id}_#{Time::now.seconds_since_midnight.round}.geojson&quot;</span>)
+<span class="line-num">102</span>   <span class="ruby-identifier">cmd</span> = <span class="ruby-node">&quot;ogr2ogr -f GeoJSON #{tmp_path} #{self.range.path}&quot;</span>
+<span class="line-num">103</span>   <span class="ruby-identifier">system</span> <span class="ruby-identifier">cmd</span>
+<span class="line-num">104</span>   <span class="ruby-identifier">open</span>(<span class="ruby-identifier">tmp_path</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+<span class="line-num">105</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">geojsongeom</span> = <span class="ruby-constant">GeoRuby</span><span class="ruby-operator">::</span><span class="ruby-constant">SimpleFeatures</span><span class="ruby-operator">::</span><span class="ruby-constant">Geometry</span>.<span class="ruby-identifier">from_geojson</span>(<span class="ruby-identifier">f</span>.<span class="ruby-identifier">read</span>)
+<span class="line-num">106</span>       <span class="ruby-keyword">self</span>.<span class="ruby-identifier">geom</span> = <span class="ruby-identifier">geojsongeom</span>.<span class="ruby-identifier">features</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">geometry</span>.<span class="ruby-identifier">as_wkt</span>
+<span class="line-num">107</span>       <span class="ruby-keyword">if</span> <span class="ruby-identifier">geom</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">geom</span>.<span class="ruby-identifier">geometry_type</span> <span class="ruby-operator">==</span> <span class="ruby-constant">RGeo</span><span class="ruby-operator">::</span><span class="ruby-constant">Feature</span><span class="ruby-operator">::</span><span class="ruby-constant">Polygon</span>
+<span class="line-num">108</span>         <span class="ruby-identifier">factory</span> = <span class="ruby-constant">RGeo</span><span class="ruby-operator">::</span><span class="ruby-constant">Cartesian</span>.<span class="ruby-identifier">simple_factory</span>( <span class="ruby-value">srid:</span> <span class="ruby-value">0</span> )
+<span class="line-num">109</span>         <span class="ruby-keyword">self</span>.<span class="ruby-identifier">geom</span> = <span class="ruby-identifier">factory</span>.<span class="ruby-identifier">multi_polygon</span>([<span class="ruby-identifier">geom</span>])
+<span class="line-num">110</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">111</span>       <span class="ruby-keyword">self</span>.<span class="ruby-identifier">geom_processed</span> = <span class="ruby-keyword">true</span>
+<span class="line-num">112</span>       <span class="ruby-keyword">self</span>.<span class="ruby-identifier">save</span>
+<span class="line-num">113</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">114</span>     <span class="ruby-identifier">f</span>.<span class="ruby-identifier">close</span>
+<span class="line-num">115</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">116</span>   <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">tmp_path</span>)
+<span class="line-num">117</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-create_kml_attachment">
+            
+              <b>create_kml_attachment</b>()
+            
+            <a href="../classes/TaxonRange.html#method-i-create_kml_attachment" name="method-i-create_kml_attachment" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-create_kml_attachment_source')" id="l_method-i-create_kml_attachment_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-create_kml_attachment_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/taxon_range.rb</span>
+<span class="line-num">75</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">create_kml_attachment</span>
+<span class="line-num">76</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">geom</span>
+<span class="line-num">77</span>   <span class="ruby-identifier">wkt</span> = <span class="ruby-constant">RGeo</span><span class="ruby-operator">::</span><span class="ruby-constant">WKRep</span><span class="ruby-operator">::</span><span class="ruby-constant">WKTGenerator</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">convert_case:</span> <span class="ruby-value">:upper</span>).<span class="ruby-identifier">generate</span>(<span class="ruby-identifier">geom</span>)
+<span class="line-num">78</span>   <span class="ruby-identifier">builder</span> = <span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">XML</span><span class="ruby-operator">::</span><span class="ruby-constant">Builder</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">xml</span><span class="ruby-operator">|</span>
+<span class="line-num">79</span>     <span class="ruby-identifier">xml</span>.<span class="ruby-identifier">kml</span>(<span class="ruby-string">&#39;xmlns&#39;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&#39;http://earth.google.com/kml/2.1&#39;</span>) <span class="ruby-keyword">do</span>
+<span class="line-num">80</span>       <span class="ruby-identifier">xml</span>.<span class="ruby-constant">Document</span> {
+<span class="line-num">81</span>         <span class="ruby-identifier">xml</span>.<span class="ruby-constant">Placemark</span> {
+<span class="line-num">82</span>           <span class="ruby-identifier">xml</span>.<span class="ruby-identifier">name</span>
+<span class="line-num">83</span>           <span class="ruby-identifier">xml</span>.<span class="ruby-identifier">description</span>
+<span class="line-num">84</span>           <span class="ruby-identifier">xml</span>.<span class="ruby-identifier">styleUrl</span> <span class="ruby-node">&quot;#{Site.default.url}/assets/index.kml#taxon_range&quot;</span>
+<span class="line-num">85</span>           <span class="ruby-identifier">xml</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">GeoRuby</span><span class="ruby-operator">::</span><span class="ruby-constant">SimpleFeatures</span><span class="ruby-operator">::</span><span class="ruby-constant">Geometry</span>.<span class="ruby-identifier">from_ewkt</span>(<span class="ruby-identifier">wkt</span>).<span class="ruby-identifier">as_kml</span>
+<span class="line-num">86</span>         }
+<span class="line-num">87</span>       }
+<span class="line-num">88</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">89</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">90</span>   <span class="ruby-identifier">tmp_path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">Dir</span><span class="ruby-operator">::</span><span class="ruby-identifier">tmpdir</span>, <span class="ruby-string">&quot;temp.kml&quot;</span>)
+<span class="line-num">91</span>   <span class="ruby-identifier">f</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">tmp_path</span>, <span class="ruby-string">&quot;w&quot;</span>)
+<span class="line-num">92</span>   <span class="ruby-identifier">f</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">builder</span>.<span class="ruby-identifier">to_xml</span>)
+<span class="line-num">93</span>   <span class="ruby-identifier">f</span>.<span class="ruby-identifier">close</span>
+<span class="line-num">94</span>   <span class="ruby-identifier">file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">tmp_path</span>, <span class="ruby-string">&quot;r&quot;</span>)
+<span class="line-num">95</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">range</span> = <span class="ruby-identifier">file</span>
+<span class="line-num">96</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">save</span>
+<span class="line-num">97</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-derive_missing_values">
+            
+              <b>derive_missing_values</b>()
+            
+            <a href="../classes/TaxonRange.html#method-i-derive_missing_values" name="method-i-derive_missing_values" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-derive_missing_values_source')" id="l_method-i-derive_missing_values_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-derive_missing_values_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/taxon_range.rb</span>
+<span class="line-num">66</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">derive_missing_values</span>
+<span class="line-num">67</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">geom_processed</span>
+<span class="line-num">68</span>   <span class="ruby-keyword">if</span> (<span class="ruby-identifier">geom</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">range</span>.<span class="ruby-identifier">path</span> )
+<span class="line-num">69</span>     <span class="ruby-identifier">delay</span>( <span class="ruby-value">priority:</span> <span class="ruby-constant">USER_INTEGRITY_PRIORITY</span> ).<span class="ruby-identifier">create_kml_attachment</span>
+<span class="line-num">70</span>   <span class="ruby-keyword">elsif</span> (<span class="ruby-operator">!</span><span class="ruby-identifier">geom</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">range</span>.<span class="ruby-identifier">path</span>)  <span class="ruby-operator">||</span> <span class="ruby-ivar">@range_has_changes</span>
+<span class="line-num">71</span>     <span class="ruby-identifier">delay</span>( <span class="ruby-value">priority:</span> <span class="ruby-constant">USER_INTEGRITY_PRIORITY</span> ).<span class="ruby-identifier">create_geom_from_kml_attachment</span>
+<span class="line-num">72</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">73</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-destroy_range-3F">
+            
+              <b>destroy_range?</b>()
+            
+            <a href="../classes/TaxonRange.html#method-i-destroy_range-3F" name="method-i-destroy_range-3F" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-destroy_range-3F_source')" id="l_method-i-destroy_range-3F_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-destroy_range-3F_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_range.rb</span>
+<span class="line-num">127</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">destroy_range?</span>
+<span class="line-num">128</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">geom_processed</span>
+<span class="line-num">129</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@range_delete</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;1&quot;</span>
+<span class="line-num">130</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">range</span>.<span class="ruby-identifier">clear</span>
+<span class="line-num">131</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">geom</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">132</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">geom_processed</span> = <span class="ruby-keyword">true</span>
+<span class="line-num">133</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">save</span>
+<span class="line-num">134</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-iucn_relationship_must_be_an_accepted_value">
+            
+              <b>iucn_relationship_must_be_an_accepted_value</b>()
+            
+            <a href="../classes/TaxonRange.html#method-i-iucn_relationship_must_be_an_accepted_value" name="method-i-iucn_relationship_must_be_an_accepted_value" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-iucn_relationship_must_be_an_accepted_value_source')" id="l_method-i-iucn_relationship_must_be_an_accepted_value_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-iucn_relationship_must_be_an_accepted_value_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/taxon_range.rb</span>
+<span class="line-num">45</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">iucn_relationship_must_be_an_accepted_value</span>
+<span class="line-num">46</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">iucn_relationship</span>.<span class="ruby-identifier">nil?</span>
+<span class="line-num">47</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> [
+<span class="line-num">48</span>     <span class="ruby-constant">TaxonRange</span><span class="ruby-operator">::</span><span class="ruby-constant">IUCN_RED_LIST_MAP</span>,
+<span class="line-num">49</span>     <span class="ruby-constant">TaxonRange</span><span class="ruby-operator">::</span><span class="ruby-constant">IUCN_RED_LIST_MAP_UNSUITABLE</span>,
+<span class="line-num">50</span>     <span class="ruby-constant">TaxonRange</span><span class="ruby-operator">::</span><span class="ruby-constant">NOT_ON_IUCN_RED_LIST</span>].<span class="ruby-identifier">include?</span> <span class="ruby-identifier">iucn_relationship</span>
+<span class="line-num">51</span>   <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">add</span>(<span class="ruby-value">:iucn_relationship</span>, <span class="ruby-value">:must_be_an_accepted_value</span>)
+<span class="line-num">52</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-kml_url">
+            
+              <b>kml_url</b>()
+            
+            <a href="../classes/TaxonRange.html#method-i-kml_url" name="method-i-kml_url" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-kml_url_source')" id="l_method-i-kml_url_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-kml_url_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/taxon_range.rb</span>
+<span class="line-num">60</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">kml_url</span>
+<span class="line-num">61</span>   <span class="ruby-keyword">return</span> <span class="ruby-node">&quot;#{range.url}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">range</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">62</span>   <span class="ruby-keyword">return</span> <span class="ruby-identifier">url</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">url</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/kml/</span>
+<span class="line-num">63</span>   <span class="ruby-keyword">nil</span>
+<span class="line-num">64</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-range_changed-3F">
+            
+              <b>range_changed?</b>()
+            
+            <a href="../classes/TaxonRange.html#method-i-range_changed-3F" name="method-i-range_changed-3F" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-range_changed-3F_source')" id="l_method-i-range_changed-3F_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-range_changed-3F_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_range.rb</span>
+<span class="line-num">136</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">range_changed?</span>
+<span class="line-num">137</span>   <span class="ruby-ivar">@range_has_changes</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">range</span>.<span class="ruby-identifier">dirty?</span>
+<span class="line-num">138</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-range_delete">
+            
+              <b>range_delete</b>()
+            
+            <a href="../classes/TaxonRange.html#method-i-range_delete" name="method-i-range_delete" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-range_delete_source')" id="l_method-i-range_delete_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-range_delete_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_range.rb</span>
+<span class="line-num">119</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">range_delete</span>
+<span class="line-num">120</span>   <span class="ruby-ivar">@range_delete</span> <span class="ruby-operator">||=</span> <span class="ruby-string">&quot;0&quot;</span>
+<span class="line-num">121</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-range_delete-3D">
+            
+              <b>range_delete=</b>(value)
+            
+            <a href="../classes/TaxonRange.html#method-i-range_delete-3D" name="method-i-range_delete-3D" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-range_delete-3D_source')" id="l_method-i-range_delete-3D_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-range_delete-3D_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_range.rb</span>
+<span class="line-num">123</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">range_delete=</span>(<span class="ruby-identifier">value</span>)
+<span class="line-num">124</span>   <span class="ruby-ivar">@range_delete</span> = <span class="ruby-identifier">value</span>
+<span class="line-num">125</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-validate_geometry">
+            
+              <b>validate_geometry</b>()
+            
+            <a href="../classes/TaxonRange.html#method-i-validate_geometry" name="method-i-validate_geometry" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-validate_geometry_source')" id="l_method-i-validate_geometry_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-validate_geometry_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/taxon_range.rb</span>
+<span class="line-num">54</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">validate_geometry</span>
+<span class="line-num">55</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">geom</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">geom</span>.<span class="ruby-identifier">num_points</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">3</span>
+<span class="line-num">56</span>     <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">add</span>(<span class="ruby-value">:geom</span>, <span class="ruby-string">&quot; must have more than 2 points&quot;</span>)
+<span class="line-num">57</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">58</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

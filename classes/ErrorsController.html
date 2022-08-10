@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ErrorsController</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["ErrorsController"]'>
+
+
+    <meta property="og:title" value="ErrorsController">
+
+  
+
+    <meta name="keywords" content="ErrorsController class, error_404, error_422, error_500">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            ErrorsController
+            
+                <span class="parent">&lt;
+                    
+                    <a href="ApplicationController.html">ApplicationController</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/app/controllers/errors_controller_rb.html">app/controllers/errors_controller.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-error_404">error_404</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-error_422">error_422</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-error_500">error_500</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-error_404">
+            
+              <b>error_404</b>()
+            
+            <a href="../classes/ErrorsController.html#method-i-error_404" name="method-i-error_404" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-error_404_source')" id="l_method-i-error_404_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-error_404_source" class="dyn-source">
+                <pre>  <span class="ruby-comment"># File app/controllers/errors_controller.rb</span>
+<span class="line-num">2</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">error_404</span>
+<span class="line-num">3</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">4</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">status:</span> <span class="ruby-value">404</span>, <span class="ruby-value">layout:</span> <span class="ruby-string">&quot;application&quot;</span> }
+<span class="line-num">5</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> { <span class="ruby-value">error:</span> <span class="ruby-identifier">t</span>(<span class="ruby-value">:not_found</span>) }, <span class="ruby-value">status:</span> <span class="ruby-value">404</span> }
+<span class="line-num">6</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">xml:</span> { <span class="ruby-value">error:</span> <span class="ruby-identifier">t</span>(<span class="ruby-value">:not_found</span>) }, <span class="ruby-value">status:</span> <span class="ruby-value">404</span> }
+<span class="line-num">7</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">8</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-error_422">
+            
+              <b>error_422</b>()
+            
+            <a href="../classes/ErrorsController.html#method-i-error_422" name="method-i-error_422" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-error_422_source')" id="l_method-i-error_422_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-error_422_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/errors_controller.rb</span>
+<span class="line-num">10</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">error_422</span>
+<span class="line-num">11</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">12</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">:error_404</span>, <span class="ruby-value">status:</span> <span class="ruby-value">422</span>, <span class="ruby-value">layout:</span> <span class="ruby-string">&quot;application&quot;</span> }
+<span class="line-num">13</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> { <span class="ruby-value">error:</span> <span class="ruby-identifier">t</span>(<span class="ruby-value">:unprocessable</span>) }, <span class="ruby-value">status:</span> <span class="ruby-value">422</span> }
+<span class="line-num">14</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">xml:</span> { <span class="ruby-value">error:</span> <span class="ruby-identifier">t</span>(<span class="ruby-value">:unprocessable</span>) }, <span class="ruby-value">status:</span> <span class="ruby-value">422</span> }
+<span class="line-num">15</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">16</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-error_500">
+            
+              <b>error_500</b>()
+            
+            <a href="../classes/ErrorsController.html#method-i-error_500" name="method-i-error_500" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-error_500_source')" id="l_method-i-error_500_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-error_500_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/errors_controller.rb</span>
+<span class="line-num">18</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">error_500</span>
+<span class="line-num">19</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">20</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">status:</span> <span class="ruby-value">500</span>, <span class="ruby-value">layout:</span> <span class="ruby-string">&quot;application&quot;</span> }
+<span class="line-num">21</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> { <span class="ruby-value">error:</span> <span class="ruby-identifier">t</span>(<span class="ruby-value">:internal_server_error</span>) }, <span class="ruby-value">status:</span> <span class="ruby-value">500</span> }
+<span class="line-num">22</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">xml:</span> { <span class="ruby-value">error:</span> <span class="ruby-identifier">t</span>(<span class="ruby-value">:internal_server_error</span>) }, <span class="ruby-value">status:</span> <span class="ruby-value">500</span> }
+<span class="line-num">23</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">24</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

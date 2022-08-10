@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>UBioService</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["UBioService"]'>
+
+
+    <meta property="og:title" value="UBioService">
+
+  
+    
+    <meta name="description" content="Wrapper class for the uBio ReSTish web service methods.  This class doesn&#39;t  do much more than pass along requests to uBio and return Nokogiri objects.  You have been warned.">
+    <meta property="og:description" content="Wrapper class for the uBio ReSTish web service methods.  This class doesn&#39;t  do much more than pass along requests to uBio and return Nokogiri objects.  You have been warned.">
+  
+
+    <meta name="keywords" content="UBioService class, new, lsid, search_help, simple_namebank_search">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            UBioService
+            
+                <span class="parent">&lt;
+                    
+                    <a href="MetaService.html">MetaService</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/lib/u_bio_service_rb.html">lib/u_bio_service.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>Wrapper class for the uBio ReSTish web service methods.  This class doesn&#39;t  do much more than pass along requests to uBio and return Nokogiri objects.</p>
+
+<p>You have been warned.</p>
+
+<p>Note that uBio base64-encodes many of its names, so you will probably want to decode them when you get them back.  Maybe I&#39;ll write some custom methods that do this later…</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-lsid">lsid</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-search_help">search_help</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-simple_namebank_search">simple_namebank_search</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <h2 class="sectiontitle">Class Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-c-new">
+            
+              <b>new</b>(key_code, options = {})
+            
+            <a href="../classes/UBioService.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/u_bio_service.rb</span>
+<span class="line-num">11</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">key_code</span>, <span class="ruby-identifier">options</span> = {})
+<span class="line-num">12</span>   <span class="ruby-keyword">unless</span> <span class="ruby-identifier">key_code</span>
+<span class="line-num">13</span>     <span class="ruby-identifier">throw</span> <span class="ruby-constant">UBioAuthorizationError</span>, 
+<span class="line-num">14</span>       <span class="ruby-string">&quot;You must supply a valid keyCode to call uBio&quot;</span>
+<span class="line-num">15</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">16</span>   <span class="ruby-keyword">super</span>(<span class="ruby-identifier">options</span>)
+<span class="line-num">17</span>   <span class="ruby-ivar">@service_name</span>           = <span class="ruby-string">&#39;uBio&#39;</span>
+<span class="line-num">18</span>   <span class="ruby-ivar">@endpoint</span>               = <span class="ruby-string">&#39;http://www.ubio.org/webservices/service.php?&#39;</span>
+<span class="line-num">19</span>   <span class="ruby-ivar">@lsid_endpoint</span>          = <span class="ruby-string">&#39;http://www.ubio.org/authority/metadata.php?&#39;</span>
+<span class="line-num">20</span>   <span class="ruby-ivar">@search_help_endpoint</span>   = <span class="ruby-string">&#39;http://www.ubio.org/searchHelp.php?&#39;</span>
+<span class="line-num">21</span>   <span class="ruby-ivar">@default_params</span> = { <span class="ruby-value">:keyCode</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">key_code</span> }
+<span class="line-num">22</span>   <span class="ruby-ivar">@method_param</span> = <span class="ruby-string">&#39;function&#39;</span>
+<span class="line-num">23</span>   <span class="ruby-ivar">@timeout</span> = <span class="ruby-value">10</span> <span class="ruby-comment"># uBio can be sloooooowww</span>
+<span class="line-num">24</span>   <span class="ruby-ivar">@debug</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:debug</span>] <span class="ruby-operator">||</span> <span class="ruby-keyword">false</span>
+<span class="line-num">25</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-lsid">
+            
+              <b>lsid</b>(params)
+            
+            <a href="../classes/UBioService.html#method-i-lsid" name="method-i-lsid" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Fetch an RDF response from uBio</p>
+
+<p>This isn&#39;t quite in keeping with the thin wrapper approach of this library, but LSID resolution has a different endpoint than the regular web services, and it seemed silly to make a completely different library for uBio LSIDs.  An LSID library that resolved LSIDs to RDFs itself using some third party resolver would be cool.  Maybe later.</p>
+
+<p>Params generally correspond to the parts of an LSID after the authority.  See <a href="http://lsids.sourceforge.net">lsids.sourceforge.net</a> for details.</p>
+
+<p>params:</p>
+
+<pre><code>namespace  - namespace identification
+object     - object identification
+revision   - revision identification (optional)
+</code></pre>
+
+<p>or you can just pass in an lsid</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-lsid_source')" id="l_method-i-lsid_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-lsid_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/u_bio_service.rb</span>
+<span class="line-num">46</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">lsid</span>(<span class="ruby-identifier">params</span>)
+<span class="line-num">47</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">String</span>
+<span class="line-num">48</span>     <span class="ruby-identifier">lsid</span> = <span class="ruby-identifier">params</span>
+<span class="line-num">49</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">50</span>     <span class="ruby-identifier">lsid</span>  = <span class="ruby-string">&quot;urn:lsid:ubio.org:%s:%s&quot;</span> <span class="ruby-operator">%</span> [<span class="ruby-identifier">params</span>[<span class="ruby-value">:namespace</span>], 
+<span class="line-num">51</span>                                          <span class="ruby-identifier">params</span>[<span class="ruby-value">:object</span>]]
+<span class="line-num">52</span>     <span class="ruby-identifier">lsid</span>  <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;:#{params[:revision]}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:revision</span>]
+<span class="line-num">53</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">54</span>   <span class="ruby-identifier">url</span>   = <span class="ruby-ivar">@lsid_endpoint</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;lsid=&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">lsid</span>
+<span class="line-num">55</span>   <span class="ruby-identifier">uri</span>   = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">encode</span>(<span class="ruby-identifier">url</span>)
+<span class="line-num">56</span>   <span class="ruby-identifier">response</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">57</span>   <span class="ruby-keyword">begin</span>
+<span class="line-num">58</span>     <span class="ruby-identifier">timed_out</span> = <span class="ruby-constant">Timeout</span><span class="ruby-operator">::</span><span class="ruby-identifier">timeout</span>(<span class="ruby-ivar">@timeout</span>) <span class="ruby-keyword">do</span>
+<span class="line-num">59</span>       <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;uBio: #{url}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@debug</span>
+<span class="line-num">60</span>       <span class="ruby-identifier">response</span>  = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">get_response</span>(<span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">uri</span>))
+<span class="line-num">61</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">62</span>   <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Timeout</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span>
+<span class="line-num">63</span>     <span class="ruby-identifier">raise</span> <span class="ruby-constant">Timeout</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span>, <span class="ruby-node">&quot;uBio didn&#39;t respond within #{timeout} seconds.&quot;</span>
+<span class="line-num">64</span>   <span class="ruby-keyword">rescue</span> <span class="ruby-constant">EOFError</span>, <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ECONNRESET</span>
+<span class="line-num">65</span>     <span class="ruby-identifier">raise</span> <span class="ruby-constant">UBioConnectionError</span>, <span class="ruby-string">&quot;uBio did not respond.&quot;</span>
+<span class="line-num">66</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">67</span>   <span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">XML</span>(<span class="ruby-identifier">response</span>.<span class="ruby-identifier">body</span>)
+<span class="line-num">68</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-search_help">
+            
+              <b>search_help</b>(q)
+            
+            <a href="../classes/UBioService.html#method-i-search_help" name="method-i-search_help" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Wraps the method uBio uses for their autocomplete, which actually seems more robust than their web service.  uBio uses this endpoint for their autocomplete searches, so it just returns an HTML fragment containing a link to a namebank entry.  This wrapper doesn&#39;t go any further than making an Nokogiri object out of that response.</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-search_help_source')" id="l_method-i-search_help_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-search_help_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/u_bio_service.rb</span>
+<span class="line-num">77</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">search_help</span>(<span class="ruby-identifier">q</span>)
+<span class="line-num">78</span>   <span class="ruby-identifier">url</span>   = <span class="ruby-node">&quot;#{@search_help_endpoint}q=#{q}&quot;</span>
+<span class="line-num">79</span>   <span class="ruby-identifier">uri</span>   = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">encode</span>(<span class="ruby-identifier">url</span>)
+<span class="line-num">80</span>   <span class="ruby-identifier">response</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">81</span>   <span class="ruby-keyword">begin</span>
+<span class="line-num">82</span>     <span class="ruby-identifier">timed_out</span> = <span class="ruby-constant">Timeout</span><span class="ruby-operator">::</span><span class="ruby-identifier">timeout</span>(<span class="ruby-ivar">@timeout</span>) <span class="ruby-keyword">do</span>
+<span class="line-num">83</span>       <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;uBio: #{url}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@debug</span>
+<span class="line-num">84</span>       <span class="ruby-identifier">response</span>  = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">get_response</span>(<span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">uri</span>))
+<span class="line-num">85</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">86</span>   <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Timeout</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span>, <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ECONNRESET</span>
+<span class="line-num">87</span>     <span class="ruby-identifier">raise</span> <span class="ruby-constant">Timeout</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span>, <span class="ruby-node">&quot;uBio didn&#39;t respond within #{timeout} seconds.&quot;</span>
+<span class="line-num">88</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">89</span>   <span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">HTML</span>(<span class="ruby-identifier">response</span>.<span class="ruby-identifier">body</span>)
+<span class="line-num">90</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-simple_namebank_search">
+            
+              <b>simple_namebank_search</b>(name)
+            
+            <a href="../classes/UBioService.html#method-i-simple_namebank_search" name="method-i-simple_namebank_search" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Calls the searchHelp endpoint and returns an array of hashes in the form</p>
+
+<pre><code>:namebankID =&gt; 111111, :name =&gt; ABCD, :link =&gt; http://www.ubio....
+</code></pre>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-simple_namebank_search_source')" id="l_method-i-simple_namebank_search_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-simple_namebank_search_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/u_bio_service.rb</span>
+<span class="line-num"> 96</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">simple_namebank_search</span>(<span class="ruby-identifier">name</span>)
+<span class="line-num"> 97</span>   <span class="ruby-identifier">r</span> = <span class="ruby-identifier">search_help</span>(<span class="ruby-identifier">name</span>)
+<span class="line-num"> 98</span>   <span class="ruby-identifier">r</span>.<span class="ruby-identifier">search</span>(<span class="ruby-string">&#39;a&#39;</span>).<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span>
+<span class="line-num"> 99</span>     { <span class="ruby-value">:namebankID</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">a</span>[<span class="ruby-string">&#39;href&#39;</span>].<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;=&#39;</span>).<span class="ruby-identifier">last</span>, 
+<span class="line-num">100</span>       <span class="ruby-value">:name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">inner_text</span>, 
+<span class="line-num">101</span>       <span class="ruby-value">:link</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">a</span>[<span class="ruby-string">&#39;href&#39;</span>] }
+<span class="line-num">102</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">103</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

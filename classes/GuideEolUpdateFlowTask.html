@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>GuideEolUpdateFlowTask</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["GuideEolUpdateFlowTask"]'>
+
+
+    <meta property="og:title" value="GuideEolUpdateFlowTask">
+
+  
+    
+    <meta name="description" content="encoding: utf-8.">
+    <meta property="og:description" content="encoding: utf-8.">
+  
+
+    <meta name="keywords" content="GuideEolUpdateFlowTask class, to_s, run, eol">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            GuideEolUpdateFlowTask
+            
+                <span class="parent">&lt;
+                    
+                    FlowTask
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/app/models/guide_eol_update_flow_task_rb.html">app/models/guide_eol_update_flow_task.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>encoding: utf-8</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-eol">eol</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-run">run</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-to_s">to_s</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-eol">
+            
+              <b>eol</b>()
+            
+            <a href="../classes/GuideEolUpdateFlowTask.html#method-i-eol" name="method-i-eol" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-eol_source')" id="l_method-i-eol_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-eol_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/guide_eol_update_flow_task.rb</span>
+<span class="line-num">22</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">eol</span>
+<span class="line-num">23</span>   <span class="ruby-ivar">@eol</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">EolService</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:timeout</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">30</span>, <span class="ruby-value">:debug</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">env</span>.<span class="ruby-identifier">development?</span>)
+<span class="line-num">24</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-run">
+            
+              <b>run</b>()
+            
+            <a href="../classes/GuideEolUpdateFlowTask.html#method-i-run" name="method-i-run" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-run_source')" id="l_method-i-run_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-run_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/guide_eol_update_flow_task.rb</span>
+<span class="line-num"> 8</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">run</span>
+<span class="line-num"> 9</span>   <span class="ruby-identifier">outputs</span>.<span class="ruby-identifier">each</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:destroy</span>)
+<span class="line-num">10</span>   <span class="ruby-identifier">guide_taxa</span> = <span class="ruby-identifier">inputs</span>.<span class="ruby-identifier">select</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">fti</span><span class="ruby-operator">|</span> <span class="ruby-identifier">fti</span>.<span class="ruby-identifier">resource</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">GuideTaxon</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">fti</span>.<span class="ruby-identifier">resource</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>}.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:resource</span>).<span class="ruby-identifier">sort_by</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">gt</span><span class="ruby-operator">|</span> <span class="ruby-identifier">gt</span>.<span class="ruby-identifier">position</span> <span class="ruby-operator">||</span> <span class="ruby-value">0</span>}
+<span class="line-num">11</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">guide_taxa</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">12</span>   <span class="ruby-identifier">guide</span> = <span class="ruby-identifier">guide_taxa</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">guide</span>
+<span class="line-num">13</span>   <span class="ruby-identifier">eol_collection</span> = <span class="ruby-keyword">if</span> <span class="ruby-identifier">guide</span>.<span class="ruby-identifier">source_url</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">collection_id</span> = <span class="ruby-identifier">guide</span>.<span class="ruby-identifier">source_url</span>[<span class="ruby-regexp">/\/(\d+)(\.\w+)?$/</span>, <span class="ruby-value">1</span>])
+<span class="line-num">14</span>     <span class="ruby-identifier">eol</span>.<span class="ruby-identifier">collections</span>(<span class="ruby-identifier">collection_id</span>, <span class="ruby-value">:per_page</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">guide</span>.<span class="ruby-identifier">guide_taxa</span>.<span class="ruby-identifier">count</span>)
+<span class="line-num">15</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">16</span>   <span class="ruby-identifier">guide_taxa</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">gt</span><span class="ruby-operator">|</span>
+<span class="line-num">17</span>     <span class="ruby-identifier">gt</span>.<span class="ruby-identifier">sync_eol</span>(<span class="ruby-identifier">options</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-value">:collection</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">eol_collection</span>, <span class="ruby-value">:eol</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">eol</span>))
+<span class="line-num">18</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">19</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">20</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-to_s">
+            
+              <b>to_s</b>()
+            
+            <a href="../classes/GuideEolUpdateFlowTask.html#method-i-to_s" name="method-i-to_s" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-to_s_source')" id="l_method-i-to_s_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-to_s_source" class="dyn-source">
+                <pre>  <span class="ruby-comment"># File app/models/guide_eol_update_flow_task.rb</span>
+<span class="line-num">4</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">to_s</span>
+<span class="line-num">5</span>   <span class="ruby-node">&quot;&lt;GuideEolUpdateFlowTask #{id}&gt;&quot;</span>
+<span class="line-num">6</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

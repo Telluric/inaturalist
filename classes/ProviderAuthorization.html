@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ProviderAuthorization</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["ProviderAuthorization"]'>
+
+
+    <meta property="og:title" value="ProviderAuthorization">
+
+  
+    
+    <meta name="description" content="would&#39;ve liked to call this simply Authorization, but that model name clashes with restful_authentication.">
+    <meta property="og:description" content="would&#39;ve liked to call this simply Authorization, but that model name clashes with restful_authentication.">
+  
+
+    <meta name="keywords" content="ProviderAuthorization class, to_s, uniqueness_of_authorization_per_user, provider, find_from_omniauth, create_photo_identity, create_sound_identity, update_photo_identities, destroy_photo_identity, destroy_sound_identity, assign_auth_info, update_with_auth_info, photo_source_name, refresh_access_token!">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            ProviderAuthorization
+            
+                <span class="parent">&lt;
+                    
+                    <a href="ApplicationRecord.html">ApplicationRecord</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/app/models/provider_authorization_rb.html">app/models/provider_authorization.rb</a></li>
+            
+            <li><a href="../files/lib/ambidextrous_rb.html">lib/ambidextrous.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>would&#39;ve liked to call this simply Authorization, but that model name clashes with restful_authentication</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-assign_auth_info">assign_auth_info</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-create_photo_identity">create_photo_identity</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-create_sound_identity">create_sound_identity</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-destroy_photo_identity">destroy_photo_identity</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-destroy_sound_identity">destroy_sound_identity</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-find_from_omniauth">find_from_omniauth</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-photo_source_name">photo_source_name</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-provider">provider</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-refresh_access_token-21">refresh_access_token!</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-to_s">to_s</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-uniqueness_of_authorization_per_user">uniqueness_of_authorization_per_user</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_photo_identities">update_photo_identities</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_with_auth_info">update_with_auth_info</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <h2 class="sectiontitle">Constants</h2>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">ALLOWED_SCOPES</td>
+            <td>=</td>
+            <td class="attr-value">%w(read write)</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">AUTH_URLS</td>
+            <td>=</td>
+            <td class="attr-value">PROVIDERS.inject({}) do |memo, provider|
+memo.update(provider =&gt; &quot;/auth/#{provider.downcase}&quot;)
+end</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">PROVIDERS</td>
+            <td>=</td>
+            <td class="attr-value">%w(facebook twitter flickr google_oauth2 yahoo soundcloud orcid apple)</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">PROVIDER_NAMES</td>
+            <td>=</td>
+            <td class="attr-value">PROVIDERS.inject({}) do |memo, provider|
+if provider == &quot;google_oauth2&quot;
+memo[provider] = &quot;Google&quot;
+elsif provider == &quot;soundcloud&quot;
+memo[provider] = &quot;SoundCloud&quot;
+elsif provider === &quot;orcid&quot;
+memo[provider] = &quot;ORCID&quot;
+else
+memo[provider] = provider.capitalize
+end
+memo
+end</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+      <!-- Section attributes -->
+      <h2 class="sectiontitle">Attributes</h2>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>auth_info</td>
+            <td class='attr-desc'><p>Hash that comes back from the provider through omniauth.  Should be set  after the callback gets fired, so in theory should only be available when  this record is created</p></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <h2 class="sectiontitle">Class Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-c-find_from_omniauth">
+            
+              <b>find_from_omniauth</b>(auth_info)
+            
+            <a href="../classes/ProviderAuthorization.html#method-c-find_from_omniauth" name="method-c-find_from_omniauth" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-find_from_omniauth_source')" id="l_method-c-find_from_omniauth_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-find_from_omniauth_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/provider_authorization.rb</span>
+<span class="line-num">67</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">find_from_omniauth</span>(<span class="ruby-identifier">auth_info</span>)
+<span class="line-num">68</span>   <span class="ruby-identifier">find_by_provider_name_and_provider_uid</span>(<span class="ruby-identifier">auth_info</span>[<span class="ruby-string">&#39;provider&#39;</span>], <span class="ruby-identifier">auth_info</span>[<span class="ruby-string">&#39;uid&#39;</span>].<span class="ruby-identifier">to_s</span>)
+<span class="line-num">69</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-assign_auth_info">
+            
+              <b>assign_auth_info</b>(auth_info)
+            
+            <a href="../classes/ProviderAuthorization.html#method-i-assign_auth_info" name="method-i-assign_auth_info" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-assign_auth_info_source')" id="l_method-i-assign_auth_info_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-assign_auth_info_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/provider_authorization.rb</span>
+<span class="line-num">132</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">assign_auth_info</span>(<span class="ruby-identifier">auth_info</span>)
+<span class="line-num">133</span>   <span class="ruby-ivar">@auth_info</span> = <span class="ruby-identifier">auth_info</span>
+<span class="line-num">134</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">provider_name</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">auth_info</span>[<span class="ruby-string">&#39;provider&#39;</span>]
+<span class="line-num">135</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">provider_uid</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">auth_info</span>[<span class="ruby-string">&#39;uid&#39;</span>]
+<span class="line-num">136</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">auth_info</span>[<span class="ruby-string">&quot;credentials&quot;</span>]
+<span class="line-num">137</span>     <span class="ruby-identifier">assign_attributes</span>(
+<span class="line-num">138</span>       <span class="ruby-value">token:</span> <span class="ruby-identifier">auth_info</span>[<span class="ruby-string">&quot;credentials&quot;</span>][<span class="ruby-string">&quot;token&quot;</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">auth_info</span>[<span class="ruby-string">&quot;credentials&quot;</span>][<span class="ruby-string">&quot;secret&quot;</span>], 
+<span class="line-num">139</span>       <span class="ruby-value">secret:</span> <span class="ruby-identifier">auth_info</span>[<span class="ruby-string">&quot;credentials&quot;</span>][<span class="ruby-string">&quot;secret&quot;</span>],
+<span class="line-num">140</span>       <span class="ruby-value">refresh_token:</span> <span class="ruby-identifier">auth_info</span>[<span class="ruby-string">&quot;credentials&quot;</span>][<span class="ruby-string">&quot;refresh_token&quot;</span>]
+<span class="line-num">141</span>     )
+<span class="line-num">142</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">143</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-create_photo_identity">
+            
+              <b>create_photo_identity</b>()
+            
+            <a href="../classes/ProviderAuthorization.html#method-i-create_photo_identity" name="method-i-create_photo_identity" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Try to create a photo identity if the auth provider has/is a photo  service</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-create_photo_identity_source')" id="l_method-i-create_photo_identity_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-create_photo_identity_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/provider_authorization.rb</span>
+<span class="line-num">73</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">create_photo_identity</span>
+<span class="line-num">74</span>   <span class="ruby-identifier">photo_identity</span> = <span class="ruby-keyword">case</span> <span class="ruby-identifier">provider_name</span>
+<span class="line-num">75</span>   <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;flickr&quot;</span>
+<span class="line-num">76</span>     <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">flickr_identity</span>
+<span class="line-num">77</span>     <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">auth_info</span>
+<span class="line-num">78</span>     
+<span class="line-num">79</span>     <span class="ruby-identifier">user</span>.<span class="ruby-identifier">create_flickr_identity</span>(
+<span class="line-num">80</span>       <span class="ruby-value">:flickr_user_id</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">provider_uid</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">auth_info</span>[<span class="ruby-string">&#39;uid&#39;</span>],
+<span class="line-num">81</span>       <span class="ruby-value">:flickr_username</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">auth_info</span>[<span class="ruby-string">&#39;name&#39;</span>],
+<span class="line-num">82</span>       <span class="ruby-value">:token</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">token</span>,
+<span class="line-num">83</span>       <span class="ruby-value">:secret</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">auth_info</span>[<span class="ruby-string">&#39;credentials&#39;</span>][<span class="ruby-string">&#39;secret&#39;</span>],
+<span class="line-num">84</span>       <span class="ruby-value">:token_created_at</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+<span class="line-num">85</span>     )
+<span class="line-num">86</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">87</span>     <span class="ruby-keyword">nil</span>
+<span class="line-num">88</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">89</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">photo_identity</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">photo_identity</span>.<span class="ruby-identifier">valid?</span>
+<span class="line-num">90</span>     <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;[ERROR #{Time.now}] Failed to save #{provider} &quot;</span> <span class="ruby-operator">+</span> 
+<span class="line-num">91</span>       <span class="ruby-string">&quot;photo identity after saving provider auth: &quot;</span> <span class="ruby-operator">+</span> 
+<span class="line-num">92</span>       <span class="ruby-identifier">photo_identity</span>.<span class="ruby-identifier">errors</span>.<span class="ruby-identifier">full_messages</span>.<span class="ruby-identifier">to_sentence</span>
+<span class="line-num">93</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">94</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">95</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-create_sound_identity">
+            
+              <b>create_sound_identity</b>()
+            
+            <a href="../classes/ProviderAuthorization.html#method-i-create_sound_identity" name="method-i-create_sound_identity" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-create_sound_identity_source')" id="l_method-i-create_sound_identity_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-create_sound_identity_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/provider_authorization.rb</span>
+<span class="line-num"> 97</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">create_sound_identity</span>
+<span class="line-num"> 98</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">provider_name</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;soundcloud&quot;</span>
+<span class="line-num"> 99</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">soundcloud_identity</span> <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">auth_info</span>
+<span class="line-num">100</span>   <span class="ruby-identifier">user</span>.<span class="ruby-identifier">create_soundcloud_identity</span>(
+<span class="line-num">101</span>     <span class="ruby-value">:native_username</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">auth_info</span>[<span class="ruby-string">&#39;info&#39;</span>][<span class="ruby-string">&#39;nickname&#39;</span>],
+<span class="line-num">102</span>     <span class="ruby-value">:native_realname</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">auth_info</span>[<span class="ruby-string">&#39;info&#39;</span>][<span class="ruby-string">&#39;name&#39;</span>]
+<span class="line-num">103</span>   )
+<span class="line-num">104</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-destroy_photo_identity">
+            
+              <b>destroy_photo_identity</b>()
+            
+            <a href="../classes/ProviderAuthorization.html#method-i-destroy_photo_identity" name="method-i-destroy_photo_identity" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-destroy_photo_identity_source')" id="l_method-i-destroy_photo_identity_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-destroy_photo_identity_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/provider_authorization.rb</span>
+<span class="line-num">118</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">destroy_photo_identity</span>
+<span class="line-num">119</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">provider_name</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;flickr&quot;</span>
+<span class="line-num">120</span>     <span class="ruby-identifier">user</span>.<span class="ruby-identifier">flickr_identity</span>.<span class="ruby-identifier">destroy</span>
+<span class="line-num">121</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">122</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">123</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-destroy_sound_identity">
+            
+              <b>destroy_sound_identity</b>()
+            
+            <a href="../classes/ProviderAuthorization.html#method-i-destroy_sound_identity" name="method-i-destroy_sound_identity" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-destroy_sound_identity_source')" id="l_method-i-destroy_sound_identity_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-destroy_sound_identity_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/provider_authorization.rb</span>
+<span class="line-num">125</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">destroy_sound_identity</span>
+<span class="line-num">126</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">provider_name</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;soundcloud&quot;</span>
+<span class="line-num">127</span>     <span class="ruby-identifier">user</span>.<span class="ruby-identifier">soundcloud_identity</span>.<span class="ruby-identifier">destroy</span>
+<span class="line-num">128</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">129</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">130</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-photo_source_name">
+            
+              <b>photo_source_name</b>()
+            
+            <a href="../classes/ProviderAuthorization.html#method-i-photo_source_name" name="method-i-photo_source_name" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-photo_source_name_source')" id="l_method-i-photo_source_name_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-photo_source_name_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/provider_authorization.rb</span>
+<span class="line-num">152</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">photo_source_name</span>
+<span class="line-num">153</span>   <span class="ruby-identifier">provider_name</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/google/</span> <span class="ruby-operator">?</span> <span class="ruby-string">&#39;picasa&#39;</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">provider_name</span>
+<span class="line-num">154</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-provider">
+            
+              <b>provider</b>()
+            
+            <a href="../classes/ProviderAuthorization.html#method-i-provider" name="method-i-provider" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-provider_source')" id="l_method-i-provider_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-provider_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/provider_authorization.rb</span>
+<span class="line-num">57</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">provider</span>
+<span class="line-num">58</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">provider_uid</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/google.com\/accounts/</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">provider_name</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/google/</span>
+<span class="line-num">59</span>     <span class="ruby-string">&#39;google&#39;</span>
+<span class="line-num">60</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">provider_uid</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/me.yahoo.com/</span>
+<span class="line-num">61</span>     <span class="ruby-string">&#39;yahoo&#39;</span>
+<span class="line-num">62</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">63</span>     <span class="ruby-identifier">provider_name</span>
+<span class="line-num">64</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">65</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-refresh_access_token-21">
+            
+              <b>refresh_access_token!</b>()
+            
+            <a href="../classes/ProviderAuthorization.html#method-i-refresh_access_token-21" name="method-i-refresh_access_token-21" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p><a href="http://stackoverflow.com/questions/12792326/how-do-i-refresh-my-google-oauth2-access-token-using-my-refresh-token">stackoverflow.com/questions/12792326/how-do-i-refresh-my-google-oauth2-access-token-using-my-refresh-token</a> <a href="http://stackoverflow.com/questions/17894192/how-do-i-get-back-a-refresh-token-for-rails-app-with-omniauth-google-oauth2">stackoverflow.com/questions/17894192/how-do-i-get-back-a-refresh-token-for-rails-app-with-omniauth-google-oauth2</a> <a href="http://stackoverflow.com/questions/3487991/why-does-oauth-v2-have-both-access-and-refresh-tokens">stackoverflow.com/questions/3487991/why-does-oauth-v2-have-both-access-and-refresh-tokens</a> <a href="https://developers.google.com/identity/protocols/OAuth2WebServer#refresh">developers.google.com/identity/protocols/OAuth2WebServer#refresh</a></p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-refresh_access_token-21_source')" id="l_method-i-refresh_access_token-21_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-refresh_access_token-21_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/provider_authorization.rb</span>
+<span class="line-num">160</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">refresh_access_token!</span>
+<span class="line-num">161</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">provider_name</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;google_oauth2&#39;</span> <span class="ruby-comment"># TODO implement for other providers</span>
+<span class="line-num">162</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">refresh_token</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">163</span>     <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;[ERROR #{Time.now}] Refresh token missing for #{self}&quot;</span>
+<span class="line-num">164</span>     <span class="ruby-keyword">return</span>
+<span class="line-num">165</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">166</span>   <span class="ruby-identifier">options</span> = {
+<span class="line-num">167</span>    <span class="ruby-value">body:</span> {
+<span class="line-num">168</span>      <span class="ruby-value">client_id:</span> <span class="ruby-constant">CONFIG</span>.<span class="ruby-identifier">google</span>.<span class="ruby-identifier">client_id</span>,
+<span class="line-num">169</span>      <span class="ruby-value">client_secret:</span> <span class="ruby-constant">CONFIG</span>.<span class="ruby-identifier">google</span>.<span class="ruby-identifier">secret</span>,
+<span class="line-num">170</span>      <span class="ruby-value">refresh_token:</span> <span class="ruby-identifier">refresh_token</span>,
+<span class="line-num">171</span>      <span class="ruby-value">grant_type:</span> <span class="ruby-string">&#39;refresh_token&#39;</span>
+<span class="line-num">172</span>    },
+<span class="line-num">173</span>    <span class="ruby-value">headers:</span> {
+<span class="line-num">174</span>      <span class="ruby-string">&#39;Content-Type&#39;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&#39;application/x-www-form-urlencoded&#39;</span>
+<span class="line-num">175</span>    }
+<span class="line-num">176</span>   }
+<span class="line-num">177</span>   <span class="ruby-identifier">response</span> = <span class="ruby-constant">HTTParty</span>.<span class="ruby-identifier">post</span>(<span class="ruby-string">&#39;https://accounts.google.com/o/oauth2/token&#39;</span>, <span class="ruby-identifier">options</span>)
+<span class="line-num">178</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">code</span> <span class="ruby-operator">==</span> <span class="ruby-value">200</span>
+<span class="line-num">179</span>     <span class="ruby-identifier">update_attribute</span>(<span class="ruby-value">:token</span>, <span class="ruby-identifier">response</span>.<span class="ruby-identifier">parsed_response</span>[<span class="ruby-string">&#39;access_token&#39;</span>])
+<span class="line-num">180</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">181</span>    <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span> <span class="ruby-node">&quot;[DEBUG] Failed to refresh access token, #{response.body}&quot;</span>
+<span class="line-num">182</span>    <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;Failed to refresh access token&quot;</span>
+<span class="line-num">183</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">184</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-to_s">
+            
+              <b>to_s</b>()
+            
+            <a href="../classes/ProviderAuthorization.html#method-i-to_s" name="method-i-to_s" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-to_s_source')" id="l_method-i-to_s_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-to_s_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/provider_authorization.rb</span>
+<span class="line-num">34</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">to_s</span>
+<span class="line-num">35</span>   <span class="ruby-node">&quot;&lt;ProviderAuthorization #{id} user_id: #{user_id} provider_name: #{provider_name}&gt;&quot;</span>
+<span class="line-num">36</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-uniqueness_of_authorization_per_user">
+            
+              <b>uniqueness_of_authorization_per_user</b>()
+            
+            <a href="../classes/ProviderAuthorization.html#method-i-uniqueness_of_authorization_per_user" name="method-i-uniqueness_of_authorization_per_user" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-uniqueness_of_authorization_per_user_source')" id="l_method-i-uniqueness_of_authorization_per_user_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-uniqueness_of_authorization_per_user_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/provider_authorization.rb</span>
+<span class="line-num">38</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">uniqueness_of_authorization_per_user</span>
+<span class="line-num">39</span>   <span class="ruby-identifier">existing_scope</span> = <span class="ruby-keyword">if</span> <span class="ruby-identifier">provider_uid</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/google.com\/accounts/</span>
+<span class="line-num">40</span>     <span class="ruby-constant">ProviderAuthorization</span>.
+<span class="line-num">41</span>       <span class="ruby-identifier">where</span>(<span class="ruby-value">:provider_name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&#39;openid&#39;</span>).
+<span class="line-num">42</span>       <span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;provider_uid LIKE &#39;https://www.google.com/accounts%&#39;&quot;</span>)
+<span class="line-num">43</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">provider_uid</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/me.yahoo.com/</span>
+<span class="line-num">44</span>     <span class="ruby-constant">ProviderAuthorization</span>.
+<span class="line-num">45</span>       <span class="ruby-identifier">where</span>(<span class="ruby-value">:provider_name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&#39;openid&#39;</span>).
+<span class="line-num">46</span>       <span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;provider_uid LIKE &#39;https://me.yahoo.com%&#39;&quot;</span>)
+<span class="line-num">47</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">48</span>     <span class="ruby-constant">ProviderAuthorization</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:provider_name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">provider_name</span>)
+<span class="line-num">49</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">50</span>   <span class="ruby-identifier">existing_scope</span> = <span class="ruby-identifier">existing_scope</span>.<span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;id != ?&quot;</span>, <span class="ruby-identifier">id</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">id</span>
+<span class="line-num">51</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">existing_scope</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:user_id</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">user_id</span>).<span class="ruby-identifier">exists?</span>
+<span class="line-num">52</span>     <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">add</span>(<span class="ruby-value">:user_id</span>, <span class="ruby-node">&quot;has already linked an account with #{provider}&quot;</span>)
+<span class="line-num">53</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">54</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">55</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-update_photo_identities">
+            
+              <b>update_photo_identities</b>()
+            
+            <a href="../classes/ProviderAuthorization.html#method-i-update_photo_identities" name="method-i-update_photo_identities" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>right now this only needs to happen for flickr</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-update_photo_identities_source')" id="l_method-i-update_photo_identities_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-update_photo_identities_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/provider_authorization.rb</span>
+<span class="line-num">107</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">update_photo_identities</span>
+<span class="line-num">108</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">token</span>
+<span class="line-num">109</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">provider_name</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;flickr&quot;</span>
+<span class="line-num">110</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">fi</span> = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">flickr_identity</span>
+<span class="line-num">111</span>   <span class="ruby-identifier">fi</span>.<span class="ruby-identifier">token</span> = <span class="ruby-identifier">token</span>
+<span class="line-num">112</span>   <span class="ruby-identifier">secret</span> = <span class="ruby-identifier">auth_info</span>.<span class="ruby-identifier">try</span>(<span class="ruby-value">:[]</span>, <span class="ruby-string">&#39;credentials&#39;</span>).<span class="ruby-identifier">try</span>(<span class="ruby-value">:[]</span>, <span class="ruby-string">&#39;secret&#39;</span>)
+<span class="line-num">113</span>   <span class="ruby-identifier">fi</span>.<span class="ruby-identifier">secret</span> = <span class="ruby-identifier">secret</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">secret</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">114</span>   <span class="ruby-identifier">fi</span>.<span class="ruby-identifier">save</span>
+<span class="line-num">115</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">116</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-update_with_auth_info">
+            
+              <b>update_with_auth_info</b>(auth_info)
+            
+            <a href="../classes/ProviderAuthorization.html#method-i-update_with_auth_info" name="method-i-update_with_auth_info" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-update_with_auth_info_source')" id="l_method-i-update_with_auth_info_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-update_with_auth_info_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/provider_authorization.rb</span>
+<span class="line-num">145</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">update_with_auth_info</span>(<span class="ruby-identifier">auth_info</span>)
+<span class="line-num">146</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">auth_info</span>[<span class="ruby-string">&quot;credentials&quot;</span>] <span class="ruby-comment"># open_id (google, yahoo, etc) doesn&#39;t provide a token</span>
+<span class="line-num">147</span>   <span class="ruby-identifier">assign_auth_info</span>(<span class="ruby-identifier">auth_info</span>)
+<span class="line-num">148</span>   <span class="ruby-identifier">save</span>
+<span class="line-num">149</span>   <span class="ruby-identifier">update_photo_identities</span>
+<span class="line-num">150</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

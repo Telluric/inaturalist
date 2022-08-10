@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>GoogleStreetViewPhoto</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["GoogleStreetViewPhoto"]'>
+
+
+    <meta property="og:title" value="GoogleStreetViewPhoto">
+
+  
+
+    <meta name="keywords" content="GoogleStreetViewPhoto class, attribution, editable_by?, set_license, repair, get_api_response, new_from_api_response">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            GoogleStreetViewPhoto
+            
+                <span class="parent">&lt;
+                    
+                    <a href="Photo.html">Photo</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/app/models/google_street_view_photo_rb.html">app/models/google_street_view_photo.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-attribution">attribution</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-editable_by-3F">editable_by?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-get_api_response">get_api_response</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new_from_api_response">new_from_api_response</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-repair">repair</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-set_license">set_license</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <h2 class="sectiontitle">Class Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-c-get_api_response">
+            
+              <b>get_api_response</b>(native_photo_id, options = {})
+            
+            <a href="../classes/GoogleStreetViewPhoto.html#method-c-get_api_response" name="method-c-get_api_response" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-get_api_response_source')" id="l_method-c-get_api_response_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-get_api_response_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/google_street_view_photo.rb</span>
+<span class="line-num">31</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">get_api_response</span>(<span class="ruby-identifier">native_photo_id</span>, <span class="ruby-identifier">options</span> = {})
+<span class="line-num">32</span>   <span class="ruby-identifier">q</span> = <span class="ruby-identifier">native_photo_id</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;?&#39;</span>).<span class="ruby-identifier">last</span>
+<span class="line-num">33</span>   <span class="ruby-constant">Rack</span><span class="ruby-operator">::</span><span class="ruby-constant">Utils</span>.<span class="ruby-identifier">parse_nested_query</span>(<span class="ruby-identifier">q</span>).<span class="ruby-identifier">symbolize_keys</span>
+<span class="line-num">34</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-new_from_api_response">
+            
+              <b>new_from_api_response</b>(api_response, options = {})
+            
+            <a href="../classes/GoogleStreetViewPhoto.html#method-c-new_from_api_response" name="method-c-new_from_api_response" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-new_from_api_response_source')" id="l_method-c-new_from_api_response_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-new_from_api_response_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/google_street_view_photo.rb</span>
+<span class="line-num">36</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">new_from_api_response</span>(<span class="ruby-identifier">api_response</span>, <span class="ruby-identifier">options</span> = {})
+<span class="line-num">37</span>   <span class="ruby-identifier">base</span> = <span class="ruby-string">&quot;http://maps.googleapis.com/maps/api/streetview?&quot;</span>
+<span class="line-num">38</span>   <span class="ruby-identifier">params</span> = <span class="ruby-identifier">api_response</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-value">:sensor</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">false</span>)
+<span class="line-num">39</span>   <span class="ruby-identifier">w</span>,<span class="ruby-identifier">h</span> = (<span class="ruby-identifier">api_response</span>[<span class="ruby-value">:size</span>] <span class="ruby-operator">||</span> <span class="ruby-string">&quot;1x1&quot;</span>).<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;x&#39;</span>).<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:to_f</span>)
+<span class="line-num">40</span>   <span class="ruby-identifier">r</span> = <span class="ruby-identifier">h</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">w</span> <span class="ruby-keyword">rescue</span> <span class="ruby-value">1</span>
+<span class="line-num">41</span>   <span class="ruby-identifier">r</span> = <span class="ruby-value">1</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">r</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">r</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0</span>
+<span class="line-num">42</span>   <span class="ruby-identifier">z</span> = (<span class="ruby-value">2</span> <span class="ruby-operator">-</span> (<span class="ruby-value">2</span> <span class="ruby-operator">*</span> (<span class="ruby-identifier">params</span>[<span class="ruby-value">:fov</span>] <span class="ruby-operator">||</span> <span class="ruby-value">90</span>).<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-value">180.0</span>)).<span class="ruby-identifier">floor</span>
+<span class="line-num">43</span>   <span class="ruby-identifier">options</span>.<span class="ruby-identifier">update</span>(
+<span class="line-num">44</span>     <span class="ruby-value">:thumb_url</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-node">&quot;#{base}#{params.merge(:size =&gt; &quot;75x#{(75*r).to_i}&quot;).map{|k,v| &quot;#{k}=#{v}&quot;}.join(&#39;&amp;&#39;)}&quot;</span>,
+<span class="line-num">45</span>     <span class="ruby-value">:square_url</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-node">&quot;#{base}#{params.merge(:size =&gt; &quot;100x100&quot;).map{|k,v| &quot;#{k}=#{v}&quot;}.join(&#39;&amp;&#39;)}&quot;</span>,
+<span class="line-num">46</span>     <span class="ruby-value">:small_url</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-node">&quot;#{base}#{params.merge(:size =&gt; &quot;240x#{(240*r).to_i}&quot;).map{|k,v| &quot;#{k}=#{v}&quot;}.join(&#39;&amp;&#39;)}&quot;</span>,
+<span class="line-num">47</span>     <span class="ruby-value">:medium_url</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-node">&quot;#{base}#{params.merge(:size =&gt; &quot;500x#{(500*r).to_i}&quot;).map{|k,v| &quot;#{k}=#{v}&quot;}.join(&#39;&amp;&#39;)}&quot;</span>,
+<span class="line-num">48</span>     <span class="ruby-value">:large_url</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-node">&quot;#{base}#{params.merge(:size =&gt; &quot;640x#{(640*r).to_i}&quot;).map{|k,v| &quot;#{k}=#{v}&quot;}.join(&#39;&amp;&#39;)}&quot;</span>,
+<span class="line-num">49</span>     <span class="ruby-value">:original_url</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-node">&quot;#{base}#{params.map{|k,v| &quot;#{k}=#{v}&quot;}.join(&#39;&amp;&#39;)}&quot;</span>,
+<span class="line-num">50</span>     <span class="ruby-value">:native_realname</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Google&quot;</span>,
+<span class="line-num">51</span>     <span class="ruby-value">:native_page_url</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-node">&quot;https://maps.google.com/?ll=#{params[:location]}&amp;layer=c&amp;cbll=#{params[:location]}&amp;cbp=12,#{params[:heading]},,#{z},#{params[:pitch].to_f * -1}&quot;</span>,
+<span class="line-num">52</span>     <span class="ruby-value">:license</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-constant">Photo</span><span class="ruby-operator">::</span><span class="ruby-constant">COPYRIGHT</span>
+<span class="line-num">53</span>   )
+<span class="line-num">54</span>   <span class="ruby-identifier">options</span>[<span class="ruby-value">:native_photo_id</span>] <span class="ruby-operator">||=</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:original_url</span>]
+<span class="line-num">55</span>   <span class="ruby-constant">GoogleStreetViewPhoto</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">options</span>)
+<span class="line-num">56</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-attribution">
+            
+              <b>attribution</b>()
+            
+            <a href="../classes/GoogleStreetViewPhoto.html#method-i-attribution" name="method-i-attribution" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-attribution_source')" id="l_method-i-attribution_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-attribution_source" class="dyn-source">
+                <pre>  <span class="ruby-comment"># File app/models/google_street_view_photo.rb</span>
+<span class="line-num">4</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">attribution</span>
+<span class="line-num">5</span>   <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">&#39;copyright.all_rights_reserved&#39;</span>, <span class="ruby-value">:name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Google&quot;</span>)
+<span class="line-num">6</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-editable_by-3F">
+            
+              <b>editable_by?</b>(user)
+            
+            <a href="../classes/GoogleStreetViewPhoto.html#method-i-editable_by-3F" name="method-i-editable_by-3F" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-editable_by-3F_source')" id="l_method-i-editable_by-3F_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-editable_by-3F_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/google_street_view_photo.rb</span>
+<span class="line-num"> 8</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">editable_by?</span>(<span class="ruby-identifier">user</span>)
+<span class="line-num"> 9</span>   <span class="ruby-keyword">false</span>
+<span class="line-num">10</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-repair">
+            
+              <b>repair</b>( options = {} )
+            
+            <a href="../classes/GoogleStreetViewPhoto.html#method-i-repair" name="method-i-repair" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-repair_source')" id="l_method-i-repair_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-repair_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/google_street_view_photo.rb</span>
+<span class="line-num">17</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">repair</span>( <span class="ruby-identifier">options</span> = {} )
+<span class="line-num">18</span>   <span class="ruby-identifier">repair_photo</span> = <span class="ruby-constant">GoogleStreetViewPhoto</span>.<span class="ruby-identifier">new_from_api_response</span>( <span class="ruby-constant">GoogleStreetViewPhoto</span>.<span class="ruby-identifier">get_api_response</span>( <span class="ruby-identifier">native_photo_id</span> ) )
+<span class="line-num">19</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">thumb_url</span> = <span class="ruby-identifier">repair_photo</span>.<span class="ruby-identifier">thumb_url</span>,
+<span class="line-num">20</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">square_url</span> = <span class="ruby-identifier">repair_photo</span>.<span class="ruby-identifier">square_url</span>,
+<span class="line-num">21</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">small_url</span> = <span class="ruby-identifier">repair_photo</span>.<span class="ruby-identifier">small_url</span>,
+<span class="line-num">22</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">medium_url</span> = <span class="ruby-identifier">repair_photo</span>.<span class="ruby-identifier">medium_url</span>,
+<span class="line-num">23</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">large_url</span> = <span class="ruby-identifier">repair_photo</span>.<span class="ruby-identifier">large_url</span>,
+<span class="line-num">24</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">original_url</span> = <span class="ruby-identifier">repair_photo</span>.<span class="ruby-identifier">original_url</span>,
+<span class="line-num">25</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">native_realname</span> = <span class="ruby-identifier">repair_photo</span>.<span class="ruby-identifier">native_realname</span>,
+<span class="line-num">26</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">native_page_url</span> = <span class="ruby-identifier">repair_photo</span>.<span class="ruby-identifier">native_page_url</span>
+<span class="line-num">27</span>   <span class="ruby-identifier">save</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:no_save</span>]
+<span class="line-num">28</span>   [<span class="ruby-keyword">self</span>, {}]
+<span class="line-num">29</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-set_license">
+            
+              <b>set_license</b>()
+            
+            <a href="../classes/GoogleStreetViewPhoto.html#method-i-set_license" name="method-i-set_license" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-set_license_source')" id="l_method-i-set_license_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-set_license_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/google_street_view_photo.rb</span>
+<span class="line-num">12</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">set_license</span>
+<span class="line-num">13</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">license</span> = <span class="ruby-constant">Photo</span><span class="ruby-operator">::</span><span class="ruby-constant">COPYRIGHT</span>
+<span class="line-num">14</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">15</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

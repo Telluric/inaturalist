@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>INatAPIService</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["INatAPIService"]'>
+
+
+    <meta property="og:title" value="INatAPIService">
+
+  
+    
+    <meta name="description" content="encoding: utf-8.">
+    <meta property="og:description" content="encoding: utf-8.">
+  
+
+    <meta name="keywords" content="INatAPIService class, geoip_lookup, identifications, identifications_categories, observations, observations_observers, observations_species_counts, observations_popular_field_values, projects, project, taxa, get_json, get">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Module</span>
+            INatAPIService
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/lib/inat_api_service_rb.html">lib/inat_api_service.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>encoding: utf-8</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-geoip_lookup">geoip_lookup</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-get">get</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-get_json">get_json</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-identifications">identifications</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-identifications_categories">identifications_categories</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-observations">observations</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-observations_observers">observations_observers</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-observations_popular_field_values">observations_popular_field_values</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-observations_species_counts">observations_species_counts</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-project">project</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-projects">projects</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-taxa">taxa</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <h2 class="sectiontitle">Constants</h2>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">ENDPOINT</td>
+            <td>=</td>
+            <td class="attr-value">CONFIG.node_api_url</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">TIMEOUT</td>
+            <td>=</td>
+            <td class="attr-value">8</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <h2 class="sectiontitle">Class Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-c-geoip_lookup">
+            
+              <b>geoip_lookup</b>(params={}, options = {})
+            
+            <a href="../classes/INatAPIService.html#method-c-geoip_lookup" name="method-c-geoip_lookup" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-geoip_lookup_source')" id="l_method-c-geoip_lookup_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-geoip_lookup_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/inat_api_service.rb</span>
+<span class="line-num"> 7</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">geoip_lookup</span>(<span class="ruby-identifier">params</span>={}, <span class="ruby-identifier">options</span> = {})
+<span class="line-num"> 8</span>   <span class="ruby-identifier">options</span>[<span class="ruby-value">:authorization</span>] <span class="ruby-operator">||=</span> <span class="ruby-constant">JsonWebToken</span>.<span class="ruby-identifier">applicationToken</span>
+<span class="line-num"> 9</span>   <span class="ruby-keyword">return</span> <span class="ruby-constant">INatAPIService</span>.<span class="ruby-identifier">get</span>(<span class="ruby-string">&quot;/geoip_lookup&quot;</span>, <span class="ruby-identifier">params</span>, <span class="ruby-identifier">options</span>)
+<span class="line-num">10</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-get">
+            
+              <b>get</b>( path, params = {}, options = {} )
+            
+            <a href="../classes/INatAPIService.html#method-c-get" name="method-c-get" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-get_source')" id="l_method-c-get_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-get_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/inat_api_service.rb</span>
+<span class="line-num"> 96</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">get</span>( <span class="ruby-identifier">path</span>, <span class="ruby-identifier">params</span> = {}, <span class="ruby-identifier">options</span> = {} )
+<span class="line-num"> 97</span>   <span class="ruby-identifier">json</span> = <span class="ruby-identifier">get_json</span>( <span class="ruby-identifier">path</span>, <span class="ruby-identifier">params</span>, <span class="ruby-identifier">options</span> )
+<span class="line-num"> 98</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">json</span>
+<span class="line-num"> 99</span>   <span class="ruby-identifier">parsed_json</span> = <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>( <span class="ruby-identifier">json</span> ) <span class="ruby-operator">||</span> { }
+<span class="line-num">100</span>   <span class="ruby-keyword">return</span> <span class="ruby-identifier">parsed_json</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:json</span>]
+<span class="line-num">101</span>   <span class="ruby-constant">OpenStruct</span>.<span class="ruby-identifier">new_recursive</span>( <span class="ruby-identifier">parsed_json</span> )
+<span class="line-num">102</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-get_json">
+            
+              <b>get_json</b>( path, params = {}, options = {} )
+            
+            <a href="../classes/INatAPIService.html#method-c-get_json" name="method-c-get_json" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-get_json_source')" id="l_method-c-get_json_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-get_json_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/inat_api_service.rb</span>
+<span class="line-num">48</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">get_json</span>( <span class="ruby-identifier">path</span>, <span class="ruby-identifier">params</span> = {}, <span class="ruby-identifier">options</span> = {} )
+<span class="line-num">49</span>   <span class="ruby-identifier">options</span>[<span class="ruby-value">:retries</span>] <span class="ruby-operator">||=</span> <span class="ruby-value">3</span>
+<span class="line-num">50</span>   <span class="ruby-identifier">options</span>[<span class="ruby-value">:timeout</span>] <span class="ruby-operator">||=</span> <span class="ruby-constant">INatAPIService</span><span class="ruby-operator">::</span><span class="ruby-constant">TIMEOUT</span>
+<span class="line-num">51</span>   <span class="ruby-identifier">options</span>[<span class="ruby-value">:retry_delay</span>] <span class="ruby-operator">||=</span> <span class="ruby-value">0.1</span>
+<span class="line-num">52</span>   <span class="ruby-identifier">endpoint</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:endpoint</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">INatAPIService</span><span class="ruby-operator">::</span><span class="ruby-constant">ENDPOINT</span>
+<span class="line-num">53</span>   <span class="ruby-identifier">url</span> = <span class="ruby-identifier">endpoint</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">path</span>
+<span class="line-num">54</span>   <span class="ruby-identifier">headers</span> = {}
+<span class="line-num">55</span>   <span class="ruby-identifier">auth_user</span> = <span class="ruby-identifier">params</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:authenticate</span>)
+<span class="line-num">56</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">auth_user</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">auth_user</span>.<span class="ruby-identifier">is_a?</span>( <span class="ruby-constant">User</span> )
+<span class="line-num">57</span>     <span class="ruby-identifier">headers</span>[<span class="ruby-string">&quot;Authorization&quot;</span>] = <span class="ruby-identifier">auth_user</span>.<span class="ruby-identifier">api_token</span>
+<span class="line-num">58</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">59</span>   <span class="ruby-identifier">authorization</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:authorization</span>)
+<span class="line-num">60</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">authorization</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">headers</span>[<span class="ruby-string">&quot;Authorization&quot;</span>]
+<span class="line-num">61</span>     <span class="ruby-identifier">headers</span>[<span class="ruby-string">&quot;Authorization&quot;</span>] = <span class="ruby-identifier">authorization</span>
+<span class="line-num">62</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">63</span>   <span class="ruby-keyword">begin</span>
+<span class="line-num">64</span>     <span class="ruby-identifier">uri</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">url</span>)
+<span class="line-num">65</span>   <span class="ruby-keyword">rescue</span> <span class="ruby-constant">URI</span><span class="ruby-operator">::</span><span class="ruby-constant">InvalidURIError</span>
+<span class="line-num">66</span>     <span class="ruby-identifier">uri</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-constant">URI</span>.<span class="ruby-identifier">escape</span>(<span class="ruby-identifier">url</span>))
+<span class="line-num">67</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">68</span>   <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">params</span>.<span class="ruby-identifier">blank?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+<span class="line-num">69</span>     <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">query</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">encode_www_form</span>( <span class="ruby-constant">Hash</span>[<span class="ruby-constant">URI</span>.<span class="ruby-identifier">decode_www_form</span>( <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">query</span> <span class="ruby-operator">||</span> <span class="ruby-string">&quot;&quot;</span> )].<span class="ruby-identifier">merge</span>( <span class="ruby-identifier">params</span> ) )
+<span class="line-num">70</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">71</span>   <span class="ruby-keyword">begin</span>
+<span class="line-num">72</span>     <span class="ruby-identifier">timed_out</span> = <span class="ruby-constant">Timeout</span><span class="ruby-operator">::</span><span class="ruby-identifier">timeout</span>( <span class="ruby-identifier">options</span>[<span class="ruby-value">:timeout</span>] ) <span class="ruby-keyword">do</span>
+<span class="line-num">73</span>       <span class="ruby-identifier">http</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">uri</span>.<span class="ruby-identifier">host</span>, <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">port</span>)
+<span class="line-num">74</span>       <span class="ruby-identifier">http</span>.<span class="ruby-identifier">use_ssl</span> = <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">scheme</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;https&quot;</span>
+<span class="line-num">75</span>       <span class="ruby-comment"># http.verify_mode = OpenSSL::SSL::VERIFY_NONE</span>
+<span class="line-num">76</span>       <span class="ruby-identifier">response</span> = <span class="ruby-identifier">http</span>.<span class="ruby-identifier">get</span>( <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">request_uri</span>, <span class="ruby-identifier">headers</span> )
+<span class="line-num">77</span>       <span class="ruby-keyword">if</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">code</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;200&quot;</span>
+<span class="line-num">78</span>         <span class="ruby-keyword">return</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">force_encoding</span>( <span class="ruby-string">&quot;utf-8&quot;</span> )
+<span class="line-num">79</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">80</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">81</span>   <span class="ruby-keyword">rescue</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">e</span>
+<span class="line-num">82</span>     <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span> <span class="ruby-node">&quot;[DEBUG] INatAPIService.get_json(#{path}, #{params}, #{options[:retries]}) failed: #{e}&quot;</span>
+<span class="line-num">83</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">84</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:retries</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Integer</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:retries</span>] <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+<span class="line-num">85</span>     <span class="ruby-identifier">retry_options</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">dup</span>
+<span class="line-num">86</span>     <span class="ruby-identifier">retry_options</span>[<span class="ruby-value">:retries</span>] <span class="ruby-operator">-=</span> <span class="ruby-value">1</span>
+<span class="line-num">87</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:retry_delay</span>]
+<span class="line-num">88</span>       <span class="ruby-comment"># delay a bit before retrying</span>
+<span class="line-num">89</span>       <span class="ruby-identifier">sleep</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:retry_delay</span>]
+<span class="line-num">90</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">91</span>     <span class="ruby-keyword">return</span> <span class="ruby-constant">INatAPIService</span>.<span class="ruby-identifier">get_json</span>( <span class="ruby-identifier">path</span>, <span class="ruby-identifier">params</span>, <span class="ruby-identifier">retry_options</span> )
+<span class="line-num">92</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">93</span>   <span class="ruby-keyword">false</span>
+<span class="line-num">94</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-identifications">
+            
+              <b>identifications</b>(params={}, options = {})
+            
+            <a href="../classes/INatAPIService.html#method-c-identifications" name="method-c-identifications" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-identifications_source')" id="l_method-c-identifications_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-identifications_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/inat_api_service.rb</span>
+<span class="line-num">12</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">identifications</span>(<span class="ruby-identifier">params</span>={}, <span class="ruby-identifier">options</span> = {})
+<span class="line-num">13</span>   <span class="ruby-keyword">return</span> <span class="ruby-constant">INatAPIService</span>.<span class="ruby-identifier">get</span>(<span class="ruby-string">&quot;/identifications&quot;</span>, <span class="ruby-identifier">params</span>, <span class="ruby-identifier">options</span>)
+<span class="line-num">14</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-identifications_categories">
+            
+              <b>identifications_categories</b>(params={}, options = {})
+            
+            <a href="../classes/INatAPIService.html#method-c-identifications_categories" name="method-c-identifications_categories" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-identifications_categories_source')" id="l_method-c-identifications_categories_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-identifications_categories_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/inat_api_service.rb</span>
+<span class="line-num">16</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">identifications_categories</span>(<span class="ruby-identifier">params</span>={}, <span class="ruby-identifier">options</span> = {})
+<span class="line-num">17</span>   <span class="ruby-keyword">return</span> <span class="ruby-constant">INatAPIService</span>.<span class="ruby-identifier">get</span>(<span class="ruby-string">&quot;/identifications/categories&quot;</span>, <span class="ruby-identifier">params</span>, <span class="ruby-identifier">options</span>)
+<span class="line-num">18</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-observations">
+            
+              <b>observations</b>(params={}, options = {})
+            
+            <a href="../classes/INatAPIService.html#method-c-observations" name="method-c-observations" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-observations_source')" id="l_method-c-observations_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-observations_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/inat_api_service.rb</span>
+<span class="line-num">20</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">observations</span>(<span class="ruby-identifier">params</span>={}, <span class="ruby-identifier">options</span> = {})
+<span class="line-num">21</span>   <span class="ruby-keyword">return</span> <span class="ruby-constant">INatAPIService</span>.<span class="ruby-identifier">get</span>(<span class="ruby-string">&quot;/observations&quot;</span>, <span class="ruby-identifier">params</span>, <span class="ruby-identifier">options</span>)
+<span class="line-num">22</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-observations_observers">
+            
+              <b>observations_observers</b>(params={}, options = {})
+            
+            <a href="../classes/INatAPIService.html#method-c-observations_observers" name="method-c-observations_observers" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-observations_observers_source')" id="l_method-c-observations_observers_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-observations_observers_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/inat_api_service.rb</span>
+<span class="line-num">24</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">observations_observers</span>(<span class="ruby-identifier">params</span>={}, <span class="ruby-identifier">options</span> = {})
+<span class="line-num">25</span>   <span class="ruby-keyword">return</span> <span class="ruby-constant">INatAPIService</span>.<span class="ruby-identifier">get</span>(<span class="ruby-string">&quot;/observations/observers&quot;</span>, <span class="ruby-identifier">params</span>, <span class="ruby-identifier">options</span>)
+<span class="line-num">26</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-observations_popular_field_values">
+            
+              <b>observations_popular_field_values</b>(params={}, options = {})
+            
+            <a href="../classes/INatAPIService.html#method-c-observations_popular_field_values" name="method-c-observations_popular_field_values" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-observations_popular_field_values_source')" id="l_method-c-observations_popular_field_values_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-observations_popular_field_values_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/inat_api_service.rb</span>
+<span class="line-num">32</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">observations_popular_field_values</span>(<span class="ruby-identifier">params</span>={}, <span class="ruby-identifier">options</span> = {})
+<span class="line-num">33</span>   <span class="ruby-keyword">return</span> <span class="ruby-constant">INatAPIService</span>.<span class="ruby-identifier">get</span>(<span class="ruby-string">&quot;/observations/popular_field_values&quot;</span>, <span class="ruby-identifier">params</span>, <span class="ruby-identifier">options</span>)
+<span class="line-num">34</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-observations_species_counts">
+            
+              <b>observations_species_counts</b>(params={}, options = {})
+            
+            <a href="../classes/INatAPIService.html#method-c-observations_species_counts" name="method-c-observations_species_counts" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-observations_species_counts_source')" id="l_method-c-observations_species_counts_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-observations_species_counts_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/inat_api_service.rb</span>
+<span class="line-num">28</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">observations_species_counts</span>(<span class="ruby-identifier">params</span>={}, <span class="ruby-identifier">options</span> = {})
+<span class="line-num">29</span>   <span class="ruby-keyword">return</span> <span class="ruby-constant">INatAPIService</span>.<span class="ruby-identifier">get</span>(<span class="ruby-string">&quot;/observations/species_counts&quot;</span>, <span class="ruby-identifier">params</span>, <span class="ruby-identifier">options</span>)
+<span class="line-num">30</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-project">
+            
+              <b>project</b>(id, params={}, options = {})
+            
+            <a href="../classes/INatAPIService.html#method-c-project" name="method-c-project" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-project_source')" id="l_method-c-project_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-project_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/inat_api_service.rb</span>
+<span class="line-num">40</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">project</span>(<span class="ruby-identifier">id</span>, <span class="ruby-identifier">params</span>={}, <span class="ruby-identifier">options</span> = {})
+<span class="line-num">41</span>   <span class="ruby-keyword">return</span> <span class="ruby-constant">INatAPIService</span>.<span class="ruby-identifier">get</span>(<span class="ruby-node">&quot;/projects/#{id}&quot;</span>, <span class="ruby-identifier">params</span>, <span class="ruby-identifier">options</span>)
+<span class="line-num">42</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-projects">
+            
+              <b>projects</b>(params={}, options = {})
+            
+            <a href="../classes/INatAPIService.html#method-c-projects" name="method-c-projects" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-projects_source')" id="l_method-c-projects_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-projects_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/inat_api_service.rb</span>
+<span class="line-num">36</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">projects</span>(<span class="ruby-identifier">params</span>={}, <span class="ruby-identifier">options</span> = {})
+<span class="line-num">37</span>   <span class="ruby-keyword">return</span> <span class="ruby-constant">INatAPIService</span>.<span class="ruby-identifier">get</span>(<span class="ruby-string">&quot;/projects&quot;</span>, <span class="ruby-identifier">params</span>, <span class="ruby-identifier">options</span>)
+<span class="line-num">38</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-taxa">
+            
+              <b>taxa</b>(params={}, options={})
+            
+            <a href="../classes/INatAPIService.html#method-c-taxa" name="method-c-taxa" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-taxa_source')" id="l_method-c-taxa_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-taxa_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/inat_api_service.rb</span>
+<span class="line-num">44</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">taxa</span>(<span class="ruby-identifier">params</span>={}, <span class="ruby-identifier">options</span>={})
+<span class="line-num">45</span>   <span class="ruby-keyword">return</span> <span class="ruby-constant">INatAPIService</span>.<span class="ruby-identifier">get</span>(<span class="ruby-string">&quot;/taxa&quot;</span>, <span class="ruby-identifier">params</span>, <span class="ruby-identifier">options</span>)
+<span class="line-num">46</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

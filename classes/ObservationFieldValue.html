@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ObservationFieldValue</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["ObservationFieldValue"]'>
+
+
+    <meta property="og:title" value="ObservationFieldValue">
+
+  
+
+    <meta name="keywords" content="ObservationFieldValue class, to_s, taxon, taxon=, strip_value, set_user, validate_observation_field_datatype, validate_observation_field_allowed_values, observer_prefers_fields_by_user, update_observation_field_counts, index_observation, create_annotation, annotation_attribute_and_value, destroy_annotation, fix_annotation_after_update, as_indexed_json, update_for_taxon_change">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            ObservationFieldValue
+            
+                <span class="parent">&lt;
+                    
+                    <a href="ApplicationRecord.html">ApplicationRecord</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/app/models/observation_field_value_rb.html">app/models/observation_field_value.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-annotation_attribute_and_value">annotation_attribute_and_value</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-as_indexed_json">as_indexed_json</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-create_annotation">create_annotation</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-destroy_annotation">destroy_annotation</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-fix_annotation_after_update">fix_annotation_after_update</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-index_observation">index_observation</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-observer_prefers_fields_by_user">observer_prefers_fields_by_user</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-set_user">set_user</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-strip_value">strip_value</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-taxon">taxon</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-taxon-3D">taxon=</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-to_s">to_s</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-update_for_taxon_change">update_for_taxon_change</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_observation_field_counts">update_observation_field_counts</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-validate_observation_field_allowed_values">validate_observation_field_allowed_values</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-validate_observation_field_datatype">validate_observation_field_datatype</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+    <!-- Includes -->
+    <div class="sectiontitle">Included Modules</div>
+    <ul>
+      
+        <li>
+          
+            <a href="Shared/TouchesObservationModule.html">
+              Shared::TouchesObservationModule
+            </a>
+          
+        </li>
+      
+        <li>
+          
+            <a href="ActsAsUUIDable.html">
+              ActsAsUUIDable
+            </a>
+          
+        </li>
+      
+    </ul>
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <h2 class="sectiontitle">Constants</h2>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">LAT_LON_REGEX</td>
+            <td>=</td>
+            <td class="attr-value">/#{Observation::COORDINATE_REGEX},#{Observation::COORDINATE_REGEX}/</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <h2 class="sectiontitle">Class Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-c-update_for_taxon_change">
+            
+              <b>update_for_taxon_change</b>( taxon_change, options, &amp;block )
+            
+            <a href="../classes/ObservationFieldValue.html#method-c-update_for_taxon_change" name="method-c-update_for_taxon_change" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-update_for_taxon_change_source')" id="l_method-c-update_for_taxon_change_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-update_for_taxon_change_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/observation_field_value.rb</span>
+<span class="line-num">319</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">update_for_taxon_change</span>( <span class="ruby-identifier">taxon_change</span>, <span class="ruby-identifier">options</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span> )
+<span class="line-num">320</span>   <span class="ruby-identifier">input_taxon_ids</span> = <span class="ruby-identifier">taxon_change</span>.<span class="ruby-identifier">input_taxa</span>.<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:id</span>)
+<span class="line-num">321</span>   <span class="ruby-identifier">scope</span> = <span class="ruby-constant">ObservationFieldValue</span>.<span class="ruby-identifier">joins</span>( <span class="ruby-value">:observation_field</span> ).
+<span class="line-num">322</span>     <span class="ruby-identifier">where</span>( <span class="ruby-string">&quot;observation_fields.datatype = ?&quot;</span>, <span class="ruby-constant">ObservationField</span><span class="ruby-operator">::</span><span class="ruby-constant">TAXON</span> )
+<span class="line-num">323</span>   <span class="ruby-identifier">scope</span> = <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">where</span>(
+<span class="line-num">324</span>     <span class="ruby-identifier">input_taxon_ids</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">itid</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;observation_field_values.value = &#39;#{itid}&#39;&quot;</span> }.<span class="ruby-identifier">join</span>( <span class="ruby-string">&quot; OR &quot;</span> )
+<span class="line-num">325</span>   )
+<span class="line-num">326</span>   <span class="ruby-identifier">scope</span> = <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">where</span>( <span class="ruby-value">user_id:</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:user</span>] ) <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:user</span>]
+<span class="line-num">327</span>   <span class="ruby-identifier">scope</span> = <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">where</span>( <span class="ruby-string">&quot;observation_field_values.id IN (?)&quot;</span>, <span class="ruby-identifier">options</span>[<span class="ruby-value">:records</span>] ) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:records</span>].<span class="ruby-identifier">blank?</span>
+<span class="line-num">328</span>   <span class="ruby-identifier">scope</span> = <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">where</span>( <span class="ruby-identifier">options</span>[<span class="ruby-value">:conditions</span>] ) <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:conditions</span>]
+<span class="line-num">329</span>   <span class="ruby-identifier">scope</span> = <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">includes</span>( <span class="ruby-identifier">options</span>[<span class="ruby-value">:include</span>] ) <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:include</span>]
+<span class="line-num">330</span>   <span class="ruby-identifier">obs_ids</span> = <span class="ruby-constant">Set</span>.<span class="ruby-identifier">new</span>
+<span class="line-num">331</span>   <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">find_each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ofv</span><span class="ruby-operator">|</span>
+<span class="line-num">332</span>     <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">output_taxon</span> = <span class="ruby-identifier">taxon_change</span>.<span class="ruby-identifier">output_taxon_for_record</span>( <span class="ruby-identifier">ofv</span> )
+<span class="line-num">333</span>     <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">taxon_change</span>.<span class="ruby-identifier">automatable_for_output?</span>( <span class="ruby-identifier">output_taxon</span>.<span class="ruby-identifier">id</span> )
+<span class="line-num">334</span>     <span class="ruby-identifier">ofv</span>.<span class="ruby-identifier">update</span>( <span class="ruby-value">value:</span> <span class="ruby-identifier">output_taxon</span>.<span class="ruby-identifier">id</span> )
+<span class="line-num">335</span>     <span class="ruby-identifier">obs_ids</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">ofv</span>.<span class="ruby-identifier">observation_id</span>
+<span class="line-num">336</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">337</span>   <span class="ruby-constant">Observation</span>.<span class="ruby-identifier">elastic_index!</span>( <span class="ruby-value">ids:</span> <span class="ruby-identifier">obs_ids</span>.<span class="ruby-identifier">to_a</span> )
+<span class="line-num">338</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-annotation_attribute_and_value">
+            
+              <b>annotation_attribute_and_value</b>()
+            
+            <a href="../classes/ObservationFieldValue.html#method-i-annotation_attribute_and_value" name="method-i-annotation_attribute_and_value" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-annotation_attribute_and_value_source')" id="l_method-i-annotation_attribute_and_value_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-annotation_attribute_and_value_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/observation_field_value.rb</span>
+<span class="line-num">216</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">annotation_attribute_and_value</span>
+<span class="line-num">217</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">observation</span>
+<span class="line-num">218</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">datatype</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;text&quot;</span>
+<span class="line-num">219</span>   <span class="ruby-identifier">stripped_value</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">downcase</span>
+<span class="line-num">220</span>   <span class="ruby-keyword">if</span> <span class="ruby-constant">ControlledTerm</span><span class="ruby-operator">::</span><span class="ruby-constant">VALUES_TO_MIGRATE</span>[<span class="ruby-identifier">stripped_value</span>.<span class="ruby-identifier">to_sym</span>]
+<span class="line-num">221</span>     <span class="ruby-identifier">controlled_attribute</span> = <span class="ruby-constant">ControlledTerm</span>.<span class="ruby-identifier">first_term_by_label</span>(
+<span class="line-num">222</span>       <span class="ruby-constant">ControlledTerm</span><span class="ruby-operator">::</span><span class="ruby-constant">VALUES_TO_MIGRATE</span>[<span class="ruby-identifier">stripped_value</span>.<span class="ruby-identifier">to_sym</span>].<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">tr</span>(<span class="ruby-string">&quot;_&quot;</span>, <span class="ruby-string">&quot; &quot;</span>))
+<span class="line-num">223</span>     <span class="ruby-identifier">controlled_value</span> = <span class="ruby-constant">ControlledTerm</span>.<span class="ruby-identifier">first_term_by_label</span>(<span class="ruby-identifier">stripped_value</span>)
+<span class="line-num">224</span>   <span class="ruby-keyword">elsif</span> ( <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/phenology/i</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^flower(s|ing)?$/i</span> ) <span class="ruby-operator">||</span>
+<span class="line-num">225</span>         ( <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;Plant flowering&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;Yes&quot;</span> )
+<span class="line-num">226</span>     <span class="ruby-identifier">controlled_attribute</span> = <span class="ruby-constant">ControlledTerm</span>.<span class="ruby-identifier">first_term_by_label</span>( <span class="ruby-string">&quot;Plant Phenology&quot;</span> )
+<span class="line-num">227</span>     <span class="ruby-identifier">controlled_value</span> = <span class="ruby-constant">ControlledTerm</span>.<span class="ruby-identifier">first_term_by_label</span>( <span class="ruby-string">&quot;Flowering&quot;</span> )
+<span class="line-num">228</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/phenology/i</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/fruit(s|ing)?$/i</span> <span class="ruby-operator">&amp;&amp;</span>
+<span class="line-num">229</span>         <span class="ruby-identifier">value</span> <span class="ruby-operator">!~</span> <span class="ruby-regexp">/[0-9]/</span>
+<span class="line-num">230</span>     <span class="ruby-identifier">controlled_attribute</span> = <span class="ruby-constant">ControlledTerm</span>.<span class="ruby-identifier">first_term_by_label</span>( <span class="ruby-string">&quot;Plant Phenology&quot;</span> )
+<span class="line-num">231</span>     <span class="ruby-identifier">controlled_value</span> = <span class="ruby-constant">ControlledTerm</span>.<span class="ruby-identifier">first_term_by_label</span>( <span class="ruby-string">&quot;Fruiting&quot;</span> )
+<span class="line-num">232</span>   <span class="ruby-keyword">elsif</span> ( <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/life stage/i</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;teneral&quot;</span> ) <span class="ruby-operator">||</span>
+<span class="line-num">233</span>         ( <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">downcase</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;teneral&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">downcase</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;yes&quot;</span> )
+<span class="line-num">234</span>     <span class="ruby-identifier">controlled_attribute</span> = <span class="ruby-constant">ControlledTerm</span>.<span class="ruby-identifier">first_term_by_label</span>( <span class="ruby-string">&quot;Life Stage&quot;</span> )
+<span class="line-num">235</span>     <span class="ruby-identifier">controlled_value</span> = <span class="ruby-constant">ControlledTerm</span>.<span class="ruby-identifier">first_term_by_label</span>( <span class="ruby-string">&quot;Teneral&quot;</span> )
+<span class="line-num">236</span>   <span class="ruby-keyword">elsif</span> ( <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/dead or alive/i</span> <span class="ruby-operator">||</span>
+<span class="line-num">237</span>           <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/alive( or |\/)dead/i</span> <span class="ruby-operator">||</span>
+<span class="line-num">238</span>           <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/was it alive/i</span> <span class="ruby-operator">||</span>
+<span class="line-num">239</span>           <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/alive \(aor\), dead \(dor\)/i</span> )
+<span class="line-num">240</span>     <span class="ruby-identifier">value_term_label</span> = <span class="ruby-keyword">case</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">downcase</span>
+<span class="line-num">241</span>     <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;yes&quot;</span>, <span class="ruby-string">&quot;alive&quot;</span>, <span class="ruby-string">&quot;aor&quot;</span>
+<span class="line-num">242</span>       <span class="ruby-string">&quot;Alive&quot;</span>
+<span class="line-num">243</span>     <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;no&quot;</span>, <span class="ruby-string">&quot;dead&quot;</span>, <span class="ruby-string">&quot;dor&quot;</span>
+<span class="line-num">244</span>       <span class="ruby-string">&quot;Dead&quot;</span>
+<span class="line-num">245</span>     <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;maybe&quot;</span>, <span class="ruby-string">&quot;not sure&quot;</span>, <span class="ruby-string">&quot;unknown&quot;</span>
+<span class="line-num">246</span>       <span class="ruby-string">&quot;Cannot Be Determined&quot;</span>
+<span class="line-num">247</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">248</span>     <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">value_term_label</span>
+<span class="line-num">249</span>     <span class="ruby-identifier">controlled_attribute</span> = <span class="ruby-constant">ControlledTerm</span>.<span class="ruby-identifier">first_term_by_label</span>( <span class="ruby-string">&quot;Alive or Dead&quot;</span> )
+<span class="line-num">250</span>     <span class="ruby-identifier">controlled_value</span> = <span class="ruby-constant">ControlledTerm</span>.<span class="ruby-identifier">first_term_by_label</span>( <span class="ruby-identifier">value_term_label</span> )
+<span class="line-num">251</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">downcase</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;roadkill&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;yes&quot;</span>
+<span class="line-num">252</span>     <span class="ruby-identifier">controlled_attribute</span> = <span class="ruby-constant">ControlledTerm</span>.<span class="ruby-identifier">first_term_by_label</span>( <span class="ruby-string">&quot;Alive or Dead&quot;</span> )
+<span class="line-num">253</span>     <span class="ruby-identifier">controlled_value</span> = <span class="ruby-constant">ControlledTerm</span>.<span class="ruby-identifier">first_term_by_label</span>( <span class="ruby-string">&quot;Dead&quot;</span> )
+<span class="line-num">254</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/animal sign/i</span>
+<span class="line-num">255</span>     <span class="ruby-identifier">value_term_label</span> = <span class="ruby-keyword">case</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">downcase</span>
+<span class="line-num">256</span>     <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;tracks&quot;</span>
+<span class="line-num">257</span>       <span class="ruby-string">&quot;track&quot;</span>
+<span class="line-num">258</span>     <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;scat&quot;</span>
+<span class="line-num">259</span>       <span class="ruby-string">&quot;scat&quot;</span>
+<span class="line-num">260</span>     <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;bone&quot;</span>, <span class="ruby-string">&quot;bones&quot;</span>
+<span class="line-num">261</span>       <span class="ruby-string">&quot;bone&quot;</span>
+<span class="line-num">262</span>     <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;fur/feathers&quot;</span>
+<span class="line-num">263</span>       <span class="ruby-string">&quot;feather&quot;</span>
+<span class="line-num">264</span>     <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;shed skin&quot;</span>
+<span class="line-num">265</span>       <span class="ruby-string">&quot;molt&quot;</span>
+<span class="line-num">266</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">267</span>     <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">value_term_label</span>
+<span class="line-num">268</span>     <span class="ruby-identifier">controlled_attribute</span> = <span class="ruby-constant">ControlledTerm</span>.<span class="ruby-identifier">first_term_by_label</span>( <span class="ruby-string">&quot;Evidence of Presence&quot;</span> )
+<span class="line-num">269</span>     <span class="ruby-identifier">controlled_value</span> = <span class="ruby-constant">ControlledTerm</span>.<span class="ruby-identifier">first_term_by_label</span>( <span class="ruby-identifier">value_term_label</span> )
+<span class="line-num">270</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">downcase</span> <span class="ruby-operator">===</span> <span class="ruby-string">&quot;scat/excreta&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">downcase</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;yes&quot;</span>
+<span class="line-num">271</span>     <span class="ruby-identifier">controlled_attribute</span> = <span class="ruby-constant">ControlledTerm</span>.<span class="ruby-identifier">first_term_by_label</span>( <span class="ruby-string">&quot;Evidence of Presence&quot;</span> )
+<span class="line-num">272</span>     <span class="ruby-identifier">controlled_value</span> = <span class="ruby-constant">ControlledTerm</span>.<span class="ruby-identifier">first_term_by_label</span>( <span class="ruby-string">&quot;scat&quot;</span> )
+<span class="line-num">273</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">downcase</span> <span class="ruby-operator">===</span> <span class="ruby-string">&quot;scat?&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">downcase</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;yes&quot;</span>
+<span class="line-num">274</span>     <span class="ruby-identifier">controlled_attribute</span> = <span class="ruby-constant">ControlledTerm</span>.<span class="ruby-identifier">first_term_by_label</span>( <span class="ruby-string">&quot;Evidence of Presence&quot;</span> )
+<span class="line-num">275</span>     <span class="ruby-identifier">controlled_value</span> = <span class="ruby-constant">ControlledTerm</span>.<span class="ruby-identifier">first_term_by_label</span>( <span class="ruby-string">&quot;scat&quot;</span> )
+<span class="line-num">276</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">downcase</span> <span class="ruby-operator">===</span> <span class="ruby-string">&quot;bone(s)&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">downcase</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;yes&quot;</span>
+<span class="line-num">277</span>     <span class="ruby-identifier">controlled_attribute</span> = <span class="ruby-constant">ControlledTerm</span>.<span class="ruby-identifier">first_term_by_label</span>( <span class="ruby-string">&quot;Evidence of Presence&quot;</span> )
+<span class="line-num">278</span>     <span class="ruby-identifier">controlled_value</span> = <span class="ruby-constant">ControlledTerm</span>.<span class="ruby-identifier">first_term_by_label</span>( <span class="ruby-string">&quot;bone&quot;</span> )
+<span class="line-num">279</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">downcase</span> <span class="ruby-operator">===</span> <span class="ruby-string">&quot;tracks&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">downcase</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;yes&quot;</span>
+<span class="line-num">280</span>     <span class="ruby-identifier">controlled_attribute</span> = <span class="ruby-constant">ControlledTerm</span>.<span class="ruby-identifier">first_term_by_label</span>( <span class="ruby-string">&quot;Evidence of Presence&quot;</span> )
+<span class="line-num">281</span>     <span class="ruby-identifier">controlled_value</span> = <span class="ruby-constant">ControlledTerm</span>.<span class="ruby-identifier">first_term_by_label</span>( <span class="ruby-string">&quot;track&quot;</span> )
+<span class="line-num">282</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">283</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">controlled_attribute</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">controlled_value</span>
+<span class="line-num">284</span>   { <span class="ruby-value">controlled_attribute:</span> <span class="ruby-identifier">controlled_attribute</span>,
+<span class="line-num">285</span>     <span class="ruby-value">controlled_value:</span> <span class="ruby-identifier">controlled_value</span> }
+<span class="line-num">286</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-as_indexed_json">
+            
+              <b>as_indexed_json</b>(options={})
+            
+            <a href="../classes/ObservationFieldValue.html#method-i-as_indexed_json" name="method-i-as_indexed_json" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-as_indexed_json_source')" id="l_method-i-as_indexed_json_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-as_indexed_json_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/observation_field_value.rb</span>
+<span class="line-num">300</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">as_indexed_json</span>(<span class="ruby-identifier">options</span>={})
+<span class="line-num">301</span>   <span class="ruby-identifier">json</span> = {
+<span class="line-num">302</span>     <span class="ruby-value">id:</span> <span class="ruby-identifier">id</span>,
+<span class="line-num">303</span>     <span class="ruby-value">uuid:</span> <span class="ruby-identifier">uuid</span>,
+<span class="line-num">304</span>     <span class="ruby-value">field_id:</span> <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">id</span>,
+<span class="line-num">305</span>     <span class="ruby-value">datatype:</span> <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">datatype</span>,
+<span class="line-num">306</span>     <span class="ruby-value">name:</span> <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">name</span>,
+<span class="line-num">307</span>     <span class="ruby-value">name_ci:</span> <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">name</span>,
+<span class="line-num">308</span>     <span class="ruby-value">value:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">value</span>,
+<span class="line-num">309</span>     <span class="ruby-value">value_ci:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">value</span>,
+<span class="line-num">310</span>     <span class="ruby-value">user_id:</span> <span class="ruby-identifier">user_id</span>
+<span class="line-num">311</span>   }
+<span class="line-num">312</span>   <span class="ruby-comment"># make sure taxon_id is an integer</span>
+<span class="line-num">313</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">datatype</span> <span class="ruby-operator">==</span> <span class="ruby-constant">ObservationField</span><span class="ruby-operator">::</span><span class="ruby-constant">TAXON</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/\A[+-]?\d+\Z/</span>
+<span class="line-num">314</span>     <span class="ruby-identifier">json</span>[<span class="ruby-value">:taxon_id</span>] = <span class="ruby-identifier">value</span>
+<span class="line-num">315</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">316</span>   <span class="ruby-identifier">json</span>
+<span class="line-num">317</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-create_annotation">
+            
+              <b>create_annotation</b>()
+            
+            <a href="../classes/ObservationFieldValue.html#method-i-create_annotation" name="method-i-create_annotation" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-create_annotation_source')" id="l_method-i-create_annotation_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-create_annotation_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/observation_field_value.rb</span>
+<span class="line-num">199</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">create_annotation</span>
+<span class="line-num">200</span>   <span class="ruby-identifier">attr_val</span> = <span class="ruby-identifier">annotation_attribute_and_value</span>
+<span class="line-num">201</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">attr_val</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">202</span>   <span class="ruby-identifier">a</span> = <span class="ruby-constant">Annotation</span>.<span class="ruby-identifier">create</span>(
+<span class="line-num">203</span>     <span class="ruby-value">observation_field_value:</span> <span class="ruby-keyword">self</span>,
+<span class="line-num">204</span>     <span class="ruby-value">resource:</span> <span class="ruby-identifier">observation</span>,
+<span class="line-num">205</span>     <span class="ruby-value">controlled_attribute:</span> <span class="ruby-identifier">attr_val</span>[<span class="ruby-value">:controlled_attribute</span>],
+<span class="line-num">206</span>     <span class="ruby-value">controlled_value:</span> <span class="ruby-identifier">attr_val</span>[<span class="ruby-value">:controlled_value</span>],
+<span class="line-num">207</span>     <span class="ruby-value">user_id:</span> <span class="ruby-identifier">user_id</span>,
+<span class="line-num">208</span>     <span class="ruby-value">created_at:</span> <span class="ruby-identifier">created_at</span>
+<span class="line-num">209</span>   )
+<span class="line-num">210</span>   <span class="ruby-keyword">unless</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">persisted?</span>
+<span class="line-num">211</span>     <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;[ERROR] Failed to created annotation for #{self}: #{a.errors.full_messages.to_sentence}&quot;</span>
+<span class="line-num">212</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">213</span>   <span class="ruby-identifier">a</span>
+<span class="line-num">214</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-destroy_annotation">
+            
+              <b>destroy_annotation</b>()
+            
+            <a href="../classes/ObservationFieldValue.html#method-i-destroy_annotation" name="method-i-destroy_annotation" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-destroy_annotation_source')" id="l_method-i-destroy_annotation_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-destroy_annotation_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/observation_field_value.rb</span>
+<span class="line-num">288</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">destroy_annotation</span>
+<span class="line-num">289</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">annotation</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">annotation</span>.<span class="ruby-identifier">vote_score</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0</span>
+<span class="line-num">290</span>   <span class="ruby-identifier">annotation</span>.<span class="ruby-identifier">destroy</span>
+<span class="line-num">291</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-fix_annotation_after_update">
+            
+              <b>fix_annotation_after_update</b>()
+            
+            <a href="../classes/ObservationFieldValue.html#method-i-fix_annotation_after_update" name="method-i-fix_annotation_after_update" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-fix_annotation_after_update_source')" id="l_method-i-fix_annotation_after_update_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-fix_annotation_after_update_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/observation_field_value.rb</span>
+<span class="line-num">293</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">fix_annotation_after_update</span>
+<span class="line-num">294</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">annotation</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">annotation</span>.<span class="ruby-identifier">vote_score</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0</span>
+<span class="line-num">295</span>     <span class="ruby-identifier">annotation</span>.<span class="ruby-identifier">destroy</span>
+<span class="line-num">296</span>     <span class="ruby-identifier">create_annotation</span>
+<span class="line-num">297</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">298</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-index_observation">
+            
+              <b>index_observation</b>()
+            
+            <a href="../classes/ObservationFieldValue.html#method-i-index_observation" name="method-i-index_observation" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-index_observation_source')" id="l_method-i-index_observation_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-index_observation_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/observation_field_value.rb</span>
+<span class="line-num">192</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">index_observation</span>
+<span class="line-num">193</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">observation</span>.<span class="ruby-identifier">skip_indexing</span>
+<span class="line-num">194</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">observation</span>.<span class="ruby-identifier">new_record?</span>
+<span class="line-num">195</span>   <span class="ruby-identifier">observation</span>.<span class="ruby-identifier">wait_for_index_refresh</span> <span class="ruby-operator">||=</span> <span class="ruby-operator">!</span><span class="ruby-operator">!</span><span class="ruby-identifier">wait_for_obs_index_refresh</span>
+<span class="line-num">196</span>   <span class="ruby-identifier">observation</span>.<span class="ruby-identifier">try</span>( <span class="ruby-value">:elastic_index!</span> )
+<span class="line-num">197</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-observer_prefers_fields_by_user">
+            
+              <b>observer_prefers_fields_by_user</b>()
+            
+            <a href="../classes/ObservationFieldValue.html#method-i-observer_prefers_fields_by_user" name="method-i-observer_prefers_fields_by_user" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-observer_prefers_fields_by_user_source')" id="l_method-i-observer_prefers_fields_by_user_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-observer_prefers_fields_by_user_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/observation_field_value.rb</span>
+<span class="line-num">165</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">observer_prefers_fields_by_user</span>
+<span class="line-num">166</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">observation</span>
+<span class="line-num">167</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">observation</span>.<span class="ruby-identifier">user</span>.<span class="ruby-identifier">preferred_observation_fields_by</span> <span class="ruby-operator">===</span> <span class="ruby-constant">User</span><span class="ruby-operator">::</span><span class="ruby-constant">PREFERRED_OBSERVATION_FIELDS_BY_ANYONE</span>
+<span class="line-num">168</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">observation</span>.<span class="ruby-identifier">user</span>.<span class="ruby-identifier">preferred_observation_fields_by</span> <span class="ruby-operator">===</span> <span class="ruby-constant">User</span><span class="ruby-operator">::</span><span class="ruby-constant">PREFERRED_OBSERVATION_FIELDS_BY_OBSERVER</span>
+<span class="line-num">169</span>     <span class="ruby-identifier">creator_is_not_observer</span> = <span class="ruby-identifier">observation</span>.<span class="ruby-identifier">user_id</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">user_id</span>
+<span class="line-num">170</span>     <span class="ruby-identifier">updater_is_not_observer</span> = <span class="ruby-identifier">observation</span>.<span class="ruby-identifier">user_id</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">updater_id</span>
+<span class="line-num">171</span>     <span class="ruby-keyword">if</span> ( <span class="ruby-identifier">new_record?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">creator_is_not_observer</span> ) <span class="ruby-operator">||</span> ( <span class="ruby-identifier">persisted?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">updater_is_not_observer</span> )
+<span class="line-num">172</span>       <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">add</span>( <span class="ruby-value">:observation_id</span>, <span class="ruby-value">:user_does_not_accept_fields_from_others</span> )
+<span class="line-num">173</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">174</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">observation</span>.<span class="ruby-identifier">user</span>.<span class="ruby-identifier">preferred_observation_fields_by</span> <span class="ruby-operator">===</span> <span class="ruby-constant">User</span><span class="ruby-operator">::</span><span class="ruby-constant">PREFERRED_OBSERVATION_FIELDS_BY_CURATORS</span>
+<span class="line-num">175</span>     <span class="ruby-identifier">creation_by_non_observer_non_curator</span> = <span class="ruby-identifier">new_record?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">user_id</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">observation</span>.<span class="ruby-identifier">user_id</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">user</span>&amp;.<span class="ruby-identifier">is_curator?</span>
+<span class="line-num">176</span>     <span class="ruby-identifier">update_by_non_observer_non_curator</span> = <span class="ruby-identifier">updater_id</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">observation</span>.<span class="ruby-identifier">user_id</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">updater</span>&amp;.<span class="ruby-identifier">is_curator?</span>
+<span class="line-num">177</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">creation_by_non_observer_non_curator</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">update_by_non_observer_non_curator</span>
+<span class="line-num">178</span>       <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">add</span>( <span class="ruby-value">:observation_id</span>, <span class="ruby-value">:user_only_accepts_fields_from_site_curators</span> )
+<span class="line-num">179</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">180</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">181</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">182</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-set_user">
+            
+              <b>set_user</b>()
+            
+            <a href="../classes/ObservationFieldValue.html#method-i-set_user" name="method-i-set_user" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-set_user_source')" id="l_method-i-set_user_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-set_user_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/observation_field_value.rb</span>
+<span class="line-num"> 96</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">set_user</span>
+<span class="line-num"> 97</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">updater</span>
+<span class="line-num"> 98</span>     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">user</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">updater</span>
+<span class="line-num"> 99</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">observation</span>
+<span class="line-num">100</span>     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">user</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">observation</span>.<span class="ruby-identifier">user</span>
+<span class="line-num">101</span>     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">updater</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">user</span>
+<span class="line-num">102</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">103</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">104</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-strip_value">
+            
+              <b>strip_value</b>()
+            
+            <a href="../classes/ObservationFieldValue.html#method-i-strip_value" name="method-i-strip_value" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-strip_value_source')" id="l_method-i-strip_value_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-strip_value_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/observation_field_value.rb</span>
+<span class="line-num">92</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">strip_value</span>
+<span class="line-num">93</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">value</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">strip</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">nil?</span>
+<span class="line-num">94</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-taxon">
+            
+              <b>taxon</b>()
+            
+            <a href="../classes/ObservationFieldValue.html#method-i-taxon" name="method-i-taxon" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-taxon_source')" id="l_method-i-taxon_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-taxon_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/observation_field_value.rb</span>
+<span class="line-num">83</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">taxon</span>
+<span class="line-num">84</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">datatype</span> <span class="ruby-operator">==</span> <span class="ruby-constant">ObservationField</span><span class="ruby-operator">::</span><span class="ruby-constant">TAXON</span>
+<span class="line-num">85</span>   <span class="ruby-ivar">@taxon</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Taxon</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">value</span>)
+<span class="line-num">86</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-taxon-3D">
+            
+              <b>taxon=</b>(taxon)
+            
+            <a href="../classes/ObservationFieldValue.html#method-i-taxon-3D" name="method-i-taxon-3D" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-taxon-3D_source')" id="l_method-i-taxon-3D_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-taxon-3D_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/observation_field_value.rb</span>
+<span class="line-num">88</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">taxon=</span>(<span class="ruby-identifier">taxon</span>)
+<span class="line-num">89</span>   <span class="ruby-ivar">@taxon</span> = <span class="ruby-identifier">taxon</span>
+<span class="line-num">90</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-to_s">
+            
+              <b>to_s</b>()
+            
+            <a href="../classes/ObservationFieldValue.html#method-i-to_s" name="method-i-to_s" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-to_s_source')" id="l_method-i-to_s_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-to_s_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/observation_field_value.rb</span>
+<span class="line-num">79</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">to_s</span>
+<span class="line-num">80</span>   <span class="ruby-node">&quot;&lt;ObservationFieldValue #{id}, observation_field_id: #{observation_field_id}, observation_id: #{observation_id}&gt;&quot;</span>
+<span class="line-num">81</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-update_observation_field_counts">
+            
+              <b>update_observation_field_counts</b>()
+            
+            <a href="../classes/ObservationFieldValue.html#method-i-update_observation_field_counts" name="method-i-update_observation_field_counts" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-update_observation_field_counts_source')" id="l_method-i-update_observation_field_counts_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-update_observation_field_counts_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/observation_field_value.rb</span>
+<span class="line-num">184</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">update_observation_field_counts</span>
+<span class="line-num">185</span>   <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">delay</span>(
+<span class="line-num">186</span>     <span class="ruby-value">priority:</span> <span class="ruby-constant">USER_PRIORITY</span>,
+<span class="line-num">187</span>     <span class="ruby-value">run_at:</span> <span class="ruby-value">30</span>.<span class="ruby-identifier">minutes</span>.<span class="ruby-identifier">from_now</span>,
+<span class="line-num">188</span>     <span class="ruby-value">unique_hash:</span> { <span class="ruby-string">&quot;ObservationField::update_counts&quot;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">id</span> }
+<span class="line-num">189</span>   ).<span class="ruby-identifier">update_counts</span>
+<span class="line-num">190</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-validate_observation_field_allowed_values">
+            
+              <b>validate_observation_field_allowed_values</b>()
+            
+            <a href="../classes/ObservationFieldValue.html#method-i-validate_observation_field_allowed_values" name="method-i-validate_observation_field_allowed_values" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-validate_observation_field_allowed_values_source')" id="l_method-i-validate_observation_field_allowed_values_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-validate_observation_field_allowed_values_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/observation_field_value.rb</span>
+<span class="line-num">151</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">validate_observation_field_allowed_values</span>
+<span class="line-num">152</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">observation_field</span>
+<span class="line-num">153</span> 
+<span class="line-num">154</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">allowed_values</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">155</span> 
+<span class="line-num">156</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">datatype</span> <span class="ruby-operator">===</span> <span class="ruby-constant">ObservationField</span><span class="ruby-operator">::</span><span class="ruby-constant">TEXT</span>
+<span class="line-num">157</span> 
+<span class="line-num">158</span>   <span class="ruby-identifier">values</span> = <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">allowed_values</span>.<span class="ruby-identifier">split</span>( <span class="ruby-string">&quot;|&quot;</span> ).<span class="ruby-identifier">map</span>( <span class="ruby-operator">&amp;</span><span class="ruby-value">:downcase</span> )
+<span class="line-num">159</span>   <span class="ruby-keyword">unless</span> <span class="ruby-identifier">values</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">downcase</span>)
+<span class="line-num">160</span>     <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">add</span>(<span class="ruby-value">:value</span>, 
+<span class="line-num">161</span>       <span class="ruby-node">&quot;of #{observation_field.name} must be #{values[0..-2].map{|v| &quot;#{v}, &quot;}.join}or #{values.last}.&quot;</span>)
+<span class="line-num">162</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">163</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-validate_observation_field_datatype">
+            
+              <b>validate_observation_field_datatype</b>()
+            
+            <a href="../classes/ObservationFieldValue.html#method-i-validate_observation_field_datatype" name="method-i-validate_observation_field_datatype" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-validate_observation_field_datatype_source')" id="l_method-i-validate_observation_field_datatype_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-validate_observation_field_datatype_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/observation_field_value.rb</span>
+<span class="line-num">106</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">validate_observation_field_datatype</span>
+<span class="line-num">107</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">observation</span>.<span class="ruby-identifier">mobile?</span> <span class="ruby-comment"># HACK until we implement ui for *all* observation field types in the mobile apps</span>
+<span class="line-num">108</span>   <span class="ruby-keyword">case</span> <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">datatype</span>
+<span class="line-num">109</span>   <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;numeric&quot;</span>
+<span class="line-num">110</span>     <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">add</span>(<span class="ruby-value">:value</span>, <span class="ruby-string">&quot;must be a number&quot;</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">!~</span> <span class="ruby-constant">Observation</span><span class="ruby-operator">::</span><span class="ruby-constant">FLOAT_REGEX</span>
+<span class="line-num">111</span>   <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;location&quot;</span>
+<span class="line-num">112</span>     <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">add</span>(<span class="ruby-value">:value</span>, <span class="ruby-string">&quot;must decimal latitude and decimal longitude separated by a comma&quot;</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">!~</span> <span class="ruby-constant">LAT_LON_REGEX</span>
+<span class="line-num">113</span>   <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;date&quot;</span>
+<span class="line-num">114</span>     <span class="ruby-keyword">unless</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^\d{4}\-\d{2}\-\d{2}$/</span>
+<span class="line-num">115</span>       <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">add</span>(<span class="ruby-value">:value</span>, <span class="ruby-value">:date_format</span>, 
+<span class="line-num">116</span>         <span class="ruby-value">:observation_field_name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">name</span>,
+<span class="line-num">117</span>         <span class="ruby-value">:observation_species_guess</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">observation</span>.<span class="ruby-identifier">try</span>(<span class="ruby-value">:species_guess</span>)
+<span class="line-num">118</span>       )
+<span class="line-num">119</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">120</span>   <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;datetime&quot;</span>
+<span class="line-num">121</span>     <span class="ruby-keyword">begin</span>
+<span class="line-num">122</span>       <span class="ruby-constant">Time</span>.<span class="ruby-identifier">iso8601</span>(<span class="ruby-identifier">value</span>)
+<span class="line-num">123</span>     <span class="ruby-keyword">rescue</span> <span class="ruby-constant">ArgumentError</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">e</span>
+<span class="line-num">124</span>       <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">add</span>(<span class="ruby-value">:value</span>, <span class="ruby-value">:datetime_format</span>,
+<span class="line-num">125</span>         <span class="ruby-value">:observation_field_name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">name</span>,
+<span class="line-num">126</span>         <span class="ruby-value">:observation_species_guess</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">observation</span>.<span class="ruby-identifier">try</span>(<span class="ruby-value">:species_guess</span>)
+<span class="line-num">127</span>       )
+<span class="line-num">128</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">129</span>   <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;time&quot;</span>
+<span class="line-num">130</span>     <span class="ruby-keyword">begin</span>
+<span class="line-num">131</span>       <span class="ruby-constant">Time</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">value</span>)
+<span class="line-num">132</span>       <span class="ruby-keyword">if</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">!~</span> <span class="ruby-regexp">/^\d\d:\d\d/</span>
+<span class="line-num">133</span>         <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">add</span>(<span class="ruby-value">:value</span>, <span class="ruby-value">:time_format</span>, 
+<span class="line-num">134</span>           <span class="ruby-value">:observation_field_name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">name</span>,
+<span class="line-num">135</span>           <span class="ruby-value">:observation_species_guess</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">observation</span>.<span class="ruby-identifier">try</span>(<span class="ruby-value">:species_guess</span>)
+<span class="line-num">136</span>         )
+<span class="line-num">137</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">138</span>     <span class="ruby-keyword">rescue</span> <span class="ruby-constant">ArgumentError</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">e</span>
+<span class="line-num">139</span>       <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">add</span>(<span class="ruby-value">:value</span>, <span class="ruby-value">:time_format</span>, 
+<span class="line-num">140</span>         <span class="ruby-value">:observation_field_name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">observation_field</span>.<span class="ruby-identifier">name</span>,
+<span class="line-num">141</span>         <span class="ruby-value">:observation_species_guess</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">observation</span>.<span class="ruby-identifier">try</span>(<span class="ruby-value">:species_guess</span>)
+<span class="line-num">142</span>       )
+<span class="line-num">143</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">144</span>   <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;dna&quot;</span>
+<span class="line-num">145</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/[^ATCG\s]/</span>
+<span class="line-num">146</span>       <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">add</span>(<span class="ruby-value">:value</span>, <span class="ruby-value">:dna_only_atcg</span>)
+<span class="line-num">147</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">148</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">149</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Benchmarker</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["Benchmarker"]'>
+
+
+    <meta property="og:title" value="Benchmarker">
+
+  
+    
+    <meta name="description" content="Utilitity for benchmarking code in the console. Use it like this:  Benchmarker.benchmark do |b|  b.benchmark &quot;thing 1&quot; do   # do thing 1 end b.">
+    <meta property="og:description" content="Utilitity for benchmarking code in the console. Use it like this:  Benchmarker.benchmark do |b|  b.benchmark &quot;thing 1&quot; do   # do thing 1 end b.">
+  
+
+    <meta name="keywords" content="Benchmarker class, benchmark, summarize, benchmark">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            Benchmarker
+            
+                <span class="parent">&lt;
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/lib/benchmarker_rb.html">lib/benchmarker.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>Utilitity for benchmarking code in the console. Use it like this:</p>
+
+<p><a href="Benchmarker.html#method-c-benchmark"><code>Benchmarker.benchmark</code></a> do |b|</p>
+
+<pre><code>b.benchmark &quot;thing 1&quot; do
+  # do thing 1
+end
+b.benchmark &quot;thing 2&quot; do
+  # do thing 1
+end
+</code></pre>
+
+<p>end</p>
+
+<p>Every time you call `b.benchmark “thing 1”` the time of the block will be recorded and stats about how long “thing 1” calls took will be reported at the end</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-benchmark">benchmark</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-benchmark">benchmark</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-summarize">summarize</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <h2 class="sectiontitle">Attributes</h2>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>benchmarks</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <h2 class="sectiontitle">Class Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-c-benchmark">
+            
+              <b>benchmark</b>()
+            
+            <a href="../classes/Benchmarker.html#method-c-benchmark" name="method-c-benchmark" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-benchmark_source')" id="l_method-c-benchmark_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-benchmark_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/benchmarker.rb</span>
+<span class="line-num">56</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">benchmark</span>
+<span class="line-num">57</span>   <span class="ruby-identifier">start</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+<span class="line-num">58</span>   <span class="ruby-identifier">b</span> = <span class="ruby-identifier">new</span>
+<span class="line-num">59</span>   <span class="ruby-keyword">yield</span> <span class="ruby-identifier">b</span>
+<span class="line-num">60</span>   <span class="ruby-identifier">b</span>.<span class="ruby-identifier">summarize</span>
+<span class="line-num">61</span>   <span class="ruby-identifier">puts</span>
+<span class="line-num">62</span>   <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;TOTAL: #{Time.now - start}&quot;</span>
+<span class="line-num">63</span>   <span class="ruby-identifier">puts</span>
+<span class="line-num">64</span>   <span class="ruby-identifier">b</span>
+<span class="line-num">65</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-benchmark">
+            
+              <b>benchmark</b>( name, options = {} )
+            
+            <a href="../classes/Benchmarker.html#method-i-benchmark" name="method-i-benchmark" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-benchmark_source')" id="l_method-i-benchmark_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-benchmark_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/benchmarker.rb</span>
+<span class="line-num">17</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">benchmark</span>( <span class="ruby-identifier">name</span>, <span class="ruby-identifier">options</span> = {} )
+<span class="line-num">18</span>   <span class="ruby-ivar">@round</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:round</span>] <span class="ruby-operator">||=</span> <span class="ruby-value">4</span>
+<span class="line-num">19</span>   <span class="ruby-identifier">start</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+<span class="line-num">20</span>   <span class="ruby-identifier">r</span> = <span class="ruby-keyword">yield</span>
+<span class="line-num">21</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">benchmarks</span> <span class="ruby-operator">||=</span> {}
+<span class="line-num">22</span>   <span class="ruby-identifier">benchmarks</span>[<span class="ruby-identifier">name</span>] <span class="ruby-operator">||=</span> []
+<span class="line-num">23</span>   <span class="ruby-identifier">benchmarks</span>[<span class="ruby-identifier">name</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">start</span>
+<span class="line-num">24</span>   <span class="ruby-identifier">r</span>
+<span class="line-num">25</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-summarize">
+            
+              <b>summarize</b>( options = {} )
+            
+            <a href="../classes/Benchmarker.html#method-i-summarize" name="method-i-summarize" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-summarize_source')" id="l_method-i-summarize_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-summarize_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/benchmarker.rb</span>
+<span class="line-num">27</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">summarize</span>( <span class="ruby-identifier">options</span> = {} )
+<span class="line-num">28</span>   <span class="ruby-identifier">sort_by</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:sort_by</span>)
+<span class="line-num">29</span>   <span class="ruby-identifier">max_len</span> = <span class="ruby-identifier">benchmarks</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:size</span>).<span class="ruby-identifier">max</span>
+<span class="line-num">30</span>   <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;**** BENCHMARKS ******************************************************&quot;</span>
+<span class="line-num">31</span>   <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#{&quot;&quot;.ljust( max_len )} #{%w(n min max avg total).map{|m| m.rjust( 10 )}.join( &quot; &quot; )}&quot;</span>
+<span class="line-num">32</span>   <span class="ruby-identifier">marks</span> = <span class="ruby-identifier">benchmarks</span>.<span class="ruby-identifier">clone</span>
+<span class="line-num">33</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">sort_by</span>
+<span class="line-num">34</span>     <span class="ruby-identifier">marks</span> = <span class="ruby-identifier">marks</span>.<span class="ruby-identifier">to_a</span>.<span class="ruby-identifier">sort_by</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">times</span><span class="ruby-operator">|</span>
+<span class="line-num">35</span>       <span class="ruby-keyword">case</span> <span class="ruby-identifier">sort_by</span>.<span class="ruby-identifier">to_sym</span>
+<span class="line-num">36</span>       <span class="ruby-keyword">when</span> <span class="ruby-value">:n</span> <span class="ruby-keyword">then</span> 
+<span class="line-num">37</span>       <span class="ruby-keyword">when</span> <span class="ruby-value">:min</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">times</span>.<span class="ruby-identifier">min</span>
+<span class="line-num">38</span>       <span class="ruby-keyword">when</span> <span class="ruby-value">:max</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">times</span>.<span class="ruby-identifier">max</span>
+<span class="line-num">39</span>       <span class="ruby-keyword">when</span> <span class="ruby-value">:total</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">times</span>.<span class="ruby-identifier">sum</span>
+<span class="line-num">40</span>       <span class="ruby-keyword">when</span> <span class="ruby-value">:avg</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">times</span>.<span class="ruby-identifier">sum</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">times</span>.<span class="ruby-identifier">size</span>
+<span class="line-num">41</span>       <span class="ruby-keyword">else</span> <span class="ruby-identifier">key</span>
+<span class="line-num">42</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">43</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">44</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">45</span>   <span class="ruby-identifier">marks</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">times</span><span class="ruby-operator">|</span>
+<span class="line-num">46</span>     <span class="ruby-identifier">n</span> = <span class="ruby-identifier">times</span>.<span class="ruby-identifier">size</span>
+<span class="line-num">47</span>     <span class="ruby-identifier">min</span> = <span class="ruby-identifier">times</span>.<span class="ruby-identifier">min</span>
+<span class="line-num">48</span>     <span class="ruby-identifier">max</span> = <span class="ruby-identifier">times</span>.<span class="ruby-identifier">max</span>
+<span class="line-num">49</span>     <span class="ruby-identifier">total</span> = <span class="ruby-identifier">times</span>.<span class="ruby-identifier">sum</span>
+<span class="line-num">50</span>     <span class="ruby-identifier">avg</span> = <span class="ruby-identifier">total</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">times</span>.<span class="ruby-identifier">size</span>
+<span class="line-num">51</span>     <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#{key.ljust( max_len )} #{[n, min, max, avg, total].map{|m| m.round( @round ).to_s.rjust( 10 )}.join( &quot; &quot; )}&quot;</span>
+<span class="line-num">52</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">53</span>   <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;**** /BENCHMARKS ******************************************************&quot;</span>
+<span class="line-num">54</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

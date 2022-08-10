@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AdminController</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["AdminController"]'>
+
+
+    <meta property="og:title" value="AdminController">
+
+  
+    
+    <meta name="description" content="A collection of tools useful for administrators.">
+    <meta property="og:description" content="A collection of tools useful for administrators.">
+  
+
+    <meta name="keywords" content="AdminController class, index, users, user_detail, deleted_users, user_content, update_user, grant_user_privilege, revoke_user_privilege, restore_user_privilege, reset_user_privilege, destroy_user_content, login_as, queries">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            AdminController
+            
+                <span class="parent">&lt;
+                    
+                    <a href="ApplicationController.html">ApplicationController</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/app/controllers/admin_controller_rb.html">app/controllers/admin_controller.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>A collection of tools useful for administrators.</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-deleted_users">deleted_users</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-destroy_user_content">destroy_user_content</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-grant_user_privilege">grant_user_privilege</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-index">index</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-login_as">login_as</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>Q</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-queries">queries</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-reset_user_privilege">reset_user_privilege</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-restore_user_privilege">restore_user_privilege</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-revoke_user_privilege">revoke_user_privilege</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-update_user">update_user</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-user_content">user_content</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-user_detail">user_detail</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-users">users</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-deleted_users">
+            
+              <b>deleted_users</b>()
+            
+            <a href="../classes/AdminController.html#method-i-deleted_users" name="method-i-deleted_users" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-deleted_users_source')" id="l_method-i-deleted_users_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-deleted_users_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/admin_controller.rb</span>
+<span class="line-num">62</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">deleted_users</span>
+<span class="line-num">63</span>   <span class="ruby-ivar">@deleted_users</span> = <span class="ruby-constant">DeletedUser</span>.<span class="ruby-identifier">order</span>( <span class="ruby-string">&quot;id desc&quot;</span> ).<span class="ruby-identifier">page</span>( <span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>] ).<span class="ruby-identifier">per_page</span>( <span class="ruby-value">100</span> )
+<span class="line-num">64</span>   <span class="ruby-ivar">@q</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:q</span>]
+<span class="line-num">65</span>   <span class="ruby-ivar">@deleted_users</span> = <span class="ruby-ivar">@deleted_users</span>.<span class="ruby-identifier">where</span>(
+<span class="line-num">66</span>     <span class="ruby-string">&quot;login ILIKE ? OR email ILIKE ?&quot;</span>, <span class="ruby-node">&quot;%#{@q}%&quot;</span>, <span class="ruby-node">&quot;%#{@q}%&quot;</span>
+<span class="line-num">67</span>   )
+<span class="line-num">68</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">69</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">layout:</span> <span class="ruby-string">&quot;admin&quot;</span> }
+<span class="line-num">70</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">71</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-destroy_user_content">
+            
+              <b>destroy_user_content</b>()
+            
+            <a href="../classes/AdminController.html#method-i-destroy_user_content" name="method-i-destroy_user_content" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-destroy_user_content_source')" id="l_method-i-destroy_user_content_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-destroy_user_content_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/admin_controller.rb</span>
+<span class="line-num">147</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">destroy_user_content</span>
+<span class="line-num">148</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">load_user_content_info</span>
+<span class="line-num">149</span>   <span class="ruby-ivar">@records</span> = <span class="ruby-ivar">@display_user</span>.<span class="ruby-identifier">send</span>(<span class="ruby-ivar">@reflection_name</span>).
+<span class="line-num">150</span>     <span class="ruby-identifier">where</span>(<span class="ruby-node">&quot;#{@reflection.table_name}.id IN (?)&quot;</span>, <span class="ruby-identifier">params</span>[<span class="ruby-value">:ids</span>] <span class="ruby-operator">||</span> [])
+<span class="line-num">151</span>   <span class="ruby-ivar">@records</span>.<span class="ruby-identifier">each</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:destroy</span>)
+<span class="line-num">152</span>   <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-node">&quot;Deleted #{@records.size} #{@type.humanize.downcase}&quot;</span>
+<span class="line-num">153</span>   <span class="ruby-identifier">redirect_back_or_default</span>(<span class="ruby-identifier">admin_user_content_path</span>(<span class="ruby-ivar">@display_user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-ivar">@type</span>))
+<span class="line-num">154</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-grant_user_privilege">
+            
+              <b>grant_user_privilege</b>()
+            
+            <a href="../classes/AdminController.html#method-i-grant_user_privilege" name="method-i-grant_user_privilege" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-grant_user_privilege_source')" id="l_method-i-grant_user_privilege_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-grant_user_privilege_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/admin_controller.rb</span>
+<span class="line-num">108</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">grant_user_privilege</span>
+<span class="line-num">109</span>   <span class="ruby-ivar">@up</span> = <span class="ruby-constant">UserPrivilege</span>.<span class="ruby-identifier">new</span>( <span class="ruby-value">user_id:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:user_id</span>], <span class="ruby-value">privilege:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:privilege</span>] )
+<span class="line-num">110</span>   <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@up</span>.<span class="ruby-identifier">save</span>
+<span class="line-num">111</span>     <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-node">&quot;Failed to grant privilege: #{@up.errors.full_messages.to_sentence}&quot;</span>
+<span class="line-num">112</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">113</span>   <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">user_detail_admin_path</span>( <span class="ruby-value">id:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:user_id</span>] )
+<span class="line-num">114</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-index">
+            
+              <b>index</b>()
+            
+            <a href="../classes/AdminController.html#method-i-index" name="method-i-index" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-index_source')" id="l_method-i-index_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-index_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/admin_controller.rb</span>
+<span class="line-num">14</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">index</span>
+<span class="line-num">15</span>   <span class="ruby-identifier">render</span> <span class="ruby-value">layout:</span> <span class="ruby-string">&quot;admin&quot;</span>
+<span class="line-num">16</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-login_as">
+            
+              <b>login_as</b>()
+            
+            <a href="../classes/AdminController.html#method-i-login_as" name="method-i-login_as" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-login_as_source')" id="l_method-i-login_as_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-login_as_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/admin_controller.rb</span>
+<span class="line-num">156</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">login_as</span>
+<span class="line-num">157</span>   <span class="ruby-keyword">unless</span> <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>] <span class="ruby-operator">||</span> [<span class="ruby-identifier">params</span>[<span class="ruby-value">:user_id</span>]])
+<span class="line-num">158</span>     <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-string">&quot;That user doesn&#39;t exist&quot;</span>
+<span class="line-num">159</span>     <span class="ruby-identifier">redirect_back_or_default</span>(<span class="ruby-value">:index</span>)
+<span class="line-num">160</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">161</span>   <span class="ruby-identifier">sign_out</span> <span class="ruby-value">:user</span>
+<span class="line-num">162</span>   <span class="ruby-identifier">sign_in</span> <span class="ruby-identifier">user</span>
+<span class="line-num">163</span>   
+<span class="line-num">164</span>   <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-node">&quot;Logged in as #{user.login}. Be careful, and remember to log out when you&#39;re done.&quot;</span>
+<span class="line-num">165</span>   <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">root_path</span>
+<span class="line-num">166</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-queries">
+            
+              <b>queries</b>()
+            
+            <a href="../classes/AdminController.html#method-i-queries" name="method-i-queries" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-queries_source')" id="l_method-i-queries_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-queries_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/admin_controller.rb</span>
+<span class="line-num">168</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">queries</span>
+<span class="line-num">169</span>   <span class="ruby-identifier">replica_pool</span> = <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">instance_variable_get</span>( <span class="ruby-string">&quot;@replica_pool&quot;</span> )
+<span class="line-num">170</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">replica_pool</span>
+<span class="line-num">171</span>     <span class="ruby-comment"># if configured to use replica DBs with Makara, fetch queries from all primaries and replicas</span>
+<span class="line-num">172</span>     <span class="ruby-identifier">primary_pool</span> = <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">instance_variable_get</span>( <span class="ruby-string">&quot;@primary_pool&quot;</span> )
+<span class="line-num">173</span>     <span class="ruby-ivar">@queries</span> = []
+<span class="line-num">174</span>     ( <span class="ruby-identifier">primary_pool</span>.<span class="ruby-identifier">connections</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">replica_pool</span>.<span class="ruby-identifier">connections</span> ).<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">connection</span><span class="ruby-operator">|</span>
+<span class="line-num">175</span>       <span class="ruby-identifier">instance_queries</span> = <span class="ruby-identifier">connection</span>.<span class="ruby-identifier">active_queries</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">q</span><span class="ruby-operator">|</span>
+<span class="line-num">176</span>         { <span class="ruby-value">db_host:</span> <span class="ruby-identifier">connection</span>.<span class="ruby-identifier">config</span>[<span class="ruby-value">:host</span>] }.<span class="ruby-identifier">merge</span>( <span class="ruby-identifier">q</span> )
+<span class="line-num">177</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">178</span>       <span class="ruby-ivar">@queries</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">instance_queries</span>
+<span class="line-num">179</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">180</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">181</span>     <span class="ruby-ivar">@queries</span> = <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">active_queries</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">q</span><span class="ruby-operator">|</span>
+<span class="line-num">182</span>       { <span class="ruby-value">db_host:</span> <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection_db_config</span>.<span class="ruby-identifier">host</span> }.<span class="ruby-identifier">merge</span>( <span class="ruby-identifier">q</span> )
+<span class="line-num">183</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">184</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">185</span>   <span class="ruby-ivar">@queries</span>.<span class="ruby-identifier">delete_if</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">q</span><span class="ruby-operator">|</span> <span class="ruby-identifier">q</span>[<span class="ruby-string">&quot;query&quot;</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp">/pg_stat_activity/</span> }
+<span class="line-num">186</span>   <span class="ruby-identifier">render</span> <span class="ruby-value">layout:</span> <span class="ruby-string">&quot;admin&quot;</span>
+<span class="line-num">187</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-reset_user_privilege">
+            
+              <b>reset_user_privilege</b>()
+            
+            <a href="../classes/AdminController.html#method-i-reset_user_privilege" name="method-i-reset_user_privilege" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-reset_user_privilege_source')" id="l_method-i-reset_user_privilege_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-reset_user_privilege_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/admin_controller.rb</span>
+<span class="line-num">137</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">reset_user_privilege</span>
+<span class="line-num">138</span>   <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@up</span> = <span class="ruby-constant">UserPrivilege</span>.<span class="ruby-identifier">where</span>( <span class="ruby-value">user_id:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:user_id</span>], <span class="ruby-value">privilege:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:privilege</span>] ).<span class="ruby-identifier">first</span>
+<span class="line-num">139</span>     <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-node">&quot;User #{params[:user_id]} doesn&#39;t have the #{params[:privilege]} privilege&quot;</span>
+<span class="line-num">140</span>     <span class="ruby-keyword">return</span> <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">user_detail_admin_path</span>( <span class="ruby-value">id:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:user_id</span>] )
+<span class="line-num">141</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">142</span>   <span class="ruby-ivar">@up</span>.<span class="ruby-identifier">destroy</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@up</span>
+<span class="line-num">143</span>   <span class="ruby-constant">UserPrivilege</span>.<span class="ruby-identifier">check</span>( <span class="ruby-identifier">params</span>[<span class="ruby-value">:user_id</span>], <span class="ruby-identifier">params</span>[<span class="ruby-value">:privilege</span>] )
+<span class="line-num">144</span>   <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">user_detail_admin_path</span>( <span class="ruby-value">id:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:user_id</span>] )
+<span class="line-num">145</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-restore_user_privilege">
+            
+              <b>restore_user_privilege</b>()
+            
+            <a href="../classes/AdminController.html#method-i-restore_user_privilege" name="method-i-restore_user_privilege" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-restore_user_privilege_source')" id="l_method-i-restore_user_privilege_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-restore_user_privilege_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/admin_controller.rb</span>
+<span class="line-num">126</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">restore_user_privilege</span>
+<span class="line-num">127</span>   <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@up</span> = <span class="ruby-constant">UserPrivilege</span>.<span class="ruby-identifier">where</span>( <span class="ruby-value">user_id:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:user_id</span>], <span class="ruby-value">privilege:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:privilege</span>] ).<span class="ruby-identifier">first</span>
+<span class="line-num">128</span>     <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-node">&quot;User #{params[:user_id]} doesn&#39;t have the #{params[:privilege]} privilege&quot;</span>
+<span class="line-num">129</span>     <span class="ruby-keyword">return</span> <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">user_detail_admin_path</span>( <span class="ruby-value">id:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:user_id</span>] )
+<span class="line-num">130</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">131</span>   <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@up</span>.<span class="ruby-identifier">restore!</span>
+<span class="line-num">132</span>     <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-node">&quot;Failed to restore privilege: #{@up.errors.full_messages.to_sentence}&quot;</span>
+<span class="line-num">133</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">134</span>   <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">user_detail_admin_path</span>( <span class="ruby-value">id:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:user_id</span>] )
+<span class="line-num">135</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-revoke_user_privilege">
+            
+              <b>revoke_user_privilege</b>()
+            
+            <a href="../classes/AdminController.html#method-i-revoke_user_privilege" name="method-i-revoke_user_privilege" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-revoke_user_privilege_source')" id="l_method-i-revoke_user_privilege_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-revoke_user_privilege_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/admin_controller.rb</span>
+<span class="line-num">116</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">revoke_user_privilege</span>
+<span class="line-num">117</span>   <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@up</span> = <span class="ruby-constant">UserPrivilege</span>.<span class="ruby-identifier">where</span>( <span class="ruby-value">user_id:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:user_id</span>], <span class="ruby-value">privilege:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:privilege</span>] ).<span class="ruby-identifier">first</span>
+<span class="line-num">118</span>     <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-node">&quot;User #{params[:user_id]} doesn&#39;t have the #{params[:privilege]} privilege&quot;</span>
+<span class="line-num">119</span>     <span class="ruby-keyword">return</span> <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">user_detail_admin_path</span>( <span class="ruby-value">id:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:user_id</span>] )
+<span class="line-num">120</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">121</span>   <span class="ruby-ivar">@up</span>.<span class="ruby-identifier">revoke!</span>( <span class="ruby-value">revoke_user:</span> <span class="ruby-identifier">current_user</span>, <span class="ruby-value">revoke_reason:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:reason</span>] )
+<span class="line-num">122</span>   <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-node">&quot;Revoked #{params[:privilege]} privilege for user #{@up.user.login}&quot;</span>
+<span class="line-num">123</span>   <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">user_detail_admin_path</span>( <span class="ruby-value">id:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:user_id</span>] )
+<span class="line-num">124</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-update_user">
+            
+              <b>update_user</b>()
+            
+            <a href="../classes/AdminController.html#method-i-update_user" name="method-i-update_user" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-update_user_source')" id="l_method-i-update_user_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-update_user_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/controllers/admin_controller.rb</span>
+<span class="line-num"> 86</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">update_user</span>
+<span class="line-num"> 87</span>   <span class="ruby-keyword">unless</span> <span class="ruby-identifier">u</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+<span class="line-num"> 88</span>     <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-string">&quot;User doesn&#39;t exist&quot;</span>
+<span class="line-num"> 89</span>     <span class="ruby-identifier">redirect_back_or_default</span>(<span class="ruby-identifier">curate_users_path</span>)
+<span class="line-num"> 90</span>   <span class="ruby-keyword">end</span>
+<span class="line-num"> 91</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:icon_delete</span>]
+<span class="line-num"> 92</span>     <span class="ruby-identifier">u</span>.<span class="ruby-identifier">icon</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num"> 93</span>     <span class="ruby-identifier">u</span>.<span class="ruby-identifier">icon_url</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num"> 94</span>   <span class="ruby-keyword">end</span>
+<span class="line-num"> 95</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:user</span>]
+<span class="line-num"> 96</span>     <span class="ruby-identifier">u</span>.<span class="ruby-identifier">update</span>( <span class="ruby-identifier">params</span>[<span class="ruby-value">:user</span>] )
+<span class="line-num"> 97</span>   <span class="ruby-keyword">else</span>
+<span class="line-num"> 98</span>     <span class="ruby-identifier">u</span>.<span class="ruby-identifier">save</span>
+<span class="line-num"> 99</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">100</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">valid?</span>
+<span class="line-num">101</span>     <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-node">&quot;Updated attributes for #{u.login}&quot;</span>
+<span class="line-num">102</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">103</span>     <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-node">&quot;Failed to update attributes for #{u.login}: #{u.errors.full_messages.to_sentence}&quot;</span>
+<span class="line-num">104</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">105</span>   <span class="ruby-identifier">redirect_back_or_default</span>(<span class="ruby-identifier">curate_users_path</span>( <span class="ruby-value">user_id:</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">id</span> ) )
+<span class="line-num">106</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-user_content">
+            
+              <b>user_content</b>()
+            
+            <a href="../classes/AdminController.html#method-i-user_content" name="method-i-user_content" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-user_content_source')" id="l_method-i-user_content_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-user_content_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/admin_controller.rb</span>
+<span class="line-num">73</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">user_content</span>
+<span class="line-num">74</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">load_user_content_info</span>
+<span class="line-num">75</span>   <span class="ruby-ivar">@page</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>]
+<span class="line-num">76</span>   <span class="ruby-ivar">@order</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:order</span>]
+<span class="line-num">77</span>   <span class="ruby-ivar">@order</span> = <span class="ruby-string">&quot;desc&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-node">%w(asc desc)</span>.<span class="ruby-identifier">include?</span>( <span class="ruby-ivar">@order</span> )
+<span class="line-num">78</span>   <span class="ruby-ivar">@order_by</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:order_by</span>]
+<span class="line-num">79</span>   <span class="ruby-ivar">@order_by</span> = <span class="ruby-string">&quot;created_at&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-node">%w(created_at updated_at)</span>.<span class="ruby-identifier">include?</span>( <span class="ruby-ivar">@order_by</span> )
+<span class="line-num">80</span>   <span class="ruby-ivar">@records</span> = <span class="ruby-ivar">@display_user</span>.<span class="ruby-identifier">send</span>( <span class="ruby-ivar">@reflection_name</span> ).
+<span class="line-num">81</span>     <span class="ruby-identifier">order</span>( <span class="ruby-ivar">@order_by</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-ivar">@order</span> ).<span class="ruby-identifier">page</span>( <span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>] <span class="ruby-operator">||</span> <span class="ruby-value">1</span> ).<span class="ruby-identifier">limit</span>( <span class="ruby-value">200</span> ) <span class="ruby-keyword">rescue</span> []
+<span class="line-num">82</span> 
+<span class="line-num">83</span>   <span class="ruby-identifier">render</span> <span class="ruby-value">layout:</span> <span class="ruby-string">&quot;bootstrap&quot;</span>
+<span class="line-num">84</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-user_detail">
+            
+              <b>user_detail</b>()
+            
+            <a href="../classes/AdminController.html#method-i-user_detail" name="method-i-user_detail" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-user_detail_source')" id="l_method-i-user_detail_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-user_detail_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/admin_controller.rb</span>
+<span class="line-num">30</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">user_detail</span>
+<span class="line-num">31</span>   <span class="ruby-ivar">@display_user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_i</span>)
+<span class="line-num">32</span>   <span class="ruby-ivar">@display_user</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_login</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+<span class="line-num">33</span>   <span class="ruby-ivar">@display_user</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_email</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">blank?</span>
+<span class="line-num">34</span>   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@display_user</span>
+<span class="line-num">35</span>     <span class="ruby-ivar">@observations</span> = <span class="ruby-constant">Observation</span>.<span class="ruby-identifier">page_of_results</span>( <span class="ruby-value">user_id:</span> <span class="ruby-ivar">@display_user</span>.<span class="ruby-identifier">id</span> )
+<span class="line-num">36</span>     <span class="ruby-identifier">geoip_response</span> = <span class="ruby-constant">INatAPIService</span>.<span class="ruby-identifier">geoip_lookup</span>( { <span class="ruby-value">ip:</span> <span class="ruby-ivar">@display_user</span>.<span class="ruby-identifier">last_ip</span> } )
+<span class="line-num">37</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">geoip_response</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">geoip_response</span>.<span class="ruby-identifier">results</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">geoip_response</span>.<span class="ruby-identifier">results</span>.<span class="ruby-identifier">country</span>
+<span class="line-num">38</span>       <span class="ruby-ivar">@geoip_location</span> = [
+<span class="line-num">39</span>         <span class="ruby-identifier">geoip_response</span>.<span class="ruby-identifier">results</span>.<span class="ruby-identifier">city</span>,
+<span class="line-num">40</span>         <span class="ruby-identifier">geoip_response</span>.<span class="ruby-identifier">results</span>.<span class="ruby-identifier">region</span>,
+<span class="line-num">41</span>         <span class="ruby-identifier">geoip_response</span>.<span class="ruby-identifier">results</span>.<span class="ruby-identifier">country</span>
+<span class="line-num">42</span>       ].<span class="ruby-identifier">join</span>( <span class="ruby-string">&quot;, &quot;</span> )
+<span class="line-num">43</span>       <span class="ruby-keyword">if</span> <span class="ruby-identifier">geoip_response</span>.<span class="ruby-identifier">results</span>.<span class="ruby-identifier">ll</span>
+<span class="line-num">44</span>         <span class="ruby-ivar">@geoip_latitude</span>, <span class="ruby-ivar">@geoip_longitude</span> = <span class="ruby-identifier">geoip_response</span>.<span class="ruby-identifier">results</span>.<span class="ruby-identifier">ll</span>
+<span class="line-num">45</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">46</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">47</span>     <span class="ruby-ivar">@email_suppressions</span> = [
+<span class="line-num">48</span>       <span class="ruby-ivar">@display_user</span>.<span class="ruby-identifier">email_suppressions</span>.<span class="ruby-identifier">to_a</span>, <span class="ruby-constant">EmailSuppression</span>.<span class="ruby-identifier">where</span>( <span class="ruby-value">email:</span> <span class="ruby-ivar">@display_user</span>.<span class="ruby-identifier">email</span> ).<span class="ruby-identifier">to_a</span>
+<span class="line-num">49</span>     ].<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">uniq</span>
+<span class="line-num">50</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">51</span> 
+<span class="line-num">52</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">53</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> <span class="ruby-keyword">do</span>
+<span class="line-num">54</span>       <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@display_user</span>
+<span class="line-num">55</span>         <span class="ruby-keyword">return</span> <span class="ruby-identifier">redirect_back_or_default</span>( <span class="ruby-identifier">users_admin_path</span> )
+<span class="line-num">56</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">57</span>       <span class="ruby-identifier">render</span> <span class="ruby-value">layout:</span> <span class="ruby-string">&quot;admin&quot;</span>
+<span class="line-num">58</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">59</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">60</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-users">
+            
+              <b>users</b>()
+            
+            <a href="../classes/AdminController.html#method-i-users" name="method-i-users" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-users_source')" id="l_method-i-users_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-users_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/admin_controller.rb</span>
+<span class="line-num">18</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">users</span>
+<span class="line-num">19</span>   <span class="ruby-ivar">@users</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">paginate</span>(<span class="ruby-value">page:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:page</span>]).<span class="ruby-identifier">order</span>(<span class="ruby-value">id:</span> <span class="ruby-value">:desc</span>)
+<span class="line-num">20</span>   <span class="ruby-ivar">@comment_counts_by_user_id</span> = <span class="ruby-constant">Comment</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">user_id:</span> <span class="ruby-ivar">@users</span>).<span class="ruby-identifier">group</span>(<span class="ruby-value">:user_id</span>).<span class="ruby-identifier">count</span>
+<span class="line-num">21</span>   <span class="ruby-ivar">@q</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:q</span>]
+<span class="line-num">22</span>   <span class="ruby-ivar">@users</span> = <span class="ruby-ivar">@users</span>.<span class="ruby-identifier">where</span>(
+<span class="line-num">23</span>     <span class="ruby-string">&quot;login ILIKE ? OR name ILIKE ? OR email ILIKE ? OR last_ip LIKE ?&quot;</span>, <span class="ruby-node">&quot;%#{@q}%&quot;</span>, <span class="ruby-node">&quot;%#{@q}%&quot;</span>, <span class="ruby-node">&quot;%#{@q}%&quot;</span>, <span class="ruby-node">&quot;%#{@q}%&quot;</span>
+<span class="line-num">24</span>   )
+<span class="line-num">25</span>   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+<span class="line-num">26</span>     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">layout:</span> <span class="ruby-string">&quot;admin&quot;</span> }
+<span class="line-num">27</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">28</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

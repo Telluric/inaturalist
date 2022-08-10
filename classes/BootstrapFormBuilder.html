@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BootstrapFormBuilder</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["BootstrapFormBuilder"]'>
+
+
+    <meta property="og:title" value="BootstrapFormBuilder">
+
+  
+
+    <meta name="keywords" content="BootstrapFormBuilder class, form_field, select, check_radio_field">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            BootstrapFormBuilder
+            
+                <span class="parent">&lt;
+                    
+                    <a href="DefaultFormBuilder.html">DefaultFormBuilder</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/app/helpers/bootstrap_form_builder_rb.html">app/helpers/bootstrap_form_builder.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-check_radio_field">check_radio_field</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-form_field">form_field</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-select">select</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-check_radio_field">
+            
+              <b>check_radio_field</b>( field, field_content = nil, options = {}, wrapper_options = {}, description = nil )
+            
+            <a href="../classes/BootstrapFormBuilder.html#method-i-check_radio_field" name="method-i-check_radio_field" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>rubocop:disable Metrics/ParameterLists</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-check_radio_field_source')" id="l_method-i-check_radio_field_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-check_radio_field_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/helpers/bootstrap_form_builder.rb</span>
+<span class="line-num">73</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">check_radio_field</span>( <span class="ruby-identifier">field</span>, <span class="ruby-identifier">field_content</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">options</span> = {}, <span class="ruby-identifier">wrapper_options</span> = {}, <span class="ruby-identifier">description</span> = <span class="ruby-keyword">nil</span> )
+<span class="line-num">74</span>   <span class="ruby-identifier">wrapper_options</span>[<span class="ruby-value">:class</span>] = <span class="ruby-identifier">wrapper_options</span>[<span class="ruby-value">:class</span>].<span class="ruby-identifier">gsub</span>( <span class="ruby-string">&quot;form-group&quot;</span>, <span class="ruby-identifier">field</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;check_box&quot;</span> <span class="ruby-operator">?</span> <span class="ruby-string">&quot;checkbox&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-string">&quot;radio&quot;</span> )
+<span class="line-num">75</span>   <span class="ruby-identifier">label_content</span> = ( <span class="ruby-identifier">options</span>[<span class="ruby-value">:label</span>] <span class="ruby-operator">==</span> <span class="ruby-keyword">false</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:label</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">field</span> ).<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">html_safe</span>
+<span class="line-num">76</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:required</span>]
+<span class="line-num">77</span>     <span class="ruby-identifier">label_content</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">content_tag</span>( <span class="ruby-value">:span</span>, <span class="ruby-string">&quot; *&quot;</span>, <span class="ruby-value">class:</span> <span class="ruby-string">&quot;required&quot;</span> )
+<span class="line-num">78</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">79</span>   <span class="ruby-identifier">content</span> = <span class="ruby-ivar">@template</span>.<span class="ruby-identifier">content_tag</span>( <span class="ruby-value">:label</span>, [<span class="ruby-identifier">field_content</span>, <span class="ruby-identifier">label_content</span>].<span class="ruby-identifier">join</span>( <span class="ruby-string">&quot; &quot;</span> ).<span class="ruby-identifier">html_safe</span> )
+<span class="line-num">80</span>   <span class="ruby-identifier">content</span> <span class="ruby-operator">+=</span> <span class="ruby-ivar">@template</span>.<span class="ruby-identifier">content_tag</span>( <span class="ruby-value">:div</span>, <span class="ruby-identifier">description</span>.<span class="ruby-identifier">html_safe</span> ) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">description</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">81</span>   <span class="ruby-ivar">@template</span>.<span class="ruby-identifier">content_tag</span>( <span class="ruby-value">:div</span>, <span class="ruby-identifier">wrapper_options</span> ) <span class="ruby-keyword">do</span>
+<span class="line-num">82</span>     <span class="ruby-identifier">content</span>
+<span class="line-num">83</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">84</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-form_field">
+            
+              <b>form_field</b>( field, field_content = nil, options = {}, &amp;block )
+            
+            <a href="../classes/BootstrapFormBuilder.html#method-i-form_field" name="method-i-form_field" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-form_field_source')" id="l_method-i-form_field_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-form_field_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/helpers/bootstrap_form_builder.rb</span>
+<span class="line-num"> 4</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">form_field</span>( <span class="ruby-identifier">field</span>, <span class="ruby-identifier">field_content</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">options</span> = {}, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span> )
+<span class="line-num"> 5</span>   <span class="ruby-identifier">options</span> = <span class="ruby-identifier">field_content</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+<span class="line-num"> 6</span>   <span class="ruby-identifier">options</span> <span class="ruby-operator">||=</span> {}
+<span class="line-num"> 7</span>   <span class="ruby-identifier">label_after</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>( <span class="ruby-value">:label_after</span> )
+<span class="line-num"> 8</span>   <span class="ruby-identifier">description_after</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>( <span class="ruby-value">:description_after</span> )
+<span class="line-num"> 9</span>   <span class="ruby-identifier">wrapper_options</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>( <span class="ruby-value">:wrapper</span> ) <span class="ruby-operator">||</span> {}
+<span class="line-num">10</span>   <span class="ruby-identifier">wrapper_options</span>[<span class="ruby-value">:class</span>] = <span class="ruby-node">&quot;#{wrapper_options[:class]} field #{field.to_s.parameterize.underscore}_field&quot;</span>.<span class="ruby-identifier">strip</span>
+<span class="line-num">11</span>   <span class="ruby-identifier">content</span> = <span class="ruby-string">&quot;&quot;</span>
+<span class="line-num">12</span>   <span class="ruby-identifier">label_content</span> = <span class="ruby-string">&quot;&quot;</span>
+<span class="line-num">13</span>   <span class="ruby-identifier">description</span> = <span class="ruby-identifier">content_tag</span>( <span class="ruby-value">:p</span>, <span class="ruby-identifier">options</span>[<span class="ruby-value">:description</span>], <span class="ruby-value">class:</span> <span class="ruby-string">&quot;help-block&quot;</span> ) <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:description</span>]
+<span class="line-num">14</span>   <span class="ruby-identifier">content</span> = <span class="ruby-node">&quot;#{content}#{block_given? ? @template.capture( &amp;block ) : field_content}&quot;</span>
+<span class="line-num">15</span> 
+<span class="line-num">16</span>   <span class="ruby-identifier">datalist</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">17</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:datalist</span>]
+<span class="line-num">18</span>     <span class="ruby-identifier">datalist</span> = <span class="ruby-identifier">content_tag</span>(
+<span class="line-num">19</span>       <span class="ruby-value">:datalist</span>,
+<span class="line-num">20</span>       <span class="ruby-identifier">options</span>[<span class="ruby-value">:datalist</span>].<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span> <span class="ruby-identifier">item</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">content_tag</span>( <span class="ruby-value">:option</span>, <span class="ruby-identifier">item</span>, <span class="ruby-value">value:</span> <span class="ruby-identifier">item</span> ) }.<span class="ruby-identifier">join</span>( <span class="ruby-string">&quot;\n&quot;</span> ).<span class="ruby-identifier">html_safe</span>,
+<span class="line-num">21</span>       <span class="ruby-value">id:</span> <span class="ruby-identifier">dom_id</span>( <span class="ruby-identifier">object</span>, <span class="ruby-node">&quot;#{field}-datalist&quot;</span> )
+<span class="line-num">22</span>     )
+<span class="line-num">23</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">24</span> 
+<span class="line-num">25</span>   <span class="ruby-keyword">if</span> <span class="ruby-node">%w(check_box radio_button)</span>.<span class="ruby-identifier">include?</span>( <span class="ruby-identifier">options</span>[<span class="ruby-value">:field_name</span>] )
+<span class="line-num">26</span>     <span class="ruby-keyword">return</span> <span class="ruby-identifier">check_radio_field</span>( <span class="ruby-identifier">field</span>, <span class="ruby-identifier">field_content</span>, <span class="ruby-identifier">options</span>, <span class="ruby-identifier">wrapper_options</span>, <span class="ruby-identifier">description</span> )
+<span class="line-num">27</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">28</span> 
+<span class="line-num">29</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:label</span>] <span class="ruby-operator">!=</span> <span class="ruby-keyword">false</span>
+<span class="line-num">30</span>     <span class="ruby-identifier">label_field</span> = <span class="ruby-identifier">field</span>
+<span class="line-num">31</span>     <span class="ruby-identifier">label_tag</span> = <span class="ruby-identifier">label</span>(
+<span class="line-num">32</span>       <span class="ruby-identifier">label_field</span>,
+<span class="line-num">33</span>       <span class="ruby-identifier">options</span>[<span class="ruby-value">:label</span>].<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">html_safe</span>,
+<span class="line-num">34</span>       <span class="ruby-value">class:</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:label_class</span>],
+<span class="line-num">35</span>       <span class="ruby-value">for:</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:id</span>]
+<span class="line-num">36</span>     )
+<span class="line-num">37</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:required</span>]
+<span class="line-num">38</span>       <span class="ruby-identifier">label_tag</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">content_tag</span>( <span class="ruby-value">:span</span>, <span class="ruby-string">&quot; *&quot;</span>, <span class="ruby-value">class:</span> <span class="ruby-string">&quot;required&quot;</span> )
+<span class="line-num">39</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">40</span>     <span class="ruby-identifier">label_content</span> = <span class="ruby-identifier">content_tag</span>( <span class="ruby-identifier">label_after</span> <span class="ruby-operator">?</span> <span class="ruby-value">:span</span> <span class="ruby-operator">:</span> <span class="ruby-value">:div</span>, <span class="ruby-identifier">label_tag</span>, <span class="ruby-value">class:</span> <span class="ruby-string">&quot;inlabel&quot;</span> )
+<span class="line-num">41</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">42</span> 
+<span class="line-num">43</span>   <span class="ruby-identifier">content</span> = <span class="ruby-keyword">if</span> <span class="ruby-identifier">label_after</span>
+<span class="line-num">44</span>     <span class="ruby-node">&quot;#{content} #{datalist} #{label_content} #{description}&quot;</span>
+<span class="line-num">45</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">description_after</span>
+<span class="line-num">46</span>     <span class="ruby-node">&quot;#{label_content} #{content} #{datalist} #{description}&quot;</span>
+<span class="line-num">47</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">48</span>     <span class="ruby-node">&quot;#{label_content} #{description} #{content} #{datalist}&quot;</span>
+<span class="line-num">49</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">50</span>   <span class="ruby-ivar">@template</span>.<span class="ruby-identifier">content_tag</span>( <span class="ruby-value">:div</span>, <span class="ruby-identifier">content</span>.<span class="ruby-identifier">html_safe</span>, <span class="ruby-identifier">wrapper_options</span> )
+<span class="line-num">51</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-select">
+            
+              <b>select</b>( method, choices = nil, options = {}, html_options = {}, &amp;block )
+            
+            <a href="../classes/BootstrapFormBuilder.html#method-i-select" name="method-i-select" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-select_source')" id="l_method-i-select_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-select_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/helpers/bootstrap_form_builder.rb</span>
+<span class="line-num">64</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">select</span>( <span class="ruby-identifier">method</span>, <span class="ruby-identifier">choices</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">options</span> = {}, <span class="ruby-identifier">html_options</span> = {}, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span> )
+<span class="line-num">65</span>   <span class="ruby-keyword">unless</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:skip_builder</span>]
+<span class="line-num">66</span>     <span class="ruby-identifier">html_options</span>[<span class="ruby-value">:class</span>] = [<span class="ruby-identifier">html_options</span>[<span class="ruby-value">:class</span>], <span class="ruby-string">&quot;form-control&quot;</span>].<span class="ruby-identifier">join</span>( <span class="ruby-string">&quot; &quot;</span> )
+<span class="line-num">67</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">68</span>   <span class="ruby-keyword">super</span>( <span class="ruby-identifier">method</span>, <span class="ruby-identifier">choices</span>, <span class="ruby-identifier">options</span>, <span class="ruby-identifier">html_options</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span> )
+<span class="line-num">69</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

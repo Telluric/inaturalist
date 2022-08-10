@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RubyPicasa::Base</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../../">
+<meta name="data-tree-keys" content='["RubyPicasa", "Base"]'>
+
+
+    <meta property="og:title" value="RubyPicasa::Base">
+
+  
+    
+    <meta name="description" content="Note that in all defined classes I&#39;m ignoring values I don&#39;t happen to need or know about. Please do add support for the ones I&#39;ve missed.">
+    <meta property="og:description" content="Note that in all defined classes I&#39;m ignoring values I don&#39;t happen to need or know about. Please do add support for the ones I&#39;ve missed.">
+  
+
+    <meta name="keywords" content="RubyPicasa::Base class, link, session=, session, feed, next, previous, url, thumbnail">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            RubyPicasa::Base
+            
+                <span class="parent">&lt;
+                    
+                    Objectify::DocumentParser
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../../files/lib/ruby_picasa/types_rb.html">lib/ruby_picasa/types.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>Note that in all defined classes I&#39;m ignoring values I don&#39;t happen to need or know about. Please do add support for the ones I&#39;ve missed.  Be sure to declare which namespaces are supported with the namespaces method.  Any elements defined in other namespaces are automatically ignored.</p>
+
+<p><a href="Base.html"><code>Base</code></a> class for <a href="User.html"><code>User</code></a>, <a href="Photo.html"><code>Photo</code></a> and <a href="Album.html"><code>Album</code></a> types, not used independently.</p>
+
+<pre><code>attribute :id, &#39;gphoto:id&#39;
+attribute :feed_id, &#39;id&#39;
+attributes :updated, :title
+
+has_many :links, Objectify::Atom::Link, &#39;link&#39;
+has_one :content, PhotoUrl, &#39;media:content&#39;
+has_many :thumbnails, ThumbnailUrl, &#39;media:thumbnail&#39;
+has_one :author, Objectify::Atom::Author, &#39;author&#39;
+</code></pre>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-feed">feed</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-link">link</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-next">next</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-previous">previous</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-session">session</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-session-3D">session=</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-thumbnail">thumbnail</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-url">url</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-feed">
+            
+              <b>feed</b>(options = {})
+            
+            <a href="../../classes/RubyPicasa/Base.html#method-i-feed" name="method-i-feed" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Retrieves the data feed at the url of the current record.</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-feed_source')" id="l_method-i-feed_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-feed_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/ruby_picasa/types.rb</span>
+<span class="line-num">73</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">feed</span>(<span class="ruby-identifier">options</span> = {})
+<span class="line-num">74</span>   <span class="ruby-identifier">session</span>.<span class="ruby-identifier">get_url</span>(<span class="ruby-identifier">link</span>(<span class="ruby-string">&#39;http://schemas.google.com/g/2005#feed&#39;</span>).<span class="ruby-identifier">href</span>, <span class="ruby-identifier">options</span>)
+<span class="line-num">75</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-link">
+            
+              <b>link</b>(rel)
+            
+            <a href="../../classes/RubyPicasa/Base.html#method-i-link" name="method-i-link" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Return the link object with a matching rel attribute value. <code>rel</code> can be either a fully matching string or a regular expression.</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-link_source')" id="l_method-i-link_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-link_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/ruby_picasa/types.rb</span>
+<span class="line-num">55</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">link</span>(<span class="ruby-identifier">rel</span>)
+<span class="line-num">56</span>   <span class="ruby-identifier">links</span>.<span class="ruby-identifier">find</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">l</span><span class="ruby-operator">|</span> <span class="ruby-identifier">rel</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">l</span>.<span class="ruby-identifier">rel</span> }
+<span class="line-num">57</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-next">
+            
+              <b>next</b>()
+            
+            <a href="../../classes/RubyPicasa/Base.html#method-i-next" name="method-i-next" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>If the results are paginated, retrieve the next page.</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-next_source')" id="l_method-i-next_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-next_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/ruby_picasa/types.rb</span>
+<span class="line-num">78</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">next</span>
+<span class="line-num">79</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier ruby-title">link</span> = <span class="ruby-identifier">link</span>(<span class="ruby-string">&#39;next&#39;</span>)
+<span class="line-num">80</span>     <span class="ruby-identifier">session</span>.<span class="ruby-identifier">get_url</span>(<span class="ruby-identifier">link</span>.<span class="ruby-identifier">href</span>)
+<span class="line-num">81</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">82</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-previous">
+            
+              <b>previous</b>()
+            
+            <a href="../../classes/RubyPicasa/Base.html#method-i-previous" name="method-i-previous" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>If the results are paginated, retrieve the previous page.</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-previous_source')" id="l_method-i-previous_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-previous_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/ruby_picasa/types.rb</span>
+<span class="line-num">85</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">previous</span>
+<span class="line-num">86</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">link</span> = <span class="ruby-identifier">link</span>(<span class="ruby-string">&#39;previous&#39;</span>)
+<span class="line-num">87</span>     <span class="ruby-identifier">session</span>.<span class="ruby-identifier">get_url</span>(<span class="ruby-identifier">link</span>.<span class="ruby-identifier">href</span>)
+<span class="line-num">88</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">89</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-session">
+            
+              <b>session</b>()
+            
+            <a href="../../classes/RubyPicasa/Base.html#method-i-session" name="method-i-session" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Should return the <a href="../Picasa.html"><code>Picasa</code></a> instance that retrieved this data.</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-session_source')" id="l_method-i-session_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-session_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/ruby_picasa/types.rb</span>
+<span class="line-num">64</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">session</span>
+<span class="line-num">65</span>   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@session</span>
+<span class="line-num">66</span>     <span class="ruby-ivar">@session</span>
+<span class="line-num">67</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">68</span>     <span class="ruby-ivar">@session</span> = <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">session</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">parent</span>
+<span class="line-num">69</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">70</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-session-3D">
+            
+              <b>session=</b>(session)
+            
+            <a href="../../classes/RubyPicasa/Base.html#method-i-session-3D" name="method-i-session-3D" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-session-3D_source')" id="l_method-i-session-3D_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-session-3D_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/ruby_picasa/types.rb</span>
+<span class="line-num">59</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">session=</span>(<span class="ruby-identifier">session</span>)
+<span class="line-num">60</span>   <span class="ruby-ivar">@session</span> = <span class="ruby-identifier">session</span>
+<span class="line-num">61</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-thumbnail">
+            
+              <b>thumbnail</b>(thumb_name)
+            
+            <a href="../../classes/RubyPicasa/Base.html#method-i-thumbnail" name="method-i-thumbnail" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>See <code>url</code> for possible image sizes</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-thumbnail_source')" id="l_method-i-thumbnail_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-thumbnail_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/ruby_picasa/types.rb</span>
+<span class="line-num">137</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">thumbnail</span>(<span class="ruby-identifier">thumb_name</span>)
+<span class="line-num">138</span>   <span class="ruby-identifier">raise</span> <span class="ruby-constant">PicasaError</span>, <span class="ruby-string">&#39;Invalid thumbnail size&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">Photo</span><span class="ruby-operator">::</span><span class="ruby-constant">VALID</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">thumb_name</span>.<span class="ruby-identifier">to_s</span>)
+<span class="line-num">139</span>   <span class="ruby-identifier">thumb</span> = <span class="ruby-identifier">thumbnails</span>.<span class="ruby-identifier">find</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">thumb_name</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">thumb_name</span> }
+<span class="line-num">140</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">thumb</span>
+<span class="line-num">141</span>     <span class="ruby-identifier">thumb</span>
+<span class="line-num">142</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">session</span>
+<span class="line-num">143</span>     <span class="ruby-identifier">f</span> = <span class="ruby-identifier">feed</span>(<span class="ruby-value">:thumbsize</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">thumb_name</span>)
+<span class="line-num">144</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">f</span>
+<span class="line-num">145</span>       <span class="ruby-identifier">f</span>.<span class="ruby-identifier">thumbnails</span>.<span class="ruby-identifier">first</span>
+<span class="line-num">146</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">147</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">148</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-url">
+            
+              <b>url</b>(thumb_name = nil, options = nil)
+            
+            <a href="../../classes/RubyPicasa/Base.html#method-i-url" name="method-i-url" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Thumbnail names are by image width in pixels. Sizes up to 160 may be either cropped (square) or uncropped:</p>
+
+<pre><code>cropped:        32c, 48c, 64c, 72c, 144c, 160c
+uncropped:      32u, 48u, 64u, 72u, 144u, 160u
+</code></pre>
+
+<p>The rest of the image sizes should be specified by the desired width alone. Widths up to 800px may be embedded on a webpage:</p>
+
+<pre><code>embeddable:     200, 288, 320, 400, 512, 576, 640, 720, 800
+not embeddable: 912, 1024, 1152, 1280, 1440, 1600
+</code></pre>
+
+<p>if a options is set to true or a hash is given, the width and height of the image will be added to the hash and returned. Useful for passing to the rails image_tag helper as follows:</p>
+
+<pre><code>image_tag(*image.url(&#39;72c&#39;, { :class =&gt; &#39;thumb&#39; }))
+</code></pre>
+
+<p>which results in:</p>
+
+<pre><code>&lt;img href=&quot;...&quot; class=&quot;thumb&quot; width=&quot;72&quot; height=&quot;72&quot;&gt;
+</code></pre>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-url_source')" id="l_method-i-url_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-url_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/ruby_picasa/types.rb</span>
+<span class="line-num">113</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">url</span>(<span class="ruby-identifier">thumb_name</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">options</span> = <span class="ruby-keyword">nil</span>)
+<span class="line-num">114</span>   <span class="ruby-identifier">url</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">115</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">thumb_name</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Hash</span>
+<span class="line-num">116</span>     <span class="ruby-identifier">options</span> = <span class="ruby-identifier">thumb_name</span>
+<span class="line-num">117</span>     <span class="ruby-identifier">thumb_name</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">118</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">119</span>   <span class="ruby-identifier">options</span> = {} <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Hash</span>
+<span class="line-num">120</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">thumb_name</span>
+<span class="line-num">121</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">thumb</span> = <span class="ruby-identifier">thumbnail</span>(<span class="ruby-identifier">thumb_name</span>)
+<span class="line-num">122</span>       <span class="ruby-identifier">url</span> = <span class="ruby-identifier">thumb</span>.<span class="ruby-identifier">url</span>
+<span class="line-num">123</span>       <span class="ruby-identifier">options</span> = { <span class="ruby-value">:width</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">thumb</span>.<span class="ruby-identifier">width</span>, <span class="ruby-value">:height</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">thumb</span>.<span class="ruby-identifier">height</span> }.<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">options</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>
+<span class="line-num">124</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">125</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">126</span>     <span class="ruby-identifier">url</span> = <span class="ruby-identifier">content</span>.<span class="ruby-identifier">url</span>
+<span class="line-num">127</span>     <span class="ruby-identifier">options</span> = { <span class="ruby-value">:width</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">content</span>.<span class="ruby-identifier">width</span>, <span class="ruby-value">:height</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">content</span>.<span class="ruby-identifier">height</span> }.<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">options</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>
+<span class="line-num">128</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">129</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>
+<span class="line-num">130</span>     [<span class="ruby-identifier">url</span>, <span class="ruby-identifier">options</span>]
+<span class="line-num">131</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">132</span>     <span class="ruby-identifier">url</span>
+<span class="line-num">133</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">134</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

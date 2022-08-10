@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ElasticModel</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["ElasticModel"]'>
+
+
+    <meta property="og:title" value="ElasticModel">
+
+  
+
+    <meta name="keywords" content="ElasticModel class, search_criteria, search_filters, search_hash, id_or_object, envelope_filter, point_geojson, point_latlon, valid_latlon?, geom_geojson, date_details, elasticsearch_url, elasticsearch_is_running?, wait_until_elasticsearch_is_running, index_exists?, wait_until_index_exists">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Module</span>
+            ElasticModel
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/lib/elastic_model/elastic_model_rb.html">lib/elastic_model/elastic_model.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-date_details">date_details</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-elasticsearch_is_running-3F">elasticsearch_is_running?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-elasticsearch_url">elasticsearch_url</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-envelope_filter">envelope_filter</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-geom_geojson">geom_geojson</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-id_or_object">id_or_object</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-index_exists-3F">index_exists?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-point_geojson">point_geojson</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-point_latlon">point_latlon</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-search_criteria">search_criteria</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-search_filters">search_filters</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-search_hash">search_hash</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-valid_latlon-3F">valid_latlon?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>W</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-wait_until_elasticsearch_is_running">wait_until_elasticsearch_is_running</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-wait_until_index_exists">wait_until_index_exists</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <h2 class="sectiontitle">Constants</h2>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">ANALYSIS</td>
+            <td>=</td>
+            <td class="attr-value">{
+analyzer: [
+ASCII_SNOWBALL_ANALYZER,
+AUTOCOMPLETE_ANALYZER,
+AUTOCOMPLETE_ANALYZER_JA,
+KEYWORD_AUTOCOMPLETE_ANALYZER,
+STANDARD_ANALYZER,
+KEYWORD_ANALYZER
+].reduce(&amp;:merge),
+filter: EDGE_NGRAM_FILTER,
+char_filter: {
+inat_char_filter: {
+type: &quot;mapping&quot;,
+mappings: [
+# map ʻokina to nothing so searches for ʻokina, &#39;okina, and okina would all return the same things
+&quot;ʻ =&gt; &quot;,
+&quot;× =&gt; x&quot;
+]
+}
+}
+}</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><p>store all of the above in a constant, used when defining indices in models</p></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">ASCII_SNOWBALL_ANALYZER</td>
+            <td>=</td>
+            <td class="attr-value">{
+ascii_snowball_analyzer: {
+tokenizer: &quot;standard&quot;,
+filter: [ &quot;lowercase&quot;, &quot;asciifolding&quot;, &quot;stop&quot;, &quot;snowball&quot; ],
+char_filter: [ &quot;inat_char_filter&quot; ]
+}
+}</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><p>basic search analyzer. Avoids diacritic variations, uses snownall for more tolerance of string endings (e.g. `bear` finds `bears`)</p></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">AUTOCOMPLETE_ANALYZER</td>
+            <td>=</td>
+            <td class="attr-value">{
+autocomplete_analyzer: {
+tokenizer: &quot;standard&quot;,
+filter: [ &quot;lowercase&quot;, &quot;asciifolding&quot;, &quot;edge_ngram_filter&quot; ],
+char_filter: [ &quot;inat_char_filter&quot; ]
+}
+}</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><p>basic autocomplete analyzer. Avoids diacritic variations, will find results based on sub-matches (e.g. `Park` finds `National Park`)</p></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">AUTOCOMPLETE_ANALYZER_JA</td>
+            <td>=</td>
+            <td class="attr-value">{
+autocomplete_analyzer_ja: {
+tokenizer: &quot;kuromoji_tokenizer&quot;,
+filter: [ &quot;cjk_width&quot;, &quot;kuromoji_readingform&quot; ]
+}
+}</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><p>autocomplete analyzer for Japanese strings NOTE: don&#39;t forget to install the proper analyzers in Elasticsearch see <a href="https://github.com/elastic/elasticsearch-analysis-kuromoji#japanese-kuromoji-analysis-for-elasticsearch">github.com/elastic/elasticsearch-analysis-kuromoji#japanese-kuromoji-analysis-for-elasticsearch</a></p></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">EDGE_NGRAM_FILTER</td>
+            <td>=</td>
+            <td class="attr-value">{
+edge_ngram_filter: {
+type: &quot;edge_ngram&quot;,
+min_gram: 1,
+max_gram: 20
+}
+}</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><p>for autocomplete analyzers. Needs at least 2 letters (e.g. `P` doesn&#39;t find `Park`)</p></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">KEYWORD_ANALYZER</td>
+            <td>=</td>
+            <td class="attr-value">{
+keyword_analyzer: {
+tokenizer: &quot;keyword&quot;,
+filter: [ &quot;lowercase&quot;, &quot;asciifolding&quot; ]
+}
+}</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><p>basic search analyzer with no sub-matches</p></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">KEYWORD_AUTOCOMPLETE_ANALYZER</td>
+            <td>=</td>
+            <td class="attr-value">{
+keyword_autocomplete_analyzer: {
+tokenizer: &quot;keyword&quot;,
+filter: [ &quot;lowercase&quot;, &quot;asciifolding&quot;, &quot;stop&quot;, &quot;edge_ngram_filter&quot; ]
+}
+}</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><p>autocomplete with no sub-matches (e.g. `Park` doesn&#39;t find `National Park`)</p></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">STANDARD_ANALYZER</td>
+            <td>=</td>
+            <td class="attr-value">{
+standard_analyzer: {
+tokenizer: &quot;standard&quot;,
+filter: [ &quot;lowercase&quot;, &quot;asciifolding&quot; ]
+}
+}</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"><p>basic search analyzer that allows sub-matches</p></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <h2 class="sectiontitle">Class Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-c-date_details">
+            
+              <b>date_details</b>(datetime)
+            
+            <a href="../classes/ElasticModel.html#method-c-date_details" name="method-c-date_details" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>used when indexing dates to enable queries like: `show me all observations from April of any year`</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-date_details_source')" id="l_method-c-date_details_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-date_details_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/elastic_model/elastic_model.rb</span>
+<span class="line-num">253</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">date_details</span>(<span class="ruby-identifier">datetime</span>)
+<span class="line-num">254</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">datetime</span>
+<span class="line-num">255</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">datetime</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Date</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">datetime</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Time</span>)
+<span class="line-num">256</span>   { <span class="ruby-value">date:</span> <span class="ruby-identifier">datetime</span>.<span class="ruby-identifier">to_date</span>,
+<span class="line-num">257</span>     <span class="ruby-value">day:</span> <span class="ruby-identifier">datetime</span>.<span class="ruby-identifier">day</span>,
+<span class="line-num">258</span>     <span class="ruby-value">month:</span> <span class="ruby-identifier">datetime</span>.<span class="ruby-identifier">month</span>,
+<span class="line-num">259</span>     <span class="ruby-value">year:</span> <span class="ruby-identifier">datetime</span>.<span class="ruby-identifier">year</span>,
+<span class="line-num">260</span>     <span class="ruby-value">hour:</span> <span class="ruby-identifier">datetime</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:hour</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">datetime</span>.<span class="ruby-identifier">hour</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>,
+<span class="line-num">261</span>     <span class="ruby-value">week:</span> <span class="ruby-identifier">datetime</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&quot;%V&quot;</span>).<span class="ruby-identifier">to_i</span> }
+<span class="line-num">262</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-elasticsearch_is_running-3F">
+            
+              <b>elasticsearch_is_running?</b>()
+            
+            <a href="../classes/ElasticModel.html#method-c-elasticsearch_is_running-3F" name="method-c-elasticsearch_is_running-3F" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-elasticsearch_is_running-3F_source')" id="l_method-c-elasticsearch_is_running-3F_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-elasticsearch_is_running-3F_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/elastic_model/elastic_model.rb</span>
+<span class="line-num">272</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">elasticsearch_is_running?</span>
+<span class="line-num">273</span>   <span class="ruby-keyword">begin</span>
+<span class="line-num">274</span>     <span class="ruby-identifier">response</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">get</span>(<span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">elasticsearch_url</span>))
+<span class="line-num">275</span>     <span class="ruby-keyword">return</span> <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">response</span>)[<span class="ruby-string">&quot;tagline&quot;</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&quot;You Know, for Search&quot;</span>
+<span class="line-num">276</span>   <span class="ruby-keyword">rescue</span>
+<span class="line-num">277</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">278</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="line-num">279</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-elasticsearch_url">
+            
+              <b>elasticsearch_url</b>()
+            
+            <a href="../classes/ElasticModel.html#method-c-elasticsearch_url" name="method-c-elasticsearch_url" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-elasticsearch_url_source')" id="l_method-c-elasticsearch_url_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-elasticsearch_url_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/elastic_model/elastic_model.rb</span>
+<span class="line-num">264</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">elasticsearch_url</span>
+<span class="line-num">265</span>   <span class="ruby-identifier">url</span> = <span class="ruby-constant">Taxon</span>.<span class="ruby-identifier">__elasticsearch__</span>.<span class="ruby-identifier">client</span>.<span class="ruby-identifier">transport</span>.<span class="ruby-identifier">instance_variable_get</span>( <span class="ruby-string">&quot;@options&quot;</span> )[<span class="ruby-value">:host</span>]
+<span class="line-num">266</span>   <span class="ruby-keyword">unless</span> <span class="ruby-identifier">url</span>.<span class="ruby-identifier">starts_with?</span>(<span class="ruby-string">&quot;http://&quot;</span>)
+<span class="line-num">267</span>     <span class="ruby-identifier">url</span> = <span class="ruby-string">&quot;http://&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">url</span>
+<span class="line-num">268</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">269</span>   <span class="ruby-identifier">url</span>
+<span class="line-num">270</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-envelope_filter">
+            
+              <b>envelope_filter</b>(options={})
+            
+            <a href="../classes/ElasticModel.html#method-c-envelope_filter" name="method-c-envelope_filter" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-envelope_filter_source')" id="l_method-c-envelope_filter_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-envelope_filter_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/elastic_model/elastic_model.rb</span>
+<span class="line-num">168</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">envelope_filter</span>(<span class="ruby-identifier">options</span>={})
+<span class="line-num">169</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">options</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:envelope</span>]
+<span class="line-num">170</span>   <span class="ruby-comment"># e.g. options = { envelope: { geojson: { nelat:X, nelng:Y... } } }</span>
+<span class="line-num">171</span>   <span class="ruby-identifier">field</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:envelope</span>].<span class="ruby-identifier">first</span>[<span class="ruby-value">0</span>]
+<span class="line-num">172</span>   <span class="ruby-identifier">opts</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:envelope</span>].<span class="ruby-identifier">first</span>[<span class="ruby-value">1</span>]
+<span class="line-num">173</span>   <span class="ruby-comment"># if we are given a user, then we return matches against any of that</span>
+<span class="line-num">174</span>   <span class="ruby-comment"># users observations&#39; private coordinates. This is done with a gnarly</span>
+<span class="line-num">175</span>   <span class="ruby-comment"># query which basically says:</span>
+<span class="line-num">176</span>   <span class="ruby-comment">#   where public geom X OR ( obs.owner=user and private_geom X)</span>
+<span class="line-num">177</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:user</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:user</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">User</span>)
+<span class="line-num">178</span>     <span class="ruby-identifier">coords</span> = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">reject</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">k</span> <span class="ruby-operator">==</span> <span class="ruby-value">:user</span> }
+<span class="line-num">179</span>     <span class="ruby-keyword">return</span> { <span class="ruby-value">bool:</span> { <span class="ruby-value">should:</span> [
+<span class="line-num">180</span>       <span class="ruby-identifier">envelope_filter</span>({ <span class="ruby-value">envelope:</span> { <span class="ruby-identifier">field</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">coords</span> } }),
+<span class="line-num">181</span>       { <span class="ruby-value">bool:</span> { <span class="ruby-value">must:</span> [
+<span class="line-num">182</span>         { <span class="ruby-value">term:</span> { <span class="ruby-value">&quot;user.id&quot;:</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:user</span>].<span class="ruby-identifier">id</span> } },
+<span class="line-num">183</span>         <span class="ruby-identifier">envelope_filter</span>({ <span class="ruby-value">envelope:</span> { <span class="ruby-value">&quot;private_#{field}&quot;:</span> <span class="ruby-identifier">coords</span> } }) ]} }
+<span class="line-num">184</span>     ]} }
+<span class="line-num">185</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">186</span>   <span class="ruby-identifier">nelat</span> = <span class="ruby-identifier">opts</span>[<span class="ruby-value">:nelat</span>]
+<span class="line-num">187</span>   <span class="ruby-identifier">nelng</span> = <span class="ruby-identifier">opts</span>[<span class="ruby-value">:nelng</span>]
+<span class="line-num">188</span>   <span class="ruby-identifier">swlat</span> = <span class="ruby-identifier">opts</span>[<span class="ruby-value">:swlat</span>]
+<span class="line-num">189</span>   <span class="ruby-identifier">swlng</span> = <span class="ruby-identifier">opts</span>[<span class="ruby-value">:swlng</span>]
+<span class="line-num">190</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">nelat</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">nelng</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">swlat</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">swlng</span>
+<span class="line-num">191</span>   <span class="ruby-identifier">swlng</span> = (<span class="ruby-identifier">swlng</span> <span class="ruby-operator">||</span> <span class="ruby-value">-180</span>).<span class="ruby-identifier">to_f</span>
+<span class="line-num">192</span>   <span class="ruby-identifier">swlat</span> = (<span class="ruby-identifier">swlat</span> <span class="ruby-operator">||</span> <span class="ruby-value">-90</span>).<span class="ruby-identifier">to_f</span>
+<span class="line-num">193</span>   <span class="ruby-identifier">nelng</span> = (<span class="ruby-identifier">nelng</span> <span class="ruby-operator">||</span> <span class="ruby-value">180</span>).<span class="ruby-identifier">to_f</span>
+<span class="line-num">194</span>   <span class="ruby-identifier">nelat</span> = (<span class="ruby-identifier">nelat</span> <span class="ruby-operator">||</span> <span class="ruby-value">90</span>).<span class="ruby-identifier">to_f</span>
+<span class="line-num">195</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">nelng</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">swlng</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">nelng</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">swlng</span>
+<span class="line-num">196</span>     <span class="ruby-comment"># the envelope crosses the dateline. Unfortunately, elasticsearch</span>
+<span class="line-num">197</span>     <span class="ruby-comment"># doesn&#39;t handle this well and we need to split the envelope at</span>
+<span class="line-num">198</span>     <span class="ruby-comment"># the dateline and do an OR query</span>
+<span class="line-num">199</span>     <span class="ruby-identifier">left</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">deep_dup</span>
+<span class="line-num">200</span>     <span class="ruby-identifier">right</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">deep_dup</span>
+<span class="line-num">201</span>     <span class="ruby-identifier">left</span>[<span class="ruby-value">:envelope</span>][<span class="ruby-identifier">field</span>][<span class="ruby-value">:nelng</span>] = <span class="ruby-value">180</span>
+<span class="line-num">202</span>     <span class="ruby-identifier">right</span>[<span class="ruby-value">:envelope</span>][<span class="ruby-identifier">field</span>][<span class="ruby-value">:swlng</span>] = <span class="ruby-value">-180</span>
+<span class="line-num">203</span>     <span class="ruby-keyword">return</span> { <span class="ruby-value">bool:</span> { <span class="ruby-value">should:</span> [
+<span class="line-num">204</span>         <span class="ruby-identifier">envelope_filter</span>(<span class="ruby-identifier">left</span>),
+<span class="line-num">205</span>         <span class="ruby-identifier">envelope_filter</span>(<span class="ruby-identifier">right</span>) ]}}
+<span class="line-num">206</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">207</span>   {
+<span class="line-num">208</span>     <span class="ruby-value">geo_shape:</span> {
+<span class="line-num">209</span>       <span class="ruby-identifier">field</span> <span class="ruby-operator">=&gt;</span> {
+<span class="line-num">210</span>         <span class="ruby-value">shape:</span> {
+<span class="line-num">211</span>           <span class="ruby-value">type:</span> <span class="ruby-string">&quot;envelope&quot;</span>,
+<span class="line-num">212</span>           <span class="ruby-value">coordinates:</span> [
+<span class="line-num">213</span>             [ <span class="ruby-identifier">swlng</span>, <span class="ruby-identifier">nelat</span> ],
+<span class="line-num">214</span>             [ <span class="ruby-identifier">nelng</span>, <span class="ruby-identifier">swlat</span> ] ]
+<span class="line-num">215</span>         }
+<span class="line-num">216</span>       }
+<span class="line-num">217</span>     }
+<span class="line-num">218</span>   }
+<span class="line-num">219</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-geom_geojson">
+            
+              <b>geom_geojson</b>(geom)
+            
+            <a href="../classes/ElasticModel.html#method-c-geom_geojson" name="method-c-geom_geojson" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-geom_geojson_source')" id="l_method-c-geom_geojson_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-geom_geojson_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/elastic_model/elastic_model.rb</span>
+<span class="line-num">241</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">geom_geojson</span>(<span class="ruby-identifier">geom</span>)
+<span class="line-num">242</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> [
+<span class="line-num">243</span>     <span class="ruby-constant">RGeo</span><span class="ruby-operator">::</span><span class="ruby-constant">Geos</span><span class="ruby-operator">::</span><span class="ruby-constant">CAPIMultiPolygonImpl</span>,
+<span class="line-num">244</span>     <span class="ruby-constant">RGeo</span><span class="ruby-operator">::</span><span class="ruby-constant">Geos</span><span class="ruby-operator">::</span><span class="ruby-constant">CAPIPointImpl</span>,
+<span class="line-num">245</span>     <span class="ruby-constant">RGeo</span><span class="ruby-operator">::</span><span class="ruby-constant">Geos</span><span class="ruby-operator">::</span><span class="ruby-constant">CAPIPolygonImpl</span>,
+<span class="line-num">246</span>     <span class="ruby-constant">RGeo</span><span class="ruby-operator">::</span><span class="ruby-constant">Geos</span><span class="ruby-operator">::</span><span class="ruby-constant">FFIMultiPolygonImpl</span>,
+<span class="line-num">247</span>     <span class="ruby-constant">RGeo</span><span class="ruby-operator">::</span><span class="ruby-constant">Geos</span><span class="ruby-operator">::</span><span class="ruby-constant">FFIPolygonImpl</span> ].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">geom</span>.<span class="ruby-identifier">class</span>)
+<span class="line-num">248</span>   <span class="ruby-constant">RGeo</span><span class="ruby-operator">::</span><span class="ruby-constant">GeoJSON</span>.<span class="ruby-identifier">encode</span>(<span class="ruby-identifier">geom</span>)
+<span class="line-num">249</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-id_or_object">
+            
+              <b>id_or_object</b>(obj)
+            
+            <a href="../classes/ElasticModel.html#method-c-id_or_object" name="method-c-id_or_object" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-id_or_object_source')" id="l_method-c-id_or_object_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-id_or_object_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/elastic_model/elastic_model.rb</span>
+<span class="line-num">160</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">id_or_object</span>(<span class="ruby-identifier">obj</span>)
+<span class="line-num">161</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:id</span>)
+<span class="line-num">162</span>     <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">id</span>
+<span class="line-num">163</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">164</span>     <span class="ruby-identifier">obj</span>
+<span class="line-num">165</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">166</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-index_exists-3F">
+            
+              <b>index_exists?</b>(index_name)
+            
+            <a href="../classes/ElasticModel.html#method-c-index_exists-3F" name="method-c-index_exists-3F" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-index_exists-3F_source')" id="l_method-c-index_exists-3F_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-index_exists-3F_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/elastic_model/elastic_model.rb</span>
+<span class="line-num">290</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">index_exists?</span>(<span class="ruby-identifier">index_name</span>)
+<span class="line-num">291</span>   <span class="ruby-keyword">begin</span>
+<span class="line-num">292</span>     <span class="ruby-identifier">response</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">get</span>(<span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>([ <span class="ruby-identifier">elasticsearch_url</span>, <span class="ruby-identifier">index_name</span> ].<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;/&quot;</span>)))
+<span class="line-num">293</span>     <span class="ruby-keyword">return</span> <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">response</span>)[<span class="ruby-identifier">index_name</span>][<span class="ruby-string">&quot;mappings&quot;</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+<span class="line-num">294</span>   <span class="ruby-keyword">rescue</span>
+<span class="line-num">295</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">296</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="line-num">297</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-point_geojson">
+            
+              <b>point_geojson</b>(lat, lon)
+            
+            <a href="../classes/ElasticModel.html#method-c-point_geojson" name="method-c-point_geojson" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-point_geojson_source')" id="l_method-c-point_geojson_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-point_geojson_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/elastic_model/elastic_model.rb</span>
+<span class="line-num">221</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">point_geojson</span>(<span class="ruby-identifier">lat</span>, <span class="ruby-identifier">lon</span>)
+<span class="line-num">222</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">valid_latlon?</span>(<span class="ruby-identifier">lat</span>, <span class="ruby-identifier">lon</span>)
+<span class="line-num">223</span>   <span class="ruby-comment"># notice the order of lon, lat which is standard for GeoJSON</span>
+<span class="line-num">224</span>   { <span class="ruby-value">type:</span> <span class="ruby-string">&quot;Point&quot;</span>, <span class="ruby-value">coordinates:</span> [ <span class="ruby-identifier">lon</span>.<span class="ruby-identifier">to_f</span>, <span class="ruby-identifier">lat</span>.<span class="ruby-identifier">to_f</span> ] }
+<span class="line-num">225</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-point_latlon">
+            
+              <b>point_latlon</b>(lat, lon)
+            
+            <a href="../classes/ElasticModel.html#method-c-point_latlon" name="method-c-point_latlon" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-point_latlon_source')" id="l_method-c-point_latlon_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-point_latlon_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/elastic_model/elastic_model.rb</span>
+<span class="line-num">227</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">point_latlon</span>(<span class="ruby-identifier">lat</span>, <span class="ruby-identifier">lon</span>)
+<span class="line-num">228</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">valid_latlon?</span>(<span class="ruby-identifier">lat</span>, <span class="ruby-identifier">lon</span>)
+<span class="line-num">229</span>   <span class="ruby-comment"># notice the order of lat, lon which is used for ES geo_point</span>
+<span class="line-num">230</span>   <span class="ruby-node">&quot;#{lat},#{lon}&quot;</span>
+<span class="line-num">231</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-search_criteria">
+            
+              <b>search_criteria</b>(options={})
+            
+            <a href="../classes/ElasticModel.html#method-c-search_criteria" name="method-c-search_criteria" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-search_criteria_source')" id="l_method-c-search_criteria_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-search_criteria_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/elastic_model/elastic_model.rb</span>
+<span class="line-num">83</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">search_criteria</span>(<span class="ruby-identifier">options</span>={})
+<span class="line-num">84</span>   <span class="ruby-keyword">return</span> [] <span class="ruby-keyword">unless</span> <span class="ruby-identifier">options</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+<span class="line-num">85</span>   <span class="ruby-identifier">criteria</span> = [ ]
+<span class="line-num">86</span>   <span class="ruby-identifier">options</span>[<span class="ruby-value">:where</span>] <span class="ruby-operator">||=</span> { }
+<span class="line-num">87</span>   <span class="ruby-identifier">options</span>[<span class="ruby-value">:where</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+<span class="line-num">88</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span>[ <span class="ruby-value">:should</span>, <span class="ruby-value">:or</span> ].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">key</span>)
+<span class="line-num">89</span>       <span class="ruby-identifier">criteria</span> <span class="ruby-operator">&lt;&lt;</span> { <span class="ruby-value">terms:</span> { <span class="ruby-identifier">key</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">id_or_object</span>(<span class="ruby-identifier">v</span>) } } }
+<span class="line-num">90</span>     <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Hash</span>
+<span class="line-num">91</span>       <span class="ruby-identifier">criteria</span> <span class="ruby-operator">&lt;&lt;</span> { <span class="ruby-identifier">key</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">value</span> }
+<span class="line-num">92</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">93</span>       <span class="ruby-identifier">criteria</span> <span class="ruby-operator">&lt;&lt;</span> { <span class="ruby-value">match:</span> { <span class="ruby-identifier">key</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">id_or_object</span>(<span class="ruby-identifier">value</span>) } }
+<span class="line-num">94</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">95</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">96</span>   <span class="ruby-identifier">criteria</span>
+<span class="line-num">97</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-search_filters">
+            
+              <b>search_filters</b>(options={})
+            
+            <a href="../classes/ElasticModel.html#method-c-search_filters" name="method-c-search_filters" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-search_filters_source')" id="l_method-c-search_filters_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-search_filters_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/elastic_model/elastic_model.rb</span>
+<span class="line-num"> 99</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">search_filters</span>(<span class="ruby-identifier">options</span>={})
+<span class="line-num">100</span>   <span class="ruby-keyword">return</span> [] <span class="ruby-keyword">unless</span> <span class="ruby-identifier">options</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>) <span class="ruby-operator">&amp;&amp;</span>
+<span class="line-num">101</span>     <span class="ruby-identifier">options</span>[<span class="ruby-value">:filters</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:filters</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>)
+<span class="line-num">102</span>   <span class="ruby-identifier">options</span>[<span class="ruby-value">:filters</span>].<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+<span class="line-num">103</span>     <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+<span class="line-num">104</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">f</span>[<span class="ruby-value">:envelope</span>]
+<span class="line-num">105</span>       <span class="ruby-constant">ElasticModel</span>.<span class="ruby-identifier">envelope_filter</span>(<span class="ruby-identifier">f</span>)
+<span class="line-num">106</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">107</span>       <span class="ruby-identifier">f</span>
+<span class="line-num">108</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">109</span>   <span class="ruby-keyword">end</span>.<span class="ruby-identifier">compact</span>
+<span class="line-num">110</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-search_hash">
+            
+              <b>search_hash</b>(options={})
+            
+            <a href="../classes/ElasticModel.html#method-c-search_hash" name="method-c-search_hash" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-search_hash_source')" id="l_method-c-search_hash_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-search_hash_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/elastic_model/elastic_model.rb</span>
+<span class="line-num">112</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">search_hash</span>(<span class="ruby-identifier">options</span>={})
+<span class="line-num">113</span>   <span class="ruby-identifier">filters</span> = <span class="ruby-constant">ElasticModel</span>.<span class="ruby-identifier">search_criteria</span>(<span class="ruby-identifier">options</span>) <span class="ruby-operator">+</span>
+<span class="line-num">114</span>     <span class="ruby-constant">ElasticModel</span>.<span class="ruby-identifier">search_filters</span>(<span class="ruby-identifier">options</span>)
+<span class="line-num">115</span>   <span class="ruby-identifier">query</span> = { <span class="ruby-value">bool:</span> { } }
+<span class="line-num">116</span>   <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">filters</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">117</span>     <span class="ruby-identifier">query</span>[<span class="ruby-value">:bool</span>][<span class="ruby-value">:must</span>] = <span class="ruby-identifier">filters</span>
+<span class="line-num">118</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">119</span>   <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">options</span>[<span class="ruby-value">:inverse_filters</span>].<span class="ruby-identifier">blank?</span>
+<span class="line-num">120</span>     <span class="ruby-identifier">query</span>[<span class="ruby-value">:bool</span>][<span class="ruby-value">:must_not</span>] = <span class="ruby-identifier">options</span>[<span class="ruby-value">:inverse_filters</span>]
+<span class="line-num">121</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">122</span>   <span class="ruby-identifier">elastic_hash</span> = { <span class="ruby-value">query:</span> { <span class="ruby-value">constant_score:</span> { <span class="ruby-value">filter:</span> <span class="ruby-identifier">query</span> } } }
+<span class="line-num">123</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:sort</span>]
+<span class="line-num">124</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:sort</span>] <span class="ruby-operator">===</span> <span class="ruby-string">&quot;random&quot;</span>
+<span class="line-num">125</span>       <span class="ruby-identifier">elastic_hash</span>[<span class="ruby-value">:query</span>] = {
+<span class="line-num">126</span>         <span class="ruby-value">function_score:</span> {
+<span class="line-num">127</span>           <span class="ruby-value">query:</span> { <span class="ruby-value">constant_score:</span> { <span class="ruby-value">filter:</span> <span class="ruby-identifier">query</span> } },
+<span class="line-num">128</span>           <span class="ruby-value">random_score:</span> {
+<span class="line-num">129</span>             <span class="ruby-value">field:</span> <span class="ruby-string">&quot;_seq_no&quot;</span>
+<span class="line-num">130</span>           }
+<span class="line-num">131</span>         }
+<span class="line-num">132</span>       }
+<span class="line-num">133</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">134</span>       <span class="ruby-identifier">elastic_hash</span>[<span class="ruby-value">:sort</span>] = <span class="ruby-identifier">options</span>[<span class="ruby-value">:sort</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:sort</span>]
+<span class="line-num">135</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">136</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">137</span>   <span class="ruby-identifier">elastic_hash</span>[<span class="ruby-value">:size</span>] = <span class="ruby-identifier">options</span>[<span class="ruby-value">:size</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:size</span>]
+<span class="line-num">138</span>   <span class="ruby-identifier">elastic_hash</span>[<span class="ruby-value">:from</span>] = <span class="ruby-identifier">options</span>[<span class="ruby-value">:from</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:from</span>]
+<span class="line-num">139</span>   <span class="ruby-identifier">elastic_hash</span>[<span class="ruby-value">:_source</span>] = <span class="ruby-identifier">options</span>[<span class="ruby-value">:source</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:source</span>]
+<span class="line-num">140</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:aggregate</span>]
+<span class="line-num">141</span>     <span class="ruby-identifier">elastic_hash</span>[<span class="ruby-value">:aggs</span>] = <span class="ruby-constant">Hash</span>[<span class="ruby-identifier">options</span>[<span class="ruby-value">:aggregate</span>].<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+<span class="line-num">142</span>       <span class="ruby-comment"># some aggregations are simple like</span>
+<span class="line-num">143</span>       <span class="ruby-comment">#   { aggregate: { &quot;colors.id&quot;: 12 } }</span>
+<span class="line-num">144</span>       <span class="ruby-keyword">if</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">first</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Integer</span>)
+<span class="line-num">145</span>         [ <span class="ruby-identifier">k</span>, { <span class="ruby-value">terms:</span> { <span class="ruby-value">field:</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">first</span>[<span class="ruby-value">0</span>], <span class="ruby-value">size:</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">first</span>[<span class="ruby-value">1</span>] } } ]
+<span class="line-num">146</span>       <span class="ruby-keyword">else</span>
+<span class="line-num">147</span>         <span class="ruby-comment"># others are more complicated and are passed on verbatim</span>
+<span class="line-num">148</span>         [ <span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span> ]
+<span class="line-num">149</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">150</span>     }]
+<span class="line-num">151</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:aggs</span>]
+<span class="line-num">152</span>     <span class="ruby-identifier">elastic_hash</span>[<span class="ruby-value">:aggs</span>] = <span class="ruby-identifier">options</span>[<span class="ruby-value">:aggs</span>]
+<span class="line-num">153</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">154</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:track_total_hits</span>]
+<span class="line-num">155</span>     <span class="ruby-identifier">elastic_hash</span>[<span class="ruby-value">:track_total_hits</span>] = <span class="ruby-keyword">true</span>
+<span class="line-num">156</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">157</span>   <span class="ruby-identifier">elastic_hash</span>
+<span class="line-num">158</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-valid_latlon-3F">
+            
+              <b>valid_latlon?</b>(lat, lon)
+            
+            <a href="../classes/ElasticModel.html#method-c-valid_latlon-3F" name="method-c-valid_latlon-3F" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-valid_latlon-3F_source')" id="l_method-c-valid_latlon-3F_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-valid_latlon-3F_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/elastic_model/elastic_model.rb</span>
+<span class="line-num">233</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">valid_latlon?</span>(<span class="ruby-identifier">lat</span>, <span class="ruby-identifier">lon</span>)
+<span class="line-num">234</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">lat</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Numeric</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">lon</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Numeric</span>)
+<span class="line-num">235</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">lat</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">-90.0</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">lat</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">90.0</span>
+<span class="line-num">236</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">lon</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">-180.0</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">lon</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">180.0</span>
+<span class="line-num">237</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">lat</span>.<span class="ruby-identifier">try</span>(<span class="ruby-value">:nan?</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">lon</span>.<span class="ruby-identifier">try</span>(<span class="ruby-value">:nan?</span>)
+<span class="line-num">238</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">239</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-wait_until_elasticsearch_is_running">
+            
+              <b>wait_until_elasticsearch_is_running</b>(options={})
+            
+            <a href="../classes/ElasticModel.html#method-c-wait_until_elasticsearch_is_running" name="method-c-wait_until_elasticsearch_is_running" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-wait_until_elasticsearch_is_running_source')" id="l_method-c-wait_until_elasticsearch_is_running_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-wait_until_elasticsearch_is_running_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/elastic_model/elastic_model.rb</span>
+<span class="line-num">281</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">wait_until_elasticsearch_is_running</span>(<span class="ruby-identifier">options</span>={})
+<span class="line-num">282</span>   <span class="ruby-identifier">options</span>[<span class="ruby-value">:timeout</span>] <span class="ruby-operator">||=</span> <span class="ruby-value">30</span>
+<span class="line-num">283</span>   <span class="ruby-identifier">start_time</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+<span class="line-num">284</span>   <span class="ruby-keyword">while</span> <span class="ruby-operator">!</span><span class="ruby-identifier">elasticsearch_is_running?</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">start_time</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:timeout</span>])
+<span class="line-num">285</span>     <span class="ruby-identifier">sleep</span>(<span class="ruby-value">1</span>)
+<span class="line-num">286</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">287</span>   <span class="ruby-keyword">return</span> <span class="ruby-identifier">elasticsearch_is_running?</span>
+<span class="line-num">288</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-wait_until_index_exists">
+            
+              <b>wait_until_index_exists</b>(index_name, options={})
+            
+            <a href="../classes/ElasticModel.html#method-c-wait_until_index_exists" name="method-c-wait_until_index_exists" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-wait_until_index_exists_source')" id="l_method-c-wait_until_index_exists_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-wait_until_index_exists_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/elastic_model/elastic_model.rb</span>
+<span class="line-num">299</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">wait_until_index_exists</span>(<span class="ruby-identifier">index_name</span>, <span class="ruby-identifier">options</span>={})
+<span class="line-num">300</span>   <span class="ruby-identifier">options</span>[<span class="ruby-value">:timeout</span>] <span class="ruby-operator">||=</span> <span class="ruby-value">30</span>
+<span class="line-num">301</span>   <span class="ruby-identifier">start_time</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+<span class="line-num">302</span>   <span class="ruby-keyword">while</span> <span class="ruby-operator">!</span><span class="ruby-identifier">index_exists?</span>(<span class="ruby-identifier">index_name</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">start_time</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:timeout</span>])
+<span class="line-num">303</span>     <span class="ruby-identifier">sleep</span>(<span class="ruby-value">1</span>)
+<span class="line-num">304</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">305</span>   <span class="ruby-keyword">return</span> <span class="ruby-identifier">index_exists?</span>(<span class="ruby-identifier">index_name</span>)
+<span class="line-num">306</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

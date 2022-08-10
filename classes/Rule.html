@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rule</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["Rule"]'>
+
+
+    <meta property="og:title" value="Rule">
+
+  
+
+    <meta name="keywords" content="Rule class, nilify_operand_if_blank, validates?, terms">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            Rule
+            
+                <span class="parent">&lt;
+                    
+                    <a href="ApplicationRecord.html">ApplicationRecord</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/lib/ruler/app/models/rule_rb.html">lib/ruler/app/models/rule.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-nilify_operand_if_blank">nilify_operand_if_blank</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-terms">terms</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-validates-3F">validates?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-nilify_operand_if_blank">
+            
+              <b>nilify_operand_if_blank</b>()
+            
+            <a href="../classes/Rule.html#method-i-nilify_operand_if_blank" name="method-i-nilify_operand_if_blank" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-nilify_operand_if_blank_source')" id="l_method-i-nilify_operand_if_blank_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-nilify_operand_if_blank_source" class="dyn-source">
+                <pre>  <span class="ruby-comment"># File lib/ruler/app/models/rule.rb</span>
+<span class="line-num">7</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">nilify_operand_if_blank</span>
+<span class="line-num">8</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">operand</span> = <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">operand_type</span>.<span class="ruby-identifier">blank?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">operand_id</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">9</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-terms">
+            
+              <b>terms</b>()
+            
+            <a href="../classes/Rule.html#method-i-terms" name="method-i-terms" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-terms_source')" id="l_method-i-terms_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-terms_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/ruler/app/models/rule.rb</span>
+<span class="line-num">15</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">terms</span>
+<span class="line-num">16</span>   <span class="ruby-keyword">return</span> <span class="ruby-node">&quot;must be #{operator.humanize.downcase}&quot;</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-string">&#39;?&#39;</span>, <span class="ruby-string">&#39;&#39;</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">operand</span>
+<span class="line-num">17</span>   <span class="ruby-identifier">operand_name</span> = <span class="ruby-keyword">if</span> <span class="ruby-identifier">operand</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:display_name</span>)
+<span class="line-num">18</span>     <span class="ruby-identifier">operand</span>.<span class="ruby-identifier">display_name</span>
+<span class="line-num">19</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">operand</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:name</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">operand</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">20</span>     <span class="ruby-identifier">operand</span>.<span class="ruby-identifier">name</span>
+<span class="line-num">21</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">operand</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:login</span>)
+<span class="line-num">22</span>     <span class="ruby-identifier">operand</span>.<span class="ruby-identifier">login</span>
+<span class="line-num">23</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">operand</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:title</span>)
+<span class="line-num">24</span>     <span class="ruby-identifier">operand</span>.<span class="ruby-identifier">title</span>
+<span class="line-num">25</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">26</span>     <span class="ruby-identifier">operand</span>
+<span class="line-num">27</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">28</span>   <span class="ruby-node">&quot;must be #{operator.humanize.downcase} #{operand_name}&quot;</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-string">&#39;?&#39;</span>, <span class="ruby-string">&#39;&#39;</span>)
+<span class="line-num">29</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-validates-3F">
+            
+              <b>validates?</b>(subject)
+            
+            <a href="../classes/Rule.html#method-i-validates-3F" name="method-i-validates-3F" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-validates-3F_source')" id="l_method-i-validates-3F_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-validates-3F_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/ruler/app/models/rule.rb</span>
+<span class="line-num">11</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">validates?</span>(<span class="ruby-identifier">subject</span>)
+<span class="line-num">12</span>   <span class="ruby-identifier">operand</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">subject</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">operator</span>, <span class="ruby-identifier">operand</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">subject</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">operator</span>)
+<span class="line-num">13</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

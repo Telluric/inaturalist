@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TaxonFramework</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["TaxonFramework"]'>
+
+
+    <meta property="og:title" value="TaxonFramework">
+
+  
+
+    <meta name="keywords" content="TaxonFramework class, handle_change_in_completeness, check_taxon_framework_relationships, check_other_taxon_framework_relationships, check_taxon_curators, rank_level_below_taxon_rank, covers?, get_downstream_taxon_frameworks_count, get_downstream_taxon_frameworks, get_unassigned_taxa, get_internal_taxa_covered_by_taxon_framework, get_flagged_taxa_count, get_flagged_taxa, taxon_framework_taxon_name, bud_off_child_taxon_framework">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            TaxonFramework
+            
+                <span class="parent">&lt;
+                    
+                    <a href="ApplicationRecord.html">ApplicationRecord</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/app/models/taxon_framework_rb.html">app/models/taxon_framework.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-bud_off_child_taxon_framework">bud_off_child_taxon_framework</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-check_other_taxon_framework_relationships">check_other_taxon_framework_relationships</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-check_taxon_curators">check_taxon_curators</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-check_taxon_framework_relationships">check_taxon_framework_relationships</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-covers-3F">covers?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>G</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-get_downstream_taxon_frameworks">get_downstream_taxon_frameworks</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get_downstream_taxon_frameworks_count">get_downstream_taxon_frameworks_count</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get_flagged_taxa">get_flagged_taxa</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get_flagged_taxa_count">get_flagged_taxa_count</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get_internal_taxa_covered_by_taxon_framework">get_internal_taxa_covered_by_taxon_framework</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-get_unassigned_taxa">get_unassigned_taxa</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-handle_change_in_completeness">handle_change_in_completeness</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-rank_level_below_taxon_rank">rank_level_below_taxon_rank</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-taxon_framework_taxon_name">taxon_framework_taxon_name</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <h2 class="sectiontitle">Attributes</h2>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>skip_check_curators</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>skip_check_frameworks</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>skip_reindexing_taxa</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <h2 class="sectiontitle">Class Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-c-bud_off_child_taxon_framework">
+            
+              <b>bud_off_child_taxon_framework</b>( taxon_id )
+            
+            <a href="../classes/TaxonFramework.html#method-c-bud_off_child_taxon_framework" name="method-c-bud_off_child_taxon_framework" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>attempting this through the UI will destroy relevant taxon_framework_relationships here&#39;s a way to rather move them accordingly</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-bud_off_child_taxon_framework_source')" id="l_method-c-bud_off_child_taxon_framework_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-bud_off_child_taxon_framework_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_framework.rb</span>
+<span class="line-num">175</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">bud_off_child_taxon_framework</span>( <span class="ruby-identifier">taxon_id</span> )
+<span class="line-num">176</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">taxon</span> = <span class="ruby-constant">Taxon</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">taxon_id</span>)
+<span class="line-num">177</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">parent_taxon_framework</span> = <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">get_upstream_taxon_framework</span>
+<span class="line-num">178</span>   <span class="ruby-identifier">ancestry</span> = [<span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">ancestor_ids</span>, <span class="ruby-identifier">taxon_id</span>].<span class="ruby-identifier">join</span>( <span class="ruby-string">&quot;/&quot;</span> )
+<span class="line-num">179</span>   <span class="ruby-identifier">tf</span> = <span class="ruby-constant">TaxonFramework</span>.<span class="ruby-identifier">new</span>(
+<span class="line-num">180</span>     <span class="ruby-value">taxon_id:</span> <span class="ruby-identifier">taxon_id</span>,
+<span class="line-num">181</span>     <span class="ruby-value">rank_level:</span> <span class="ruby-identifier">parent_taxon_framework</span>.<span class="ruby-identifier">rank_level</span>,
+<span class="line-num">182</span>     <span class="ruby-value">source_id:</span> <span class="ruby-identifier">parent_taxon_framework</span>.<span class="ruby-identifier">source_id</span>,
+<span class="line-num">183</span>     <span class="ruby-value">user_id:</span> <span class="ruby-identifier">parent_taxon_framework</span>.<span class="ruby-identifier">user_id</span>
+<span class="line-num">184</span>   )
+<span class="line-num">185</span>   <span class="ruby-identifier">tf</span>.<span class="ruby-identifier">skip_check_frameworks</span> = <span class="ruby-keyword">true</span>
+<span class="line-num">186</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">tf</span>.<span class="ruby-identifier">save</span>
+<span class="line-num">187</span>   <span class="ruby-identifier">tfrs</span> = <span class="ruby-constant">TaxonFrameworkRelationship</span>.<span class="ruby-identifier">joins</span>( <span class="ruby-value">:taxa</span> ).<span class="ruby-identifier">where</span>( <span class="ruby-node">&quot;taxon_framework_id = ? AND ( taxa.ancestry = &#39;#{ancestry}&#39; OR taxa.ancestry LIKE &#39;#{ancestry}/%&#39; )&quot;</span>, <span class="ruby-identifier">parent_taxon_framework</span>.<span class="ruby-identifier">id</span> )
+<span class="line-num">188</span>   <span class="ruby-identifier">tfrs</span>.<span class="ruby-identifier">update_all</span>( <span class="ruby-value">taxon_framework_id:</span> <span class="ruby-identifier">tf</span>.<span class="ruby-identifier">id</span> )
+<span class="line-num">189</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">190</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-check_other_taxon_framework_relationships">
+            
+              <b>check_other_taxon_framework_relationships</b>()
+            
+            <a href="../classes/TaxonFramework.html#method-i-check_other_taxon_framework_relationships" name="method-i-check_other_taxon_framework_relationships" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-check_other_taxon_framework_relationships_source')" id="l_method-i-check_other_taxon_framework_relationships_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-check_other_taxon_framework_relationships_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/taxon_framework.rb</span>
+<span class="line-num">41</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">check_other_taxon_framework_relationships</span>
+<span class="line-num">42</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">skip_check_frameworks</span>
+<span class="line-num">43</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">rank_level</span>
+<span class="line-num">44</span>   <span class="ruby-keyword">unless</span> <span class="ruby-identifier">new_record?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">saved_change_to_rank_level?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">saved_change_to_source_id?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">saved_change_to_taxon_id?</span>
+<span class="line-num">45</span>     <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+<span class="line-num">46</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">47</span>   
+<span class="line-num">48</span>   <span class="ruby-identifier">upstream_taxon_frameworks</span> = <span class="ruby-constant">TaxonFramework</span>.<span class="ruby-identifier">where</span>( <span class="ruby-string">&quot;taxon_id IN (?)&quot;</span>, <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">ancestor_ids</span> ).<span class="ruby-identifier">pluck</span>( <span class="ruby-value">:id</span> )
+<span class="line-num">49</span>   <span class="ruby-identifier">ancestor_string</span> = <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">rank</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;stateofmatter&quot;</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">id</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">:</span> <span class="ruby-node">&quot;%/#{ taxon.id }&quot;</span>
+<span class="line-num">50</span>   <span class="ruby-identifier">tr</span> = <span class="ruby-constant">TaxonFrameworkRelationship</span>.<span class="ruby-identifier">joins</span>( <span class="ruby-value">:taxa</span> ).
+<span class="line-num">51</span>     <span class="ruby-identifier">where</span>(
+<span class="line-num">52</span>       <span class="ruby-string">&quot;taxon_framework_id IN (?) AND (taxa.id = ? OR taxa.ancestry LIKE (?) OR taxa.ancestry LIKE (?))&quot;</span>,
+<span class="line-num">53</span>       <span class="ruby-identifier">upstream_taxon_frameworks</span>, <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">ancestor_string</span>, <span class="ruby-node">&quot;#{ ancestor_string }/%&quot;</span>
+<span class="line-num">54</span>     )
+<span class="line-num">55</span>   <span class="ruby-keyword">return</span> <span class="ruby-identifier">tr</span>.<span class="ruby-identifier">destroy_all</span>
+<span class="line-num">56</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-check_taxon_curators">
+            
+              <b>check_taxon_curators</b>()
+            
+            <a href="../classes/TaxonFramework.html#method-i-check_taxon_curators" name="method-i-check_taxon_curators" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-check_taxon_curators_source')" id="l_method-i-check_taxon_curators_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-check_taxon_curators_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/taxon_framework.rb</span>
+<span class="line-num">58</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">check_taxon_curators</span>
+<span class="line-num">59</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">skip_check_curators</span>
+<span class="line-num">60</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">new_record?</span>
+<span class="line-num">61</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">rank_level_was</span>.<span class="ruby-identifier">nil?</span>
+<span class="line-num">62</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">rank_level_changed?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">rank_level</span>.<span class="ruby-identifier">nil?</span>
+<span class="line-num">63</span>   <span class="ruby-identifier">taxon_curators</span>.<span class="ruby-identifier">destroy_all</span>
+<span class="line-num">64</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">65</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-check_taxon_framework_relationships">
+            
+              <b>check_taxon_framework_relationships</b>()
+            
+            <a href="../classes/TaxonFramework.html#method-i-check_taxon_framework_relationships" name="method-i-check_taxon_framework_relationships" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-check_taxon_framework_relationships_source')" id="l_method-i-check_taxon_framework_relationships_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-check_taxon_framework_relationships_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/taxon_framework.rb</span>
+<span class="line-num">32</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">check_taxon_framework_relationships</span>
+<span class="line-num">33</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">skip_check_frameworks</span>
+<span class="line-num">34</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">new_record?</span>
+<span class="line-num">35</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">rank_level_was</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">source_id_was</span>.<span class="ruby-identifier">nil?</span>
+<span class="line-num">36</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">rank_level_changed?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">source_id_changed?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">taxon_id_changed?</span>
+<span class="line-num">37</span>   <span class="ruby-identifier">taxon_framework_relationships</span>.<span class="ruby-identifier">destroy_all</span>
+<span class="line-num">38</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">39</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-covers-3F">
+            
+              <b>covers?</b>()
+            
+            <a href="../classes/TaxonFramework.html#method-i-covers-3F" name="method-i-covers-3F" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-covers-3F_source')" id="l_method-i-covers-3F_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-covers-3F_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/taxon_framework.rb</span>
+<span class="line-num">75</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">covers?</span>
+<span class="line-num">76</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">rank_level</span>.<span class="ruby-identifier">nil?</span>
+<span class="line-num">77</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="line-num">78</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-get_downstream_taxon_frameworks">
+            
+              <b>get_downstream_taxon_frameworks</b>()
+            
+            <a href="../classes/TaxonFramework.html#method-i-get_downstream_taxon_frameworks" name="method-i-get_downstream_taxon_frameworks" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-get_downstream_taxon_frameworks_source')" id="l_method-i-get_downstream_taxon_frameworks_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-get_downstream_taxon_frameworks_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/taxon_framework.rb</span>
+<span class="line-num">88</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_downstream_taxon_frameworks</span>
+<span class="line-num">89</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">covers?</span>
+<span class="line-num">90</span>   <span class="ruby-identifier">ancestry_string</span> = <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">rank</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;stateofmatter&quot;</span> <span class="ruby-operator">?</span> <span class="ruby-node">&quot;#{ taxon_id }&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-node">&quot;%/#{ taxon_id }&quot;</span>
+<span class="line-num">91</span>   <span class="ruby-identifier">downstream_taxon_frameworks</span> = <span class="ruby-constant">TaxonFramework</span>.<span class="ruby-identifier">includes</span>( <span class="ruby-string">&quot;taxon&quot;</span> ).<span class="ruby-identifier">joins</span>( <span class="ruby-string">&quot;JOIN taxa ON taxon_frameworks.taxon_id = taxa.id&quot;</span> ).
+<span class="line-num">92</span>     <span class="ruby-identifier">where</span>( <span class="ruby-node">&quot;( taxa.ancestry LIKE ( &#39;#{ ancestry_string }/%&#39; ) OR taxa.ancestry LIKE ( &#39;#{ ancestry_string }&#39; ) ) AND taxa.rank_level &gt; #{ rank_level } AND taxon_frameworks.rank_level IS NOT NULL&quot;</span> ).
+<span class="line-num">93</span>     <span class="ruby-identifier">order</span>(<span class="ruby-string">&quot;taxa.rank_level desc&quot;</span>).<span class="ruby-identifier">limit</span>(<span class="ruby-value">30</span>)
+<span class="line-num">94</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-get_downstream_taxon_frameworks_count">
+            
+              <b>get_downstream_taxon_frameworks_count</b>()
+            
+            <a href="../classes/TaxonFramework.html#method-i-get_downstream_taxon_frameworks_count" name="method-i-get_downstream_taxon_frameworks_count" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-get_downstream_taxon_frameworks_count_source')" id="l_method-i-get_downstream_taxon_frameworks_count_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-get_downstream_taxon_frameworks_count_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/taxon_framework.rb</span>
+<span class="line-num">80</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_downstream_taxon_frameworks_count</span>
+<span class="line-num">81</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">covers?</span>
+<span class="line-num">82</span>   <span class="ruby-identifier">ancestry_string</span> = <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">rank</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;stateofmatter&quot;</span> <span class="ruby-operator">?</span> <span class="ruby-node">&quot;#{ taxon_id }&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-node">&quot;%/#{ taxon_id }&quot;</span>
+<span class="line-num">83</span>   <span class="ruby-identifier">downstream_taxon_frameworks</span> = <span class="ruby-constant">TaxonFramework</span>.<span class="ruby-identifier">includes</span>( <span class="ruby-string">&quot;taxon&quot;</span> ).<span class="ruby-identifier">joins</span>( <span class="ruby-string">&quot;JOIN taxa ON taxon_frameworks.taxon_id = taxa.id&quot;</span> ).
+<span class="line-num">84</span>     <span class="ruby-identifier">where</span>( <span class="ruby-node">&quot;( taxa.ancestry LIKE ( &#39;#{ ancestry_string }/%&#39; ) OR taxa.ancestry LIKE ( &#39;#{ ancestry_string }&#39; ) ) AND taxa.rank_level &gt; #{ rank_level } AND taxon_frameworks.rank_level IS NOT NULL&quot;</span> )
+<span class="line-num">85</span>   .<span class="ruby-identifier">count</span>
+<span class="line-num">86</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-get_flagged_taxa">
+            
+              <b>get_flagged_taxa</b>(options = {})
+            
+            <a href="../classes/TaxonFramework.html#method-i-get_flagged_taxa" name="method-i-get_flagged_taxa" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-get_flagged_taxa_source')" id="l_method-i-get_flagged_taxa_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-get_flagged_taxa_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_framework.rb</span>
+<span class="line-num">157</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_flagged_taxa</span>(<span class="ruby-identifier">options</span> = {})
+<span class="line-num">158</span>   <span class="ruby-identifier">taxon_clause</span> = <span class="ruby-string">&quot;&quot;</span>
+<span class="line-num">159</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">t</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:taxon</span>]
+<span class="line-num">160</span>     <span class="ruby-identifier">taxon_clause</span> = <span class="ruby-node">&quot; AND ( taxa.id = #{ t.id } OR taxa.ancestry = &#39;#{ t.ancestry }/#{ t.id }&#39; OR taxa.ancestry LIKE &#39;#{ t.ancestry }/#{ t.id }/%&#39; )&quot;</span>
+<span class="line-num">161</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">162</span>   <span class="ruby-identifier">flagged_taxa</span> = <span class="ruby-constant">Taxon</span>.<span class="ruby-identifier">get_internal_taxa_covered_by</span>( <span class="ruby-keyword">self</span> ).
+<span class="line-num">163</span>     <span class="ruby-identifier">joins</span>( <span class="ruby-string">&quot;INNER JOIN flags ON taxa.id = flags.flaggable_id AND flags.flaggable_type = &#39;Taxon&#39;&quot;</span> ).
+<span class="line-num">164</span>     <span class="ruby-identifier">where</span>( <span class="ruby-node">&quot;flags.resolved = false#{taxon_clause}&quot;</span>).<span class="ruby-identifier">order</span>( <span class="ruby-string">&quot;taxa.rank_level desc&quot;</span> ).<span class="ruby-identifier">limit</span>( <span class="ruby-value">10</span> )
+<span class="line-num">165</span> 
+<span class="line-num">166</span>   <span class="ruby-keyword">return</span> <span class="ruby-identifier">flagged_taxa</span>
+<span class="line-num">167</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-get_flagged_taxa_count">
+            
+              <b>get_flagged_taxa_count</b>(options = {})
+            
+            <a href="../classes/TaxonFramework.html#method-i-get_flagged_taxa_count" name="method-i-get_flagged_taxa_count" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-get_flagged_taxa_count_source')" id="l_method-i-get_flagged_taxa_count_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-get_flagged_taxa_count_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_framework.rb</span>
+<span class="line-num">145</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_flagged_taxa_count</span>(<span class="ruby-identifier">options</span> = {})
+<span class="line-num">146</span>   <span class="ruby-identifier">taxon_clause</span> = <span class="ruby-string">&quot;&quot;</span>
+<span class="line-num">147</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">t</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:taxon</span>]
+<span class="line-num">148</span>     <span class="ruby-identifier">taxon_clause</span> = <span class="ruby-node">&quot; AND ( taxa.id = #{ t.id } OR taxa.ancestry = &#39;#{ t.ancestry }/#{ t.id }&#39; OR taxa.ancestry LIKE &#39;#{ t.ancestry }/#{ t.id }/%&#39; )&quot;</span>
+<span class="line-num">149</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">150</span>   <span class="ruby-identifier">flagged_taxa_count</span> = <span class="ruby-constant">Taxon</span>.<span class="ruby-identifier">get_internal_taxa_covered_by</span>( <span class="ruby-keyword">self</span> ).
+<span class="line-num">151</span>     <span class="ruby-identifier">joins</span>( <span class="ruby-string">&quot;INNER JOIN flags ON taxa.id = flags.flaggable_id AND flags.flaggable_type = &#39;Taxon&#39;&quot;</span> ).
+<span class="line-num">152</span>     <span class="ruby-identifier">where</span>( <span class="ruby-node">&quot;flags.resolved = false#{taxon_clause}&quot;</span>).<span class="ruby-identifier">count</span>
+<span class="line-num">153</span> 
+<span class="line-num">154</span>   <span class="ruby-keyword">return</span> <span class="ruby-identifier">flagged_taxa_count</span>
+<span class="line-num">155</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-get_internal_taxa_covered_by_taxon_framework">
+            
+              <b>get_internal_taxa_covered_by_taxon_framework</b>()
+            
+            <a href="../classes/TaxonFramework.html#method-i-get_internal_taxa_covered_by_taxon_framework" name="method-i-get_internal_taxa_covered_by_taxon_framework" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-get_internal_taxa_covered_by_taxon_framework_source')" id="l_method-i-get_internal_taxa_covered_by_taxon_framework_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-get_internal_taxa_covered_by_taxon_framework_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_framework.rb</span>
+<span class="line-num">120</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_internal_taxa_covered_by_taxon_framework</span>
+<span class="line-num">121</span>   <span class="ruby-identifier">ancestry_string</span> = <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">rank</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;stateofmatter&quot;</span> <span class="ruby-operator">?</span>
+<span class="line-num">122</span>     <span class="ruby-node">&quot;#{ taxon_id }&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-node">&quot;#{ taxon.ancestry }/#{ taxon.id }&quot;</span>
+<span class="line-num">123</span>   <span class="ruby-identifier">other_taxon_frameworks</span> = <span class="ruby-constant">TaxonFramework</span>.<span class="ruby-identifier">joins</span>(<span class="ruby-value">:taxon</span>).
+<span class="line-num">124</span>     <span class="ruby-identifier">where</span>( <span class="ruby-node">&quot;( taxa.ancestry LIKE ( &#39;#{ ancestry_string }/%&#39; ) OR taxa.ancestry LIKE ( &#39;#{ ancestry_string }&#39; ) )&quot;</span> ).
+<span class="line-num">125</span>     <span class="ruby-identifier">where</span>( <span class="ruby-node">&quot;taxa.rank_level &gt; #{ rank_level } AND taxon_frameworks.rank_level IS NOT NULL&quot;</span> )
+<span class="line-num">126</span> 
+<span class="line-num">127</span>   <span class="ruby-identifier">other_taxon_frameworks_taxa</span> = ( <span class="ruby-identifier">other_taxon_frameworks</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> ) <span class="ruby-operator">?</span>
+<span class="line-num">128</span>     <span class="ruby-constant">Taxon</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">id:</span> <span class="ruby-identifier">other_taxon_frameworks</span>.<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:taxon_id</span>)) <span class="ruby-operator">:</span> []
+<span class="line-num">129</span> 
+<span class="line-num">130</span>   <span class="ruby-identifier">internal_taxa</span> = <span class="ruby-constant">Taxon</span>.
+<span class="line-num">131</span>     <span class="ruby-identifier">where</span>( <span class="ruby-string">&quot;taxa.ancestry = ? OR taxa.ancestry LIKE ?&quot;</span>, <span class="ruby-identifier">ancestry_string</span>, <span class="ruby-node">&quot;#{ancestry_string}/%&quot;</span> ).
+<span class="line-num">132</span>     <span class="ruby-identifier">where</span>( <span class="ruby-value">is_active:</span> <span class="ruby-keyword">true</span> ).
+<span class="line-num">133</span>     <span class="ruby-identifier">joins</span>( <span class="ruby-string">&quot;JOIN taxa parent ON parent.id = (string_to_array(taxa.ancestry, &#39;/&#39;)::int[])[array_upper(string_to_array(taxa.ancestry, &#39;/&#39;)::int[],1)]&quot;</span> ).
+<span class="line-num">134</span>     <span class="ruby-identifier">where</span>( <span class="ruby-string">&quot;taxa.rank_level &gt;= ? &quot;</span>, <span class="ruby-identifier">rank_level</span>).
+<span class="line-num">135</span>     <span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;( select count(*) from conservation_statuses ct where ct.taxon_id=taxa.id AND ct.iucn=70 AND ct.place_id IS NULL ) = 0&quot;</span>)
+<span class="line-num">136</span> 
+<span class="line-num">137</span>   <span class="ruby-identifier">other_taxon_frameworks_taxa</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+<span class="line-num">138</span>     <span class="ruby-identifier">internal_taxa</span> = <span class="ruby-identifier">internal_taxa</span>.<span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;taxa.ancestry != ? AND taxa.ancestry NOT LIKE ?&quot;</span>, <span class="ruby-node">&quot;#{t.ancestry}/#{t.id}&quot;</span>, <span class="ruby-node">&quot;#{t.ancestry}/#{t.id}/%&quot;</span>)
+<span class="line-num">139</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">140</span> 
+<span class="line-num">141</span>   <span class="ruby-keyword">return</span> <span class="ruby-identifier">internal_taxa</span>
+<span class="line-num">142</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-get_unassigned_taxa">
+            
+              <b>get_unassigned_taxa</b>()
+            
+            <a href="../classes/TaxonFramework.html#method-i-get_unassigned_taxa" name="method-i-get_unassigned_taxa" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-get_unassigned_taxa_source')" id="l_method-i-get_unassigned_taxa_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-get_unassigned_taxa_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_framework.rb</span>
+<span class="line-num"> 96</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_unassigned_taxa</span>
+<span class="line-num"> 97</span>   <span class="ruby-identifier">ancestry_string</span> = <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">rank</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;stateofmatter&quot;</span> <span class="ruby-operator">?</span> <span class="ruby-node">&quot;#{ taxon_id }&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-node">&quot;#{ taxon.ancestry }/#{ taxon_id }&quot;</span>
+<span class="line-num"> 98</span>   <span class="ruby-identifier">other_taxon_frameworks</span> = <span class="ruby-constant">TaxonFramework</span>.<span class="ruby-identifier">joins</span>( <span class="ruby-value">:taxon</span> ).
+<span class="line-num"> 99</span>     <span class="ruby-identifier">where</span>( <span class="ruby-node">&quot;( taxa.ancestry LIKE ( &#39;#{ ancestry_string }/%&#39; ) OR taxa.ancestry LIKE ( &#39;#{ ancestry_string }&#39; ) )&quot;</span> ).
+<span class="line-num">100</span>     <span class="ruby-identifier">where</span>( <span class="ruby-node">&quot;taxa.rank_level &gt; #{ rank_level } AND taxon_frameworks.rank_level IS NOT NULL&quot;</span> )
+<span class="line-num">101</span> 
+<span class="line-num">102</span>   <span class="ruby-identifier">other_taxon_frameworks_taxa</span> = ( <span class="ruby-identifier">other_taxon_frameworks</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> ) <span class="ruby-operator">?</span>
+<span class="line-num">103</span>     <span class="ruby-constant">Taxon</span>.<span class="ruby-identifier">where</span>( <span class="ruby-value">id:</span> <span class="ruby-identifier">other_taxon_frameworks</span>.<span class="ruby-identifier">map</span>( <span class="ruby-operator">&amp;</span><span class="ruby-value">:taxon_id</span> ) ) <span class="ruby-operator">:</span> []
+<span class="line-num">104</span> 
+<span class="line-num">105</span>   <span class="ruby-identifier">unassigned_taxa</span> = <span class="ruby-constant">Taxon</span>.
+<span class="line-num">106</span>     <span class="ruby-identifier">joins</span>( <span class="ruby-string">&quot;JOIN taxa parent ON parent.id = (string_to_array(taxa.ancestry, &#39;/&#39;)::int[])[array_upper(string_to_array(taxa.ancestry, &#39;/&#39;)::int[],1)]&quot;</span> ).
+<span class="line-num">107</span>     <span class="ruby-identifier">where</span>( <span class="ruby-node">&quot;parent.id = #{taxon_id} OR parent.ancestry = ? OR parent.ancestry LIKE ?&quot;</span>, <span class="ruby-identifier">ancestry_string</span>, <span class="ruby-node">&quot;#{ancestry_string}/%&quot;</span> ).
+<span class="line-num">108</span>     <span class="ruby-identifier">where</span>( <span class="ruby-value">is_active:</span> <span class="ruby-keyword">true</span> ).
+<span class="line-num">109</span>     <span class="ruby-identifier">where</span>( <span class="ruby-string">&quot;parent.rank_level &gt; ? &quot;</span>, <span class="ruby-identifier">rank_level</span> ).
+<span class="line-num">110</span>     <span class="ruby-identifier">where</span>( <span class="ruby-string">&quot;taxa.rank_level &lt; ? &quot;</span>, <span class="ruby-identifier">rank_level</span> ).
+<span class="line-num">111</span>     <span class="ruby-identifier">where</span>( <span class="ruby-string">&quot;( select count(*) from conservation_statuses ct where ct.taxon_id=taxa.id AND ct.iucn=70 AND ct.place_id IS NULL ) = 0&quot;</span> )
+<span class="line-num">112</span> 
+<span class="line-num">113</span>   <span class="ruby-identifier">other_taxon_frameworks_taxa</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+<span class="line-num">114</span>     <span class="ruby-identifier">unassigned_taxa</span> = <span class="ruby-identifier">unassigned_taxa</span>.<span class="ruby-identifier">where</span>( <span class="ruby-string">&quot;parent.ancestry != ? AND parent.ancestry NOT LIKE ?&quot;</span>, <span class="ruby-node">&quot;#{ t.ancestry }/#{ t.id }&quot;</span>, <span class="ruby-node">&quot;#{ t.ancestry }/#{ t.id }/%&quot;</span> )
+<span class="line-num">115</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">116</span> 
+<span class="line-num">117</span>   <span class="ruby-keyword">return</span> <span class="ruby-identifier">unassigned_taxa</span>
+<span class="line-num">118</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-handle_change_in_completeness">
+            
+              <b>handle_change_in_completeness</b>()
+            
+            <a href="../classes/TaxonFramework.html#method-i-handle_change_in_completeness" name="method-i-handle_change_in_completeness" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-handle_change_in_completeness_source')" id="l_method-i-handle_change_in_completeness_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-handle_change_in_completeness_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/taxon_framework.rb</span>
+<span class="line-num">22</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">handle_change_in_completeness</span>
+<span class="line-num">23</span>   <span class="ruby-comment"># would use new_record? here if this was called any time other than after_save</span>
+<span class="line-num">24</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">saved_change_to_complete?</span> <span class="ruby-operator">||</span> ( <span class="ruby-identifier">saved_change_to_rank_level?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">saved_change_to_id?</span> )
+<span class="line-num">25</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">skip_reindexing_taxa</span>
+<span class="line-num">26</span>   <span class="ruby-constant">Taxon</span>.
+<span class="line-num">27</span>     <span class="ruby-identifier">delay</span>( <span class="ruby-value">priority:</span> <span class="ruby-constant">INTEGRITY_PRIORITY</span>, <span class="ruby-value">unique_hash:</span> { <span class="ruby-value">&quot;Taxon::reindex_taxa_covered_by&quot;:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">id</span> } ).
+<span class="line-num">28</span>     <span class="ruby-identifier">reindex_taxa_covered_by</span>( <span class="ruby-keyword">self</span> )
+<span class="line-num">29</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">30</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-rank_level_below_taxon_rank">
+            
+              <b>rank_level_below_taxon_rank</b>()
+            
+            <a href="../classes/TaxonFramework.html#method-i-rank_level_below_taxon_rank" name="method-i-rank_level_below_taxon_rank" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-rank_level_below_taxon_rank_source')" id="l_method-i-rank_level_below_taxon_rank_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-rank_level_below_taxon_rank_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/models/taxon_framework.rb</span>
+<span class="line-num">67</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">rank_level_below_taxon_rank</span>
+<span class="line-num">68</span>   <span class="ruby-keyword">return</span>  <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">rank_level</span>.<span class="ruby-identifier">nil?</span>
+<span class="line-num">69</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">rank_level</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">rank_level</span>.<span class="ruby-identifier">to_i</span>
+<span class="line-num">70</span>     <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">add</span>( <span class="ruby-value">:rank_level</span>, <span class="ruby-string">&quot;must be below the taxon rank&quot;</span> )
+<span class="line-num">71</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">72</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">73</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-taxon_framework_taxon_name">
+            
+              <b>taxon_framework_taxon_name</b>()
+            
+            <a href="../classes/TaxonFramework.html#method-i-taxon_framework_taxon_name" name="method-i-taxon_framework_taxon_name" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-taxon_framework_taxon_name_source')" id="l_method-i-taxon_framework_taxon_name_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-taxon_framework_taxon_name_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_framework.rb</span>
+<span class="line-num">169</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">taxon_framework_taxon_name</span>
+<span class="line-num">170</span>   <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">name</span>
+<span class="line-num">171</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

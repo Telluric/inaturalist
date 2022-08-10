@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JsonWebToken</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["JsonWebToken"]'>
+
+
+    <meta property="og:title" value="JsonWebToken">
+
+  
+
+    <meta name="keywords" content="JsonWebToken class, encode, decode, applicationToken, decodeApplication">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            JsonWebToken
+            
+                <span class="parent">&lt;
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/lib/json_web_token_rb.html">lib/json_web_token.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-applicationToken">applicationToken</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-decode">decode</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-decodeApplication">decodeApplication</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-encode">encode</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <h2 class="sectiontitle">Class Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-c-applicationToken">
+            
+              <b>applicationToken</b>(expiration = 5.minutes.from_now)
+            
+            <a href="../classes/JsonWebToken.html#method-c-applicationToken" name="method-c-applicationToken" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-applicationToken_source')" id="l_method-c-applicationToken_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-applicationToken_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/json_web_token.rb</span>
+<span class="line-num">14</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">applicationToken</span>(<span class="ruby-identifier">expiration</span> = <span class="ruby-value">5</span>.<span class="ruby-identifier">minutes</span>.<span class="ruby-identifier">from_now</span>)
+<span class="line-num">15</span>   <span class="ruby-identifier">payload</span> = { <span class="ruby-value">application:</span> <span class="ruby-string">&quot;rails&quot;</span> }
+<span class="line-num">16</span>   <span class="ruby-identifier">payload</span>[<span class="ruby-value">:exp</span>] = <span class="ruby-identifier">expiration</span>.<span class="ruby-identifier">to_i</span>
+<span class="line-num">17</span>   <span class="ruby-constant">JWT</span>.<span class="ruby-identifier">encode</span>(<span class="ruby-identifier">payload</span>, <span class="ruby-constant">CONFIG</span>.<span class="ruby-identifier">jwt_application_secret</span> <span class="ruby-operator">||</span> <span class="ruby-string">&quot;application_secret&quot;</span>, <span class="ruby-string">&quot;HS512&quot;</span>)
+<span class="line-num">18</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-decode">
+            
+              <b>decode</b>(token)
+            
+            <a href="../classes/JsonWebToken.html#method-c-decode" name="method-c-decode" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-decode_source')" id="l_method-c-decode_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-decode_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/json_web_token.rb</span>
+<span class="line-num">10</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">decode</span>(<span class="ruby-identifier">token</span>)
+<span class="line-num">11</span>   <span class="ruby-constant">JWT</span>.<span class="ruby-identifier">decode</span>(<span class="ruby-identifier">token</span>, <span class="ruby-constant">CONFIG</span>.<span class="ruby-identifier">jwt_secret</span> <span class="ruby-operator">||</span> <span class="ruby-string">&quot;secret&quot;</span>, <span class="ruby-keyword">true</span>, { <span class="ruby-value">algorithm:</span> <span class="ruby-string">&quot;HS512&quot;</span> }).<span class="ruby-identifier">first</span>
+<span class="line-num">12</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-decodeApplication">
+            
+              <b>decodeApplication</b>( token )
+            
+            <a href="../classes/JsonWebToken.html#method-c-decodeApplication" name="method-c-decodeApplication" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-decodeApplication_source')" id="l_method-c-decodeApplication_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-decodeApplication_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/json_web_token.rb</span>
+<span class="line-num">20</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">decodeApplication</span>( <span class="ruby-identifier">token</span> )
+<span class="line-num">21</span>   <span class="ruby-constant">JWT</span>.<span class="ruby-identifier">decode</span>( <span class="ruby-identifier">token</span>, <span class="ruby-constant">CONFIG</span>.<span class="ruby-identifier">jwt_application_secret</span> <span class="ruby-operator">||</span> <span class="ruby-string">&quot;application_secret&quot;</span>, <span class="ruby-keyword">true</span>, { <span class="ruby-value">algorithm:</span> <span class="ruby-string">&quot;HS512&quot;</span> } ).<span class="ruby-identifier">first</span>
+<span class="line-num">22</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-encode">
+            
+              <b>encode</b>(payload, expiration = 24.hours.from_now)
+            
+            <a href="../classes/JsonWebToken.html#method-c-encode" name="method-c-encode" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-encode_source')" id="l_method-c-encode_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-encode_source" class="dyn-source">
+                <pre>  <span class="ruby-comment"># File lib/json_web_token.rb</span>
+<span class="line-num">4</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">encode</span>(<span class="ruby-identifier">payload</span>, <span class="ruby-identifier">expiration</span> = <span class="ruby-value">24</span>.<span class="ruby-identifier">hours</span>.<span class="ruby-identifier">from_now</span>)
+<span class="line-num">5</span>   <span class="ruby-identifier">payload</span> = <span class="ruby-identifier">payload</span>.<span class="ruby-identifier">dup</span>
+<span class="line-num">6</span>   <span class="ruby-identifier">payload</span>[<span class="ruby-value">:exp</span>] = <span class="ruby-identifier">expiration</span>.<span class="ruby-identifier">to_i</span>
+<span class="line-num">7</span>   <span class="ruby-constant">JWT</span>.<span class="ruby-identifier">encode</span>(<span class="ruby-identifier">payload</span>, <span class="ruby-constant">CONFIG</span>.<span class="ruby-identifier">jwt_secret</span> <span class="ruby-operator">||</span> <span class="ruby-string">&quot;secret&quot;</span>, <span class="ruby-string">&quot;HS512&quot;</span>)
+<span class="line-num">8</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

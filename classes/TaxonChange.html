@@ -1,0 +1,1920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TaxonChange</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["TaxonChange"]'>
+
+
+    <meta property="og:title" value="TaxonChange">
+
+  
+
+    <meta name="keywords" content="TaxonChange class, to_s, committed?, rank_level_conflict?, active_children_conflict?, automatable_for_output?, committable_by?, add_input_taxon, add_output_taxon, input_taxa, output_taxa, verb_phrase, commit, commit_records, find_batched_records_of, update_records_of_class, output_taxon_for_record, partial_revert, automatable?, taxon_change_commit_records_unique_hash, commit_records_later, commit_records_job, editable_by?, uniqueness_of_taxa, uniqueness_of_output_taxa, move_input_children_to_output, index_taxon, mentioned_users, draft?">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            TaxonChange
+            
+                <span class="parent">&lt;
+                    
+                    <a href="ApplicationRecord.html">ApplicationRecord</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/app/models/taxon_change_rb.html">app/models/taxon_change.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+    <!-- Namespace -->
+    <div class="sectiontitle">Namespace</div>
+    <ul>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="TaxonChange/ActiveChildrenError.html">TaxonChange::ActiveChildrenError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="TaxonChange/PermissionError.html">TaxonChange::PermissionError</a>
+        </li>
+      
+        <li>
+          <span class="type">CLASS</span>
+          <a href="TaxonChange/RankLevelError.html">TaxonChange::RankLevelError</a>
+        </li>
+      
+    </ul>
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-active_children_conflict-3F">active_children_conflict?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-add_input_taxon">add_input_taxon</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-add_output_taxon">add_output_taxon</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-automatable-3F">automatable?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-automatable_for_output-3F">automatable_for_output?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-commit">commit</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-commit_records">commit_records</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-commit_records_job">commit_records_job</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-commit_records_later">commit_records_later</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-committable_by-3F">committable_by?</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-committed-3F">committed?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-draft-3F">draft?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-editable_by-3F">editable_by?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-find_batched_records_of">find_batched_records_of</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>I</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-index_taxon">index_taxon</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-input_taxa">input_taxa</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-mentioned_users">mentioned_users</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-move_input_children_to_output">move_input_children_to_output</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>O</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-output_taxa">output_taxa</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-output_taxon_for_record">output_taxon_for_record</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-partial_revert">partial_revert</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-rank_level_conflict-3F">rank_level_conflict?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>T</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-taxon_change_commit_records_unique_hash">taxon_change_commit_records_unique_hash</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-to_s">to_s</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>U</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-uniqueness_of_output_taxa">uniqueness_of_output_taxa</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-uniqueness_of_taxa">uniqueness_of_taxa</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-update_records_of_class">update_records_of_class</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-verb_phrase">verb_phrase</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <h2 class="sectiontitle">Constants</h2>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">TAXON_CHANGE_TAXA_JOINS</td>
+            <td>=</td>
+            <td class="attr-value">[
+&quot;LEFT OUTER JOIN taxon_change_taxa tct ON tct.taxon_change_id = taxon_changes.id&quot;
+]</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">TAXON_JOINS</td>
+            <td>=</td>
+            <td class="attr-value">TAXON_CHANGE_TAXA_JOINS + [
+&quot;LEFT OUTER JOIN taxon_change_taxa tct ON tct.taxon_change_id = taxon_changes.id&quot;,
+&quot;LEFT OUTER JOIN taxa t1 ON taxon_changes.taxon_id = t1.id&quot;,
+&quot;LEFT OUTER JOIN taxa t2 ON tct.taxon_id = t2.id&quot;
+]</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">TYPES</td>
+            <td>=</td>
+            <td class="attr-value">%w(TaxonChange TaxonMerge TaxonSplit TaxonSwap TaxonDrop TaxonStage)</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-active_children_conflict-3F">
+            
+              <b>active_children_conflict?</b>()
+            
+            <a href="../classes/TaxonChange.html#method-i-active_children_conflict-3F" name="method-i-active_children_conflict-3F" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-active_children_conflict-3F_source')" id="l_method-i-active_children_conflict-3F_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-active_children_conflict-3F_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_change.rb</span>
+<span class="line-num">126</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">active_children_conflict?</span>
+<span class="line-num">127</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">move_children?</span>
+<span class="line-num">128</span>   <span class="ruby-comment"># inputs can&#39;t have active children</span>
+<span class="line-num">129</span>   <span class="ruby-keyword">if</span> [<span class="ruby-string">&quot;TaxonSwap&quot;</span>, <span class="ruby-string">&quot;TaxonSplit&quot;</span>, <span class="ruby-string">&quot;TaxonDrop&quot;</span>].<span class="ruby-identifier">include?</span> <span class="ruby-identifier">type</span>
+<span class="line-num">130</span>     <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">input_taxa</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">any?</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">is_active</span> }}.<span class="ruby-identifier">any?</span>
+<span class="line-num">131</span>     <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">is_a?</span>( <span class="ruby-constant">TaxonSplit</span> ) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">is_branching?</span>
+<span class="line-num">132</span>   <span class="ruby-comment"># unless they are also inputs</span>
+<span class="line-num">133</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;TaxonMerge&quot;</span>
+<span class="line-num">134</span>     <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">input_taxa</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">any?</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">is_active</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-operator">!</span><span class="ruby-identifier">input_taxa</span>.<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:id</span>).<span class="ruby-identifier">include?</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">id</span>) }}.<span class="ruby-identifier">any?</span>
+<span class="line-num">135</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;TaxonStage&quot;</span>
+<span class="line-num">136</span>     <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="line-num">137</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">138</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+<span class="line-num">139</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-add_input_taxon">
+            
+              <b>add_input_taxon</b>(taxon)
+            
+            <a href="../classes/TaxonChange.html#method-i-add_input_taxon" name="method-i-add_input_taxon" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Override in subclasses that use self.taxon_change_taxa as the input</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-add_input_taxon_source')" id="l_method-i-add_input_taxon_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-add_input_taxon_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_change.rb</span>
+<span class="line-num">159</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">add_input_taxon</span>(<span class="ruby-identifier">taxon</span>)
+<span class="line-num">160</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">taxon</span> = <span class="ruby-identifier">taxon</span>
+<span class="line-num">161</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-add_output_taxon">
+            
+              <b>add_output_taxon</b>(taxon)
+            
+            <a href="../classes/TaxonChange.html#method-i-add_output_taxon" name="method-i-add_output_taxon" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Override in subclasses that use self.taxon as the output</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-add_output_taxon_source')" id="l_method-i-add_output_taxon_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-add_output_taxon_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_change.rb</span>
+<span class="line-num">164</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">add_output_taxon</span>(<span class="ruby-identifier">taxon</span>)
+<span class="line-num">165</span>   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">taxon_change_taxa</span>.<span class="ruby-identifier">build</span>(<span class="ruby-value">:taxon</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">taxon</span>, <span class="ruby-value">:taxon_change</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">self</span>)
+<span class="line-num">166</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-automatable-3F">
+            
+              <b>automatable?</b>()
+            
+            <a href="../classes/TaxonChange.html#method-i-automatable-3F" name="method-i-automatable-3F" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-automatable-3F_source')" id="l_method-i-automatable-3F_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-automatable-3F_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_change.rb</span>
+<span class="line-num">404</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">automatable?</span>
+<span class="line-num">405</span>   <span class="ruby-identifier">output_taxa</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+<span class="line-num">406</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-automatable_for_output-3F">
+            
+              <b>automatable_for_output?</b>( output_taxon )
+            
+            <a href="../classes/TaxonChange.html#method-i-automatable_for_output-3F" name="method-i-automatable_for_output-3F" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-automatable_for_output-3F_source')" id="l_method-i-automatable_for_output-3F_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-automatable_for_output-3F_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_change.rb</span>
+<span class="line-num">141</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">automatable_for_output?</span>( <span class="ruby-identifier">output_taxon</span> )
+<span class="line-num">142</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">is_a?</span>( <span class="ruby-constant">TaxonSplit</span> ) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">is_branching?</span>
+<span class="line-num">143</span>   <span class="ruby-identifier">output_taxon_id</span> = <span class="ruby-identifier">output_taxon</span>.<span class="ruby-identifier">is_a?</span>( <span class="ruby-constant">Taxon</span> ) <span class="ruby-operator">?</span> <span class="ruby-identifier">output_taxon</span>.<span class="ruby-identifier">id</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">output_taxon</span>
+<span class="line-num">144</span>   <span class="ruby-identifier">input_taxon</span>.<span class="ruby-identifier">id</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">output_taxon_id</span>
+<span class="line-num">145</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-commit">
+            
+              <b>commit</b>()
+            
+            <a href="../classes/TaxonChange.html#method-i-commit" name="method-i-commit" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Override in subclasses</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-commit_source')" id="l_method-i-commit_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-commit_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_change.rb</span>
+<span class="line-num">185</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">commit</span>
+<span class="line-num">186</span>   <span class="ruby-keyword">if</span> <span class="ruby-constant">CONFIG</span>.<span class="ruby-identifier">content_freeze_enabled</span>
+<span class="line-num">187</span>     <span class="ruby-identifier">raise</span> <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>( <span class="ruby-string">&quot;cannot_be_changed_during_a_content_freeze&quot;</span> )
+<span class="line-num">188</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">189</span>   <span class="ruby-keyword">unless</span> <span class="ruby-identifier">committable_by?</span>( <span class="ruby-identifier">committer</span> )
+<span class="line-num">190</span>     <span class="ruby-identifier">raise</span> <span class="ruby-constant">PermissionError</span>, <span class="ruby-string">&quot;Committing user doesn&#39;t have permission to commit&quot;</span>
+<span class="line-num">191</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">192</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">active_children_conflict?</span>
+<span class="line-num">193</span>     <span class="ruby-identifier">raise</span> <span class="ruby-constant">ActiveChildrenError</span>, <span class="ruby-string">&quot;Input taxon cannot have active children&quot;</span>
+<span class="line-num">194</span>     <span class="ruby-keyword">return</span>
+<span class="line-num">195</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">196</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">rank_level_conflict?</span>
+<span class="line-num">197</span>     <span class="ruby-identifier">raise</span> <span class="ruby-constant">RankLevelError</span>, <span class="ruby-string">&quot;Output taxon rank level not coarser than rank level of an input taxon&#39;s active children&quot;</span>
+<span class="line-num">198</span>     <span class="ruby-keyword">return</span>
+<span class="line-num">199</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">200</span>   <span class="ruby-keyword">unless</span> <span class="ruby-identifier">is_a?</span>( <span class="ruby-constant">TaxonSplit</span> ) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">is_branching?</span>
+<span class="line-num">201</span>     <span class="ruby-identifier">input_taxa</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">update!</span>(<span class="ruby-value">is_active:</span> <span class="ruby-keyword">false</span>, <span class="ruby-value">skip_only_inactive_children_if_inactive:</span> (<span class="ruby-identifier">move_children?</span> <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">active_children_conflict?</span>) )}
+<span class="line-num">202</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">203</span>   <span class="ruby-identifier">output_taxa</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+<span class="line-num">204</span>     <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">is_a?</span>( <span class="ruby-constant">TaxonSplit</span> ) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">id</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">input_taxon</span>.<span class="ruby-identifier">id</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">input_taxon</span>.<span class="ruby-identifier">is_active</span>
+<span class="line-num">205</span>     <span class="ruby-identifier">t</span>.<span class="ruby-identifier">update!</span>(
+<span class="line-num">206</span>       <span class="ruby-value">is_active:</span> <span class="ruby-keyword">true</span>,
+<span class="line-num">207</span>       <span class="ruby-value">skip_only_inactive_children_if_inactive:</span> <span class="ruby-identifier">move_children?</span>,
+<span class="line-num">208</span>       <span class="ruby-value">skip_taxon_framework_checks:</span> <span class="ruby-keyword">true</span>
+<span class="line-num">209</span>     )
+<span class="line-num">210</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">211</span>   <span class="ruby-identifier">update_attribute</span>(<span class="ruby-value">:committed_on</span>, <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>)
+<span class="line-num">212</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-commit_records">
+            
+              <b>commit_records</b>( options = {} )
+            
+            <a href="../classes/TaxonChange.html#method-i-commit_records" name="method-i-commit_records" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>For all records with a taxon association affected by this change, update the record if  possible / desired by its owner, or generate an update for the owner notifying them of  the change</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-commit_records_source')" id="l_method-i-commit_records_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-commit_records_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_change.rb</span>
+<span class="line-num">217</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">commit_records</span>( <span class="ruby-identifier">options</span> = {} )
+<span class="line-num">218</span>   <span class="ruby-comment"># unless draft?</span>
+<span class="line-num">219</span>   <span class="ruby-keyword">if</span> <span class="ruby-constant">CONFIG</span>.<span class="ruby-identifier">content_freeze_enabled</span>
+<span class="line-num">220</span>     <span class="ruby-identifier">raise</span> <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>( <span class="ruby-string">&quot;cannot_be_changed_during_a_content_freeze&quot;</span> )
+<span class="line-num">221</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">222</span>   <span class="ruby-keyword">unless</span> <span class="ruby-identifier">valid?</span>
+<span class="line-num">223</span>     <span class="ruby-identifier">msg</span> = <span class="ruby-node">&quot;Failed to commit records for #{self}: #{errors.full_messages.to_sentence}&quot;</span>
+<span class="line-num">224</span>     <span class="ruby-comment"># Rails.logger.error &quot;[ERROR #{Time.now}] #{msg}&quot;</span>
+<span class="line-num">225</span>     <span class="ruby-comment"># return</span>
+<span class="line-num">226</span>     <span class="ruby-identifier">raise</span> <span class="ruby-identifier">msg</span>
+<span class="line-num">227</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">228</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">input_taxa</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">229</span>     <span class="ruby-comment"># return</span>
+<span class="line-num">230</span>     <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Failed to commit records for #{self}: no input taxa&quot;</span>
+<span class="line-num">231</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">232</span>   <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;[INFO #{Time.now}] #{self}: starting commit_records&quot;</span>
+<span class="line-num">233</span>   <span class="ruby-identifier">notified_user_ids</span> = []
+<span class="line-num">234</span>   <span class="ruby-identifier">associations_to_update</span> = <span class="ruby-node">%w(identifications observations listed_taxa taxon_links observation_field_values)</span>
+<span class="line-num">235</span>   <span class="ruby-identifier">has_many_reflections</span> = <span class="ruby-identifier">associations_to_update</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span> 
+<span class="line-num">236</span>     <span class="ruby-constant">Taxon</span>.<span class="ruby-identifier">reflections</span>.<span class="ruby-identifier">detect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">a</span>}
+<span class="line-num">237</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">238</span>   <span class="ruby-identifier">has_many_reflections</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">reflection</span><span class="ruby-operator">|</span>
+<span class="line-num">239</span>     <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;[INFO #{Time.now}] #{self}: committing #{k}&quot;</span>
+<span class="line-num">240</span>     <span class="ruby-identifier">find_batched_records_of</span>( <span class="ruby-identifier">reflection</span> ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">batch</span><span class="ruby-operator">|</span>
+<span class="line-num">241</span>       <span class="ruby-identifier">auto_updatable_records</span> = []
+<span class="line-num">242</span>       <span class="ruby-identifier">batch_users_to_notify</span> = []
+<span class="line-num">243</span>       <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;[INFO #{Time.now}] #{self}: committing #{k}, batch starting with #{batch[0]}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:debug</span>]
+<span class="line-num">244</span>       <span class="ruby-identifier">batch</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">record</span><span class="ruby-operator">|</span>
+<span class="line-num">245</span>         <span class="ruby-identifier">record_has_user</span> = <span class="ruby-identifier">record</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:user</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">record</span>.<span class="ruby-identifier">user</span>
+<span class="line-num">246</span>         <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">options</span>[<span class="ruby-value">:skip_updates</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">record_has_user</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">notified_user_ids</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">record</span>.<span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>)
+<span class="line-num">247</span>           <span class="ruby-identifier">batch_users_to_notify</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">record</span>.<span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>
+<span class="line-num">248</span>           <span class="ruby-identifier">notified_user_ids</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">record</span>.<span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>
+<span class="line-num">249</span>         <span class="ruby-keyword">end</span>
+<span class="line-num">250</span>         <span class="ruby-keyword">if</span> <span class="ruby-identifier">automatable?</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-operator">!</span><span class="ruby-identifier">record_has_user</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">record</span>.<span class="ruby-identifier">user</span>.<span class="ruby-identifier">prefers_automatic_taxonomic_changes?</span>)
+<span class="line-num">251</span>           <span class="ruby-identifier">auto_updatable_records</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">record</span>
+<span class="line-num">252</span>         <span class="ruby-keyword">end</span>
+<span class="line-num">253</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">254</span>       <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;[INFO #{Time.now}] #{self}: committing #{k}, #{auto_updatable_records.size} automatable records&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:debug</span>]
+<span class="line-num">255</span>       <span class="ruby-keyword">unless</span> <span class="ruby-identifier">auto_updatable_records</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">256</span>         <span class="ruby-identifier">update_records_of_class</span>( <span class="ruby-identifier">reflection</span>.<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">options</span>.<span class="ruby-identifier">merge</span>( <span class="ruby-value">records:</span> <span class="ruby-identifier">auto_updatable_records</span> ) )
+<span class="line-num">257</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">258</span>       <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">batch_users_to_notify</span>.<span class="ruby-identifier">empty?</span>
+<span class="line-num">259</span>         <span class="ruby-identifier">action_attrs</span> = {
+<span class="line-num">260</span>           <span class="ruby-value">resource:</span> <span class="ruby-keyword">self</span>,
+<span class="line-num">261</span>           <span class="ruby-value">notifier:</span> <span class="ruby-keyword">self</span>,
+<span class="line-num">262</span>           <span class="ruby-value">notification:</span> <span class="ruby-string">&quot;committed&quot;</span>
+<span class="line-num">263</span>         }
+<span class="line-num">264</span>         <span class="ruby-keyword">if</span> <span class="ruby-identifier">action</span> = <span class="ruby-constant">UpdateAction</span>.<span class="ruby-identifier">first_with_attributes</span>(<span class="ruby-identifier">action_attrs</span>)
+<span class="line-num">265</span>           <span class="ruby-identifier">action</span>.<span class="ruby-identifier">append_subscribers</span>( <span class="ruby-identifier">batch_users_to_notify</span>.<span class="ruby-identifier">uniq</span> )
+<span class="line-num">266</span>         <span class="ruby-keyword">end</span>
+<span class="line-num">267</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">268</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">269</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">270</span>   [<span class="ruby-identifier">input_taxa</span>, <span class="ruby-identifier">output_taxa</span>].<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">taxon</span><span class="ruby-operator">|</span>
+<span class="line-num">271</span>     <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;[INFO #{Time.now}] #{self}: updating counts for #{taxon}&quot;</span>
+<span class="line-num">272</span>     <span class="ruby-constant">Taxon</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">id:</span> <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">id</span>).<span class="ruby-identifier">update_all</span>(
+<span class="line-num">273</span>       <span class="ruby-value">observations_count:</span> <span class="ruby-constant">Observation</span>.<span class="ruby-identifier">of</span>(<span class="ruby-identifier">taxon</span>).<span class="ruby-identifier">count</span>,
+<span class="line-num">274</span>       <span class="ruby-value">listed_taxa_count:</span> <span class="ruby-constant">ListedTaxon</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">taxon_id:</span> <span class="ruby-identifier">taxon</span>).<span class="ruby-identifier">count</span>)
+<span class="line-num">275</span>     <span class="ruby-identifier">taxon</span>.<span class="ruby-identifier">elastic_index!</span>
+<span class="line-num">276</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">277</span>   <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;[INFO #{Time.now}] #{self}: finished commit_records&quot;</span>
+<span class="line-num">278</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-commit_records_job">
+            
+              <b>commit_records_job</b>()
+            
+            <a href="../classes/TaxonChange.html#method-i-commit_records_job" name="method-i-commit_records_job" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-commit_records_job_source')" id="l_method-i-commit_records_job_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-commit_records_job_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_change.rb</span>
+<span class="line-num">420</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">commit_records_job</span>
+<span class="line-num">421</span>   <span class="ruby-constant">Delayed</span><span class="ruby-operator">::</span><span class="ruby-constant">Job</span>.<span class="ruby-identifier">where</span>( <span class="ruby-value">unique_hash:</span> <span class="ruby-identifier">taxon_change_commit_records_unique_hash</span>.<span class="ruby-identifier">to_s</span> ).<span class="ruby-identifier">first</span>
+<span class="line-num">422</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-commit_records_later">
+            
+              <b>commit_records_later</b>()
+            
+            <a href="../classes/TaxonChange.html#method-i-commit_records_later" name="method-i-commit_records_later" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-commit_records_later_source')" id="l_method-i-commit_records_later_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-commit_records_later_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_change.rb</span>
+<span class="line-num">412</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">commit_records_later</span>
+<span class="line-num">413</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">saved_change_to_committed_on?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">committed?</span>
+<span class="line-num">414</span>   <span class="ruby-identifier">delay</span>( <span class="ruby-value">priority:</span> <span class="ruby-constant">USER_INTEGRITY_PRIORITY</span>,
+<span class="line-num">415</span>     <span class="ruby-value">unique_hash:</span> <span class="ruby-identifier">taxon_change_commit_records_unique_hash</span> ).
+<span class="line-num">416</span>     <span class="ruby-identifier">commit_records</span>
+<span class="line-num">417</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">418</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-committable_by-3F">
+            
+              <b>committable_by?</b>( u )
+            
+            <a href="../classes/TaxonChange.html#method-i-committable_by-3F" name="method-i-committable_by-3F" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-committable_by-3F_source')" id="l_method-i-committable_by-3F_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-committable_by-3F_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_change.rb</span>
+<span class="line-num">147</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">committable_by?</span>( <span class="ruby-identifier">u</span> )
+<span class="line-num">148</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">u</span>
+<span class="line-num">149</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">is_curator?</span>
+<span class="line-num">150</span>   <span class="ruby-identifier">uneditable_input_taxon</span> = <span class="ruby-identifier">input_taxa</span>.<span class="ruby-identifier">detect</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-operator">!</span><span class="ruby-identifier">t</span>.<span class="ruby-identifier">protected_attributes_editable_by?</span>( <span class="ruby-identifier">u</span> ) }
+<span class="line-num">151</span>   <span class="ruby-identifier">uneditable_output_taxon</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">152</span>   <span class="ruby-keyword">unless</span> <span class="ruby-identifier">uneditable_input_taxon</span>
+<span class="line-num">153</span>     <span class="ruby-identifier">uneditable_output_taxon</span> = <span class="ruby-identifier">output_taxa</span>.<span class="ruby-identifier">detect</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-operator">!</span><span class="ruby-identifier">t</span>.<span class="ruby-identifier">is_active</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">t</span>.<span class="ruby-identifier">activated_protected_attributes_editable_by?</span>( <span class="ruby-identifier">u</span> ) }
+<span class="line-num">154</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">155</span>   <span class="ruby-identifier">uneditable_input_taxon</span>.<span class="ruby-identifier">blank?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">uneditable_output_taxon</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">156</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-committed-3F">
+            
+              <b>committed?</b>()
+            
+            <a href="../classes/TaxonChange.html#method-i-committed-3F" name="method-i-committed-3F" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-committed-3F_source')" id="l_method-i-committed-3F_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-committed-3F_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_change.rb</span>
+<span class="line-num">111</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">committed?</span>
+<span class="line-num">112</span>   <span class="ruby-operator">!</span><span class="ruby-identifier">committed_on</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">113</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-draft-3F">
+            
+              <b>draft?</b>()
+            
+            <a href="../classes/TaxonChange.html#method-i-draft-3F" name="method-i-draft-3F" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-draft-3F_source')" id="l_method-i-draft-3F_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-draft-3F_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_change.rb</span>
+<span class="line-num">523</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">draft?</span>
+<span class="line-num">524</span>   <span class="ruby-identifier">committed_on</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">525</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-editable_by-3F">
+            
+              <b>editable_by?</b>(u)
+            
+            <a href="../classes/TaxonChange.html#method-i-editable_by-3F" name="method-i-editable_by-3F" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-editable_by-3F_source')" id="l_method-i-editable_by-3F_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-editable_by-3F_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_change.rb</span>
+<span class="line-num">424</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">editable_by?</span>(<span class="ruby-identifier">u</span>)
+<span class="line-num">425</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">426</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">is_curator?</span>
+<span class="line-num">427</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">id</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">user_id</span>
+<span class="line-num">428</span>   <span class="ruby-keyword">false</span>
+<span class="line-num">429</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-find_batched_records_of">
+            
+              <b>find_batched_records_of</b>( reflection )
+            
+            <a href="../classes/TaxonChange.html#method-i-find_batched_records_of" name="method-i-find_batched_records_of" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-find_batched_records_of_source')" id="l_method-i-find_batched_records_of_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-find_batched_records_of_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_change.rb</span>
+<span class="line-num">280</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">find_batched_records_of</span>( <span class="ruby-identifier">reflection</span> )
+<span class="line-num">281</span>   <span class="ruby-identifier">input_taxon_ids</span> = <span class="ruby-identifier">input_taxa</span>.<span class="ruby-identifier">to_a</span>.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:id</span>)
+<span class="line-num">282</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">reflection</span>.<span class="ruby-identifier">klass</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;Observation&quot;</span>
+<span class="line-num">283</span>     <span class="ruby-constant">Observation</span>.<span class="ruby-identifier">search_in_batches</span>( <span class="ruby-value">ident_taxon_id:</span> <span class="ruby-identifier">input_taxon_ids</span>.<span class="ruby-identifier">join</span>( <span class="ruby-string">&quot;,&quot;</span> ) ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">batch</span><span class="ruby-operator">|</span>
+<span class="line-num">284</span>       <span class="ruby-keyword">yield</span> <span class="ruby-identifier">batch</span>
+<span class="line-num">285</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">286</span>   <span class="ruby-comment"># Omitting using ES for idents now until the ident index gets fully</span>
+<span class="line-num">287</span>   <span class="ruby-comment"># rebuilt. This should be slower but more reliable</span>
+<span class="line-num">288</span>   <span class="ruby-comment"># elsif reflection.klass == Identification</span>
+<span class="line-num">289</span>   <span class="ruby-comment">#   page = 1</span>
+<span class="line-num">290</span>   <span class="ruby-comment">#   loop do</span>
+<span class="line-num">291</span>   <span class="ruby-comment">#     results = Identification.elastic_paginate(</span>
+<span class="line-num">292</span>   <span class="ruby-comment">#       filters: [</span>
+<span class="line-num">293</span>   <span class="ruby-comment">#         { terms: { &quot;taxon.ancestor_ids.keyword&quot; =&gt; input_taxon_ids } },</span>
+<span class="line-num">294</span>   <span class="ruby-comment">#         { term: { current: true } }</span>
+<span class="line-num">295</span>   <span class="ruby-comment">#       ],</span>
+<span class="line-num">296</span>   <span class="ruby-comment">#       page: page,</span>
+<span class="line-num">297</span>   <span class="ruby-comment">#       per_page: 100</span>
+<span class="line-num">298</span>   <span class="ruby-comment">#     )</span>
+<span class="line-num">299</span>   <span class="ruby-comment">#     break if results.blank?</span>
+<span class="line-num">300</span>   <span class="ruby-comment">#     yield results</span>
+<span class="line-num">301</span>   <span class="ruby-comment">#     page += 1</span>
+<span class="line-num">302</span>   <span class="ruby-comment">#   end</span>
+<span class="line-num">303</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">reflection</span>.<span class="ruby-identifier">klass</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Identification</span>
+<span class="line-num">304</span>     <span class="ruby-constant">Identification</span>.<span class="ruby-identifier">where</span>( <span class="ruby-value">taxon_id:</span> <span class="ruby-identifier">input_taxon_ids</span>, <span class="ruby-value">current:</span> <span class="ruby-keyword">true</span> ).<span class="ruby-identifier">find_in_batches</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">batch</span><span class="ruby-operator">|</span>
+<span class="line-num">305</span>       <span class="ruby-keyword">yield</span> <span class="ruby-identifier">batch</span>
+<span class="line-num">306</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">307</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">reflection</span>.<span class="ruby-identifier">klass</span> <span class="ruby-operator">==</span> <span class="ruby-constant">ObservationFieldValue</span>
+<span class="line-num">308</span>     <span class="ruby-constant">ObservationFieldValue</span>.
+<span class="line-num">309</span>         <span class="ruby-identifier">joins</span>(<span class="ruby-value">:observation_field</span>).
+<span class="line-num">310</span>         <span class="ruby-identifier">where</span>( <span class="ruby-string">&quot;value IN (?)&quot;</span>, <span class="ruby-identifier">input_taxon_ids</span>.<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:to_s</span>) ).
+<span class="line-num">311</span>         <span class="ruby-identifier">find_in_batches</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">batch</span><span class="ruby-operator">|</span>
+<span class="line-num">312</span>       <span class="ruby-keyword">yield</span> <span class="ruby-identifier">batch</span>
+<span class="line-num">313</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">314</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">315</span>     <span class="ruby-identifier">scope</span> = <span class="ruby-identifier">reflection</span>.<span class="ruby-identifier">klass</span>.<span class="ruby-identifier">where</span>( <span class="ruby-node">&quot;#{reflection.foreign_key} IN (?)&quot;</span>, <span class="ruby-identifier">input_taxon_ids</span> )
+<span class="line-num">316</span>     <span class="ruby-comment"># sometimes reflections have custom scopes that need to be applied</span>
+<span class="line-num">317</span>     <span class="ruby-identifier">scope</span> = <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">merge</span>( <span class="ruby-identifier">reflection</span>.<span class="ruby-identifier">scope</span> ) <span class="ruby-keyword">if</span> <span class="ruby-identifier">reflection</span>.<span class="ruby-identifier">scope</span>
+<span class="line-num">318</span>     <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">find_in_batches</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">batch</span><span class="ruby-operator">|</span>
+<span class="line-num">319</span>       <span class="ruby-keyword">yield</span> <span class="ruby-identifier">batch</span>
+<span class="line-num">320</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">321</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">322</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-index_taxon">
+            
+              <b>index_taxon</b>()
+            
+            <a href="../classes/TaxonChange.html#method-i-index_taxon" name="method-i-index_taxon" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-index_taxon_source')" id="l_method-i-index_taxon_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-index_taxon_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_change.rb</span>
+<span class="line-num">512</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">index_taxon</span>
+<span class="line-num">513</span>   <span class="ruby-comment"># unless draft?</span>
+<span class="line-num">514</span>   <span class="ruby-constant">Taxon</span>.<span class="ruby-identifier">elastic_index!</span>( <span class="ruby-value">ids:</span> [<span class="ruby-identifier">input_taxa</span>.<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:id</span>), <span class="ruby-identifier">output_taxa</span>.<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:id</span>)].<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">compact</span> )
+<span class="line-num">515</span>   <span class="ruby-keyword">true</span>
+<span class="line-num">516</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-input_taxa">
+            
+              <b>input_taxa</b>()
+            
+            <a href="../classes/TaxonChange.html#method-i-input_taxa" name="method-i-input_taxa" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-input_taxa_source')" id="l_method-i-input_taxa_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-input_taxa_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_change.rb</span>
+<span class="line-num">168</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">input_taxa</span>
+<span class="line-num">169</span>   [<span class="ruby-identifier">taxon</span>].<span class="ruby-identifier">compact</span>
+<span class="line-num">170</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-mentioned_users">
+            
+              <b>mentioned_users</b>()
+            
+            <a href="../classes/TaxonChange.html#method-i-mentioned_users" name="method-i-mentioned_users" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-mentioned_users_source')" id="l_method-i-mentioned_users_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-mentioned_users_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_change.rb</span>
+<span class="line-num">518</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">mentioned_users</span>
+<span class="line-num">519</span>   <span class="ruby-keyword">return</span> [ ] <span class="ruby-keyword">if</span> <span class="ruby-identifier">description</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">520</span>   <span class="ruby-identifier">description</span>.<span class="ruby-identifier">mentioned_users</span>
+<span class="line-num">521</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-move_input_children_to_output">
+            
+              <b>move_input_children_to_output</b>( target_input_taxon )
+            
+            <a href="../classes/TaxonChange.html#method-i-move_input_children_to_output" name="method-i-move_input_children_to_output" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-move_input_children_to_output_source')" id="l_method-i-move_input_children_to_output_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-move_input_children_to_output_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_change.rb</span>
+<span class="line-num">447</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">move_input_children_to_output</span>( <span class="ruby-identifier">target_input_taxon</span> )
+<span class="line-num">448</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">move_children?</span>
+<span class="line-num">449</span>   <span class="ruby-keyword">unless</span> <span class="ruby-identifier">target_input_taxon</span>.<span class="ruby-identifier">is_a?</span>( <span class="ruby-constant">Taxon</span> )
+<span class="line-num">450</span>     <span class="ruby-identifier">target_input_taxon</span> = <span class="ruby-constant">Taxon</span>.<span class="ruby-identifier">find_by_id</span>( <span class="ruby-identifier">target_input_taxon</span> )
+<span class="line-num">451</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">452</span>   <span class="ruby-identifier">move_child</span> = <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">child</span><span class="ruby-operator">|</span>
+<span class="line-num">453</span>     <span class="ruby-identifier">child</span>.<span class="ruby-identifier">skip_locks</span> = <span class="ruby-keyword">true</span>
+<span class="line-num">454</span>     <span class="ruby-identifier">child</span>.<span class="ruby-identifier">skip_taxon_framework_checks</span> = <span class="ruby-keyword">true</span>
+<span class="line-num">455</span>     <span class="ruby-identifier">output_taxon</span>.<span class="ruby-identifier">skip_locks</span> = <span class="ruby-keyword">true</span>
+<span class="line-num">456</span>     <span class="ruby-identifier">output_taxon</span>.<span class="ruby-identifier">skip_taxon_framework_checks</span> = <span class="ruby-keyword">true</span>
+<span class="line-num">457</span>     <span class="ruby-identifier">child</span>.<span class="ruby-identifier">move_to_child_of</span>( <span class="ruby-identifier">output_taxon</span> )
+<span class="line-num">458</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">459</span>   <span class="ruby-keyword">if</span> (
+<span class="line-num">460</span>     <span class="ruby-identifier">target_input_taxon</span>.<span class="ruby-identifier">rank_level</span> <span class="ruby-operator">&amp;&amp;</span>
+<span class="line-num">461</span>     <span class="ruby-identifier">target_input_taxon</span>.<span class="ruby-identifier">rank_level</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-constant">Taxon</span><span class="ruby-operator">::</span><span class="ruby-constant">GENUS_LEVEL</span> <span class="ruby-operator">&amp;&amp;</span>
+<span class="line-num">462</span>     <span class="ruby-identifier">output_taxon</span>.<span class="ruby-identifier">rank</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">target_input_taxon</span>.<span class="ruby-identifier">rank</span> <span class="ruby-operator">&amp;&amp;</span>
+<span class="line-num">463</span>       (
+<span class="line-num">464</span>         <span class="ruby-identifier">target_input_taxon</span>.<span class="ruby-identifier">genus</span>.<span class="ruby-identifier">blank?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">output_taxon</span>.<span class="ruby-identifier">genus</span>.<span class="ruby-identifier">blank?</span> <span class="ruby-operator">||</span>
+<span class="line-num">465</span>         <span class="ruby-identifier">output_taxon</span>.<span class="ruby-identifier">genus</span>.<span class="ruby-identifier">try</span>(<span class="ruby-value">:name</span>) <span class="ruby-operator">!=</span> <span class="ruby-identifier">target_input_taxon</span>.<span class="ruby-identifier">genus</span>.<span class="ruby-identifier">try</span>(<span class="ruby-value">:name</span>)
+<span class="line-num">466</span>       )
+<span class="line-num">467</span>   )
+<span class="line-num">468</span>     <span class="ruby-identifier">target_input_taxon</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">active</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">child</span><span class="ruby-operator">|</span>
+<span class="line-num">469</span>       <span class="ruby-comment"># If for some horrible reason people are swapping replacing taxa with</span>
+<span class="line-num">470</span>       <span class="ruby-comment"># their own children, at least don&#39;t get into some kind of invite</span>
+<span class="line-num">471</span>       <span class="ruby-comment"># change loop.</span>
+<span class="line-num">472</span>       <span class="ruby-keyword">if</span> <span class="ruby-identifier">input_taxa</span>.<span class="ruby-identifier">include?</span>( <span class="ruby-identifier">child</span> ) <span class="ruby-operator">||</span> <span class="ruby-identifier">output_taxa</span>.<span class="ruby-identifier">include?</span>( <span class="ruby-identifier">child</span> )
+<span class="line-num">473</span>         <span class="ruby-keyword">next</span>
+<span class="line-num">474</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">475</span>       <span class="ruby-identifier">tc</span> = <span class="ruby-constant">TaxonSwap</span>.<span class="ruby-identifier">new</span>(
+<span class="line-num">476</span>         <span class="ruby-value">user:</span> <span class="ruby-identifier">user</span>,
+<span class="line-num">477</span>         <span class="ruby-value">change_group:</span> (<span class="ruby-identifier">change_group</span> <span class="ruby-operator">||</span> <span class="ruby-node">&quot;#{self.class.name}-#{id}-children&quot;</span>),
+<span class="line-num">478</span>         <span class="ruby-value">source:</span> <span class="ruby-identifier">source</span>,
+<span class="line-num">479</span>         <span class="ruby-value">description:</span> <span class="ruby-node">&quot;Automatically generated change from #{FakeView.taxon_change_url( self )}&quot;</span>,
+<span class="line-num">480</span>         <span class="ruby-value">move_children:</span> <span class="ruby-keyword">true</span>
+<span class="line-num">481</span>       )
+<span class="line-num">482</span>       <span class="ruby-identifier">tc</span>.<span class="ruby-identifier">add_input_taxon</span>( <span class="ruby-identifier">child</span> )
+<span class="line-num">483</span>       <span class="ruby-identifier">output_child_name</span> = <span class="ruby-keyword">if</span> <span class="ruby-identifier">child</span>.<span class="ruby-identifier">rank_level</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">Taxon</span><span class="ruby-operator">::</span><span class="ruby-constant">SPECIES_LEVEL</span>
+<span class="line-num">484</span>         <span class="ruby-identifier">child</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">sub</span>( <span class="ruby-identifier">child</span>.<span class="ruby-identifier">species_name</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">strip</span>, <span class="ruby-identifier">output_taxon</span>.<span class="ruby-identifier">species_name</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">strip</span> ).<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">gsub</span>( <span class="ruby-regexp">/\s+/</span>, <span class="ruby-string">&quot; &quot;</span> )
+<span class="line-num">485</span>       <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">child</span>.<span class="ruby-identifier">species?</span>
+<span class="line-num">486</span>         <span class="ruby-identifier">child</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">sub</span>( <span class="ruby-identifier">child</span>.<span class="ruby-identifier">genus_name</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">strip</span>, <span class="ruby-identifier">output_taxon</span>.<span class="ruby-identifier">genus_name</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">strip</span> ).<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">gsub</span>( <span class="ruby-regexp">/\s+/</span>, <span class="ruby-string">&quot; &quot;</span> )
+<span class="line-num">487</span>       <span class="ruby-keyword">else</span>
+<span class="line-num">488</span>         <span class="ruby-identifier">child</span>.<span class="ruby-identifier">name</span>
+<span class="line-num">489</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">490</span>       <span class="ruby-keyword">if</span> <span class="ruby-identifier">output_child</span> = <span class="ruby-identifier">output_taxon</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">detect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">output_child_name</span> }
+<span class="line-num">491</span>         <span class="ruby-comment"># puts &quot;found existing output_child: #{output_child}&quot;</span>
+<span class="line-num">492</span>       <span class="ruby-keyword">else</span>
+<span class="line-num">493</span>         <span class="ruby-identifier">output_child</span> = <span class="ruby-constant">Taxon</span>.<span class="ruby-identifier">new</span>(
+<span class="line-num">494</span>           <span class="ruby-value">name:</span> <span class="ruby-identifier">output_child_name</span>,
+<span class="line-num">495</span>           <span class="ruby-value">rank:</span> <span class="ruby-identifier">child</span>.<span class="ruby-identifier">rank</span>,
+<span class="line-num">496</span>           <span class="ruby-value">is_active:</span> <span class="ruby-keyword">false</span>,
+<span class="line-num">497</span>           <span class="ruby-value">skip_locks:</span> <span class="ruby-keyword">true</span>
+<span class="line-num">498</span>         )
+<span class="line-num">499</span>         <span class="ruby-identifier">output_child</span>.<span class="ruby-identifier">save!</span>
+<span class="line-num">500</span>         <span class="ruby-identifier">output_child</span>.<span class="ruby-identifier">update</span>( <span class="ruby-value">parent:</span> <span class="ruby-identifier">output_taxon</span>, <span class="ruby-value">skip_locks:</span> <span class="ruby-keyword">true</span> )
+<span class="line-num">501</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">502</span>       <span class="ruby-identifier">tc</span>.<span class="ruby-identifier">add_output_taxon</span>( <span class="ruby-identifier">output_child</span> )
+<span class="line-num">503</span>       <span class="ruby-identifier">tc</span>.<span class="ruby-identifier">save!</span>
+<span class="line-num">504</span>       <span class="ruby-identifier">tc</span>.<span class="ruby-identifier">committer</span> = <span class="ruby-identifier">committer</span>
+<span class="line-num">505</span>       <span class="ruby-identifier">tc</span>.<span class="ruby-identifier">commit</span>
+<span class="line-num">506</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">507</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">508</span>     <span class="ruby-identifier">target_input_taxon</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">active</span>.<span class="ruby-identifier">each</span>( <span class="ruby-operator">&amp;</span><span class="ruby-identifier">move_child</span> )
+<span class="line-num">509</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">510</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-output_taxa">
+            
+              <b>output_taxa</b>()
+            
+            <a href="../classes/TaxonChange.html#method-i-output_taxa" name="method-i-output_taxa" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-output_taxa_source')" id="l_method-i-output_taxa_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-output_taxa_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_change.rb</span>
+<span class="line-num">172</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">output_taxa</span>
+<span class="line-num">173</span>   <span class="ruby-identifier">taxon_change_taxa</span>.<span class="ruby-identifier">select</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">tct</span><span class="ruby-operator">|</span> <span class="ruby-operator">!</span><span class="ruby-identifier">tct</span>.<span class="ruby-identifier">_destroy</span>}.<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:taxon</span>).<span class="ruby-identifier">sort_by</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:id</span>)
+<span class="line-num">174</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-output_taxon_for_record">
+            
+              <b>output_taxon_for_record</b>( record )
+            
+            <a href="../classes/TaxonChange.html#method-i-output_taxon_for_record" name="method-i-output_taxon_for_record" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-output_taxon_for_record_source')" id="l_method-i-output_taxon_for_record_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-output_taxon_for_record_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_change.rb</span>
+<span class="line-num">352</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">output_taxon_for_record</span>( <span class="ruby-identifier">record</span> )
+<span class="line-num">353</span>   <span class="ruby-identifier">output_taxa</span>.<span class="ruby-identifier">first</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">output_taxa</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+<span class="line-num">354</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-partial_revert">
+            
+              <b>partial_revert</b>( options = {} )
+            
+            <a href="../classes/TaxonChange.html#method-i-partial_revert" name="method-i-partial_revert" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>This is an emergency tool, so for the love of Linnaeus please be careful with it and don&#39;t expose it in the UI. It will correctly revert identifications and observations, but for splits it will not do anything for affected listed taxa or taxon links, and for other changes it will assume records updated 24 hours after the change was committed were updated by this change, which is obviously dubious.</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-partial_revert_source')" id="l_method-i-partial_revert_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-partial_revert_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_change.rb</span>
+<span class="line-num">362</span>   <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">partial_revert</span>( <span class="ruby-identifier">options</span> = {} )
+<span class="line-num">363</span>     <span class="ruby-identifier">debug</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:debug</span>]
+<span class="line-num">364</span>     <span class="ruby-identifier">logger</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:logger</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>
+<span class="line-num">365</span>     <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;[INFO #{Time.now}] Starting partial revert for #{self}&quot;</span>
+<span class="line-num">366</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">committed_on</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">debug</span>
+<span class="line-num">367</span>       <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;Reverting requires committed_on not to be nil&quot;</span>
+<span class="line-num">368</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">369</span>     <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;[INFO #{Time.now}] Destroying identifications...&quot;</span>
+<span class="line-num">370</span>     <span class="ruby-keyword">unless</span> <span class="ruby-identifier">debug</span>
+<span class="line-num">371</span>       <span class="ruby-identifier">identifications</span>.<span class="ruby-identifier">find_each</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:destroy</span>)
+<span class="line-num">372</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">373</span>     <span class="ruby-identifier">in_taxon</span> = <span class="ruby-identifier">input_taxa</span>.<span class="ruby-identifier">first</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">input_taxa</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+<span class="line-num">374</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">in_taxon</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">output_taxa</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">375</span>       <span class="ruby-identifier">listed_taxa_sql</span> = <span class="ruby-identifier">&lt;&lt;-SQL</span>
+<span class="line-num">376</span> <span class="ruby-value">        UPDATE listed_taxa SET taxon_id = #{in_taxon.id} FROM places WHERE
+<span class="line-num">377</span>           listed_taxa.taxon_id IN (#{output_taxa.map(&amp;:id).join(&#39;,&#39;)})
+<span class="line-num">378</span>           AND (listed_taxa.updated_at BETWEEN &#39;#{(committed_on+0.hours).to_s(:db)}&#39; AND &#39;#{(committed_on+1.day).to_s(:db)}&#39;)
+<span class="line-num">379</span> </span><span class="ruby-identifier">      SQL</span>
+<span class="line-num">380</span>       <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;[INFO #{Time.now}] Reverting listed taxa: #{listed_taxa_sql}&quot;</span>
+<span class="line-num">381</span>       <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-identifier">listed_taxa_sql</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">debug</span>
+<span class="line-num">382</span>       <span class="ruby-identifier">taxon_link_sql</span> = <span class="ruby-identifier">&lt;&lt;-SQL</span>
+<span class="line-num">383</span> <span class="ruby-value">        UPDATE taxon_links SET taxon_id = #{in_taxon.id} FROM places WHERE
+<span class="line-num">384</span>           taxon_links.taxon_id IN (#{output_taxa.map(&amp;:id).join(&#39;,&#39;)})
+<span class="line-num">385</span>           AND (taxon_links.updated_at BETWEEN &#39;#{(committed_on+0.hours).to_s(:db)}&#39; AND &#39;#{(committed_on+1.day).to_s(:db)}&#39;)
+<span class="line-num">386</span> </span><span class="ruby-identifier">      SQL</span>
+<span class="line-num">387</span>       <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;[INFO #{Time.now}] Reverting taxon links: #{taxon_link_sql}&quot;</span>
+<span class="line-num">388</span>       <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-identifier">taxon_link_sql</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">debug</span>
+<span class="line-num">389</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">390</span>     <span class="ruby-identifier">input_taxa</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">input_taxon</span><span class="ruby-operator">|</span>
+<span class="line-num">391</span>       <span class="ruby-identifier">input_taxon</span>.<span class="ruby-identifier">update</span>( <span class="ruby-value">is_active:</span> <span class="ruby-keyword">true</span> ) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">debug</span>
+<span class="line-num">392</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">393</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:deactivate_output_taxa</span>]
+<span class="line-num">394</span>       <span class="ruby-identifier">output_taxa</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">output_taxon</span><span class="ruby-operator">|</span>
+<span class="line-num">395</span>         <span class="ruby-keyword">unless</span> <span class="ruby-identifier">input_taxa</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">output_taxon</span>
+<span class="line-num">396</span>           <span class="ruby-identifier">output_taxon</span>.<span class="ruby-identifier">update</span>( <span class="ruby-value">is_active:</span> <span class="ruby-keyword">false</span> ) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">debug</span>
+<span class="line-num">397</span>         <span class="ruby-keyword">end</span>
+<span class="line-num">398</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">399</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">400</span>     <span class="ruby-comment"># output taxa may or may not need to be made inactive, impossible to say in code</span>
+<span class="line-num">401</span>     <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;[INFO #{Time.now}] Finished partial revert for #{self}&quot;</span>
+<span class="line-num">402</span>   <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-rank_level_conflict-3F">
+            
+              <b>rank_level_conflict?</b>()
+            
+            <a href="../classes/TaxonChange.html#method-i-rank_level_conflict-3F" name="method-i-rank_level_conflict-3F" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-rank_level_conflict-3F_source')" id="l_method-i-rank_level_conflict-3F_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-rank_level_conflict-3F_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_change.rb</span>
+<span class="line-num">115</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">rank_level_conflict?</span>
+<span class="line-num">116</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> [<span class="ruby-string">&quot;TaxonSwap&quot;</span>, <span class="ruby-string">&quot;TaxonMerge&quot;</span>].<span class="ruby-identifier">include?</span> <span class="ruby-identifier">type</span>
+<span class="line-num">117</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;TaxonSwap&quot;</span>
+<span class="line-num">118</span>     <span class="ruby-identifier">input_taxa_rank_level_conflict</span> = <span class="ruby-identifier">input_taxa</span>[<span class="ruby-value">0</span>] <span class="ruby-keyword">if</span> ( <span class="ruby-identifier">input_taxa</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">children</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">is_active:</span> <span class="ruby-keyword">true</span>).<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">rank_level</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">output_taxa</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">rank_level</span>}.<span class="ruby-identifier">any?</span> )
+<span class="line-num">119</span>   <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;TaxonMerge&quot;</span>
+<span class="line-num">120</span>     <span class="ruby-identifier">input_taxa_rank_level_conflict</span> = <span class="ruby-identifier">input_taxa</span>.<span class="ruby-identifier">select</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">input_taxon</span><span class="ruby-operator">|</span> <span class="ruby-identifier">input_taxon</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">is_active:</span> <span class="ruby-keyword">true</span>).<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">rank_level</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">output_taxa</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">rank_level</span>}.<span class="ruby-identifier">any?</span> }.<span class="ruby-identifier">first</span>
+<span class="line-num">121</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">122</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">input_taxa_rank_level_conflict</span> 
+<span class="line-num">123</span>   <span class="ruby-identifier">input_taxa_rank_level_conflict</span>
+<span class="line-num">124</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-taxon_change_commit_records_unique_hash">
+            
+              <b>taxon_change_commit_records_unique_hash</b>()
+            
+            <a href="../classes/TaxonChange.html#method-i-taxon_change_commit_records_unique_hash" name="method-i-taxon_change_commit_records_unique_hash" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-taxon_change_commit_records_unique_hash_source')" id="l_method-i-taxon_change_commit_records_unique_hash_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-taxon_change_commit_records_unique_hash_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_change.rb</span>
+<span class="line-num">408</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">taxon_change_commit_records_unique_hash</span>
+<span class="line-num">409</span>   { <span class="ruby-value">&quot;TaxonSwap::commit_records&quot;:</span> <span class="ruby-identifier">id</span> }
+<span class="line-num">410</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-to_s">
+            
+              <b>to_s</b>()
+            
+            <a href="../classes/TaxonChange.html#method-i-to_s" name="method-i-to_s" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-to_s_source')" id="l_method-i-to_s_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-to_s_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_change.rb</span>
+<span class="line-num">107</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">to_s</span>
+<span class="line-num">108</span>   <span class="ruby-node">&quot;&lt;#{self.class} #{id}&gt;&quot;</span>
+<span class="line-num">109</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-uniqueness_of_output_taxa">
+            
+              <b>uniqueness_of_output_taxa</b>()
+            
+            <a href="../classes/TaxonChange.html#method-i-uniqueness_of_output_taxa" name="method-i-uniqueness_of_output_taxa" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-uniqueness_of_output_taxa_source')" id="l_method-i-uniqueness_of_output_taxa_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-uniqueness_of_output_taxa_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_change.rb</span>
+<span class="line-num">439</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">uniqueness_of_output_taxa</span>
+<span class="line-num">440</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;TaxonSplit&quot;</span>
+<span class="line-num">441</span>   <span class="ruby-identifier">taxon_ids</span> = <span class="ruby-identifier">taxon_change_taxa</span>.<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:taxon_id</span>)
+<span class="line-num">442</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">taxon_ids</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">taxon_ids</span>.<span class="ruby-identifier">uniq</span>.<span class="ruby-identifier">size</span>
+<span class="line-num">443</span>     <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">add</span>(<span class="ruby-value">:base</span>, <span class="ruby-string">&quot;output taxa must be unique&quot;</span>)
+<span class="line-num">444</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">445</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-uniqueness_of_taxa">
+            
+              <b>uniqueness_of_taxa</b>()
+            
+            <a href="../classes/TaxonChange.html#method-i-uniqueness_of_taxa" name="method-i-uniqueness_of_taxa" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-uniqueness_of_taxa_source')" id="l_method-i-uniqueness_of_taxa_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-uniqueness_of_taxa_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_change.rb</span>
+<span class="line-num">431</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">uniqueness_of_taxa</span>
+<span class="line-num">432</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;TaxonSplit&quot;</span>
+<span class="line-num">433</span>   <span class="ruby-identifier">taxon_ids</span> = [<span class="ruby-identifier">taxon_id</span>, <span class="ruby-identifier">taxon_change_taxa</span>.<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:taxon_id</span>)].<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">compact</span>
+<span class="line-num">434</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">taxon_ids</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">taxon_ids</span>.<span class="ruby-identifier">uniq</span>.<span class="ruby-identifier">size</span>
+<span class="line-num">435</span>     <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">add</span>(<span class="ruby-value">:base</span>, <span class="ruby-string">&quot;input and output taxa must be unique&quot;</span>)
+<span class="line-num">436</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">437</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-update_records_of_class">
+            
+              <b>update_records_of_class</b>(klass, options = {}, &amp;block)
+            
+            <a href="../classes/TaxonChange.html#method-i-update_records_of_class" name="method-i-update_records_of_class" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Change all records associated with input taxa to use the selected taxon</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-update_records_of_class_source')" id="l_method-i-update_records_of_class_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-update_records_of_class_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_change.rb</span>
+<span class="line-num">325</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">update_records_of_class</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">options</span> = {}, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+<span class="line-num">326</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:update_for_taxon_change</span>)
+<span class="line-num">327</span>     <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">update_for_taxon_change</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">options</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+<span class="line-num">328</span>     <span class="ruby-keyword">return</span>
+<span class="line-num">329</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">330</span>   <span class="ruby-identifier">records</span> = <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:records</span>]
+<span class="line-num">331</span>     <span class="ruby-identifier">options</span>[<span class="ruby-value">:records</span>]
+<span class="line-num">332</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">333</span>     <span class="ruby-identifier">scope</span> = <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">send</span>(<span class="ruby-ivar">@klass</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">underscore</span>.<span class="ruby-identifier">pluralize</span>).<span class="ruby-identifier">where</span>(<span class="ruby-node">&quot;#{klass.table_name}.taxon_id IN (?)&quot;</span>, <span class="ruby-identifier">input_taxa</span>)
+<span class="line-num">334</span>     <span class="ruby-identifier">scope</span> = <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;user_id = ?&quot;</span>, <span class="ruby-identifier">options</span>[<span class="ruby-value">:user</span>]) <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:user</span>]
+<span class="line-num">335</span>     <span class="ruby-identifier">scope</span> = <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">options</span>[<span class="ruby-value">:conditions</span>]) <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:conditions</span>]
+<span class="line-num">336</span>     <span class="ruby-identifier">scope</span> = <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">includes</span>(<span class="ruby-identifier">options</span>[<span class="ruby-value">:include</span>]) <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:include</span>]
+<span class="line-num">337</span>     <span class="ruby-identifier">scope</span>
+<span class="line-num">338</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">339</span>   <span class="ruby-identifier">proc</span> = <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">record</span><span class="ruby-operator">|</span>
+<span class="line-num">340</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">taxon</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:taxon</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">output_taxon_for_record</span>( <span class="ruby-identifier">record</span> )
+<span class="line-num">341</span>       <span class="ruby-identifier">record</span>.<span class="ruby-identifier">update</span>( <span class="ruby-value">taxon:</span> <span class="ruby-identifier">taxon</span> )
+<span class="line-num">342</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">343</span>     <span class="ruby-keyword">yield</span>(<span class="ruby-identifier">record</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+<span class="line-num">344</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">345</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">records</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:find_each</span>)
+<span class="line-num">346</span>     <span class="ruby-identifier">records</span>.<span class="ruby-identifier">find_each</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">proc</span>)
+<span class="line-num">347</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">348</span>     <span class="ruby-identifier">records</span>.<span class="ruby-identifier">each</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">proc</span>)
+<span class="line-num">349</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">350</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-verb_phrase">
+            
+              <b>verb_phrase</b>()
+            
+            <a href="../classes/TaxonChange.html#method-i-verb_phrase" name="method-i-verb_phrase" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-verb_phrase_source')" id="l_method-i-verb_phrase_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-verb_phrase_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File app/models/taxon_change.rb</span>
+<span class="line-num">176</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">verb_phrase</span>
+<span class="line-num">177</span>   <span class="ruby-node">&quot;#{self.class.name.underscore.split(&#39;_&#39;)[1..-1].join(&#39; &#39;).downcase}&quot;</span>
+<span class="line-num">178</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

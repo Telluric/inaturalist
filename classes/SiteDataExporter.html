@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SiteDataExporter</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["SiteDataExporter"]'>
+
+
+    <meta property="og:title" value="SiteDataExporter">
+
+  
+
+    <meta name="keywords" content="SiteDataExporter class, new, basename_for_site, export">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            SiteDataExporter
+            
+                <span class="parent">&lt;
+                    
+                    <a href="Object.html">Object</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/lib/site_data_exporter_rb.html">lib/site_data_exporter.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>B</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-basename_for_site">basename_for_site</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>E</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-export">export</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <h2 class="sectiontitle">Constants</h2>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">ASSOC_COLUMNS</td>
+            <td>=</td>
+            <td class="attr-value">{
+annotations: %w(
+id
+uuid
+resource_type
+resource_id
+created_at
+controlled_attribute_id
+controlled_attribute_label
+controlled_value_id
+controlled_value_label
+user_id
+vote_score
+),
+comments: %w(
+id
+uuid
+parent_type
+parent_id
+created_at
+updated_at
+user_id
+body
+),
+identifications: %w(
+id
+observation_id
+taxon_id
+user_id
+body
+created_at
+updated_at
+current
+taxon_change_id
+category
+uuid
+previous_observation_taxon_id
+disagreement
+),
+quality_metrics: %w(
+id
+user_id
+observation_id
+metric
+agree
+created_at
+updated_at
+),
+observation_field_values: %w(
+id
+observation_id
+observation_field_id
+value
+created_at
+updated_at
+user_id
+updater_id
+uuid
+)
+}.freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">OBS_COLUMNS</td>
+            <td>=</td>
+            <td class="attr-value">%w(
+id
+observed_on_string
+observed_on
+time_observed_at
+time_zone
+out_of_range
+user_id
+user_login
+site_id
+created_at
+updated_at
+quality_grade
+license
+url
+image_url
+sound_url
+tag_list
+description
+id_please
+num_identification_agreements
+num_identification_disagreements
+captive_cultivated
+oauth_application_id
+place_guess
+latitude
+longitude
+positional_accuracy
+private_place_guess
+private_latitude
+private_longitude
+public_positional_accuracy
+geoprivacy
+taxon_geoprivacy
+coordinates_obscured
+positioning_method
+positioning_device
+place_town_name
+place_county_name
+place_state_name
+place_country_name
+place_admin1_name
+place_admin2_name
+species_guess
+scientific_name
+common_name
+iconic_taxon_name
+taxon_id
+).freeze</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+      <h2 class="sectiontitle">Class Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-c-basename_for_site">
+            
+              <b>basename_for_site</b>( site )
+            
+            <a href="../classes/SiteDataExporter.html#method-c-basename_for_site" name="method-c-basename_for_site" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-basename_for_site_source')" id="l_method-c-basename_for_site_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-basename_for_site_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/site_data_exporter.rb</span>
+<span class="line-num">133</span> <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">basename_for_site</span>( <span class="ruby-identifier">site</span> )
+<span class="line-num">134</span>   <span class="ruby-node">&quot;#{site.name.parameterize}-#{site.id}&quot;</span>
+<span class="line-num">135</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-new">
+            
+              <b>new</b>( site, options = {} )
+            
+            <a href="../classes/SiteDataExporter.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/site_data_exporter.rb</span>
+<span class="line-num">115</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>( <span class="ruby-identifier">site</span>, <span class="ruby-identifier">options</span> = {} )
+<span class="line-num">116</span>   <span class="ruby-ivar">@options</span> = <span class="ruby-identifier">options</span>
+<span class="line-num">117</span>   <span class="ruby-ivar">@site</span> = <span class="ruby-identifier">site</span>
+<span class="line-num">118</span>   <span class="ruby-ivar">@site_name</span> = <span class="ruby-ivar">@site</span>.<span class="ruby-identifier">name</span>
+<span class="line-num">119</span>   <span class="ruby-identifier">dbconfig</span> = <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">configurations</span>.<span class="ruby-identifier">configs_for</span>( <span class="ruby-value">env_name:</span> <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">env</span> ).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">configuration_hash</span>
+<span class="line-num">120</span>   <span class="ruby-ivar">@dbname</span> = <span class="ruby-identifier">dbconfig</span>[<span class="ruby-value">:database</span>]
+<span class="line-num">121</span>   <span class="ruby-ivar">@dbhost</span> = <span class="ruby-identifier">dbconfig</span>[<span class="ruby-value">:host</span>]
+<span class="line-num">122</span>   <span class="ruby-ivar">@psql_cmd</span> = <span class="ruby-node">&quot;psql #{@dbname} -h #{@dbhost}&quot;</span>
+<span class="line-num">123</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">dbconfig</span>[<span class="ruby-value">:username</span>]
+<span class="line-num">124</span>     <span class="ruby-ivar">@psql_cmd</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot; -U #{dbconfig[:username]}&quot;</span>
+<span class="line-num">125</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">126</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">dbconfig</span>[<span class="ruby-value">:password</span>]
+<span class="line-num">127</span>     <span class="ruby-ivar">@psql_cmd</span> = <span class="ruby-node">&quot;PGPASSWORD=#{dbconfig[:password]} #{@psql_cmd}&quot;</span>
+<span class="line-num">128</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">129</span>   <span class="ruby-ivar">@max_obs_id</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:max_obs_id</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">Observation</span>.<span class="ruby-identifier">calculate</span>( <span class="ruby-value">:maximum</span>, <span class="ruby-value">:id</span> ) <span class="ruby-operator">||</span> <span class="ruby-value">0</span>
+<span class="line-num">130</span>   <span class="ruby-ivar">@num_processes</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:num_processes</span>].<span class="ruby-identifier">to_i</span>.<span class="ruby-identifier">positive?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:num_processes</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-operator">:</span> <span class="ruby-value">3</span>
+<span class="line-num">131</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-export">
+            
+              <b>export</b>()
+            
+            <a href="../classes/SiteDataExporter.html#method-i-export" name="method-i-export" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-export_source')" id="l_method-i-export_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-export_source" class="dyn-source">
+                <pre>    <span class="ruby-comment"># File lib/site_data_exporter.rb</span>
+<span class="line-num">137</span>   <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">export</span>
+<span class="line-num">138</span>     <span class="ruby-comment"># Make a temp dir</span>
+<span class="line-num">139</span>     <span class="ruby-ivar">@work_dir</span> = <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">mktmpdir</span>
+<span class="line-num">140</span>     <span class="ruby-ivar">@basename</span> = <span class="ruby-constant">SiteDataExporter</span>.<span class="ruby-identifier">basename_for_site</span>( <span class="ruby-ivar">@site</span> )
+<span class="line-num">141</span>     <span class="ruby-ivar">@work_path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>( <span class="ruby-ivar">@work_dir</span>, <span class="ruby-ivar">@basename</span> )
+<span class="line-num">142</span>     <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">mkdir_p</span> <span class="ruby-ivar">@work_path</span>, <span class="ruby-value">mode:</span> <span class="ruby-value">0o755</span>
+<span class="line-num">143</span> 
+<span class="line-num">144</span>     <span class="ruby-comment"># Export users table</span>
+<span class="line-num">145</span>     <span class="ruby-identifier">path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>( <span class="ruby-ivar">@work_path</span>, <span class="ruby-node">&quot;#{@basename}-users.csv&quot;</span> )
+<span class="line-num">146</span>     <span class="ruby-identifier">sql</span> = <span class="ruby-identifier">&lt;&lt;-SQL</span>
+<span class="line-num">147</span> <span class="ruby-value">      SELECT
+<span class="line-num">148</span>         id,
+<span class="line-num">149</span>         created_at,
+<span class="line-num">150</span>         updated_at,
+<span class="line-num">151</span>         login,
+<span class="line-num">152</span>         name,
+<span class="line-num">153</span>         email,
+<span class="line-num">154</span>         time_zone,
+<span class="line-num">155</span>         description,
+<span class="line-num">156</span>         observations_count,
+<span class="line-num">157</span>         identifications_count,
+<span class="line-num">158</span>         suspended_at,
+<span class="line-num">159</span>         uri,
+<span class="line-num">160</span>         locale,
+<span class="line-num">161</span>         place_id,
+<span class="line-num">162</span>         last_active
+<span class="line-num">163</span>       FROM
+<span class="line-num">164</span>         users
+<span class="line-num">165</span>       WHERE
+<span class="line-num">166</span>         site_id = #{@site.id}
+<span class="line-num">167</span>         AND (spammer = &#39;f&#39; OR spammer IS NULL)
+<span class="line-num">168</span> </span><span class="ruby-identifier">    SQL</span>
+<span class="line-num">169</span>     <span class="ruby-identifier">cmd</span> = <span class="ruby-node">&quot;#{@psql_cmd} -c \&quot;COPY (#{sql.gsub( /\s+/m, &#39; &#39; )}) TO STDOUT WITH CSV HEADER\&quot; &gt; #{path}&quot;</span>
+<span class="line-num">170</span>     <span class="ruby-identifier">system_call</span> <span class="ruby-identifier">cmd</span>
+<span class="line-num">171</span> 
+<span class="line-num">172</span>     <span class="ruby-comment"># Export taxa table</span>
+<span class="line-num">173</span>     <span class="ruby-identifier">path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>( <span class="ruby-ivar">@work_path</span>, <span class="ruby-node">&quot;#{@basename}-taxa.csv&quot;</span> )
+<span class="line-num">174</span>     <span class="ruby-identifier">sql</span> = <span class="ruby-identifier">&lt;&lt;-SQL</span>
+<span class="line-num">175</span> <span class="ruby-value">      SELECT
+<span class="line-num">176</span>         id,
+<span class="line-num">177</span>         name,
+<span class="line-num">178</span>         rank,
+<span class="line-num">179</span>         created_at,
+<span class="line-num">180</span>         updated_at,
+<span class="line-num">181</span>         iconic_taxon_id,
+<span class="line-num">182</span>         is_iconic,
+<span class="line-num">183</span>         creator_id,
+<span class="line-num">184</span>         updater_id,
+<span class="line-num">185</span>         observations_count,
+<span class="line-num">186</span>         rank_level,
+<span class="line-num">187</span>         wikipedia_title,
+<span class="line-num">188</span>         featured_at,
+<span class="line-num">189</span>         ancestry,
+<span class="line-num">190</span>         locked,
+<span class="line-num">191</span>         is_active,
+<span class="line-num">192</span>         taxon_framework_relationship_id,
+<span class="line-num">193</span>         uuid
+<span class="line-num">194</span>       FROM
+<span class="line-num">195</span>         taxa
+<span class="line-num">196</span> </span><span class="ruby-identifier">    SQL</span>
+<span class="line-num">197</span>     <span class="ruby-identifier">cmd</span> = <span class="ruby-node">&quot;#{@psql_cmd} -c \&quot;COPY (#{sql.gsub( /\s+/m, &#39; &#39; )}) TO STDOUT WITH CSV HEADER\&quot; &gt; #{path}&quot;</span>
+<span class="line-num">198</span>     <span class="ruby-identifier">system_call</span> <span class="ruby-identifier">cmd</span>
+<span class="line-num">199</span> 
+<span class="line-num">200</span>     <span class="ruby-comment"># Export conservation_statuses table</span>
+<span class="line-num">201</span>     <span class="ruby-identifier">path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>( <span class="ruby-ivar">@work_path</span>, <span class="ruby-node">&quot;#{@basename}-conservation_statuses.csv&quot;</span> )
+<span class="line-num">202</span>     <span class="ruby-identifier">sql</span> = <span class="ruby-identifier">&lt;&lt;-SQL</span>
+<span class="line-num">203</span> <span class="ruby-value">      SELECT
+<span class="line-num">204</span>         cs.id,
+<span class="line-num">205</span>         cs.taxon_id,
+<span class="line-num">206</span>         cs.user_id,
+<span class="line-num">207</span>         cs.place_id,
+<span class="line-num">208</span>         cs.source_id,
+<span class="line-num">209</span>         cs.authority,
+<span class="line-num">210</span>         cs.status,
+<span class="line-num">211</span>         cs.url,
+<span class="line-num">212</span>         cs.description,
+<span class="line-num">213</span>         cs.geoprivacy,
+<span class="line-num">214</span>         cs.iucn,
+<span class="line-num">215</span>         cs.created_at,
+<span class="line-num">216</span>         cs.updated_at,
+<span class="line-num">217</span>         places.name AS place_name,
+<span class="line-num">218</span>         places.display_name AS place_display_name
+<span class="line-num">219</span>       FROM
+<span class="line-num">220</span>         conservation_statuses cs
+<span class="line-num">221</span>           LEFT JOIN places ON places.id = cs.place_id
+<span class="line-num">222</span> </span><span class="ruby-identifier">    SQL</span>
+<span class="line-num">223</span>     <span class="ruby-identifier">cmd</span> = <span class="ruby-node">&quot;#{@psql_cmd} -c \&quot;COPY (#{sql.gsub( /\s+/m, &#39; &#39; )}) TO STDOUT WITH CSV HEADER\&quot; &gt; #{path}&quot;</span>
+<span class="line-num">224</span>     <span class="ruby-identifier">system_call</span> <span class="ruby-identifier">cmd</span>
+<span class="line-num">225</span> 
+<span class="line-num">226</span>     <span class="ruby-comment"># Export observation_fields table</span>
+<span class="line-num">227</span>     <span class="ruby-identifier">path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>( <span class="ruby-ivar">@work_path</span>, <span class="ruby-node">&quot;#{@basename}-observation_fields.csv&quot;</span> )
+<span class="line-num">228</span>     <span class="ruby-identifier">sql</span> = <span class="ruby-identifier">&lt;&lt;-SQL</span>
+<span class="line-num">229</span> <span class="ruby-value">      SELECT
+<span class="line-num">230</span>         id,
+<span class="line-num">231</span>         name,
+<span class="line-num">232</span>         datatype,
+<span class="line-num">233</span>         user_id,
+<span class="line-num">234</span>         description,
+<span class="line-num">235</span>         created_at,
+<span class="line-num">236</span>         updated_at,
+<span class="line-num">237</span>         allowed_values,
+<span class="line-num">238</span>         values_count,
+<span class="line-num">239</span>         users_count,
+<span class="line-num">240</span>         uuid
+<span class="line-num">241</span>       FROM
+<span class="line-num">242</span>         observation_fields
+<span class="line-num">243</span> </span><span class="ruby-identifier">    SQL</span>
+<span class="line-num">244</span>     <span class="ruby-identifier">cmd</span> = <span class="ruby-node">&quot;#{@psql_cmd} -c \&quot;COPY (#{sql.gsub( /\s+/m, &#39; &#39; )}) TO STDOUT WITH CSV HEADER\&quot; &gt; #{path}&quot;</span>
+<span class="line-num">245</span>     <span class="ruby-identifier">system_call</span> <span class="ruby-identifier">cmd</span>
+<span class="line-num">246</span> 
+<span class="line-num">247</span>     <span class="ruby-comment"># Export observations by site users with private coordinates</span>
+<span class="line-num">248</span>     <span class="ruby-identifier">export_observations</span>(
+<span class="line-num">249</span>       <span class="ruby-value">site_id:</span> <span class="ruby-ivar">@site</span>.<span class="ruby-identifier">id</span>,
+<span class="line-num">250</span>       <span class="ruby-value">force_coordinate_visibility:</span> <span class="ruby-keyword">true</span>,
+<span class="line-num">251</span>       <span class="ruby-value">debug_label:</span> <span class="ruby-string">&quot;by site users&quot;</span>
+<span class="line-num">252</span>     )
+<span class="line-num">253</span>     <span class="ruby-comment"># Export observations in place by non-site users *only* obscured by taxon geoprivacy with private coordinates</span>
+<span class="line-num">254</span>     <span class="ruby-identifier">export_observations</span>(
+<span class="line-num">255</span>       <span class="ruby-value">not_site_id:</span> <span class="ruby-ivar">@site</span>.<span class="ruby-identifier">id</span>,
+<span class="line-num">256</span>       <span class="ruby-value">place_id:</span> ( [<span class="ruby-ivar">@site</span>.<span class="ruby-identifier">place_id</span>] <span class="ruby-operator">+</span> <span class="ruby-ivar">@site</span>.<span class="ruby-identifier">places_sites</span>.<span class="ruby-identifier">pluck</span>( <span class="ruby-value">:place_id</span> ) ).<span class="ruby-identifier">compact</span>,
+<span class="line-num">257</span>       <span class="ruby-value">taxon_geoprivacy:</span> [<span class="ruby-string">&quot;obscured&quot;</span>, <span class="ruby-string">&quot;private&quot;</span>],
+<span class="line-num">258</span>       <span class="ruby-value">geoprivacy:</span> [<span class="ruby-string">&quot;open&quot;</span>],
+<span class="line-num">259</span>       <span class="ruby-value">force_coordinate_visibility:</span> <span class="ruby-keyword">true</span>,
+<span class="line-num">260</span>       <span class="ruby-value">debug_label:</span> <span class="ruby-string">&quot;by non-site users w/ taxon_geoprivacy but not geoprivacy&quot;</span>
+<span class="line-num">261</span>     )
+<span class="line-num">262</span>     <span class="ruby-identifier">export_observations</span>(
+<span class="line-num">263</span>       <span class="ruby-value">not_site_id:</span> <span class="ruby-ivar">@site</span>.<span class="ruby-identifier">id</span>,
+<span class="line-num">264</span>       <span class="ruby-value">place_id:</span> ( [<span class="ruby-ivar">@site</span>.<span class="ruby-identifier">place_id</span>] <span class="ruby-operator">+</span> <span class="ruby-ivar">@site</span>.<span class="ruby-identifier">places_sites</span>.<span class="ruby-identifier">pluck</span>( <span class="ruby-value">:place_id</span> ) ).<span class="ruby-identifier">compact</span>,
+<span class="line-num">265</span>       <span class="ruby-value">taxon_geoprivacy:</span> [<span class="ruby-string">&quot;obscured&quot;</span>, <span class="ruby-string">&quot;private&quot;</span>],
+<span class="line-num">266</span>       <span class="ruby-value">geoprivacy:</span> [<span class="ruby-string">&quot;obscured&quot;</span>, <span class="ruby-string">&quot;private&quot;</span>],
+<span class="line-num">267</span>       <span class="ruby-value">debug_label:</span> <span class="ruby-string">&quot;by non-site users of w/ taxon_geoprivacy AND geoprivacy&quot;</span>
+<span class="line-num">268</span>     )
+<span class="line-num">269</span>     <span class="ruby-comment"># Export observations in place by non-site users *not* obscured by taxon geoprivacy *without* private coordinates</span>
+<span class="line-num">270</span>     <span class="ruby-identifier">export_observations</span>(
+<span class="line-num">271</span>       <span class="ruby-value">not_site_id:</span> <span class="ruby-ivar">@site</span>.<span class="ruby-identifier">id</span>,
+<span class="line-num">272</span>       <span class="ruby-value">place_id:</span> ( [<span class="ruby-ivar">@site</span>.<span class="ruby-identifier">place_id</span>] <span class="ruby-operator">+</span> <span class="ruby-ivar">@site</span>.<span class="ruby-identifier">places_sites</span>.<span class="ruby-identifier">pluck</span>( <span class="ruby-value">:place_id</span> ) ).<span class="ruby-identifier">compact</span>,
+<span class="line-num">273</span>       <span class="ruby-value">not_taxon_geoprivacy:</span> [<span class="ruby-string">&quot;obscured&quot;</span>, <span class="ruby-string">&quot;private&quot;</span>],
+<span class="line-num">274</span>       <span class="ruby-value">debug_label:</span> <span class="ruby-string">&quot;by non-site users of un-threatened taxa&quot;</span>
+<span class="line-num">275</span>     )
+<span class="line-num">276</span> 
+<span class="line-num">277</span>     <span class="ruby-comment"># Make the archive</span>
+<span class="line-num">278</span>     <span class="ruby-identifier">fname</span> = <span class="ruby-node">&quot;#{@basename}.zip&quot;</span>
+<span class="line-num">279</span>     <span class="ruby-identifier">archive_path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>( <span class="ruby-ivar">@work_dir</span>, <span class="ruby-identifier">fname</span> )
+<span class="line-num">280</span>     <span class="ruby-identifier">system_call</span> <span class="ruby-node">&quot;cd #{@work_dir} &amp;&amp; zip -#{!@options[:verbose] &amp;&amp; &#39;q&#39;}D #{archive_path} #{@basename}/*&quot;</span>
+<span class="line-num">281</span>     <span class="ruby-identifier">archive_path</span>
+<span class="line-num">282</span>   <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

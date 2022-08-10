@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gonzo::Acts::Flaggable::SingletonMethods</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../../../../">
+<meta name="data-tree-keys" content='["Gonzo", "Acts", "Flaggable", "SingletonMethods"]'>
+
+
+    <meta property="og:title" value="Gonzo::Acts::Flaggable::SingletonMethods">
+
+  
+    
+    <meta name="description" content="This module contains class methods.">
+    <meta property="og:description" content="This module contains class methods.">
+  
+
+    <meta name="keywords" content="Gonzo::Acts::Flaggable::SingletonMethods class, find_flags_for, find_flags_by_user">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Module</span>
+            Gonzo::Acts::Flaggable::SingletonMethods
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../../../../files/lib/acts_as_flaggable/acts_as_flaggable_rb.html">lib/acts_as_flaggable/acts_as_flaggable.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>This module contains class methods</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-find_flags_by_user">find_flags_by_user</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-find_flags_for">find_flags_for</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-find_flags_by_user">
+            
+              <b>find_flags_by_user</b>(user)
+            
+            <a href="../../../../classes/Gonzo/Acts/Flaggable/SingletonMethods.html#method-i-find_flags_by_user" name="method-i-find_flags_by_user" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Helper class method to lookup flags for the mixin flaggable type written by a given user.</p>
+
+<p>This method is NOT equivalent to Flag.find_flags_for_user</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-find_flags_by_user_source')" id="l_method-i-find_flags_by_user_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-find_flags_by_user_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/acts_as_flaggable/acts_as_flaggable.rb</span>
+<span class="line-num">46</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">find_flags_by_user</span>(<span class="ruby-identifier">user</span>) 
+<span class="line-num">47</span>   <span class="ruby-identifier">flaggable</span> = <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">send</span>(<span class="ruby-value">:class_name_of_active_record_descendant</span>, <span class="ruby-keyword">self</span>).<span class="ruby-identifier">to_s</span>
+<span class="line-num">48</span>   
+<span class="line-num">49</span>   <span class="ruby-constant">Flag</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>,
+<span class="line-num">50</span>     <span class="ruby-value">:conditions</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-string">&quot;user_id = ? and flaggable_type = ?&quot;</span>, <span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">flaggable</span>],
+<span class="line-num">51</span>     <span class="ruby-value">:order</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;created_at DESC&quot;</span>
+<span class="line-num">52</span>   )
+<span class="line-num">53</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-find_flags_for">
+            
+              <b>find_flags_for</b>(obj)
+            
+            <a href="../../../../classes/Gonzo/Acts/Flaggable/SingletonMethods.html#method-i-find_flags_for" name="method-i-find_flags_for" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              <p>Helper method to lookup for flags for a given object. This method is equivalent to obj.flags.</p>
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-find_flags_for_source')" id="l_method-i-find_flags_for_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-find_flags_for_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/acts_as_flaggable/acts_as_flaggable.rb</span>
+<span class="line-num">34</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">find_flags_for</span>(<span class="ruby-identifier">obj</span>)
+<span class="line-num">35</span>   <span class="ruby-identifier">flaggable</span> = <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">send</span>(<span class="ruby-value">:class_name_of_active_record_descendant</span>, <span class="ruby-keyword">self</span>).<span class="ruby-identifier">to_s</span>
+<span class="line-num">36</span>  
+<span class="line-num">37</span>   <span class="ruby-constant">Flag</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>,
+<span class="line-num">38</span>     <span class="ruby-value">:conditions</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-string">&quot;flaggable_id = ? and flaggable_type = ?&quot;</span>, <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">flaggable</span>],
+<span class="line-num">39</span>     <span class="ruby-value">:order</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;created_at DESC&quot;</span>
+<span class="line-num">40</span>   )
+<span class="line-num">41</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

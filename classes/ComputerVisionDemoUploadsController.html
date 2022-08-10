@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ComputerVisionDemoUploadsController</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["ComputerVisionDemoUploadsController"]'>
+
+
+    <meta property="og:title" value="ComputerVisionDemoUploadsController">
+
+  
+
+    <meta name="keywords" content="ComputerVisionDemoUploadsController class, create, score, lookup_upload">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            ComputerVisionDemoUploadsController
+            
+                <span class="parent">&lt;
+                    
+                    <a href="ApplicationController.html">ApplicationController</a>
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/app/controllers/computer_vision_demo_uploads_controller_rb.html">app/controllers/computer_vision_demo_uploads_controller.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-create">create</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>L</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-lookup_upload">lookup_upload</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-score">score</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-create">
+            
+              <b>create</b>()
+            
+            <a href="../classes/ComputerVisionDemoUploadsController.html#method-i-create" name="method-i-create" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-create_source')" id="l_method-i-create_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-create_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/computer_vision_demo_uploads_controller.rb</span>
+<span class="line-num"> 6</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">create</span>
+<span class="line-num"> 7</span>   <span class="ruby-ivar">@upload</span> = <span class="ruby-constant">ComputerVisionDemoUpload</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">photo:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:file</span>],
+<span class="line-num"> 8</span>     <span class="ruby-value">mobile:</span> <span class="ruby-identifier">is_mobile_app?</span>, <span class="ruby-value">user_agent:</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">user_agent</span>)
+<span class="line-num"> 9</span>   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@upload</span>.<span class="ruby-identifier">save</span>
+<span class="line-num">10</span>     <span class="ruby-ivar">@upload</span>.<span class="ruby-identifier">reload</span>
+<span class="line-num">11</span>     <span class="ruby-identifier">json</span> = <span class="ruby-ivar">@upload</span>.<span class="ruby-identifier">as_json</span>( <span class="ruby-value">include:</span> <span class="ruby-value">:to_observation</span> )
+<span class="line-num">12</span>     <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> <span class="ruby-identifier">json</span>
+<span class="line-num">13</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">14</span>     <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> <span class="ruby-ivar">@upload</span>.<span class="ruby-identifier">errors</span>, <span class="ruby-value">status:</span> <span class="ruby-value">:unprocessable_entity</span>
+<span class="line-num">15</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">16</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-lookup_upload">
+            
+              <b>lookup_upload</b>()
+            
+            <a href="../classes/ComputerVisionDemoUploadsController.html#method-i-lookup_upload" name="method-i-lookup_upload" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-lookup_upload_source')" id="l_method-i-lookup_upload_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-lookup_upload_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/computer_vision_demo_uploads_controller.rb</span>
+<span class="line-num">32</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">lookup_upload</span>
+<span class="line-num">33</span>   <span class="ruby-ivar">@upload</span> = <span class="ruby-constant">ComputerVisionDemoUpload</span>.<span class="ruby-identifier">where</span>( <span class="ruby-value">uuid:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>] ).<span class="ruby-identifier">first</span>
+<span class="line-num">34</span>   <span class="ruby-identifier">render_404</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@upload</span>
+<span class="line-num">35</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-score">
+            
+              <b>score</b>()
+            
+            <a href="../classes/ComputerVisionDemoUploadsController.html#method-i-score" name="method-i-score" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-score_source')" id="l_method-i-score_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-score_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File app/controllers/computer_vision_demo_uploads_controller.rb</span>
+<span class="line-num">18</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">score</span>
+<span class="line-num">19</span>   <span class="ruby-keyword">begin</span>
+<span class="line-num">20</span>     <span class="ruby-identifier">response</span> = <span class="ruby-constant">RestClient</span>.<span class="ruby-identifier">post</span>( <span class="ruby-constant">CONFIG</span>.<span class="ruby-identifier">node_api_url</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;/computervision/score_image&quot;</span>,
+<span class="line-num">21</span>       <span class="ruby-identifier">params</span>.<span class="ruby-identifier">to_hash</span>.<span class="ruby-identifier">merge</span>( <span class="ruby-value">image:</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">new</span>( <span class="ruby-ivar">@upload</span>.<span class="ruby-identifier">photo</span>.<span class="ruby-identifier">path</span>( <span class="ruby-value">:thumbnail</span> ) ) ),
+<span class="line-num">22</span>       <span class="ruby-value">authorization:</span> <span class="ruby-constant">JsonWebToken</span>.<span class="ruby-identifier">applicationToken</span>)
+<span class="line-num">23</span>   <span class="ruby-keyword">rescue</span>
+<span class="line-num">24</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">25</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">response</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">code</span> <span class="ruby-operator">==</span> <span class="ruby-value">200</span>
+<span class="line-num">26</span>     <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>( <span class="ruby-identifier">response</span> )
+<span class="line-num">27</span>   <span class="ruby-keyword">else</span>
+<span class="line-num">28</span>     <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> <span class="ruby-ivar">@upload</span>.<span class="ruby-identifier">errors</span>, <span class="ruby-value">status:</span> <span class="ruby-value">:unprocessable_entity</span>
+<span class="line-num">29</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">30</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

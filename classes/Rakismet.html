@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rakismet</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../">
+<meta name="data-tree-keys" content='["Rakismet"]'>
+
+
+    <meta property="og:title" value="Rakismet">
+
+  
+    
+    <meta name="description" content="added a disable attribute on the class which can be used to disable akismet API calls, for example when running specs which great tons of objects which would normally call the API in their after_save .">
+    <meta property="og:description" content="added a disable attribute on the class which can be used to disable akismet API calls, for example when running specs which great tons of objects which would normally call the API in their after_save .">
+  
+
+    <meta name="keywords" content="Rakismet class, spammable_models, fake_environment_variables">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Module</span>
+            Rakismet
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../files/lib/acts_as_spammable/rakismet_rb.html">lib/acts_as_spammable/rakismet.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>added a disable attribute on the class which can be used to disable akismet API calls, for example when running specs which great tons of objects which would normally call the API in their after_save callback</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-fake_environment_variables">fake_environment_variables</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-spammable_models">spammable_models</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+      <!-- Section attributes -->
+      <h2 class="sectiontitle">Attributes</h2>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>disabled</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <h2 class="sectiontitle">Class Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-c-fake_environment_variables">
+            
+              <b>fake_environment_variables</b>()
+            
+            <a href="../classes/Rakismet.html#method-c-fake_environment_variables" name="method-c-fake_environment_variables" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-fake_environment_variables_source')" id="l_method-c-fake_environment_variables_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-fake_environment_variables_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/acts_as_spammable/rakismet.rb</span>
+<span class="line-num">12</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">fake_environment_variables</span>
+<span class="line-num">13</span>   {
+<span class="line-num">14</span>     <span class="ruby-string">&quot;REMOTE_ADDR&quot;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;127.0.0.1&quot;</span>,
+<span class="line-num">15</span>     <span class="ruby-string">&quot;HTTP_USER_AGENT&quot;</span> <span class="ruby-operator">=&gt;</span>
+<span class="line-num">16</span>       <span class="ruby-string">&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 &quot;</span> <span class="ruby-operator">+</span>
+<span class="line-num">17</span>       <span class="ruby-string">&quot;(KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36&quot;</span>
+<span class="line-num">18</span>   }
+<span class="line-num">19</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-spammable_models">
+            
+              <b>spammable_models</b>()
+            
+            <a href="../classes/Rakismet.html#method-c-spammable_models" name="method-c-spammable_models" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-spammable_models_source')" id="l_method-c-spammable_models_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-spammable_models_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/acts_as_spammable/rakismet.rb</span>
+<span class="line-num"> 8</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">spammable_models</span>
+<span class="line-num"> 9</span>   <span class="ruby-constant">Flag</span><span class="ruby-operator">::</span><span class="ruby-constant">TYPES</span>.<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:constantize</span>).<span class="ruby-identifier">select</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">spammable?</span> }
+<span class="line-num">10</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>

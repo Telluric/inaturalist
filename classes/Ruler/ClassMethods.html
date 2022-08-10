@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ruler::ClassMethods</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../../">
+<meta name="data-tree-keys" content='["Ruler", "ClassMethods"]'>
+
+
+    <meta property="og:title" value="Ruler::ClassMethods">
+
+  
+
+    <meta name="keywords" content="Ruler::ClassMethods class, has_rules_for, validates_rules_from">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Module</span>
+            Ruler::ClassMethods
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../../files/lib/ruler/ruler/has_rules_for_rb.html">lib/ruler/ruler/has_rules_for.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>H</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-has_rules_for">has_rules_for</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>V</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-validates_rules_from">validates_rules_from</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-has_rules_for">
+            
+              <b>has_rules_for</b>(association, options = {})
+            
+            <a href="../../classes/Ruler/ClassMethods.html#method-i-has_rules_for" name="method-i-has_rules_for" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-has_rules_for_source')" id="l_method-i-has_rules_for_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-has_rules_for_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/ruler/ruler/has_rules_for.rb</span>
+<span class="line-num"> 7</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">has_rules_for</span>(<span class="ruby-identifier">association</span>, <span class="ruby-identifier">options</span> = {})
+<span class="line-num"> 8</span>   <span class="ruby-identifier">rule_class</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:rule_class</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">Rule</span>
+<span class="line-num"> 9</span>   <span class="ruby-identifier">association_name</span> = <span class="ruby-node">&quot;#{association.to_s.singularize}_rules&quot;</span>.<span class="ruby-identifier">to_sym</span>
+<span class="line-num">10</span>   <span class="ruby-identifier">has_many</span> <span class="ruby-identifier">association_name</span>, <span class="ruby-value">class_name:</span> <span class="ruby-identifier">rule_class</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-value">as:</span> <span class="ruby-value">:ruler</span>, <span class="ruby-value">dependent:</span> <span class="ruby-value">:destroy</span>
+<span class="line-num">11</span>   <span class="ruby-identifier">accepts_nested_attributes_for</span> <span class="ruby-identifier">association_name</span>, <span class="ruby-value">:allow_destroy</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">true</span>, 
+<span class="line-num">12</span>     <span class="ruby-value">:reject_if</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:all_blank</span>
+<span class="line-num">13</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-validates_rules_from">
+            
+              <b>validates_rules_from</b>(association, options = {})
+            
+            <a href="../../classes/Ruler/ClassMethods.html#method-i-validates_rules_from" name="method-i-validates_rules_from" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-validates_rules_from_source')" id="l_method-i-validates_rules_from_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-validates_rules_from_source" class="dyn-source">
+                <pre>   <span class="ruby-comment"># File lib/ruler/ruler/has_rules_for.rb</span>
+<span class="line-num">15</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">validates_rules_from</span>(<span class="ruby-identifier">association</span>, <span class="ruby-identifier">options</span> = {})
+<span class="line-num">16</span>   <span class="ruby-identifier">validation_method_name</span> = <span class="ruby-node">&quot;validate_rules_from_#{association.to_s}&quot;</span>
+<span class="line-num">17</span>   <span class="ruby-identifier">rule_methods</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:rule_methods</span>) <span class="ruby-operator">||</span> []
+<span class="line-num">18</span>   <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">validation_method_name</span>) <span class="ruby-keyword">do</span>
+<span class="line-num">19</span>     <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">send</span>(<span class="ruby-identifier">association</span>).<span class="ruby-identifier">blank?</span>
+<span class="line-num">20</span>     <span class="ruby-identifier">rules</span> = <span class="ruby-identifier">send</span>(<span class="ruby-identifier">association</span>).<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{self.class.to_s.underscore.singularize}_rules&quot;</span>)
+<span class="line-num">21</span>     <span class="ruby-identifier">rules</span>.<span class="ruby-identifier">group_by</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:operator</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">operator</span>, <span class="ruby-identifier">operator_rules</span><span class="ruby-operator">|</span>
+<span class="line-num">22</span>       <span class="ruby-identifier">errors_for_operator</span> = []
+<span class="line-num">23</span>       <span class="ruby-identifier">operator_rules</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">rule</span><span class="ruby-operator">|</span>
+<span class="line-num">24</span>         <span class="ruby-keyword">if</span> <span class="ruby-identifier">rule</span>.<span class="ruby-identifier">validates?</span>(<span class="ruby-keyword">self</span>)
+<span class="line-num">25</span>           <span class="ruby-comment"># since only one of the group needs to pass, we can stop</span>
+<span class="line-num">26</span>           <span class="ruby-keyword">break</span>
+<span class="line-num">27</span>         <span class="ruby-keyword">else</span>
+<span class="line-num">28</span>           <span class="ruby-identifier">errors_for_operator</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">rule</span>.<span class="ruby-identifier">terms</span>
+<span class="line-num">29</span>         <span class="ruby-keyword">end</span>
+<span class="line-num">30</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">31</span>       <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">errors_for_operator</span>.<span class="ruby-identifier">blank?</span>
+<span class="line-num">32</span>       <span class="ruby-keyword">if</span> <span class="ruby-identifier">operator_rules</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+<span class="line-num">33</span>         <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">add</span>( <span class="ruby-value">:base</span>, <span class="ruby-node">&quot;Didn&#39;t pass rule: #{errors_for_operator.first}&quot;</span> )
+<span class="line-num">34</span>       <span class="ruby-comment"># FYI: if there are multiple rules with the same operator</span>
+<span class="line-num">35</span>       <span class="ruby-comment"># ONLY ONE of the rules with that operator must pass. For example</span>
+<span class="line-num">36</span>       <span class="ruby-comment"># if there are 10 place rules, the obs needs be in only 1</span>
+<span class="line-num">37</span>       <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">errors_for_operator</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">operator_rules</span>.<span class="ruby-identifier">size</span>
+<span class="line-num">38</span>         <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">add</span>( <span class="ruby-value">:base</span>, <span class="ruby-node">&quot;Didn&#39;t pass rules: #{errors_for_operator.join(&#39; OR &#39;)}&quot;</span> )
+<span class="line-num">39</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">40</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">41</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">42</span>   <span class="ruby-identifier">validate</span> <span class="ruby-identifier">validation_method_name</span>.<span class="ruby-identifier">to_sym</span>, <span class="ruby-identifier">options</span>
+<span class="line-num">43</span>   
+<span class="line-num">44</span>   <span class="ruby-identifier">const_set</span> <span class="ruby-string">&quot;RULE_METHODS&quot;</span>, <span class="ruby-identifier">rule_methods</span>
+<span class="line-num">45</span> <span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>
