@@ -249,6 +249,7 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
+    choice (0.2.0)
     chroma (0.2.0)
     chronic (0.10.2)
     climate_control (0.2.0)
@@ -489,6 +490,8 @@ GEM
     rack (2.2.4)
     rack-cors (1.1.1)
       rack (>= 2.0.0)
+    rack-mini-profiler (2.3.4)
+      rack (>= 1.2.0)
     rack-mobile-detect (0.4.0)
       rack
     rack-openid (1.4.2)
@@ -522,6 +525,11 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
+    rails-erd (1.7.1)
+      activerecord (>= 4.2)
+      activesupport (>= 4.2)
+      choice (~> 0.2.0)
+      ruby-graphviz (~> 1.2)
     rails-html-sanitizer (1.4.3)
       loofah (~> 2.3)
     rails-i18n (6.0.0)
@@ -604,6 +612,8 @@ GEM
       rubocop (>= 1.7.0, < 2.0)
     rubocop-rspec (2.5.0)
       rubocop (~> 1.19)
+    ruby-graphviz (1.2.5)
+      rexml
     ruby-openid (2.9.2)
     ruby-progressbar (1.11.0)
     ruby2_keywords (0.0.5)
@@ -627,6 +637,8 @@ GEM
       nokogiri (>= 1.8.1)
       nori (~> 2.4)
       wasabi (~> 3.4)
+    sdoc (2.4.0)
+      rdoc (>= 5.0)
     shoulda-matchers (5.0.0)
       activesupport (>= 5.2.0)
     simplecov (0.21.2)
@@ -639,6 +651,7 @@ GEM
     soundcloud (0.3.5)
       hashie
       httmultiparty (~> 0.3.0)
+    spring (4.0.0)
     sprockets (4.1.1)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -785,10 +798,12 @@ DEPENDENCIES
   pg
   puma
   rack-cors
+  rack-mini-profiler (~> 2.0)
   rack-mobile-detect
   rack-tracker
   rails (= 6.1.6.1)
   rails-controller-testing
+  rails-erd
   rails-html-sanitizer
   rails-i18n
   rails-observers
@@ -809,9 +824,11 @@ DEPENDENCIES
   rubyzip (~> 2.3.0)
   sass-rails
   savon
+  sdoc
   shoulda-matchers
   simplecov
   soundcloud
+  spring
   sprockets
   terrapin
   thin

@@ -86,7 +86,6 @@ gem "rails-html-sanitizer"
 gem "rails-i18n"
 gem "rails-observers"
 gem "rakismet"
-gem "rdoc", "< 6.4.0"
 gem "redcarpet"
 gem "rest-client", require: "rest_client"
 gem "rgeo"
@@ -134,8 +133,18 @@ end
 
 group :development do
   # The following are required for ed25519 ssh keys
-  gem "ed25519"
   gem "bcrypt_pbkdf"
+  gem "ed25519"
+  # Generate ERD Diagrams
+  gem "rails-erd"
+  # Documentation
+  gem "rdoc", "< 6.4.0"
+  gem "sdoc"
+  # Display performance information such as SQL time and flame graphs for each request in your browser.
+  # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
+  gem 'rack-mini-profiler', '~> 2.0'
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
 end
 
 group :test do
