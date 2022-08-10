@@ -116,15 +116,15 @@ end
 group :test, :development, :prod_dev do
   gem "database_cleaner"
 
-  # this fork fixes the `warning: constant ::Fixnum is deprecated` warnings
-  # See https://github.com/notahat/machinist/pull/133
-  gem "machinist", git: "https://github.com/narze/machinist", ref: "eaf5a447ff0d59a1fb2c49b91c6e1b2d95d8e4ee"
-
   gem "better_errors"
   gem "binding_of_caller"
   gem "byebug"
   gem "capybara"
   gem "lefthook", require: false
+  # this fork fixes the `warning: constant ::Fixnum is deprecated` warnings
+  # See https://github.com/notahat/machinist/pull/133
+  gem "machinist", git: "https://github.com/narze/machinist", ref: "eaf5a447ff0d59a1fb2c49b91c6e1b2d95d8e4ee"
+  gem "parallel_tests"
   gem "puma"
   gem "rubocop-rails", require: false
   gem "rubocop-rspec", require: false
@@ -142,9 +142,9 @@ group :development do
   gem "sdoc"
   # Display performance information such as SQL time and flame graphs for each request in your browser.
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
-  gem 'rack-mini-profiler', '~> 2.0'
+  gem "rack-mini-profiler", "~> 2.0"
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+  gem "spring"
 end
 
 group :test do

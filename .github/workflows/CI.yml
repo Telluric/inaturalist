@@ -28,19 +28,19 @@ jobs:
           - 5432:5432
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
 
-    strategy:
-      fail-fast: false
-      matrix:
-        # Note that these letter prefix patterns must match existing files or
-        # Github will error out of the build
-        spec_pattern:
-          - spec/models/{a,b,c,d,e,f,g,i,l}*_spec.rb
-          - spec/models/{m,o}*_spec.rb
-          - spec/models/{p,q,s}*_spec.rb
-          - spec/models/{t,u,w}*_spec.rb
-          - spec/controllers/{a,c,e,f,g,i,l,m,o}*_spec.rb
-          - spec/controllers/{p,q,r,s,t,u,v,w}*_spec.rb
-          - spec/helpers spec/initializers spec/lib spec/views spec/features
+#    strategy:
+#      fail-fast: false
+#      matrix:
+#        # Note that these letter prefix patterns must match existing files or
+#        # Github will error out of the build
+#        spec_pattern:
+#          - spec/models/{a,b,c,d,e,f,g,i,l}*_spec.rb
+#          - spec/models/{m,o}*_spec.rb
+#          - spec/models/{p,q,s}*_spec.rb
+#          - spec/models/{t,u,w}*_spec.rb
+#          - spec/controllers/{a,c,e,f,g,i,l,m,o}*_spec.rb
+#          - spec/controllers/{p,q,r,s,t,u,v,w}*_spec.rb
+#          - spec/helpers spec/initializers spec/lib spec/views spec/features
 
     steps:
     - name: Install dependencies
@@ -77,9 +77,9 @@ jobs:
 
     - run: npm install
 
-    - name: Add .rspec
-      run: |
-        echo -e "--format documentation\n--color\n--require spec_helper\n--profile\n--tty" > .rspec
+#    - name: Add .rspec
+#      run: |
+#        echo -e "--format documentation\n--color\n--require spec_helper\n--profile\n--tty" > .rspec
 
     - name: Before script
       run: ci/scripts/before_script.sh
@@ -92,7 +92,7 @@ jobs:
         CI: true
 
     - name: Run specs
-      run: bundle exec rspec ${{ matrix.spec_pattern }}
+      run: bundle exec rake parallel:spec
       env:
         PGHOST: 0.0.0.0
         PGUSER: postgres
@@ -101,12 +101,13 @@ jobs:
         TRAVIS: true
         TRAVIS_CI: true
         CI: true
+        RUBYOPT: W0
 
   notify:
     name: Notify Slack
     needs: build
     if: ${{ success() || failure() }}
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
       - uses: iRoachie/slack-github-actions@v2.0.1
         if: env.SLACK_WEBHOOK_URL != null
